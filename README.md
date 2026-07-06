@@ -1,8 +1,8 @@
-# 🎓 Pipeline NCD/Gzip - Análisis de Comportamiento Académico
+#  Pipeline NCD/Gzip - Análisis de Comportamiento Académico
 
 Proyecto de análisis de patrones académicos usando **Normalized Compression Distance (NCD)** con compresión **Gzip** para identificar qué variables socioeconómicas y académicas influyen más en el rendimiento estudiantil.
 
-## 📋 Descripción
+##  Descripción
 
 Este pipeline analiza un dataset de 18,000 estudiantes para responder:
 
@@ -17,7 +17,7 @@ Este pipeline analiza un dataset de 18,000 estudiantes para responder:
 5. **Comparación** → Compara redes Best vs Worst, identifica variables con mayor cambio
 6. **Informe** → Genera reporte automático en Markdown
 
-## 📊 Variables del Dataset
+##  Variables del Dataset
 
 | Variable | Descripción | Tipo |
 |----------|-------------|------|
@@ -33,7 +33,7 @@ Este pipeline analiza un dataset de 18,000 estudiantes para responder:
 | X10 | Cursos desaprobados | Numérica |
 | **X11** | **Promedio final (clasificación)** | **Numérica** |
 
-## 🚀 Cómo ejecutar
+##  Cómo ejecutar
 
 ### 1. Instalar dependencias
 
@@ -51,7 +51,7 @@ Asegúrate de que `data/estudiantes.csv` existe con las 11 columnas.
 python main.py
 ```
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 proyecto_academico/
@@ -75,7 +75,7 @@ proyecto_academico/
 └── requirements.txt
 ```
 
-## 📐 Fórmula NCD
+##  Fórmula NCD
 
 ```
 NCD(x, y) = (C(xy) - min(C(x), C(y))) / max(C(x), C(y))
@@ -85,7 +85,7 @@ NCD(x, y) = (C(xy) - min(C(x), C(y))) / max(C(x), C(y))
 - `NCD ≈ 0` → variables muy similares/relacionadas
 - `NCD ≈ 1` → variables muy diferentes
 
-## 🔍 Interpretación de resultados
+##  Interpretación de resultados
 
 La comparación de topologías calcula:
 
@@ -97,7 +97,7 @@ D = GradoPonderado_Worst - GradoPonderado_Best
 - **D negativo grande** → Variable que disminuye su conexión en Worst (factor protector)
 - **D ≈ 0** → Variable con comportamiento similar en ambos grupos
 
-## 📦 Requisitos
+##  Requisitos
 
 - Python 3.8+
 - pandas

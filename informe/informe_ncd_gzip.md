@@ -1,7 +1,12 @@
 # Informe: Análisis de Comportamiento Académico con NCD/Gzip
 
-**Fecha:** 06/07/2026 12:19
+**Fecha:** 06/07/2026 
+
 **Curso:** Ciberseguridad - 9no Semestre
+
+**Responsable de Asignaturta:**JUAREZ RUELAS JOSE LUIS  
+
+
 **Universidad:** Universidad Nacional del Altiplano - Puno
 
 ---

@@ -52,7 +52,7 @@ def crear_particiones(df):
 
     for nivel in NIVELES_PARTICION:
         pct_label = f"{nivel * 100:.1f}".rstrip('0').rstrip('.')
-        k = int(n * nivel)
+        k = int(n * nivel) #importante redondear hacia abajo para evitar problemas con decimales
 
         # Best = los k primeros (mayor promedio)
         best = df_sorted.head(k).copy()

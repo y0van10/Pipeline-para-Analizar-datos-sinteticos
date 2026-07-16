@@ -1,214 +1,145 @@
 # Informe: Análisis de Comportamiento Académico con NCD/Gzip
 
-**Fecha:** 06/07/2026 
+Este informe documenta los resultados del experimento automatizado llevado a cabo sobre el modelo de factores socioacadémicos utilizando la distancia de compresión normalizada (NCD) con el compresor Gzip.
 
-**Curso:** Ciberseguridad - 9no Semestre
-
-**Responsable de Asignaturta:**JUAREZ RUELAS JOSE LUIS  
-
-
-**Universidad:** Universidad Nacional del Altiplano - Puno
+**Fecha de ejecución:** 16/07/2026 13:40  
+**Total de estudiantes analizados:** 18000
 
 ---
 
-## 1. Introducción
+## 1. Limpieza y Validación de Datos
 
-El presente informe documenta el experimento de análisis de patrones académicos
-utilizando la métrica **Normalized Compression Distance (NCD)** con compresión **Gzip**.
+El dataset original pasó por un proceso de limpieza para garantizar la calidad y lógica de los datos.
 
-El objetivo es descubrir **qué factores socioeconómicos y académicos** se comportan
-de manera diferente entre estudiantes de alto y bajo rendimiento, revelando las
-posibles **causas** del éxito o fracaso académico.
+*   **Filas originales:** 18000
+*   **Duplicados eliminados:** 0
+*   **Filas nulas eliminadas:** 0
+*   **Registros no numéricos eliminados:** 0
+*   **Registros fuera de rango eliminados:** 0
+*   **Filas finales retenidas:** 18000 (100.00%)
 
-## 2. Objetivo
+---
 
-Aplicar un pipeline completo de análisis basado en NCD/Gzip para:
+## 2. Definición de Grupos y Muestras
 
-1. Dividir a los estudiantes según su rendimiento académico (X11 - Promedio Final)
-2. Calcular distancias entre variables explicativas (X1-X10) dentro de cada grupo
-3. Construir topologías de red (MST) que representen las relaciones entre variables
-4. Comparar las redes Best vs Worst para identificar qué variables cambian más
+Los estudiantes se ordenaron de manera descendente según su rendimiento académico (**X11 - Promedio Final**) y se seleccionaron muestras en los extremos de rendimiento académico:
 
-**Pregunta central:** ¿Qué variables (causas) explican la diferencia entre
-estudiantes con alto y bajo promedio final?
+*   **Best (Alto rendimiento):** El porcentaje de estudiantes con mayor promedio.
+*   **Worst (Bajo rendimiento):** El porcentaje de estudiantes con menor promedio.
 
-## 3. Descripción del Dataset
+Las muestras definidas fueron:
+*   **12.5%:** 2250 estudiantes por subgrupo.
+*   **25%:** 4500 estudiantes por subgrupo.
+*   **50%:** 9000 estudiantes por subgrupo.
 
-| Característica | Valor |
-|---|---|
-| Total de estudiantes (después de limpieza) | 18000 |
-| Variables explicativas | X1 a X10 (10 variables) |
-| Variable de clasificación | X11 - Promedio Final |
-| Duplicados eliminados | 0 |
-| Nulos eliminados | 0 |
+---
 
-### Variables del estudio
+## 3. Matrices NCD (Normalized Compression Distance)
 
-| Variable | Descripción | Tipo |
-|---|---|---|
-| X1 | Sexo | Categórica |
-| X2 | Zona geográfica | Categórica |
-| X3 | Ciclo académico | Numérica |
-| X4 | Ingreso familiar | Numérica |
-| X5 | Trabaja | Categórica |
-| X6 | Beca | Categórica |
-| X7 | Educación del jefe de familia | Categórica |
-| X8 | Tamaño familiar | Numérica |
-| X9 | Asistencia (%) | Numérica |
-| X10 | Cursos desaprobados | Numérica |
-| **X11** | **Promedio final** | **Numérica (clasificación)** |
+A continuación se presentan las matrices de distancia calculadas para cada grupo de rendimiento y nivel de partición. Un valor cercano a `0` indica alta similitud/relación y un valor cercano a `1` indica independencia.
 
-> **Nota:** X11 se usa exclusivamente para clasificar estudiantes en Best/Worst.
-> Las variables X1-X10 son las que se analizan con NCD para descubrir patrones.
+### Matriz NCD - Best_12.5
 
-## 4. Metodología
+| X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.0000 | 0.9361 | 1.0000 | 1.0000 | 0.9574 | 0.9985 | 0.9698 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9361 | 0.0000 | 1.0000 | 1.0000 | 0.9422 | 0.9621 | 0.9669 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9295 | 0.9977 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9574 | 0.9422 | 1.0000 | 1.0000 | 0.0000 | 0.8837 | 0.9740 | 1.0000 | 1.0000 | 0.9777 |
+| 0.9985 | 0.9621 | 1.0000 | 1.0000 | 0.8837 | 0.0000 | 0.9902 | 1.0000 | 1.0000 | 0.9983 |
+| 0.9698 | 0.9669 | 1.0000 | 1.0000 | 0.9740 | 0.9902 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9295 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9980 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9977 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9980 | 0.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9777 | 0.9983 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
 
-### 4.1 Limpieza de datos
+### Matriz NCD - Worst_12.5
 
-Se eliminaron filas con valores nulos, duplicados y datos fuera de rango lógico
-(promedio < 0 o > 20, asistencia < 0 o > 100, etc.).
+| X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.0000 | 0.9436 | 1.0000 | 1.0000 | 0.9588 | 0.9726 | 0.9777 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9436 | 0.0000 | 1.0000 | 1.0000 | 0.8973 | 0.9245 | 0.9769 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9296 | 0.9981 | 0.9826 |
+| 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9588 | 0.8973 | 1.0000 | 1.0000 | 0.0000 | 0.8598 | 0.9753 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9726 | 0.9245 | 1.0000 | 1.0000 | 0.8598 | 0.0000 | 0.9713 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9777 | 0.9769 | 1.0000 | 1.0000 | 0.9753 | 0.9713 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9296 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9965 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9981 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9965 | 0.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9826 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
 
-### 4.2 Particionamiento por rendimiento académico
+### Matriz NCD - Best_25
 
-Los estudiantes se ordenaron por X11 (promedio final) y se crearon particiones:
+| X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.0000 | 0.9745 | 1.0000 | 1.0000 | 0.9915 | 1.0000 | 0.9936 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9745 | 0.0000 | 1.0000 | 1.0000 | 0.9772 | 0.9952 | 0.9831 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9452 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9915 | 0.9772 | 1.0000 | 1.0000 | 0.0000 | 0.8993 | 0.9903 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 0.9952 | 1.0000 | 1.0000 | 0.8993 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9936 | 0.9831 | 1.0000 | 1.0000 | 0.9903 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9452 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
 
-| Nivel | Best (Top) | Worst (Bottom) |
-|---|---|---|
-| 12.5% | 2250 estudiantes con mayor promedio | 2250 estudiantes con menor promedio |
-| 25% | 4500 estudiantes | 4500 estudiantes |
-| 50% | 9000 estudiantes | 9000 estudiantes |
+### Matriz NCD - Worst_25
 
-### 4.3 Cálculo de NCD/Gzip
+| X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.0000 | 0.9722 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9722 | 0.0000 | 1.0000 | 1.0000 | 0.9696 | 0.9785 | 0.9949 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9474 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 0.9696 | 1.0000 | 1.0000 | 0.0000 | 0.9206 | 0.9957 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 0.9785 | 1.0000 | 1.0000 | 0.9206 | 0.0000 | 0.9914 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 0.9949 | 1.0000 | 1.0000 | 0.9957 | 0.9914 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9474 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9999 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9999 | 0.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
 
-Para cada partición se calculó una **matriz de distancia 10×10** entre las variables
-X1 a X10 usando la fórmula:
+### Matriz NCD - Best_50
 
-```
-NCD(x, y) = (C(xy) - min(C(x), C(y))) / max(C(x), C(y))
-```
+| X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9936 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9532 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9167 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9167 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 0.9936 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9532 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
 
-Donde:
-- `C(x)` = tamaño comprimido de la columna x con gzip (nivel 9)
-- Cada columna se convirtió a cadena de texto antes de comprimir
-- `NCD ≈ 0` → variables muy similares/relacionadas
-- `NCD ≈ 1` → variables muy diferentes
+### Matriz NCD - Worst_50
 
-### 4.4 Construcción de topologías de red
+| X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.0000 | 0.9882 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 0.9882 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9589 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9536 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9536 | 0.0000 | 0.9993 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9993 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 0.9589 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
+| 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
 
-Con cada matriz NCD se construyó un **Minimum Spanning Tree (MST)** usando NetworkX:
-- 10 nodos = 10 variables
-- Aristas = distancia NCD entre variables
-- El MST conecta todas las variables con el mínimo peso total
+---
 
-### 4.5 Comparación de topologías
+## 4. Comparación de Topologías (Best vs Worst)
 
-Se compararon las redes Best vs Worst calculando el **grado ponderado** de cada
-variable (suma de pesos de aristas conectadas en el MST) y la diferencia:
+Al extraer el Árbol de Expansión Mínima (MST) de cada grafo y calcular el **Grado Ponderado** (suma de pesos de aristas incidentes en el árbol), evaluamos qué tan conectada y central es cada variable dentro de la red del grupo.
 
-```
-D = GradoPonderado_Worst - GradoPonderado_Best
-```
+La diferencia se calcula como:
+$$D = Grado_{Worst} - Grado_{Best}$$
 
-- **D positivo grande** → la variable aumenta su conexión en Worst (factor de riesgo)
-- **D negativo grande** → la variable disminuye su conexión en Worst (factor protector)
+Un valor de $D$ muy positivo o muy negativo nos muestra variables que cambian drásticamente su rol en el comportamiento de los estudiantes de bajo rendimiento frente a los de alto rendimiento.
 
-## 5. Resultados
-
-### 5.1 Matrices NCD
-
-#### Matriz NCD - BEST (12.5%)
-
-| Var | X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X1 | 0.0000 | 0.9361 | 1.0000 | 1.0000 | 0.9574 | 0.9985 | 0.9698 | 1.0000 | 1.0000 | 1.0000 |
-| X2 | 0.9361 | 0.0000 | 1.0000 | 1.0000 | 0.9422 | 0.9621 | 0.9669 | 1.0000 | 1.0000 | 1.0000 |
-| X3 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9295 | 0.9977 | 1.0000 |
-| X4 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X5 | 0.9574 | 0.9422 | 1.0000 | 1.0000 | 0.0000 | 0.8837 | 0.9740 | 1.0000 | 1.0000 | 0.9777 |
-| X6 | 0.9985 | 0.9621 | 1.0000 | 1.0000 | 0.8837 | 0.0000 | 0.9902 | 1.0000 | 1.0000 | 0.9983 |
-| X7 | 0.9698 | 0.9669 | 1.0000 | 1.0000 | 0.9740 | 0.9902 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X8 | 1.0000 | 1.0000 | 0.9295 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9980 | 1.0000 |
-| X9 | 1.0000 | 1.0000 | 0.9977 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9980 | 0.0000 | 1.0000 |
-| X10 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9777 | 0.9983 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
-
-#### Matriz NCD - BEST (25%)
-
-| Var | X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X1 | 0.0000 | 0.9745 | 1.0000 | 1.0000 | 0.9915 | 1.0000 | 0.9936 | 1.0000 | 1.0000 | 1.0000 |
-| X2 | 0.9745 | 0.0000 | 1.0000 | 1.0000 | 0.9772 | 0.9952 | 0.9831 | 1.0000 | 1.0000 | 1.0000 |
-| X3 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9452 | 1.0000 | 1.0000 |
-| X4 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X5 | 0.9915 | 0.9772 | 1.0000 | 1.0000 | 0.0000 | 0.8993 | 0.9903 | 1.0000 | 1.0000 | 1.0000 |
-| X6 | 1.0000 | 0.9952 | 1.0000 | 1.0000 | 0.8993 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X7 | 0.9936 | 0.9831 | 1.0000 | 1.0000 | 0.9903 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X8 | 1.0000 | 1.0000 | 0.9452 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 |
-| X9 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
-| X10 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
-
-#### Matriz NCD - BEST (50%)
-
-| Var | X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X1 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X2 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9936 | 1.0000 | 1.0000 | 1.0000 |
-| X3 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9532 | 1.0000 | 1.0000 |
-| X4 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X5 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9167 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X6 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9167 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X7 | 1.0000 | 0.9936 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X8 | 1.0000 | 1.0000 | 0.9532 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 |
-| X9 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
-| X10 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
-
-#### Matriz NCD - WORST (12.5%)
-
-| Var | X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X1 | 0.0000 | 0.9436 | 1.0000 | 1.0000 | 0.9588 | 0.9726 | 0.9777 | 1.0000 | 1.0000 | 1.0000 |
-| X2 | 0.9436 | 0.0000 | 1.0000 | 1.0000 | 0.8973 | 0.9245 | 0.9769 | 1.0000 | 1.0000 | 1.0000 |
-| X3 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9296 | 0.9981 | 0.9826 |
-| X4 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X5 | 0.9588 | 0.8973 | 1.0000 | 1.0000 | 0.0000 | 0.8598 | 0.9753 | 1.0000 | 1.0000 | 1.0000 |
-| X6 | 0.9726 | 0.9245 | 1.0000 | 1.0000 | 0.8598 | 0.0000 | 0.9713 | 1.0000 | 1.0000 | 1.0000 |
-| X7 | 0.9777 | 0.9769 | 1.0000 | 1.0000 | 0.9753 | 0.9713 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X8 | 1.0000 | 1.0000 | 0.9296 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9965 | 1.0000 |
-| X9 | 1.0000 | 1.0000 | 0.9981 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9965 | 0.0000 | 1.0000 |
-| X10 | 1.0000 | 1.0000 | 0.9826 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
-
-#### Matriz NCD - WORST (25%)
-
-| Var | X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X1 | 0.0000 | 0.9722 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X2 | 0.9722 | 0.0000 | 1.0000 | 1.0000 | 0.9696 | 0.9785 | 0.9949 | 1.0000 | 1.0000 | 1.0000 |
-| X3 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9474 | 1.0000 | 1.0000 |
-| X4 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X5 | 1.0000 | 0.9696 | 1.0000 | 1.0000 | 0.0000 | 0.9206 | 0.9957 | 1.0000 | 1.0000 | 1.0000 |
-| X6 | 1.0000 | 0.9785 | 1.0000 | 1.0000 | 0.9206 | 0.0000 | 0.9914 | 1.0000 | 1.0000 | 1.0000 |
-| X7 | 1.0000 | 0.9949 | 1.0000 | 1.0000 | 0.9957 | 0.9914 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X8 | 1.0000 | 1.0000 | 0.9474 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9999 | 1.0000 |
-| X9 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9999 | 0.0000 | 1.0000 |
-| X10 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
-
-#### Matriz NCD - WORST (50%)
-
-| Var | X1 | X2 | X3 | X4 | X5 | X6 | X7 | X8 | X9 | X10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X1 | 0.0000 | 0.9882 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X2 | 0.9882 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X3 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9589 | 1.0000 | 1.0000 |
-| X4 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X5 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 0.9536 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X6 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9536 | 0.0000 | 0.9993 | 1.0000 | 1.0000 | 1.0000 |
-| X7 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9993 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
-| X8 | 1.0000 | 1.0000 | 0.9589 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 | 1.0000 |
-| X9 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
-| X10 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
-
-### 5.2 Comparación de Topologías
-
-#### Partición 12.5%
+### Comparación para Partición 12.5%
 
 | Variable | Nombre | Grado_Best | Grado_Worst | Diferencia_D | Abs_Diferencia |
 | --- | --- | --- | --- | --- | --- |
@@ -223,11 +154,10 @@ D = GradoPonderado_Worst - GradoPonderado_Best
 | X9 | Asistencia | 0.9977 | 0.9965 | -0.0013 | 0.0013 |
 | X4 | Ingreso | 1.0000 | 1.0000 | 0.0000 | 0.0000 |
 
-**Variable con MÁXIMO cambio:** X5 (Trabaja) → D = -1.0466
+*   🔴 **Máximo Cambio:** Variable `X5` (Trabaja) con una diferencia $|D| = 1.0466$
+*   🟢 **Mínimo Cambio:** Variable `X4` (Ingreso) con una diferencia $|D| = 0.0000$
 
-**Variable con MÍNIMO cambio:** X4 (Ingreso Familiar) → D = +0.0000
-
-#### Partición 25%
+### Comparación para Partición 25%
 
 | Variable | Nombre | Grado_Best | Grado_Worst | Diferencia_D | Abs_Diferencia |
 | --- | --- | --- | --- | --- | --- |
@@ -235,18 +165,17 @@ D = GradoPonderado_Worst - GradoPonderado_Best
 | X1 | Sexo | 4.9745 | 3.9722 | -1.0023 | 1.0023 |
 | X8 | Tam.Fam | 0.9452 | 1.9473 | 1.0021 | 1.0021 |
 | X2 | Zona | 2.9348 | 1.9418 | -0.9930 | 0.9930 |
-| X5 | Trabaja | 1.8765 | 1.8902 | 0.0138 | 0.0138 |
+| X5 | Trabaja | 1.8765 | 1.8902 | 0.0138 | 0.0137 |
 | X7 | Educ.Jefe | 0.9831 | 0.9914 | 0.0083 | 0.0083 |
 | X3 | Ciclo | 1.9452 | 1.9474 | 0.0022 | 0.0022 |
 | X9 | Asistencia | 1.0000 | 0.9999 | -0.0001 | 0.0001 |
 | X4 | Ingreso | 1.0000 | 1.0000 | 0.0000 | 0.0000 |
 | X10 | Desaprobados | 1.0000 | 1.0000 | 0.0000 | 0.0000 |
 
-**Variable con MÁXIMO cambio:** X6 (Beca) → D = +1.0128
+*   🔴 **Máximo Cambio:** Variable `X6` (Beca) con una diferencia $|D| = 1.0128$
+*   🟢 **Mínimo Cambio:** Variable `X10` (Desaprobados) con una diferencia $|D| = 0.0000$
 
-**Variable con MÍNIMO cambio:** X10 (Cursos Desaprobados) → D = +0.0000
-
-#### Partición 50%
+### Comparación para Partición 50%
 
 | Variable | Nombre | Grado_Best | Grado_Worst | Diferencia_D | Abs_Diferencia |
 | --- | --- | --- | --- | --- | --- |
@@ -255,88 +184,23 @@ D = GradoPonderado_Worst - GradoPonderado_Best
 | X5 | Trabaja | 1.9167 | 1.9536 | 0.0369 | 0.0369 |
 | X1 | Sexo | 6.0000 | 5.9882 | -0.0118 | 0.0118 |
 | X7 | Educ.Jefe | 0.9936 | 0.9993 | 0.0057 | 0.0057 |
-| X3 | Ciclo | 1.9532 | 1.9589 | 0.0057 | 0.0057 |
 | X8 | Tam.Fam | 0.9532 | 0.9589 | 0.0057 | 0.0057 |
+| X3 | Ciclo | 1.9532 | 1.9589 | 0.0057 | 0.0057 |
 | X4 | Ingreso | 1.0000 | 1.0000 | 0.0000 | 0.0000 |
 | X9 | Asistencia | 1.0000 | 1.0000 | 0.0000 | 0.0000 |
 | X10 | Desaprobados | 1.0000 | 1.0000 | 0.0000 | 0.0000 |
 
-**Variable con MÁXIMO cambio:** X6 (Beca) → D = +1.0362
-
-**Variable con MÍNIMO cambio:** X10 (Cursos Desaprobados) → D = +0.0000
-
-## 6. Análisis de Variables Relevantes
-
-### Variables con mayor cambio estructural
-
-Las siguientes variables presentan los mayores cambios en su posición dentro
-de la red entre los grupos Best y Worst:
-
-- **X6 (Beca)**: máximo cambio en 2 de 3 particiones
-- **X5 (Trabaja)**: máximo cambio en 1 de 3 particiones
-
-### Variables con menor cambio estructural
-
-Las siguientes variables mantienen un comportamiento similar en ambos grupos:
-
-- **X10 (Cursos Desaprobados)**: mínimo cambio en 2 de 3 particiones
-- **X4 (Ingreso Familiar)**: mínimo cambio en 1 de 3 particiones
-
-
-## 7. Discusión
-
-El análisis NCD/Gzip permitió revelar que las relaciones entre variables
-socioeconómicas y académicas **no son iguales** para estudiantes de alto y bajo
-rendimiento. Las variables que más cambian su posición en la topología de red
-son aquellas que tienen un comportamiento diferenciado según el grupo.
-
-Cuando una variable tiene un **D positivo grande**, significa que en el grupo
-Worst esa variable está más conectada/central en la red de relaciones,
-sugiriendo que juega un papel más determinante en el bajo rendimiento.
-
-Cuando una variable tiene un **D negativo grande**, significa que en el grupo
-Best esa variable tiene mayor centralidad, sugiriendo un rol protector o
-asociado al buen rendimiento.
-
-## 8. Conclusiones
-
-1. La técnica NCD/Gzip permite cuantificar relaciones entre variables sin
-   asumir distribuciones estadísticas ni linealidad.
-
-2. Las topologías de red (MST) revelan la estructura de dependencias entre
-   variables dentro de cada grupo de rendimiento.
-
-3. La comparación de topologías identifica las variables que más cambian
-   su comportamiento entre grupos, indicando posibles factores causales.
-
-4. Los resultados son consistentes a través de las tres particiones
-   (12.5%, 25%, 50%), lo que refuerza la robustez de los hallazgos.
-
-## 9. Reproducibilidad
-
-Para reproducir este análisis:
-
-```bash
-pip install -r requirements.txt
-python main.py
-```
-
-Los resultados se generan en:
-- `results/matrices/` → Matrices NCD (CSV)
-- `results/graficos/` → Gráficos de redes y comparaciones (PNG)
-- `results/tablas/` → Tablas comparativas (CSV)
-
-## 10. Anexos
-
-### Archivos generados
-
-| Carpeta | Contenido |
-|---|---|
-| `results/matrices/` | 6 matrices NCD (10×10) en formato CSV |
-| `results/graficos/` | Gráficos MST, heatmaps, comparaciones |
-| `results/tablas/` | Particiones y tablas comparativas |
-| `informe/` | Este informe en formato Markdown |
+*   🔴 **Máximo Cambio:** Variable `X6` (Beca) con una diferencia $|D| = 1.0362$
+*   🟢 **Mínimo Cambio:** Variable `X10` (Desaprobados) con una diferencia $|D| = 0.0000$
 
 ---
 
-*Informe generado automáticamente por el pipeline NCD/Gzip.*
+## 5. Conclusiones y Discusión Académica
+
+El análisis comparativo de las topologías revela cambios estructurales críticos en las relaciones de los estudiantes:
+
+1.  **Factores Determinantes:** Al comparar los extremos de rendimiento académico (el 12.5% superior e inferior), las variables cuyas relaciones y centralidad topológica cambian de forma más radical son **Trabaja (X5)** y **Zona (X2)**.
+2.  **Mecánica de Impacto:** La variable `X5` pasa de tener un grado de 2.8037 en los mejores estudiantes a 1.7571 en los peores. Este cambio drástico ($D = -1.0466$) demuestra que su influencia en la red socioacadémica cambia significativamente según el rendimiento final.
+3.  **Variables Invariantes:** Las variables que mostraron menor variación o que permanecieron casi idénticas en ambas redes son aquellas al final del ranking, lideradas por **Ingreso (X4)**, sugiriendo que su rol es neutro o estable en este contexto experimental.
+
+Este experimento demuestra empíricamente que la causa del bajo rendimiento académico (X11) no puede explicarse evaluando variables de manera aislada, sino a través de la **reorganización estructural de las variables socioeconómicas y familiares**.

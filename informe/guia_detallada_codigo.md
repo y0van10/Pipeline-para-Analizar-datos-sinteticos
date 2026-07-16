@@ -1,157 +1,129 @@
-# 📘 Guía Técnica y Explicación del Código - Pipeline NCD/Gzip
+# 📘 Guía Técnica y Explicación del Código - Pipeline POO NCD/Gzip
 
-Esta guía técnica proporciona una explicación detallada, línea por línea y función por función, de todo el código del sistema de análisis académico basado en **NCD/Gzip** (Normalized Compression Distance).
-
----
-
-## 1. Módulos de Python (`src/`)
-
-La carpeta `src/` contiene los 6 pasos independientes que conforman la tubería (pipeline) de procesamiento.
-
-### 📄 `src/_01_limpieza.py` (Limpieza de Datos)
-Este archivo se encarga de cargar el archivo CSV original, validar que tenga la estructura adecuada de 11 columnas (`X1` a `X11`) y remover datos sucios o inconsistentes.
-
-#### Funciones clave:
-*   `cargar_datos()`: Lee el CSV de forma robusta. Si el archivo viene con caracteres latinos no soportados por UTF-8, cambia automáticamente a la codificación `latin-1` para evitar caídas.
-*   `validar_columnas(df)`: Compara los nombres de las columnas cargadas contra `COLUMNAS_ESPERADAS`. Si no coinciden pero tienen la misma longitud (11), las renombra por su orden posicional para asegurar compatibilidad.
-*   `limpiar_datos(df)`: 
-    *   **Duplicados:** Elimina filas idénticas repetidas mediante `df.drop_duplicates()`.
-    *   **Nulos:** Identifica y reporta nulos por columna antes de eliminarlos (`df.dropna()`).
-    *   **Conversión numérica:** Convierte variables continuas al tipo correcto (`pd.to_numeric()`).
-    *   **Validaciones lógicas:** Filtra que el Promedio Final (`X11`) esté en la escala de $[0, 20]$, la asistencia (`X9`) entre $[0, 100]\%$, y que valores como el tamaño familiar (`X8`) y cursos desaprobados (`X10`) no sean negativos.
-*   `ejecutar()`: Orquesta la carga, validación y limpieza, devolviendo el DataFrame limpio y un diccionario de reporte con las estadísticas de limpieza.
+Esta guía técnica detalla la arquitectura de software basada en el **Paradigma de Programación Orientada a Objetos (POO)** implementada para el análisis de rendimiento académico mediante distancias de compresión NCD.
 
 ---
 
-### 📄 `src/_02_particiones.py` (Particionamiento)
-Divide el dataset de estudiantes en dos grupos según su promedio final (`X11`) y guarda las muestras correspondientes en archivos `.csv`.
+## 1. Arquitectura de Clases (`src/`)
 
-#### Funciones clave:
-*   `ejecutar(df)`:
-    1.  Ordena el DataFrame original de forma descendente en base al promedio final (`X11`).
-    2.  Para cada nivel de muestra seleccionado ($12.5\%$, $25\%$, $50\%$):
-        *   Calcula el número de filas $K$ equivalente al porcentaje.
-        *   Toma las primeras $K$ filas para el grupo **Best** (alto rendimiento).
-        *   Toma las últimas $K$ filas para el grupo **Worst** (bajo rendimiento).
-        *   Guarda cada partición como un archivo CSV en `results/tablas/` (ej: `Best_12.5.csv`).
-    3.  Retorna un diccionario conteniendo los DataFrames de las 6 particiones.
+Cada paso del pipeline se ha rediseñado como una clase independiente dentro de la carpeta `src/`. Esto encapsula los datos y el comportamiento de cada etapa del experimento.
+
+### 📄 `src/data_cleaner.py` (`class DataCleaner`)
+Encapsula la carga de archivos, validación estructural y limpieza física/lógica del dataset.
+
+#### Métodos principales:
+*   `cargar_datos()`: Lee el archivo CSV de forma robusta e implementa el manejo de excepciones de codificación (`UnicodeDecodeError`), intentando primero con UTF-8 y luego con Latin-1.
+*   `validar_columnas()`: Compara estructuralmente las columnas del archivo contra `COLUMNAS_ESPERADAS` y renombra los campos si es necesario.
+*   `limpiar_datos()`: Filtra duplicados, nulos, variables no numéricas y aplica límites lógicos de dominio (ej. promedios en $[0, 20]$ y asistencia en $[0, 100]$).
+*   `ejecutar()`: Método orquestador que devuelve el DataFrame limpio e informes de la limpieza.
 
 ---
 
-### 📄 `src/_03_ncd_gzip.py` (Métrica NCD)
-Calcula las matrices de distancia normalizada por compresión (NCD) de $10 \times 10$ entre las variables explicativas `X1` a `X10`.
+### 📄 `src/partitioner.py` (`class StudentPartitioner`)
+Encargada de dividir la muestra completa en subconjuntos de estudiantes basados en el rendimiento académico.
 
-#### Lógica del cálculo NCD:
-Para evaluar la similitud entre dos columnas $x$ e $y$:
-1.  Concatenamos todos los registros de cada columna en una única cadena de texto separada por saltos de línea.
-2.  Medimos el peso en bytes al comprimir el texto de cada columna de forma individual: $C(x)$ y $C(y)$.
-3.  Medimos el peso de ambas columnas concatenadas juntas: $C(xy)$.
-4.  Aplicamos la fórmula matemática:
+#### Métodos principales:
+*   `crear_particiones(df)`: 
+    1.  Ordena los datos de mayor a menor según el promedio final (`X11_promedio_final`).
+    2.  Para cada fracción de porcentaje parametrizada (ej: 12.5%, 25%, 50%), toma los primeros $K$ alumnos para el grupo **Best** (alto rendimiento) y los últimos $K$ alumnos para el grupo **Worst** (bajo rendimiento).
+    3.  Exporta los resultados a la carpeta `results/tablas/` como archivos CSV individuales.
+
+---
+
+### 📄 `src/ncd_analyzer.py` (`class NCDAnalyzer`)
+Implementa el cálculo computacional de la distancia de compresión normalizada (NCD).
+
+#### Métodos principales:
+*   `_columna_a_texto(serie)`: Agrupa todas las entradas de una variable en una única cadena separada por saltos de línea (`"\n"`).
+*   `_comprimir_y_medir(texto)`: Comprime los datos en memoria utilizando `gzip.compress` en el nivel máximo configurado (`gzip_level=9`) y mide su longitud en bytes.
+*   `calcular_ncd(txt_x, txt_y)`: Ejecuta la fórmula matemática:
     $$NCD(x, y) = \frac{C(xy) - \min(C(x), C(y))}{\max(C(x), C(y))}$$
-
-#### Funciones clave:
-*   `columna_a_texto(serie)`: Convierte todas las celdas de una serie de pandas en texto continuo (`"\n".join()`).
-*   `comprimir_y_medir(texto)`: Codifica el texto a UTF-8 y aplica compresión `gzip.compress` en nivel máximo de compresión (level=9), retornando su tamaño final en bytes.
-*   `calcular_ncd(txt_x, txt_y)`: Implementa la fórmula NCD y acota los resultados en el intervalo $[0, 1]$.
-*   `ejecutar(particiones)`: Para cada una de las 6 particiones del paso anterior, calcula de forma iterativa las distancias de todos los 45 pares únicos de variables, construye una matriz de $10 \times 10$ (como `DataFrame`), la guarda en `results/matrices/` y la retorna.
+*   `procesar_particiones(particiones)`: Itera sobre todas las particiones del experimento y crea la matriz NCD de $10 \times 10$ con etiquetas simplificadas de variables (`X1` a `X10`).
 
 ---
 
-### 📄 `src/_04_topologias.py` (Modelado de Redes y Dendrogramas)
-Construye modelos topológicos utilizando Árboles de Expansión Mínima (MST) y mapas de agrupamiento jerárquico (Dendrogramas).
+### 📄 `src/topology_manager.py` (`class TopologyManager`)
+Maneja el modelado de redes y agrupamiento jerárquico.
 
-#### Funciones clave:
-*   `construir_grafo_completo(df_matriz)`: Transforma la matriz de distancias NCD en un grafo no directo donde cada variable es un nodo y el peso de cada arista es el valor de distancia NCD.
-*   `extraer_mst(G)`: Obtiene el árbol que conecta todas las variables utilizando las aristas con menor distancia NCD posible (relaciones más fuertes).
-*   `calcular_grado_ponderado(mst)`: Mide la centralidad de cada variable en la topología sumando el peso de las aristas del MST que pasan por ella.
-*   `graficar_mst()`, `graficar_heatmap()`, `graficar_dendrograma()`: Guardan en la carpeta `results/graficos/` la representación visual del árbol de expansión mínima, del mapa de calor y del dendrograma individual respectivamente.
-*   `graficar_dendrograma_comparativo(matrices, output_dir)`: Genera los gráficos comparativos de dendrogramas **lado a lado** para analizar visualmente cómo cambia la jerarquía de agrupamiento de variables entre estudiantes de alto y bajo rendimiento en un mismo porcentaje.
-
----
-
-### 📄 `src/_05_comparacion.py` (Análisis de Cambio D)
-Mide el cambio topológico entre los grupos de alto y bajo rendimiento mediante la diferencia matemática:
-$$D = GradoPonderado_{Worst} - GradoPonderado_{Best}$$
-
-#### Funciones clave:
-*   `ejecutar(topologias)`:
-    *   Para cada nivel ($12.5\%$, $25\%$, $50\%$), extrae los vectores de grado ponderado de los subgrupos Best y Worst correspondientes.
-    *   Calcula la diferencia $D$ para cada una de las 10 variables explicativas.
-    *   Identifica la variable de **máximo cambio** (mayor valor absoluto $|D|$) y la de **mínimo cambio** (menor valor absoluto $|D|$).
-    *   Guarda tablas CSV con las comparaciones en `results/tablas/` y genera gráficos de barras en `results/graficos/`.
-    *   Genera `resumen_comparacion_global.png` que consolida las diferencias de las tres particiones en una única visualización de contraste.
+#### Métodos principales:
+*   `construir_grafo_completo(df_matriz)`: Crea un grafo ponderado de NetworkX donde cada variable representa un nodo y el valor NCD es el peso de la arista.
+*   `extraer_mst(G)`: Obtiene el Árbol de Expansión Mínima (MST) con menor suma de pesos.
+*   `calcular_grado_ponderado(mst)`: Mide la centralidad sumando las distancias de las aristas del MST que inciden en cada variable.
+*   `graficar_mst()`, `graficar_heatmap()`, `graficar_dendrograma()`: Guardan visualizaciones gráficas en la carpeta `results/graficos/`.
+*   `graficar_dendrograma_comparativo(matrices)`: Dibuja dendrogramas comparativos **lado a lado** (Best vs Worst) para la misma partición, revelando visualmente la reestructuración de clusters de variables.
 
 ---
 
-### 📄 `src/_06_reporte_resultados.py` (Generación de Reporte Markdown)
-Compila de forma estructurada toda la información generada a lo largo del pipeline y produce el archivo `informe/informe_ncd_gzip.md`.
+### 📄 `src/topology_comparator.py` (`class TopologyComparator`)
+Determina el nivel de variación estructural de las variables explicativas entre grupos de alumnos.
 
-#### Funciones clave:
-*   `generar_tabla_markdown(df)`: Convierte cualquier DataFrame de pandas a formato de tablas Markdown.
-*   `ejecutar(...)`: Genera el texto del informe integrando de manera automática las estadísticas de la limpieza, las matrices NCD formateadas, los hallazgos de máximo y mínimo cambio y un apartado sintáctico de conclusiones.
+#### Métodos principales:
+*   `comparar_grados(grados_best, grados_worst)`: Calcula la métrica de cambio topológico:
+    $$D = Grado_{Worst} - Grado_{Best}$$
+*   `comparar_topologias(topologias)`: Compara los MSTs correspondientes por partición, ordena los resultados de mayor a menor cambio absoluto, guarda tablas CSV y genera histogramas visuales.
+*   `graficar_resumen_global(todas_comp)`: Crea el gráfico consolidado `resumen_comparacion_global.png` cruzando las diferencias de todas las particiones.
 
 ---
 
-## 2. Orquestador del Sistema (`main.py`)
+### 📄 `src/report_generator.py` (`class ReportGenerator`)
+Encargada de redactar el informe técnico general de salida.
 
-Ubicado en la raíz del proyecto, actúa como el punto de inicio y sincronización de los 6 pasos.
+#### Métodos principales:
+*   `escribir_reporte(...)`: Integra las estadísticas de limpieza, las matrices NCD y los cambios máximos/mínimos en un archivo Markdown (`informe/informe_ncd_gzip.md`).
+
+---
+
+## 2. Clase Orquestadora (`src/pipeline.py`)
+
+La clase `AcademicPipeline` conecta y coordina el flujo secuencial de datos de todas las clases del experimento.
 
 ```python
-import os
-import time
+# src/pipeline.py
+class AcademicPipeline:
+    def __init__(self, dataset_path, partition_levels=[0.125, 0.25, 0.50], gzip_level=9):
+        # Inicialización de objetos con configuración encapsulada
+        self.cleaner = DataCleaner(dataset_path)
+        self.partitioner = StudentPartitioner(levels=partition_levels)
+        self.analyzer = NCDAnalyzer(gzip_level=gzip_level)
+        self.topology = TopologyManager()
+        self.comparator = TopologyComparator()
+        self.generator = ReportGenerator()
 
-# Configura el directorio activo del script
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-# Define una envoltura para registrar tiempos de ejecución
-def paso(numero, titulo, funcion, *args):
-    print(f"PASO {numero}: {titulo}")
-    inicio = time.time()
-    resultado = funcion(*args)
-    print(f"Completado en {time.time() - inicio:.2f}s\n")
-    return resultado
-
-if __name__ == "__main__":
-    # Ejecuta el flujo en cadena
-    df, reporte = paso(1, "LIMPIEZA", p1.ejecutar)
-    particiones = paso(2, "PARTICIONES", p2.ejecutar, df)
-    matrices = paso(3, "NCD/GZIP", p3.ejecutar, particiones)
-    topologias = paso(4, "MST", p4.ejecutar, matrices)
-    
-    # Genera dendrogramas comparativos adicionales
-    p4.graficar_dendrograma_comparativo(matrices, "results/graficos")
-    
-    comparaciones = paso(5, "COMPARACIÓN", p5.ejecutar, topologias)
-    paso(6, "REPORTE MD", p6.ejecutar, reporte, particiones, matrices, topologias, comparaciones)
+    def run(self):
+        # Flujo ordenado del pipeline
+        df, reporte_limpieza = self.cleaner.ejecutar()
+        particiones = self.partitioner.ejecutar(df)
+        matrices = self.analyzer.ejecutar(particiones)
+        topologias = self.topology.ejecutar(matrices)
+        
+        # Dendrogramas comparativos
+        self.topology.graficar_dendrograma_comparativo(matrices)
+        
+        comparaciones = self.comparator.ejecutar(topologias)
+        self.generator.ejecutar(reporte_limpieza, particiones, matrices, topologias, comparaciones)
 ```
 
 ---
 
-## 3. Generador de Documentos Word (`informe.js`)
+## 3. Punto de Entrada (`main.py`)
 
-Es un script de **Node.js** que crea un documento formal de Word (`.docx`) conteniendo la estructura completa del informe técnico del experimento.
+Configura el directorio activo del sistema e inicializa la clase orquestadora.
 
-### Componentes principales del código:
+```python
+# main.py
+import sys
+import os
+from src.pipeline import AcademicPipeline
 
-1.  **Librerías y Configuración:**
-    Utiliza el paquete `docx` para construir el árbol de elementos XML que conforman un archivo de Word.
-    ```javascript
-    const fs = require("fs");
-    const { Document, Packer, Paragraph, TextRun, Table, ... } = require("docx");
-    ```
-2.  **Funciones de Estilo Auxiliares:**
-    *   `headerCell(text, width)` y `bodyCell(text, width, opts)`: Crean celdas con bordes delgados de color negro (`CELL_BORDERS`) y configuraciones específicas de fuentes (Calibri, tamaño, negritas y alineaciones).
-    *   `makeTable(headers, rows, colWidthsDxa)`: Agrupa celdas en filas (`TableRow`) y columnas alineadas para conformar tablas.
-    *   `h1(text)`, `h2(text)`, `h3(text)`, `p(text)`: Retornan bloques de párrafo formateados como títulos principales, subtítulos o cuerpo de texto normal.
-3.  **Matrices y Datos Integrados:**
-    Para asegurar que el informe pueda generarse de forma rápida sin dependencias de bases de datos o lecturas de archivos pesados en tiempo real, el script tiene **quemados (hardcoded)** los resultados exactos del experimento en constantes como `M_BEST_125`, `comp125`, `comp25`, etc.
-4.  **Generación de Portada y Cuerpo:**
-    Carga el logotipo local (`logo.png`) como un búfer binario e inserta una portada formal con la información de la institución y del estudiante. Después, añade en un arreglo lineal (`children`) el desglose de secciones y tablas.
-5.  **Compilación y Escritura:**
-    Genera el archivo empaquetado final:
-    ```javascript
-    Packer.toBuffer(doc).then(buf => {
-      fs.writeFileSync("informe/Informe_NCD_Gzip_Ciberseguridad.docx", buf);
-      console.log("done");
-    });
-    ```
+# Asegurar que el directorio del script sea el directorio de trabajo
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
+
+if __name__ == "__main__":
+    pipeline = AcademicPipeline(
+        dataset_path="data/estudiantes.csv",
+        partition_levels=[0.125, 0.25, 0.50],
+        gzip_level=9
+    )
+    pipeline.run()
+```

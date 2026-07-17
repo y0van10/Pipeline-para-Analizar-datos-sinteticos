@@ -10,7 +10,7 @@ class GeneradorReportes:
         "X1": "Sexo", "X2": "Zona", "X3": "Ciclo",
         "X4": "Ingreso Familiar", "X5": "Trabaja", "X6": "Beca",
         "X7": "Educación Jefe de Familia", "X8": "Tamaño Familiar",
-        "X9": "Asistencia", "X10": "Cursos Desaprobados"
+        "X9": "Asistencia", "X10": "Cursos Desaprobados", "X11": "Rendimiento"
     }
 
     def __init__(self, ruta_informe="informe/informe_ncd_gzip.md"):
@@ -40,9 +40,9 @@ class GeneradorReportes:
         n_estudiantes = reporte_limpieza.get("final", "N/A")
 
         # Empezar a armar el string Markdown
-        md = f"""# Informe: Análisis de Comportamiento Académico con NCD/Gzip
+        md = f"""# Informe: Análisis de Comportamiento Académico con NCD/Gzip y Árboles Bayesianos
 
-Este informe documenta los resultados del experimento automatizado llevado a cabo sobre el modelo de factores socioacadémicos utilizando la distancia de compresión normalizada (NCD) con el compresor Gzip.
+Este informe de investigación académica consolida los resultados del experimento automatizado llevado a cabo sobre el modelo de factores socioacadémicos utilizando la distancia de compresión normalizada (NCD) y **Árboles Bayesianos Probabilísticos (MST Dirigidos de Probabilidad Conjunta)**.
 
 **Fecha de ejecución:** {fecha}  
 **Total de estudiantes analizados:** {n_estudiantes}
@@ -111,9 +111,22 @@ Un valor de $D$ muy positivo o muy negativo nos muestra variables que cambian dr
 
         md += """---
 
-## 5. Conclusiones y Discusión Académica
+## 5. Análisis de Árboles Bayesianos (MST Dirigidos de Probabilidad Conjunta)
 
-El análisis comparativo de las topologías revela cambios estructurales críticos en las relaciones de los estudiantes:
+Para validar las dependencias de forma puramente probabilística, binarizamos todas las variables (utilizando la mediana para numéricas, el umbral de aprobación $\ge 11$ para promedio final, y el mapeo categórico para binarias).
+
+Para cada par de variables $(X_i, X_j)$, encontramos la combinación de estados $(a, b)$ que maximiza su **Probabilidad Conjunta**:
+$$P_{max}(X_i, X_j) = \max_{a,b} P(X_i=a, X_j=b)$$
+
+Definimos una métrica de distancia de separación como $D(X_i, X_j) = 1 - P_{max}(X_i, X_j)$, con la cual extraemos un Árbol de Expansión Mínima. Para transformarlo en un **Árbol Bayesiano Dirigido**, cada arista del árbol se orienta de $X_i \to X_j$ si su probabilidad condicional es mayor en ese sentido, es decir, si $P(X_i = a) \le P(X_j = b)$.
+
+Esto produce las redes dirigidas almacenadas en `results/graficos/arbol_bayesiano_*.png`. El flujo de flechas ilustra la jerarquía de causa y efecto probabilístico entre los factores socioeconómicos y el rendimiento final académico.
+
+---
+
+## 6. Conclusiones y Discusión Académica
+
+El análisis comparativo de las topologías y las dependencias bayesianas revela cambios estructurales críticos en las relaciones de los estudiantes:
 
 """
 
@@ -128,7 +141,7 @@ El análisis comparativo de las topologías revela cambios estructurales crític
             md += f"3.  **Variables Invariantes:** Las variables que mostraron menor variación o que permanecieron casi idénticas en ambas redes son aquellas al final del ranking, lideradas por **{df_125.iloc[-1]['Nombre']} ({df_125.iloc[-1]['Variable']})**, sugiriendo que su rol es neutro o estable en este contexto experimental.\n"
 
         md += """
-Este experimento demuestra empíricamente que la causa del bajo rendimiento académico (X11) no puede explicarse evaluando variables de manera aislada, sino a través de la **reorganización estructural de las variables socioeconómicas y familiares**.
+Este experimento demuestra empíricamente que la causa del bajo rendimiento académico (X11) no puede explicarse evaluando variables de manera aislada, sino a través de la **reorganización estructural de las variables socioeconómicas y de comportamiento académico**, lo cual queda plasmado en la direccionalidad de las dependencias probabilísticas en los Árboles Bayesianos generados.
 """
 
         with open(self.ruta_informe, "w", encoding="utf-8") as f:

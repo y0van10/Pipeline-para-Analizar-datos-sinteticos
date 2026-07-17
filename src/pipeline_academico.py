@@ -5,12 +5,13 @@ from src.particionador import ParticionadorEstudiantes
 from src.analizador_ncd import AnalizadorNCD
 from src.gestor_topologias import GestorTopologias
 from src.comparador_topologias import ComparadorTopologias
+from src.analizador_bayesiano import AnalizadorBayesiano
 from src.generador_reportes import GeneradorReportes
 
 class PipelineAcademico:
     """
     Clase Orquestadora (Controlador) que representa el Pipeline de Análisis Académico completo.
-    Encapsula y conecta las etapas individuales del experimento en español.
+    Encapsula y conecta las etapas individuales del experimento en español (7 pasos, incluyendo Árboles Bayesianos).
     """
     def __init__(self, ruta_datos, niveles_particion=[0.125, 0.25, 0.50], nivel_gzip=9):
         self.ruta_datos = ruta_datos
@@ -21,6 +22,7 @@ class PipelineAcademico:
         self.analizador = AnalizadorNCD(nivel_gzip=nivel_gzip)
         self.topologia = GestorTopologias()
         self.comparador = ComparadorTopologias()
+        self.bayesiano = AnalizadorBayesiano()
         self.reportador = GeneradorReportes()
 
     def _separador(self, titulo):
@@ -29,7 +31,7 @@ class PipelineAcademico:
         print("█" * 60)
 
     def _paso(self, numero, titulo, metodo, *args):
-        self._separador(f"PASO {numero}/6: {titulo}")
+        self._separador(f"PASO {numero}/7: {titulo}")
         inicio = time.time()
         resultado = metodo(*args)
         fin = time.time()
@@ -63,8 +65,11 @@ class PipelineAcademico:
         # Paso 5: Comparación Best vs Worst (Diferencia D)
         comparaciones = self._paso(5, "COMPARACIÓN BEST vs WORST", self.comparador.ejecutar, topologias)
 
-        # Paso 6: Informe
-        ruta_informe = self._paso(6, "GENERACIÓN DE INFORME", self.reportador.ejecutar, 
+        # Paso 6: Árboles Bayesianos (MST Dirigido de Probabilidad Conjunta)
+        arboles_bayesianos = self._paso(6, "CONSTRUCCIÓN DE ÁRBOLES BAYESIANOS (PROB. CONJUNTA)", self.bayesiano.ejecutar_paso, df, particiones)
+
+        # Paso 7: Informe
+        ruta_informe = self._paso(7, "GENERACIÓN DE INFORME", self.reportador.ejecutar, 
                                   reporte_limpieza, particiones, matrices, topologias, comparaciones)
 
         fin_total = time.time()

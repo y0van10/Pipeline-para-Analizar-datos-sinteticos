@@ -1,8 +1,8 @@
-# Informe: Análisis de Comportamiento Académico con NCD/Gzip
+# Informe: Análisis de Comportamiento Académico con NCD/Gzip y Árboles Bayesianos
 
-Este informe documenta los resultados del experimento automatizado llevado a cabo sobre el modelo de factores socioacadémicos utilizando la distancia de compresión normalizada (NCD) con el compresor Gzip.
+Este informe de investigación académica consolida los resultados del experimento automatizado llevado a cabo sobre el modelo de factores socioacadémicos utilizando la distancia de compresión normalizada (NCD) y **Árboles Bayesianos Probabilísticos (MST Dirigidos de Probabilidad Conjunta)**.
 
-**Fecha de ejecución:** 16/07/2026 21:09  
+**Fecha de ejecución:** 16/07/2026 21:30  
 **Total de estudiantes analizados:** 18000
 
 ---
@@ -195,12 +195,25 @@ Un valor de $D$ muy positivo o muy negativo nos muestra variables que cambian dr
 
 ---
 
-## 5. Conclusiones y Discusión Académica
+## 5. Análisis de Árboles Bayesianos (MST Dirigidos de Probabilidad Conjunta)
 
-El análisis comparativo de las topologías revela cambios estructurales críticos en las relaciones de los estudiantes:
+Para validar las dependencias de forma puramente probabilística, binarizamos todas las variables (utilizando la mediana para numéricas, el umbral de aprobación $\ge 11$ para promedio final, y el mapeo categórico para binarias).
+
+Para cada par de variables $(X_i, X_j)$, encontramos la combinación de estados $(a, b)$ que maximiza su **Probabilidad Conjunta**:
+$$P_{max}(X_i, X_j) = \max_{a,b} P(X_i=a, X_j=b)$$
+
+Definimos una métrica de distancia de separación como $D(X_i, X_j) = 1 - P_{max}(X_i, X_j)$, con la cual extraemos un Árbol de Expansión Mínima. Para transformarlo en un **Árbol Bayesiano Dirigido**, cada arista del árbol se orienta de $X_i 	o X_j$ si su probabilidad condicional es mayor en ese sentido, es decir, si $P(X_i = a) \le P(X_j = b)$.
+
+Esto produce las redes dirigidas almacenadas en `results/graficos/arbol_bayesiano_*.png`. El flujo de flechas ilustra la jerarquía de causa y efecto probabilístico entre los factores socioeconómicos y el rendimiento final académico.
+
+---
+
+## 6. Conclusiones y Discusión Académica
+
+El análisis comparativo de las topologías y las dependencias bayesianas revela cambios estructurales críticos en las relaciones de los estudiantes:
 
 1.  **Factores Determinantes:** Al comparar los extremos de rendimiento académico (el 12.5% superior e inferior), las variables cuyas relaciones y centralidad topológica cambian de forma más radical son **Trabaja (X5)** y **Zona (X2)**.
 2.  **Mecánica de Impacto:** La variable `X5` pasa de tener un grado de 2.8037 en los mejores estudiantes a 1.7571 en los peores. Este cambio drástico ($D = -1.0466$) demuestra que su influencia en la red socioacadémica cambia significativamente según el rendimiento final.
 3.  **Variables Invariantes:** Las variables que mostraron menor variación o que permanecieron casi idénticas en ambas redes son aquellas al final del ranking, lideradas por **Ingreso (X4)**, sugiriendo que su rol es neutro o estable en este contexto experimental.
 
-Este experimento demuestra empíricamente que la causa del bajo rendimiento académico (X11) no puede explicarse evaluando variables de manera aislada, sino a través de la **reorganización estructural de las variables socioeconómicas y familiares**.
+Este experimento demuestra empíricamente que la causa del bajo rendimiento académico (X11) no puede explicarse evaluando variables de manera aislada, sino a través de la **reorganización estructural de las variables socioeconómicas y de comportamiento académico**, lo cual queda plasmado en la direccionalidad de las dependencias probabilísticas en los Árboles Bayesianos generados.

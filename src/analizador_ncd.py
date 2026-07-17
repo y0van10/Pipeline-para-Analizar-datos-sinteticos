@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from itertools import combinations
 
-class NCDAnalyzer:
+class AnalizadorNCD:
     """
     Clase encargada de calcular las matrices NCD (Normalized Compression Distance)
     para cada partición utilizando compresión Gzip.
@@ -15,9 +15,9 @@ class NCDAnalyzer:
         "X9_asistencia", "X10_cursos_desaprobados"
     ]
 
-    def __init__(self, output_dir="results/matrices", gzip_level=9):
-        self.output_dir = os.path.normpath(output_dir)
-        self.gzip_level = gzip_level
+    def __init__(self, dir_salida="results/matrices", nivel_gzip=9):
+        self.dir_salida = os.path.normpath(dir_salida)
+        self.nivel_gzip = nivel_gzip
         self.matrices = {}
 
     def _columna_a_texto(self, serie):
@@ -25,7 +25,7 @@ class NCDAnalyzer:
 
     def _comprimir_y_medir(self, texto):
         datos = texto.encode("utf-8")
-        return len(gzip.compress(datos, compresslevel=self.gzip_level))
+        return len(gzip.compress(datos, compresslevel=self.nivel_gzip))
 
     def calcular_ncd(self, txt_x, txt_y):
         cx = self._comprimir_y_medir(txt_x)
@@ -36,7 +36,7 @@ class NCDAnalyzer:
         return float(np.clip(ncd, 0.0, 1.0))
 
     def procesar_particiones(self, particiones):
-        os.makedirs(self.output_dir, exist_ok=True)
+        os.makedirs(self.dir_salida, exist_ok=True)
         self.matrices = {}
 
         for nombre, df in particiones.items():
@@ -67,7 +67,7 @@ class NCDAnalyzer:
             self.matrices[nombre] = df_matriz
 
             # Guardar a disco
-            path = os.path.join(self.output_dir, f"ncd_{nombre}.csv")
+            path = os.path.join(self.dir_salida, f"ncd_{nombre}.csv")
             df_matriz.to_csv(path)
             print(f"      💾 Matriz guardada: ncd_{nombre}.csv")
 

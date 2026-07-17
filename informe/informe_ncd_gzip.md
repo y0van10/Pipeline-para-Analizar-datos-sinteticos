@@ -2,7 +2,7 @@
 
 Este informe documenta los resultados del experimento automatizado llevado a cabo sobre el modelo de factores socioacadémicos utilizando la distancia de compresión normalizada (NCD) con el compresor Gzip.
 
-**Fecha de ejecución:** 16/07/2026 13:40  
+**Fecha de ejecución:** 16/07/2026 21:09  
 **Total de estudiantes analizados:** 18000
 
 ---

@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 
-class ReportGenerator:
+class GeneradorReportes:
     """
     Clase encargada de consolidar los resultados obtenidos en las etapas del pipeline
     y redactar el reporte final estructurado en Markdown.
@@ -13,8 +13,8 @@ class ReportGenerator:
         "X9": "Asistencia", "X10": "Cursos Desaprobados"
     }
 
-    def __init__(self, output_path="informe/informe_ncd_gzip.md"):
-        self.output_path = os.path.normpath(output_path)
+    def __init__(self, ruta_informe="informe/informe_ncd_gzip.md"):
+        self.ruta_informe = os.path.normpath(ruta_informe)
 
     def _generar_tabla_markdown(self, df, max_decimales=4):
         cols = df.columns.tolist()
@@ -35,7 +35,7 @@ class ReportGenerator:
         return "\n".join(lineas)
 
     def escribir_reporte(self, reporte_limpieza, particiones, matrices, topologias, comparaciones):
-        os.makedirs(os.path.dirname(self.output_path), exist_ok=True)
+        os.makedirs(os.path.dirname(self.ruta_informe), exist_ok=True)
         fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
         n_estudiantes = reporte_limpieza.get("final", "N/A")
 
@@ -131,11 +131,11 @@ El análisis comparativo de las topologías revela cambios estructurales crític
 Este experimento demuestra empíricamente que la causa del bajo rendimiento académico (X11) no puede explicarse evaluando variables de manera aislada, sino a través de la **reorganización estructural de las variables socioeconómicas y familiares**.
 """
 
-        with open(self.output_path, "w", encoding="utf-8") as f:
+        with open(self.ruta_informe, "w", encoding="utf-8") as f:
             f.write(md)
 
-        print(f"   💾 Informe guardado: {self.output_path}")
-        return self.output_path
+        print(f"   💾 Informe guardado: {self.ruta_informe}")
+        return self.ruta_informe
 
     def ejecutar(self, reporte_limpieza, particiones, matrices, topologias, comparaciones):
         return self.escribir_reporte(reporte_limpieza, particiones, matrices, topologias, comparaciones)

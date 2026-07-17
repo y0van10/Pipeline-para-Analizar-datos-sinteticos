@@ -9,7 +9,7 @@ import pandas as pd
 from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.spatial.distance import squareform
 
-class TopologyManager:
+class GestorTopologias:
     """
     Clase encargada de construir las topologías de red (MST), heatmaps y dendrogramas
     a partir de las matrices de distancias NCD de cada partición.
@@ -21,9 +21,9 @@ class TopologyManager:
         "X10": "Desaprobados"
     }
 
-    def __init__(self, output_dir="results/graficos"):
-        self.output_dir = os.path.normpath(output_dir)
-        self.topologies = {}
+    def __init__(self, dir_salida="results/graficos"):
+        self.dir_salida = os.path.normpath(dir_salida)
+        self.topologias = {}
 
     def construir_grafo_completo(self, df_matriz):
         G = nx.Graph()
@@ -76,7 +76,7 @@ class TopologyManager:
         ax.axis("off")
 
         plt.tight_layout()
-        path = os.path.join(self.output_dir, f"mst_{nombre}.png")
+        path = os.path.join(self.dir_salida, f"mst_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
@@ -105,7 +105,7 @@ class TopologyManager:
         ax.set_title(f"Matriz NCD - {tipo} ({pct}%)\nDistancias entre Variables X1-X10", fontsize=12, fontweight="bold")
         
         plt.tight_layout()
-        path = os.path.join(self.output_dir, f"heatmap_{nombre}.png")
+        path = os.path.join(self.dir_salida, f"heatmap_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
@@ -141,7 +141,7 @@ class TopologyManager:
         ax.grid(axis="y", alpha=0.3, linestyle="--")
 
         plt.tight_layout()
-        path = os.path.join(self.output_dir, f"dendrograma_{nombre}.png")
+        path = os.path.join(self.dir_salida, f"dendrograma_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
@@ -185,14 +185,14 @@ class TopologyManager:
 
             fig.suptitle(f"Comparación de Dendrogramas - Partición {nivel}%\n¿Cómo cambia el agrupamiento de variables entre Best y Worst?", fontsize=14, fontweight="bold")
             plt.tight_layout()
-            path = os.path.join(self.output_dir, f"dendrograma_comparativo_{nivel}.png")
+            path = os.path.join(self.dir_salida, f"dendrograma_comparativo_{nivel}.png")
             plt.savefig(path, dpi=150, bbox_inches="tight")
             plt.close()
             print(f"   💾 Dendrograma comparativo generado: dendrograma_comparativo_{nivel}.png")
 
     def construir_topologias(self, matrices):
-        os.makedirs(self.output_dir, exist_ok=True)
-        self.topologies = {}
+        os.makedirs(self.dir_salida, exist_ok=True)
+        self.topologias = {}
 
         for nombre, df_matriz in matrices.items():
             print(f"\n   🔧 Construyendo topología para {nombre}...")
@@ -207,7 +207,7 @@ class TopologyManager:
             self.graficar_heatmap(df_matriz, nombre)
             self.graficar_dendrograma(df_matriz, nombre)
 
-            self.topologies[nombre] = {
+            self.topologias[nombre] = {
                 "mst": mst,
                 "grados": grados,
                 "grafo_completo": G,
@@ -215,7 +215,7 @@ class TopologyManager:
             }
             print(f"      ✅ Red construida. MST, Heatmap y Dendrograma guardados en disco.")
 
-        return self.topologies
+        return self.topologias
 
     def ejecutar(self, matrices):
         return self.construir_topologias(matrices)

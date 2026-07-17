@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-class DataCleaner:
+class LimpiadorDatos:
     """
     Clase encargada de cargar, validar y limpiar el dataset de estudiantes.
     """
@@ -11,54 +11,54 @@ class DataCleaner:
         "X9_asistencia", "X10_cursos_desaprobados", "X11_promedio_final"
     ]
 
-    def __init__(self, data_path):
-        self.data_path = os.path.normpath(data_path)
-        self.raw_df = None
-        self.cleaned_df = None
-        self.report = {}
+    def __init__(self, ruta_datos):
+        self.ruta_datos = os.path.normpath(ruta_datos)
+        self.df_original = None
+        self.df_limpio = None
+        self.reporte = {}
 
     def cargar_datos(self):
-        print(f"   📂 Leyendo: {self.data_path}")
+        print(f"   📂 Leyendo: {self.ruta_datos}")
         try:
-            self.raw_df = pd.read_csv(self.data_path, encoding="utf-8")
+            self.df_original = pd.read_csv(self.ruta_datos, encoding="utf-8")
         except UnicodeDecodeError:
-            self.raw_df = pd.read_csv(self.data_path, encoding="latin-1")
+            self.df_original = pd.read_csv(self.ruta_datos, encoding="latin-1")
             print("   ⚠️  Codificación cambiada a latin-1")
-        print(f"   ✅ Datos cargados: {self.raw_df.shape[0]} filas × {self.raw_df.shape[1]} columnas")
-        return self.raw_df
+        print(f"   ✅ Datos cargados: {self.df_original.shape[0]} filas × {self.df_original.shape[1]} columnas")
+        return self.df_original
 
     def validar_columnas(self):
-        if self.raw_df is None:
+        if self.df_original is None:
             raise ValueError("❌ No hay datos cargados. Llama a cargar_datos() primero.")
             
-        if list(self.raw_df.columns) == self.COLUMNAS_ESPERADAS:
+        if list(self.df_original.columns) == self.COLUMNAS_ESPERADAS:
             print("   ✅ Columnas correctas")
             return
             
-        if self.raw_df.shape[1] == len(self.COLUMNAS_ESPERADAS):
+        if self.df_original.shape[1] == len(self.COLUMNAS_ESPERADAS):
             print("   ⚠️  Nombres de columnas no coinciden, renombrando por posición...")
-            self.raw_df.columns = self.COLUMNAS_ESPERADAS
+            self.df_original.columns = self.COLUMNAS_ESPERADAS
             print("   ✅ Columnas renombradas correctamente")
             return
 
         raise ValueError(
-            f"❌ El dataset tiene {self.raw_df.shape[1]} columnas, se esperaban {len(self.COLUMNAS_ESPERADAS)}.\n"
-            f"   Columnas encontradas: {list(self.raw_df.columns)}"
+            f"❌ El dataset tiene {self.df_original.shape[1]} columnas, se esperaban {len(self.COLUMNAS_ESPERADAS)}.\n"
+            f"   Columnas encontradas: {list(self.df_original.columns)}"
         )
 
     def limpiar_datos(self):
-        if self.raw_df is None:
+        if self.df_original is None:
             raise ValueError("❌ No hay datos cargados. Llama a cargar_datos() primero.")
 
-        df = self.raw_df.copy()
+        df = self.df_original.copy()
         n_original = len(df)
-        self.report = {"original": n_original}
+        self.reporte = {"original": n_original}
 
         # 1. Duplicados
         n_antes = len(df)
         df = df.drop_duplicates()
         n_dup = n_antes - len(df)
-        self.report["duplicados_eliminados"] = n_dup
+        self.reporte["duplicados_eliminados"] = n_dup
         if n_dup > 0:
             print(f"   🗑️  Duplicados eliminados: {n_dup}")
         else:
@@ -74,7 +74,7 @@ class DataCleaner:
             print(f"   🗑️  Filas eliminadas por nulos: {n_antes - len(df)}")
         else:
             print(f"   ✅ Sin valores nulos")
-        self.report["nulos_eliminados"] = n_antes - len(df)
+        self.reporte["nulos_eliminados"] = n_antes - len(df)
 
         # 3. Convertir columnas numéricas
         cols_numericas = ["X3_ciclo", "X4_ingreso_familiar", "X8_tam_familiar",
@@ -84,7 +84,7 @@ class DataCleaner:
 
         n_antes = len(df)
         df = df.dropna()
-        self.report["no_numericos_eliminados"] = n_antes - len(df)
+        self.reporte["no_numericos_eliminados"] = n_antes - len(df)
 
         # 4. Validaciones lógicas
         n_antes = len(df)
@@ -94,24 +94,24 @@ class DataCleaner:
         df = df[df["X9_asistencia"] <= 100]
         df = df[df["X10_cursos_desaprobados"] >= 0]
         df = df[df["X4_ingreso_familiar"] >= 0]
-        self.report["fuera_rango_eliminados"] = n_antes - len(df)
+        self.reporte["fuera_rango_eliminados"] = n_antes - len(df)
 
         df = df.reset_index(drop=True)
-        self.cleaned_df = df
+        self.df_limpio = df
 
-        self.report["final"] = len(df)
-        self.report["total_eliminados"] = n_original - len(df)
+        self.reporte["final"] = len(df)
+        self.reporte["total_eliminados"] = n_original - len(df)
 
         print(f"\n   📊 RESUMEN DE LIMPIEZA:")
-        print(f"      Filas originales:  {self.report['original']}")
-        print(f"      Filas eliminadas:  {self.report['total_eliminados']}")
-        print(f"      Filas finales:     {self.report['final']}")
-        print(f"      Retención:         {100 * self.report['final'] / self.report['original']:.1f}%\n")
+        print(f"      Filas originales:  {self.reporte['original']}")
+        print(f"      Filas eliminadas:  {self.reporte['total_eliminados']}")
+        print(f"      Filas finales:     {self.reporte['final']}")
+        print(f"      Retención:         {100 * self.reporte['final'] / self.reporte['original']:.1f}%\n")
         
-        return self.cleaned_df
+        return self.df_limpio
 
     def ejecutar(self):
         self.cargar_datos()
         self.validar_columnas()
         self.limpiar_datos()
-        return self.cleaned_df, self.report
+        return self.df_limpio, self.reporte

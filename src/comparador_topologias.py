@@ -5,7 +5,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-class TopologyComparator:
+class ComparadorTopologias:
     """
     Clase encargada de comparar las topologías Best vs Worst para cada partición,
     calcular el cambio en centralidad (D = Worst - Best) y graficar los resultados.
@@ -17,10 +17,10 @@ class TopologyComparator:
         "X10": "Desaprobados"
     }
 
-    def __init__(self, output_dir_tablas="results/tablas", output_dir_graficos="results/graficos"):
-        self.output_dir_tablas = os.path.normpath(output_dir_tablas)
-        self.output_dir_graficos = os.path.normpath(output_dir_graficos)
-        self.comparisons = {}
+    def __init__(self, dir_tablas="results/tablas", dir_graficos="results/graficos"):
+        self.dir_tablas = os.path.normpath(dir_tablas)
+        self.dir_graficos = os.path.normpath(dir_graficos)
+        self.comparaciones = {}
 
     def comparar_grados(self, grados_best, grados_worst):
         filas = []
@@ -67,12 +67,12 @@ class TopologyComparator:
 
         # --- Subplot 2: Diferencia D = Worst - Best ---
         ax2 = axes[1]
-        df_sorted = df_comp.sort_values("Diferencia_D")
-        colores = ["#EF5350" if d > 0 else "#42A5F5" for d in df_sorted["Diferencia_D"]]
+        df_ordenado = df_comp.sort_values("Diferencia_D")
+        colores = ["#EF5350" if d > 0 else "#42A5F5" for d in df_ordenado["Diferencia_D"]]
 
         bars = ax2.barh(
-            [f"{row['Variable']} ({row['Nombre']})" for _, row in df_sorted.iterrows()],
-            df_sorted["Diferencia_D"],
+            [f"{row['Variable']} ({row['Nombre']})" for _, row in df_ordenado.iterrows()],
+            df_ordenado["Diferencia_D"],
             color=colores, edgecolor="white"
         )
 
@@ -82,7 +82,7 @@ class TopologyComparator:
         ax2.grid(axis="x", alpha=0.3)
 
         # Anotar valores
-        for bar, val in zip(bars, df_sorted["Diferencia_D"]):
+        for bar, val in zip(bars, df_ordenado["Diferencia_D"]):
             ax2.text(val + (0.002 if val >= 0 else -0.002),
                      bar.get_y() + bar.get_height()/2,
                      f"{val:+.4f}", va="center",
@@ -90,7 +90,7 @@ class TopologyComparator:
                      fontsize=8, fontweight="bold")
 
         plt.tight_layout()
-        path = os.path.join(self.output_dir_graficos, f"comparacion_{nombre_base}.png")
+        path = os.path.join(self.dir_graficos, f"comparacion_{nombre_base}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
@@ -134,15 +134,15 @@ class TopologyComparator:
         ax.grid(axis="y", alpha=0.3)
 
         plt.tight_layout()
-        path = os.path.join(self.output_dir_graficos, "resumen_comparacion_global.png")
+        path = os.path.join(self.dir_graficos, "resumen_comparacion_global.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
 
     def comparar_topologias(self, topologias):
-        os.makedirs(self.output_dir_tablas, exist_ok=True)
-        os.makedirs(self.output_dir_graficos, exist_ok=True)
-        self.comparisons = {}
+        os.makedirs(self.dir_tablas, exist_ok=True)
+        os.makedirs(self.dir_graficos, exist_ok=True)
+        self.comparaciones = {}
 
         # Identificar niveles (ej: 12.5, 25, 50)
         niveles = set(n.split("_")[1] for n in topologias.keys())
@@ -162,13 +162,13 @@ class TopologyComparator:
             grados_worst = topologias[nombre_worst]["grados"]
 
             df_comp = self.comparar_grados(grados_best, grados_worst)
-            self.comparisons[nivel] = df_comp
+            self.comparaciones[nivel] = df_comp
 
             # Identificar máximo y mínimo cambio para imprimir
             var_max_cambio = df_comp.iloc[0]
             var_min_cambio = df_comp.iloc[-1]
 
-            print(f"\n   {'Variable':<10} {'Nombre':<14} {'Best':>10} {'Worst':>10} {'D=W-B':>10}")
+            print(f"\n   Variable   Nombre               Best      Worst      D=W-B")
             print(f"   " + "─" * 55)
             for _, row in df_comp.iterrows():
                 indicador = ""
@@ -186,7 +186,7 @@ class TopologyComparator:
                   f"| D = {var_min_cambio['Diferencia_D']:+.4f}")
 
             # Guardar tabla CSV
-            path_csv = os.path.join(self.output_dir_tablas, f"comparacion_{nivel}.csv")
+            path_csv = os.path.join(self.dir_tablas, f"comparacion_{nivel}.csv")
             df_comp.to_csv(path_csv, index=False)
             print(f"   💾 Tabla guardada: comparacion_{nivel}.csv")
 
@@ -194,9 +194,9 @@ class TopologyComparator:
             self.graficar_comparacion(df_comp, nivel)
 
         # Generar gráfico resumen global
-        self.graficar_resumen_global(self.comparisons)
+        self.graficar_resumen_global(self.comparaciones)
 
-        return self.comparisons
+        return self.comparaciones
 
     def ejecutar(self, topologias):
         return self.comparar_topologias(topologias)

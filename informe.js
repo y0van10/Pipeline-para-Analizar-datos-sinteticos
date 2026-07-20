@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const {
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
   Table, TableRow, TableCell, WidthType, BorderStyle, ImageRun,
@@ -104,9 +105,9 @@ const bestNames = { X1: "Sexo", X2: "Zona geográfica", X3: "Ciclo académico", 
 const varTableRows = Object.entries(bestNames).map(([k, v]) => [k, v, (k === "X1" || k === "X2" || k === "X5" || k === "X6" || k === "X7") ? "Categórica" : (k === "X11" ? "Numérica (clasificación)" : "Numérica")]);
 
 const partRows = [
-  ["12.5%", "2250 estudiantes con mayor promedio", "2250 estudiantes con menor promedio"],
-  ["25%", "4500 estudiantes", "4500 estudiantes"],
-  ["50%", "9000 estudiantes", "9000 estudiantes"]
+  ["12.5%", "8 bloques continuos (Best_12.5_1 a 4, Worst_12.5_1 a 4)", "results/nivel_12.5/tablas/"],
+  ["25%", "4 cuartiles continuos (Best_25_1, Best_25_2, Worst_25_1, Worst_25_2)", "results/nivel_25/tablas/"],
+  ["50%", "2 bloques (Best_50, Worst_50)", "results/nivel_50/tablas/"]
 ];
 
 function ncdMatrixTable(matrix) {
@@ -244,149 +245,64 @@ children.push(
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40 }, children: [new TextRun({ text: "UNIVERSIDAD NACIONAL DEL ALTIPLANO - PUNO", bold: true, size: 26, font: "Calibri" })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 300 }, children: [new TextRun({ text: "Facultad de Ingeniería de Sistemas", size: 22, font: "Calibri" })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 600, after: 200 }, children: [new TextRun({ text: "INFORME", bold: true, size: 36, font: "Calibri" })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 600 }, children: [new TextRun({ text: "Análisis de Comportamiento Académico con NCD/Gzip", bold: true, size: 28, font: "Calibri" })] }),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 600 }, children: [new TextRun({ text: "Análisis de Comportamiento Académico con NCD/Gzip y Redes Bayesianas", bold: true, size: 28, font: "Calibri" })] }),
   new Paragraph({ spacing: { before: 800, after: 80 }, children: [new TextRun({ text: "Estudiante: ", bold: true, size: 22, font: "Calibri" }), new TextRun({ text: "Jhoel Yovani Ticona Erquinigo", size: 22, font: "Calibri" })] }),
   new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Curso: ", bold: true, size: 22, font: "Calibri" }), new TextRun({ text: "Ciberseguridad - 9no Semestre", size: 22, font: "Calibri" })] }),
   new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Docente: ", bold: true, size: 22, font: "Calibri" }), new TextRun({ text: "Juárez Ruelas José Luis", size: 22, font: "Calibri" })] }),
-  new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Fecha: ", bold: true, size: 22, font: "Calibri" }), new TextRun({ text: "06 de julio de 2026", size: 22, font: "Calibri" })] }),
+  new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: "Fecha: ", bold: true, size: 22, font: "Calibri" }), new TextRun({ text: "20 de julio de 2026", size: 22, font: "Calibri" })] }),
   new Paragraph({ children: [new PageBreak()] })
 );
 
 children.push(h1("1. Introducción"));
-children.push(p("El presente informe documenta el experimento de análisis de patrones académicos utilizando la métrica Normalized Compression Distance (NCD) con compresión Gzip.", { justify: true }));
-children.push(p("El objetivo es descubrir qué factores socioeconómicos y académicos se comportan de manera diferente entre estudiantes de alto y bajo rendimiento, revelando las posibles causas del éxito o fracaso académico.", { justify: true }));
+children.push(p("El presente informe documenta el experimento de análisis de patrones académicos utilizando la métrica Normalized Compression Distance (NCD) con compresión Gzip, particionamiento jerárquico por bloques y Árboles Bayesianos Probabilísticos.", { justify: true }));
 
 children.push(h1("2. Objetivo"));
 children.push(p("Aplicar un pipeline completo de análisis basado en NCD/Gzip para:", { justify: true }));
-children.push(numbered("Dividir a los estudiantes según su rendimiento académico (X11 - Promedio Final)."));
-children.push(numbered("Calcular distancias entre variables explicativas (X1-X10) dentro de cada grupo."));
-children.push(numbered("Construir topologías de red (MST) que representen las relaciones entre variables."));
+children.push(numbered("Dividir a los estudiantes según su rendimiento académico (X11 - Promedio Final) en bloques contiguos (50%, 25% y 12.5%)."));
+children.push(numbered("Calcular distancias NCD entre variables explicativas (X1-X10) leyendo archivos CSV desde disco."));
+children.push(numbered("Construir topologías de red (MST), Heatmaps y Dendrogramas por nivel."));
+children.push(numbered("Construir Árboles Bayesianos dirigidos basados en la probabilidad conjunta máxima."));
 children.push(numbered("Comparar las redes Best vs Worst para identificar qué variables cambian más."));
-children.push(p([new TextRun({ text: "Pregunta central: ", bold: true, size: 21, font: "Calibri" }), new TextRun({ text: "¿Qué variables (causas) explican la diferencia entre estudiantes con alto y bajo promedio final?", italics: true, size: 21, font: "Calibri" })]));
 
 children.push(h1("3. Descripción del Dataset"));
 children.push(makeTable(["Característica", "Valor"], [
-  ["Total de estudiantes (después de limpieza)", "18000"],
+  ["Total de estudiantes", "18000"],
   ["Variables explicativas", "X1 a X10 (10 variables)"],
-  ["Variable de clasificación", "X11 - Promedio Final"],
-  ["Duplicados eliminados", "0"],
-  ["Nulos eliminados", "0"]
+  ["Variable objetivo", "X11 - Promedio Final"],
+  ["Bloques generados", "14 archivos CSV en results/"]
 ], [5500, 3000]));
-children.push(new Paragraph({ spacing: { before: 200 } }));
-children.push(h2("Variables del estudio"));
-children.push(makeTable(["Variable", "Descripción", "Tipo"], varTableRows, [1200, 4500, 2800]));
-children.push(p("Nota: X11 se usa exclusivamente para clasificar estudiantes en Best/Worst. Las variables X1-X10 son las que se analizan con NCD para descubrir patrones.", { justify: true }));
 
-children.push(h1("4. Metodología"));
-children.push(h2("4.1 Limpieza de datos"));
-children.push(p("Se eliminaron filas con valores nulos, duplicados y datos fuera de rango lógico (promedio < 0 o > 20, asistencia < 0 o > 100, etc.).", { justify: true }));
+function addImageIfExists(filePath, titleText, w = 450, h = 300) {
+  if (fs.existsSync(filePath)) {
+    const buf = fs.readFileSync(filePath);
+    children.push(h3(titleText));
+    children.push(new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 200 },
+      children: [new ImageRun({ type: "png", data: buf, transformation: { width: w, height: h } })]
+    }));
+  }
+}
 
-children.push(h2("4.2 Particionamiento por rendimiento académico"));
-children.push(p("Los estudiantes se ordenaron por X11 (promedio final) y se crearon particiones:", { justify: true }));
-children.push(makeTable(["Nivel", "Best (Top)", "Worst (Bottom)"], partRows, [1500, 3800, 3200]));
+children.push(h1("4. Gráficos y Visualizaciones"));
 
-children.push(h2("4.3 Cálculo de NCD/Gzip"));
-children.push(p("Para cada partición se calculó una matriz de distancia 10×10 entre las variables X1 a X10 usando la fórmula:", { justify: true }));
-children.push(code(["NCD(x, y) = (C(xy) - min(C(x), C(y))) / max(C(x), C(y))"]));
-children.push(p("Donde:"));
-children.push(bullet("C(x) = tamaño comprimido de la columna x con gzip (nivel 9)"));
-children.push(bullet("Cada columna se convirtió a cadena de texto antes de comprimir"));
-children.push(bullet("NCD ≈ 0 → variables muy similares/relacionadas"));
-children.push(bullet("NCD ≈ 1 → variables muy diferentes"));
+children.push(h2("4.1 Redes Bayesianas Dirigidas"));
+addImageIfExists("results/global/arbol_bayesiano_Completo.png", "Árbol Bayesiano Dirigido - Dataset Completo");
+addImageIfExists("results/nivel_50/graficos/arbol_bayesiano_Best_50.png", "Árbol Bayesiano - Best 50%");
+addImageIfExists("results/nivel_50/graficos/arbol_bayesiano_Worst_50.png", "Árbol Bayesiano - Worst 50%");
 
-children.push(h2("4.4 Construcción de topologías de red"));
-children.push(p("Con cada matriz NCD se construyó un Minimum Spanning Tree (MST) usando NetworkX:", { justify: true }));
-children.push(bullet("10 nodos = 10 variables"));
-children.push(bullet("Aristas = distancia NCD entre variables"));
-children.push(bullet("El MST conecta todas las variables con el mínimo peso total"));
+children.push(h2("4.2 Gráficos de Radar (Telaraña) Comparativos"));
+addImageIfExists("results/nivel_50/graficos/radar_comparativo_50.png", "Perfil Radar - Nivel 50%");
+addImageIfExists("results/nivel_25/graficos/radar_comparativo_25.png", "Perfil Radar - Nivel 25%");
+addImageIfExists("results/nivel_12.5/graficos/radar_comparativo_12.5.png", "Perfil Radar - Nivel 12.5%");
 
-children.push(h2("4.5 Comparación de topologías"));
-children.push(p("Se compararon las redes Best vs Worst calculando el grado ponderado de cada variable (suma de pesos de aristas conectadas en el MST) y la diferencia:", { justify: true }));
-children.push(code(["D = GradoPonderado_Worst - GradoPonderado_Best"]));
-children.push(bullet("D positivo grande → la variable aumenta su conexión en Worst (factor de riesgo)"));
-children.push(bullet("D negativo grande → la variable disminuye su conexión en Worst (factor protector)"));
+children.push(h2("4.3 Comparaciones Topológicas"));
+addImageIfExists("results/global/resumen_comparacion_global.png", "Resumen Global de Diferencias Topológicas");
 
-children.push(new Paragraph({ children: [new PageBreak()] }));
-children.push(h1("5. Resultados"));
-children.push(h2("5.1 Matrices NCD"));
-
-children.push(h3("Matriz NCD - BEST (12.5%)"));
-children.push(ncdMatrixTable(M_BEST_125));
-children.push(h3("Matriz NCD - BEST (25%)"));
-children.push(ncdMatrixTable(M_BEST_25));
-children.push(h3("Matriz NCD - BEST (50%)"));
-children.push(ncdMatrixTable(M_BEST_50));
-children.push(new Paragraph({ children: [new PageBreak()] }));
-children.push(h3("Matriz NCD - WORST (12.5%)"));
-children.push(ncdMatrixTable(M_WORST_125));
-children.push(h3("Matriz NCD - WORST (25%)"));
-children.push(ncdMatrixTable(M_WORST_25));
-children.push(h3("Matriz NCD - WORST (50%)"));
-children.push(ncdMatrixTable(M_WORST_50));
-
-children.push(new Paragraph({ children: [new PageBreak()] }));
-children.push(h2("5.2 Comparación de Topologías"));
-
-children.push(h3("Partición 12.5%"));
-children.push(compTable(comp125));
-children.push(p([new TextRun({ text: "Variable con MÁXIMO cambio: ", bold: true, size: 21, font: "Calibri" }), new TextRun({ text: "X5 (Trabaja) → D = -1.0466", size: 21, font: "Calibri" })]));
-children.push(p([new TextRun({ text: "Variable con MÍNIMO cambio: ", bold: true, size: 21, font: "Calibri" }), new TextRun({ text: "X4 (Ingreso Familiar) → D = +0.0000", size: 21, font: "Calibri" })]));
-
-children.push(h3("Partición 25%"));
-children.push(compTable(comp25));
-children.push(p([new TextRun({ text: "Variable con MÁXIMO cambio: ", bold: true, size: 21, font: "Calibri" }), new TextRun({ text: "X6 (Beca) → D = +1.0128", size: 21, font: "Calibri" })]));
-children.push(p([new TextRun({ text: "Variable con MÍNIMO cambio: ", bold: true, size: 21, font: "Calibri" }), new TextRun({ text: "X10 (Cursos Desaprobados) → D = +0.0000", size: 21, font: "Calibri" })]));
-
-children.push(h3("Partición 50%"));
-children.push(compTable(comp50));
-children.push(p([new TextRun({ text: "Variable con MÁXIMO cambio: ", bold: true, size: 21, font: "Calibri" }), new TextRun({ text: "X6 (Beca) → D = +1.0362", size: 21, font: "Calibri" })]));
-children.push(p([new TextRun({ text: "Variable con MÍNIMO cambio: ", bold: true, size: 21, font: "Calibri" }), new TextRun({ text: "X10 (Cursos Desaprobados) → D = +0.0000", size: 21, font: "Calibri" })]));
-
-children.push(new Paragraph({ children: [new PageBreak()] }));
-children.push(h1("6. Análisis de Variables Relevantes"));
-children.push(h2("Variables con mayor cambio estructural"));
-children.push(p("Las siguientes variables presentan los mayores cambios en su posición dentro de la red entre los grupos Best y Worst:", { justify: true }));
-children.push(bullet("X6 (Beca): máximo cambio en 2 de 3 particiones"));
-children.push(bullet("X5 (Trabaja): máximo cambio en 1 de 3 particiones"));
-
-children.push(h2("Variables con menor cambio estructural"));
-children.push(p("Las siguientes variables mantienen un comportamiento similar en ambos grupos:", { justify: true }));
-children.push(bullet("X10 (Cursos Desaprobados): mínimo cambio en 2 de 3 particiones"));
-children.push(bullet("X4 (Ingreso Familiar): mínimo cambio en 1 de 3 particiones"));
-
-children.push(h1("7. Discusión"));
-children.push(p("El análisis NCD/Gzip permitió revelar que las relaciones entre variables socioeconómicas y académicas no son iguales para estudiantes de alto y bajo rendimiento. Las variables que más cambian su posición en la topología de red son aquellas que tienen un comportamiento diferenciado según el grupo.", { justify: true }));
-children.push(p("Cuando una variable tiene un D positivo grande, significa que en el grupo Worst esa variable está más conectada/central en la red de relaciones, sugiriendo que juega un papel más determinante en el bajo rendimiento.", { justify: true }));
-children.push(p("Cuando una variable tiene un D negativo grande, significa que en el grupo Best esa variable tiene mayor centralidad, sugiriendo un rol protector o asociado al buen rendimiento.", { justify: true }));
-
-children.push(h1("8. Conclusiones"));
-children.push(numbered("La técnica NCD/Gzip permite cuantificar relaciones entre variables sin asumir distribuciones estadísticas ni linealidad."));
-children.push(numbered("Las topologías de red (MST) revelan la estructura de dependencias entre variables dentro de cada grupo de rendimiento."));
-children.push(numbered("La comparación de topologías identifica las variables que más cambian su comportamiento entre grupos, indicando posibles factores causales."));
-children.push(numbered("Los resultados son consistentes a través de las tres particiones (12.5%, 25%, 50%), lo que refuerza la robustez de los hallazgos."));
-
-children.push(h1("9. Reproducibilidad"));
-children.push(p("Para reproducir este análisis:"));
-children.push(code(["pip install -r requirements.txt", "python main.py"]));
-children.push(p("Los resultados se generan en:"));
-children.push(bullet("results/matrices/ → Matrices NCD (CSV)"));
-children.push(bullet("results/graficos/ → Gráficos de redes y comparaciones (PNG)"));
-children.push(bullet("results/tablas/ → Tablas comparativas (CSV)"));
-
-children.push(h1("10. Anexos"));
-children.push(h2("Archivos generados"));
-children.push(makeTable(["Carpeta", "Contenido"], [
-  ["results/matrices/", "6 matrices NCD (10×10) en formato CSV"],
-  ["results/graficos/", "Gráficos MST, heatmaps, comparaciones"],
-  ["results/tablas/", "Particiones y tablas comparativas"],
-  ["informe/", "Este informe en formato Markdown"]
-], [3500, 5300]));
-
-children.push(new Paragraph({
-  spacing: { before: 400 },
-  alignment: AlignmentType.CENTER,
-  children: [new TextRun({ text: "Informe generado automáticamente por el pipeline NCD/Gzip.", italics: true, size: 18, font: "Calibri" })]
-}));
+children.push(h1("5. Conclusiones"));
+children.push(numbered("El pipeline en POO ejecuta los 7 pasos procesando archivos CSV independientes por cada nivel."));
+children.push(numbered("Los Árboles Bayesianos dirigen adecuadamente las aristas utilizando probabilidades condicionales, resaltando el rendimiento (X11) como nodo central."));
+children.push(numbered("Los gráficos de Radar confirman visualmente las desviaciones socioeconómicas y académicas entre estudiantes de alto y bajo rendimiento."));
 
 const doc = new Document({
   numbering: {
@@ -429,5 +345,5 @@ const doc = new Document({
 
 Packer.toBuffer(doc).then(buf => {
   fs.writeFileSync("informe/Informe_NCD_Gzip_Ciberseguridad.docx", buf);
-  console.log("done");
+  console.log("Word docx successfully generated at informe/Informe_NCD_Gzip_Ciberseguridad.docx");
 });

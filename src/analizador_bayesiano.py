@@ -11,7 +11,8 @@ from itertools import combinations
 class AnalizadorBayesiano:
     """
     Clase encargada de construir Árboles Bayesianos (MSTs dirigidos) basados en la 
-    probabilidad conjunta de las variables discretizadas para cada partición leyendo desde disco.
+    probabilidad conjunta de las variables discretizadas con flechas ultraclaras y legibles.
+    También genera gráficos de Radar (Telaraña) comparativos.
     """
     NOMBRES_COMPLETOS = {
         "X1": "Sexo", "X2": "Zona", "X3": "Ciclo",
@@ -111,6 +112,7 @@ class AnalizadorBayesiano:
             p_u = (df_disc[u] == estado_u).sum() / n
             p_v = (df_disc[v] == estado_v).sum() / n
             
+            # Direccionar de menor probabilidad marginal a mayor
             if p_u <= p_v:
                 arbol_bayesiano.add_edge(u, v, weight=max_prob, state=(estado_u, estado_v))
             else:
@@ -121,40 +123,51 @@ class AnalizadorBayesiano:
         return arbol_bayesiano
 
     def graficar_arbol(self, arbol, nombre, nivel):
-        fig, ax = plt.subplots(figsize=(12, 10))
+        fig, ax = plt.subplots(figsize=(13, 11))
 
         categoricas = {"X1", "X2", "X5", "X6", "X7"}
-        numericas = {"X3", "X4", "X8", "X9", "X10"}
         target = {"X11"}
 
         colores_nodo = []
+        tamaños_nodo = []
         for nodo in arbol.nodes():
+            grado_in = arbol.in_degree(nodo)
+            grado_out = arbol.out_degree(nodo)
+            tamanio = 1400 + (grado_in + grado_out) * 200
+            tamaños_nodo.append(tamanio)
+
             if nodo in target:
-                colores_nodo.append("#66BB6A")
+                colores_nodo.append("#2E7D32")  # verde oscuro = Rendimiento X11
             elif nodo in categoricas:
-                colores_nodo.append("#FF7043")
+                colores_nodo.append("#E65100")  # naranja intenso = Categórica
             else:
-                colores_nodo.append("#42A5F5")
+                colores_nodo.append("#1565C0")  # azul intenso = Numérica
 
-        pos = nx.spring_layout(arbol, seed=42, k=2.0)
+        pos = nx.spring_layout(arbol, seed=42, k=2.2)
 
+        # Dibujar aristas dirigidas con arcos curvos y márgenes limpios
         nx.draw_networkx_edges(
             arbol, pos, ax=ax,
-            arrows=True, arrowstyle="-|>", arrowsize=20,
-            edge_color="#455A64", width=2.5, alpha=0.8
+            arrows=True, arrowstyle="-|>", arrowsize=25,
+            edge_color="#C62828", width=2.8, alpha=0.85,
+            connectionstyle="arc3,rad=0.12",
+            min_target_margin=30, min_source_margin=30
         )
 
+        # Dibujar nodos
         nx.draw_networkx_nodes(
-            arbol, pos, ax=ax, node_size=1300,
+            arbol, pos, ax=ax, node_size=tamaños_nodo,
             node_color=colores_nodo, edgecolors="white", linewidths=2.5
         )
 
+        # Etiquetas de nodos
         etiquetas = {n: f"{n}\n{self.NOMBRES_COMPLETOS.get(n, '')}" for n in arbol.nodes()}
         nx.draw_networkx_labels(
             arbol, pos, labels=etiquetas, ax=ax,
-            font_size=8, font_weight="bold", font_color="white"
+            font_size=9, font_weight="bold", font_color="white"
         )
 
+        # Etiquetas de aristas (Probabilidad Conjunta y Estado)
         etiquetas_aristas = {}
         for u, v, data in arbol.edges(data=True):
             prob = data["weight"]
@@ -163,16 +176,17 @@ class AnalizadorBayesiano:
 
         nx.draw_networkx_edge_labels(
             arbol, pos, edge_labels=etiquetas_aristas,
-            ax=ax, font_size=8, font_color="#37474F"
+            ax=ax, font_size=8, font_color="#D32F2F", font_weight="bold"
         )
 
-        parche_cat = mpatches.Patch(color="#FF7043", label="Variable Categórica")
-        parche_num = mpatches.Patch(color="#42A5F5", label="Variable Numérica")
-        parche_tar = mpatches.Patch(color="#66BB6A", label="Rendimiento (X11)")
+        # Leyenda explicativa
+        parche_cat = mpatches.Patch(color="#E65100", label="Variable Categórica (X1, X2, X5-X7)")
+        parche_num = mpatches.Patch(color="#1565C0", label="Variable Numérica (X3, X4, X8-X10)")
+        parche_tar = mpatches.Patch(color="#2E7D32", label="Target: Rendimiento (X11)")
         ax.legend(handles=[parche_cat, parche_num, parche_tar], loc="upper left", fontsize=10)
 
-        ax.set_title(f"Árbol Bayesiano Probabilístico (MST Dirigido) - {nombre}\n"
-                     f"Enlaces basados en Max Probabilidad Conjunta",
+        ax.set_title(f"Árbol Bayesiano Dirigido (Red Causal Probabilística) - {nombre}\n"
+                     f"Las flechas indican la dirección del condicionamiento | Pesos = P(Xi, Xj)",
                      fontsize=13, fontweight="bold")
         ax.axis("off")
 
@@ -186,21 +200,77 @@ class AnalizadorBayesiano:
         path = os.path.join(dir_g, f"arbol_bayesiano_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
-        print(f"      💾 Gráfico guardado: {path}")
+        print(f"      💾 Gráfico Bayesiano con flechas claras guardado: {path}")
+
+    def graficar_radar_comparativo(self, df_particiones):
+        """
+        Genera un Gráfico de Telaraña / Radar comparando las medias de los factores
+        entre el grupo de mayor y menor rendimiento.
+        """
+        pares = [
+            ("50", "Best_50", "Worst_50"),
+            ("25", "Best_25_1", "Worst_25_2"),
+            ("12.5", "Best_12.5_1", "Worst_12.5_4")
+        ]
+
+        for nivel, n_best, n_worst in pares:
+            if n_best not in df_particiones or n_worst not in df_particiones:
+                continue
+
+            df_b = df_particiones[n_best]["df"] if isinstance(df_particiones[n_best], dict) else df_particiones[n_best]
+            df_w = df_particiones[n_worst]["df"] if isinstance(df_particiones[n_worst], dict) else df_particiones[n_worst]
+
+            disc_b = self.discretizar_dataframe(df_b)
+            disc_w = self.discretizar_dataframe(df_w)
+
+            vars_radar = [f"X{i}" for i in range(1, 11)]
+            means_b = [disc_b[v].mean() for v in vars_radar]
+            means_w = [disc_w[v].mean() for v in vars_radar]
+
+            angles = np.linspace(0, 2 * np.pi, len(vars_radar), endpoint=False).tolist()
+            means_b += means_b[:1]
+            means_w += means_w[:1]
+            angles += angles[:1]
+
+            fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True))
+            
+            ax.plot(angles, means_b, color="#1E88E5", linewidth=2.5, linestyle="-", label=f"BEST ({n_best})")
+            ax.fill(angles, means_b, color="#1E88E5", alpha=0.25)
+
+            ax.plot(angles, means_w, color="#E53935", linewidth=2.5, linestyle="-", label=f"WORST ({n_worst})")
+            ax.fill(angles, means_w, color="#E53935", alpha=0.25)
+
+            labels_full = [f"{v}\n({self.NOMBRES_COMPLETOS[v]})" for v in vars_radar]
+            ax.set_xticks(angles[:-1])
+            ax.set_xticklabels(labels_full, fontsize=9, fontweight="bold")
+            ax.set_ylim(0, 1.0)
+            ax.set_title(f"Gráfico de Telaraña (Radar) - Nivel {nivel}%\nComparación de Perfiles Socioacadémicos", fontsize=12, fontweight="bold", pad=20)
+            ax.legend(loc="upper right", bbox_to_anchor=(1.15, 1.1), fontsize=10)
+
+            dir_g = os.path.join(self.dir_base, f"nivel_{nivel}", "graficos")
+            os.makedirs(dir_g, exist_ok=True)
+            path = os.path.join(dir_g, f"radar_comparativo_{nivel}.png")
+            plt.savefig(path, dpi=150, bbox_inches="tight")
+            plt.close()
+            print(f"      💾 Gráfico Radar comparativo guardado: {path}")
 
     def ejecutar_paso(self, df_limpio, particiones):
         self.arboles = {}
 
-        # 1. Construir árbol para el dataset completo
+        # 1. Árbol completo
         print("\n   🌳 Construyendo Árbol Bayesiano completo...")
         self.construir_arbol_bayesiano(df_limpio, "Completo", nivel="global")
 
-        # 2. Construir árbol para cada partición leyendo CSVs de disco
+        # 2. Árboles por bloque
         for nombre, info in particiones.items():
             nivel = info["nivel"]
             ruta_csv = info["ruta_csv"]
             df_part = pd.read_csv(ruta_csv)
             print(f"   🌳 Construyendo Árbol Bayesiano para {nombre} desde {os.path.basename(ruta_csv)}...")
             self.construir_arbol_bayesiano(df_part, nombre, nivel=nivel)
+
+        # 3. Graficar Radar Comparativo
+        print("\n   🕸️ Generando gráficos de Radar (Telaraña)...")
+        self.graficar_radar_comparativo(particiones)
 
         return self.arboles

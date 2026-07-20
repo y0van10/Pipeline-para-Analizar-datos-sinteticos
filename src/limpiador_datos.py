@@ -60,20 +60,20 @@ class LimpiadorDatos:
         n_dup = n_antes - len(df)
         self.reporte["duplicados_eliminados"] = n_dup
         if n_dup > 0:
-            print(f"   🗑️  Duplicados eliminados: {n_dup}")
+            print(f"     Duplicados eliminados: {n_dup}")
         else:
-            print(f"   ✅ Sin duplicados")
+            print(f"    Sin duplicados")
 
         # 2. Valores nulos
         n_antes = len(df)
         nulos_por_col = df.isnull().sum()
         nulos_total = nulos_por_col.sum()
         if nulos_total > 0:
-            print(f"   ⚠️  Valores nulos encontrados: {nulos_total}")
+            print(f"     Valores nulos encontrados: {nulos_total}")
             df = df.dropna()
-            print(f"   🗑️  Filas eliminadas por nulos: {n_antes - len(df)}")
+            print(f"     Filas eliminadas por nulos: {n_antes - len(df)}")
         else:
-            print(f"   ✅ Sin valores nulos")
+            print(f"    Sin valores nulos")
         self.reporte["nulos_eliminados"] = n_antes - len(df)
 
         # 3. Convertir columnas numéricas
@@ -102,7 +102,7 @@ class LimpiadorDatos:
         self.reporte["final"] = len(df)
         self.reporte["total_eliminados"] = n_original - len(df)
 
-        print(f"\n   📊 RESUMEN DE LIMPIEZA:")
+        print(f"\n    RESUMEN DE LIMPIEZA:")
         print(f"      Filas originales:  {self.reporte['original']}")
         print(f"      Filas eliminadas:  {self.reporte['total_eliminados']}")
         print(f"      Filas finales:     {self.reporte['final']}")

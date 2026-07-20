@@ -2,8 +2,6 @@
 =============================================================
   PIPELINE POO: NCD/Gzip - Análisis Académico (Español)
 =============================================================
-Ejecuta el pipeline completo estructurado bajo el paradigma
-de Programación Orientada a Objetos (POO) con nomenclatura en español.
 
 USO:
   python main.py
@@ -28,7 +26,6 @@ if __name__ == "__main__":
     # Inicializar el pipeline en base a la clase orquestadora POO en español
     pipeline = PipelineAcademico(
         ruta_datos="data/estudiantes.csv",
-        niveles_particion=[0.125, 0.25, 0.50],
         nivel_gzip=9
     )
     

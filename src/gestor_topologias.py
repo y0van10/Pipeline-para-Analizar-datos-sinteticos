@@ -12,7 +12,8 @@ from scipy.spatial.distance import squareform
 class GestorTopologias:
     """
     Clase encargada de construir las topologías de red (MST), heatmaps y dendrogramas
-    a partir de las matrices de distancias NCD de cada partición.
+    a partir de las matrices de distancias NCD de cada partición, guardando las imágenes
+    en las carpetas organizadas por nivel.
     """
     NOMBRES_COMPLETOS = {
         "X1": "Sexo", "X2": "Zona", "X3": "Ciclo",
@@ -21,8 +22,8 @@ class GestorTopologias:
         "X10": "Desaprobados"
     }
 
-    def __init__(self, dir_salida="results/graficos"):
-        self.dir_salida = os.path.normpath(dir_salida)
+    def __init__(self, dir_base="results"):
+        self.dir_base = os.path.normpath(dir_base)
         self.topologias = {}
 
     def construir_grafo_completo(self, df_matriz):
@@ -46,14 +47,18 @@ class GestorTopologias:
             grados[nodo] = round(peso_total, 6)
         return grados
 
-    def graficar_mst(self, mst, nombre):
+    def _obtener_dir_graficos(self, nivel):
+        dir_g = os.path.join(self.dir_base, f"nivel_{nivel}", "graficos")
+        os.makedirs(dir_g, exist_ok=True)
+        return dir_g
+
+    def graficar_mst(self, mst, nombre, nivel):
         fig, ax = plt.subplots(figsize=(12, 10))
         categoricas = {"X1", "X2", "X5", "X6", "X7"}
         
         colores_nodo = ["#FF7043" if n in categoricas else "#42A5F5" for n in mst.nodes()]
         pos = nx.spring_layout(mst, seed=42, k=2.5)
 
-        # Medir espesores de aristas
         pesos = [mst[u][v]["weight"] for u, v in mst.edges()]
         peso_max = max(pesos) if pesos else 1
         anchos = [3.0 * (1 - w / peso_max) + 0.5 for w in pesos]
@@ -70,18 +75,18 @@ class GestorTopologias:
         parche_num = mpatches.Patch(color="#42A5F5", label="Numérica")
         ax.legend(handles=[parche_cat, parche_num], loc="upper left", fontsize=10)
 
-        tipo = "BEST (Alto rendimiento)" if "Best" in nombre else "WORST (Bajo rendimiento)"
-        pct = nombre.split("_")[1]
-        ax.set_title(f"Árbol de Expansión Mínima (MST) - {tipo}\nPartición: {pct}% | Variables X1-X10", fontsize=13, fontweight="bold")
+        tipo = "BEST" if "Best" in nombre else "WORST"
+        ax.set_title(f"Árbol de Expansión Mínima (MST) - {nombre}\nPartición Nivel {nivel}% | Variables X1-X10", fontsize=13, fontweight="bold")
         ax.axis("off")
 
         plt.tight_layout()
-        path = os.path.join(self.dir_salida, f"mst_{nombre}.png")
+        dir_g = self._obtener_dir_graficos(nivel)
+        path = os.path.join(dir_g, f"mst_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
 
-    def graficar_heatmap(self, df_matriz, nombre):
+    def graficar_heatmap(self, df_matriz, nombre, nivel):
         fig, ax = plt.subplots(figsize=(10, 8))
         datos = df_matriz.values
         etiquetas = list(df_matriz.index)
@@ -100,17 +105,16 @@ class GestorTopologias:
                 color_texto = "white" if datos[i, j] > 0.7 else "black"
                 ax.text(j, i, f"{datos[i, j]:.3f}", ha="center", va="center", fontsize=7, color=color_texto)
 
-        tipo = "BEST" if "Best" in nombre else "WORST"
-        pct = nombre.split("_")[1]
-        ax.set_title(f"Matriz NCD - {tipo} ({pct}%)\nDistancias entre Variables X1-X10", fontsize=12, fontweight="bold")
+        ax.set_title(f"Matriz NCD - {nombre} (Nivel {nivel}%)\nDistancias entre Variables X1-X10", fontsize=12, fontweight="bold")
         
         plt.tight_layout()
-        path = os.path.join(self.dir_salida, f"heatmap_{nombre}.png")
+        dir_g = self._obtener_dir_graficos(nivel)
+        path = os.path.join(dir_g, f"heatmap_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
 
-    def graficar_dendrograma(self, df_matriz, nombre):
+    def graficar_dendrograma(self, df_matriz, nombre, nivel):
         fig, ax = plt.subplots(figsize=(12, 7))
         etiquetas = list(df_matriz.index)
         etiq_completas = [f"{e} ({self.NOMBRES_COMPLETOS.get(e, '')})" for e in etiquetas]
@@ -130,9 +134,7 @@ class GestorTopologias:
             lbl.set_color("#E65100" if var_id in categoricas_idx else "#1565C0")
             lbl.set_fontweight("bold")
 
-        tipo = "BEST (Alto rendimiento)" if "Best" in nombre else "WORST (Bajo rendimiento)"
-        pct = nombre.split("_")[1]
-        ax.set_title(f"Dendrograma Jerárquico - {tipo}\nPartición: {pct}% | Agrupamiento de Variables por NCD", fontsize=13, fontweight="bold")
+        ax.set_title(f"Dendrograma Jerárquico - {nombre}\nPartición Nivel {nivel}% | Agrupamiento de Variables por NCD", fontsize=13, fontweight="bold")
         ax.set_ylabel("Distancia (Ward)", fontsize=11)
 
         parche_cat = mpatches.Patch(color="#E65100", label="Categórica")
@@ -141,26 +143,30 @@ class GestorTopologias:
         ax.grid(axis="y", alpha=0.3, linestyle="--")
 
         plt.tight_layout()
-        path = os.path.join(self.dir_salida, f"dendrograma_{nombre}.png")
+        dir_g = self._obtener_dir_graficos(nivel)
+        path = os.path.join(dir_g, f"dendrograma_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
 
     def graficar_dendrograma_comparativo(self, matrices):
-        niveles = set(nombre.split("_")[1] for nombre in matrices.keys())
-        for nivel in sorted(niveles, key=lambda x: float(x)):
-            nombre_best = f"Best_{nivel}"
-            nombre_worst = f"Worst_{nivel}"
-            if nombre_best not in matrices or nombre_worst not in matrices:
+        pares_comparativos = [
+            ("50", "Best_50", "Worst_50", "BEST (Alto Rendimiento)", "WORST (Bajo Rendimiento)"),
+            ("25", "Best_25_1", "Worst_25_2", "BEST 25% (Extremo Superior)", "WORST 25% (Extremo Inferior)"),
+            ("12.5", "Best_12.5_1", "Worst_12.5_4", "BEST 12.5% (Extremo Superior)", "WORST 12.5% (Extremo Inferior)")
+        ]
+
+        for nivel, n_best, n_worst, t_best, t_worst in pares_comparativos:
+            if n_best not in matrices or n_worst not in matrices:
                 continue
 
             fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 8))
 
             for ax, nombre, tipo_t, color_t in [
-                (ax1, nombre_best, "BEST (Alto rendimiento)", "#1565C0"),
-                (ax2, nombre_worst, "WORST (Bajo rendimiento)", "#C62828")
+                (ax1, n_best, t_best, "#1565C0"),
+                (ax2, n_worst, t_worst, "#C62828")
             ]:
-                df_matriz = matrices[nombre]
+                df_matriz = matrices[nombre]["df_matriz"]
                 etiquetas = list(df_matriz.index)
                 etiq_completas = [f"{e} ({self.NOMBRES_COMPLETOS.get(e, '')})" for e in etiquetas]
 
@@ -183,37 +189,40 @@ class GestorTopologias:
                     lbl.set_color("#E65100" if var_id in categoricas_idx else "#1565C0")
                     lbl.set_fontweight("bold")
 
-            fig.suptitle(f"Comparación de Dendrogramas - Partición {nivel}%\n¿Cómo cambia el agrupamiento de variables entre Best y Worst?", fontsize=14, fontweight="bold")
+            fig.suptitle(f"Comparación de Dendrogramas Extremos - Partición Nivel {nivel}%\n¿Cómo cambia el agrupamiento entre extremos de rendimiento?", fontsize=14, fontweight="bold")
             plt.tight_layout()
-            path = os.path.join(self.dir_salida, f"dendrograma_comparativo_{nivel}.png")
+            dir_g = self._obtener_dir_graficos(nivel)
+            path = os.path.join(dir_g, f"dendrograma_comparativo_{nivel}.png")
             plt.savefig(path, dpi=150, bbox_inches="tight")
             plt.close()
-            print(f"   💾 Dendrograma comparativo generado: dendrograma_comparativo_{nivel}.png")
+            print(f"   💾 Dendrograma comparativo generado en nivel_{nivel}: dendrograma_comparativo_{nivel}.png")
 
     def construir_topologias(self, matrices):
-        os.makedirs(self.dir_salida, exist_ok=True)
         self.topologias = {}
 
-        for nombre, df_matriz in matrices.items():
-            print(f"\n   🔧 Construyendo topología para {nombre}...")
+        for nombre, info in matrices.items():
+            nivel = info["nivel"]
+            df_matriz = info["df_matriz"]
+            print(f"\n   🔧 Construyendo topología para {nombre} (Nivel {nivel}%)...")
             
             G = self.construir_grafo_completo(df_matriz)
             mst = self.extraer_mst(G)
             peso_total = sum(mst[u][v]["weight"] for u, v in mst.edges())
             grados = self.calcular_grado_ponderado(mst)
 
-            # Guardar imágenes
-            self.graficar_mst(mst, nombre)
-            self.graficar_heatmap(df_matriz, nombre)
-            self.graficar_dendrograma(df_matriz, nombre)
+            # Guardar imágenes por carpeta de nivel
+            self.graficar_mst(mst, nombre, nivel)
+            self.graficar_heatmap(df_matriz, nombre, nivel)
+            self.graficar_dendrograma(df_matriz, nombre, nivel)
 
             self.topologias[nombre] = {
+                "nivel": nivel,
                 "mst": mst,
                 "grados": grados,
                 "grafo_completo": G,
                 "peso_total_mst": peso_total
             }
-            print(f"      ✅ Red construida. MST, Heatmap y Dendrograma guardados en disco.")
+            print(f"      ✅ MST, Heatmap y Dendrograma guardados en results/nivel_{nivel}/graficos/")
 
         return self.topologias
 

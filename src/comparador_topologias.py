@@ -7,8 +7,9 @@ import matplotlib.pyplot as plt
 
 class ComparadorTopologias:
     """
-    Clase encargada de comparar las topologías Best vs Worst para cada partición,
-    calcular el cambio en centralidad (D = Worst - Best) y graficar los resultados.
+    Clase encargada de comparar las topologías de rendimiento extremo (Best vs Worst)
+    para cada nivel (50%, 25%, 12.5%), calcular el cambio en centralidad (D = Worst - Best)
+    y guardar las tablas e histogramas en sus respectivas carpetas por nivel.
     """
     NOMBRES_COMPLETOS = {
         "X1": "Sexo", "X2": "Zona", "X3": "Ciclo",
@@ -17,9 +18,8 @@ class ComparadorTopologias:
         "X10": "Desaprobados"
     }
 
-    def __init__(self, dir_tablas="results/tablas", dir_graficos="results/graficos"):
-        self.dir_tablas = os.path.normpath(dir_tablas)
-        self.dir_graficos = os.path.normpath(dir_graficos)
+    def __init__(self, dir_base="results"):
+        self.dir_base = os.path.normpath(dir_base)
         self.comparaciones = {}
 
     def comparar_grados(self, grados_best, grados_worst):
@@ -41,31 +41,31 @@ class ComparadorTopologias:
         df = df.sort_values("Abs_Diferencia", ascending=False).reset_index(drop=True)
         return df
 
-    def graficar_comparacion(self, df_comp, nombre_base):
+    def graficar_comparacion(self, df_comp, nivel, nombre_best, nombre_worst):
         fig, axes = plt.subplots(1, 2, figsize=(16, 6))
 
         variables = df_comp.sort_values("Variable", key=lambda s: s.str.extract(r'(\d+)')[0].astype(int))
 
-        # --- Subplot 1: Grado ponderado Best vs Worst ---
+        # Subplot 1: Grado ponderado Best vs Worst
         ax1 = axes[0]
         x = np.arange(len(variables))
         ancho = 0.35
 
-        bars_best = ax1.bar(x - ancho/2, variables["Grado_Best"], ancho,
-                            label="Best (Alto rendimiento)", color="#42A5F5", edgecolor="white")
-        bars_worst = ax1.bar(x + ancho/2, variables["Grado_Worst"], ancho,
-                             label="Worst (Bajo rendimiento)", color="#EF5350", edgecolor="white")
+        ax1.bar(x - ancho/2, variables["Grado_Best"], ancho,
+                label=f"Best ({nombre_best})", color="#42A5F5", edgecolor="white")
+        ax1.bar(x + ancho/2, variables["Grado_Worst"], ancho,
+                label=f"Worst ({nombre_worst})", color="#EF5350", edgecolor="white")
 
         ax1.set_xlabel("Variables", fontsize=10)
         ax1.set_ylabel("Grado Ponderado (suma pesos MST)", fontsize=10)
-        ax1.set_title(f"Grado Ponderado por Variable\nPartición {nombre_base}%", fontsize=12, fontweight="bold")
+        ax1.set_title(f"Grado Ponderado por Variable\nPartición Nivel {nivel}% ({nombre_best} vs {nombre_worst})", fontsize=11, fontweight="bold")
         ax1.set_xticks(x)
         etiq = [f"{row['Variable']}\n{row['Nombre']}" for _, row in variables.iterrows()]
         ax1.set_xticklabels(etiq, fontsize=7, rotation=45, ha="right")
         ax1.legend(fontsize=9)
         ax1.grid(axis="y", alpha=0.3)
 
-        # --- Subplot 2: Diferencia D = Worst - Best ---
+        # Subplot 2: Diferencia D = Worst - Best
         ax2 = axes[1]
         df_ordenado = df_comp.sort_values("Diferencia_D")
         colores = ["#EF5350" if d > 0 else "#42A5F5" for d in df_ordenado["Diferencia_D"]]
@@ -78,10 +78,9 @@ class ComparadorTopologias:
 
         ax2.axvline(x=0, color="black", linewidth=0.8)
         ax2.set_xlabel("D = Grado_Worst − Grado_Best", fontsize=10)
-        ax2.set_title(f"Cambio en la Topología (D)\nPartición {nombre_base}%", fontsize=12, fontweight="bold")
+        ax2.set_title(f"Cambio en la Topología (D)\nPartición Nivel {nivel}%", fontsize=11, fontweight="bold")
         ax2.grid(axis="x", alpha=0.3)
 
-        # Anotar valores
         for bar, val in zip(bars, df_ordenado["Diferencia_D"]):
             ax2.text(val + (0.002 if val >= 0 else -0.002),
                      bar.get_y() + bar.get_height()/2,
@@ -90,7 +89,9 @@ class ComparadorTopologias:
                      fontsize=8, fontweight="bold")
 
         plt.tight_layout()
-        path = os.path.join(self.dir_graficos, f"comparacion_{nombre_base}.png")
+        dir_g = os.path.join(self.dir_base, f"nivel_{nivel}", "graficos")
+        os.makedirs(dir_g, exist_ok=True)
+        path = os.path.join(dir_g, f"comparacion_{nivel}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
@@ -113,12 +114,12 @@ class ComparadorTopologias:
             color = colores_nivel.get(nivel, "#78909C")
 
             ax.bar(x + offset, tabla["Diferencia_D"], ancho,
-                   label=f"Partición {nivel}%", color=color, edgecolor="white", alpha=0.85)
+                   label=f"Extremos Nivel {nivel}%", color=color, edgecolor="white", alpha=0.85)
 
         ax.axhline(y=0, color="black", linewidth=0.8)
         ax.set_ylabel("D = Grado_Worst − Grado_Best", fontsize=11)
         ax.set_xlabel("Variables", fontsize=11)
-        ax.set_title("Cambio en Topología por Variable\nComparación entre Todas las Particiones",
+        ax.set_title("Cambio en Topología por Variable (Best vs Worst Extremos)\nComparación entre Todos los Niveles",
                      fontsize=13, fontweight="bold")
 
         etiquetas_x = []
@@ -134,28 +135,28 @@ class ComparadorTopologias:
         ax.grid(axis="y", alpha=0.3)
 
         plt.tight_layout()
-        path = os.path.join(self.dir_graficos, "resumen_comparacion_global.png")
+        dir_global = os.path.join(self.dir_base, "global")
+        os.makedirs(dir_global, exist_ok=True)
+        path = os.path.join(dir_global, "resumen_comparacion_global.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
         return path
 
     def comparar_topologias(self, topologias):
-        os.makedirs(self.dir_tablas, exist_ok=True)
-        os.makedirs(self.dir_graficos, exist_ok=True)
         self.comparaciones = {}
 
-        # Identificar niveles (ej: 12.5, 25, 50)
-        niveles = set(n.split("_")[1] for n in topologias.keys())
+        pares_comparativos = [
+            ("50", "Best_50", "Worst_50"),
+            ("25", "Best_25_1", "Worst_25_2"),
+            ("12.5", "Best_12.5_1", "Worst_12.5_4")
+        ]
         
-        for nivel in sorted(niveles, key=lambda x: float(x)):
-            nombre_best = f"Best_{nivel}"
-            nombre_worst = f"Worst_{nivel}"
-            
+        for nivel, nombre_best, nombre_worst in pares_comparativos:
             if nombre_best not in topologias or nombre_worst not in topologias:
                 continue
 
             print(f"\n   ═══════════════════════════════════════════════════════")
-            print(f"   📊 COMPARACIÓN: {nombre_best} vs {nombre_worst}")
+            print(f"   📊 COMPARACIÓN NIVEL {nivel}%: {nombre_best} vs {nombre_worst}")
             print(f"   ═══════════════════════════════════════════════════════")
 
             grados_best = topologias[nombre_best]["grados"]
@@ -164,7 +165,6 @@ class ComparadorTopologias:
             df_comp = self.comparar_grados(grados_best, grados_worst)
             self.comparaciones[nivel] = df_comp
 
-            # Identificar máximo y mínimo cambio para imprimir
             var_max_cambio = df_comp.iloc[0]
             var_min_cambio = df_comp.iloc[-1]
 
@@ -185,16 +185,17 @@ class ComparadorTopologias:
             print(f"   🟢 MÍNIMO CAMBIO: {var_min_cambio['Variable']} ({var_min_cambio['Nombre']}) "
                   f"| D = {var_min_cambio['Diferencia_D']:+.4f}")
 
-            # Guardar tabla CSV
-            path_csv = os.path.join(self.dir_tablas, f"comparacion_{nivel}.csv")
+            dir_t = os.path.join(self.dir_base, f"nivel_{nivel}", "tablas")
+            os.makedirs(dir_t, exist_ok=True)
+            path_csv = os.path.join(dir_t, f"comparacion_{nivel}.csv")
             df_comp.to_csv(path_csv, index=False)
-            print(f"   💾 Tabla guardada: comparacion_{nivel}.csv")
+            print(f"   💾 Tabla guardada: {path_csv}")
 
-            # Graficar
-            self.graficar_comparacion(df_comp, nivel)
+            self.graficar_comparacion(df_comp, nivel, nombre_best, nombre_worst)
 
-        # Generar gráfico resumen global
-        self.graficar_resumen_global(self.comparaciones)
+        if self.comparaciones:
+            self.graficar_resumen_global(self.comparaciones)
+            print(f"\n   💾 Resumen global guardado en results/global/resumen_comparacion_global.png")
 
         return self.comparaciones
 

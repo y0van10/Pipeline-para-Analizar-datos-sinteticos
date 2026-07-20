@@ -10,19 +10,20 @@ from src.generador_reportes import GeneradorReportes
 
 class PipelineAcademico:
     """
-    Clase Orquestadora (Controlador) que representa el Pipeline de Análisis Académico completo.
-    Encapsula y conecta las etapas individuales del experimento en español (7 pasos, incluyendo Árboles Bayesianos).
+    Encapsula y conecta las etapas individuales del experimento en español
+    con almacenamiento jerárquico por bloques (50%, 25%, 12.5%).
     """
-    def __init__(self, ruta_datos, niveles_particion=[0.125, 0.25, 0.50], nivel_gzip=9):
+    def __init__(self, ruta_datos, nivel_gzip=9):
         self.ruta_datos = ruta_datos
+        self.dir_base = "results"
         
         # Instanciar las etapas en español como objetos
         self.limpiador = LimpiadorDatos(ruta_datos)
-        self.particionador = ParticionadorEstudiantes(niveles=niveles_particion)
-        self.analizador = AnalizadorNCD(nivel_gzip=nivel_gzip)
-        self.topologia = GestorTopologias()
-        self.comparador = ComparadorTopologias()
-        self.bayesiano = AnalizadorBayesiano()
+        self.particionador = ParticionadorEstudiantes(dir_base=self.dir_base)
+        self.analizador = AnalizadorNCD(dir_base=self.dir_base, nivel_gzip=nivel_gzip)
+        self.topologia = GestorTopologias(dir_base=self.dir_base)
+        self.comparador = ComparadorTopologias(dir_base=self.dir_base)
+        self.bayesiano = AnalizadorBayesiano(dir_base=self.dir_base)
         self.reportador = GeneradorReportes()
 
     def _separador(self, titulo):
@@ -41,7 +42,7 @@ class PipelineAcademico:
     def ejecutar(self):
         print("\n" + "=" * 60)
         print("   🎓 PIPELINE POO NCD/Gzip - ANÁLISIS ACADÉMICO")
-        print("   Cuantificación de Patrones en Orientación a Objetos (ES)")
+        print("   Particionamiento Jerárquico por Bloques (50%, 25%, 12.5%)")
         print("=" * 60)
 
         inicio_total = time.time()
@@ -49,17 +50,17 @@ class PipelineAcademico:
         # Paso 1: Limpieza
         df, reporte_limpieza = self._paso(1, "LIMPIEZA DE DATOS", self.limpiador.ejecutar)
 
-        # Paso 2: Particiones
-        particiones = self._paso(2, "PARTICIONAMIENTO POR RENDIMIENTO", self.particionador.ejecutar, df)
+        # Paso 2: Particiones jerárquicas (Sub-bloques)
+        particiones = self._paso(2, "PARTICIONAMIENTO POR BLOQUES", self.particionador.ejecutar, df)
 
-        # Paso 3: NCD/Gzip
+        # Paso 3: NCD/Gzip leyendo CSVs de disco
         matrices = self._paso(3, "CÁLCULO NCD/GZIP ENTRE VARIABLES", self.analizador.ejecutar, particiones)
 
-        # Paso 4: Topologías (MST, heatmap, dendrograma)
+        # Paso 4: Topologías (MST, heatmap, dendrograma por nivel)
         topologias = self._paso(4, "CONSTRUCCIÓN DE TOPOLOGÍAS (MST)", self.topologia.ejecutar, matrices)
 
-        # Dendrogramas comparativos Best vs Worst
-        print("\n   🌳 Generando dendrogramas comparativos...")
+        # Dendrogramas comparativos Best vs Worst extremos
+        print("\n   🌳 Generando dendrogramas comparativos por nivel...")
         self.topologia.graficar_dendrograma_comparativo(matrices)
 
         # Paso 5: Comparación Best vs Worst (Diferencia D)

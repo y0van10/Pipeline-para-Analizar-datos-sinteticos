@@ -9,6 +9,7 @@ import PIL.Image
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
 from src.pipeline_academico import PipelineAcademico
+from src.convertidor_dataset import ConvertidorDataset
 
 st.set_page_config(
     page_title="Pipeline POO NCD/Gzip & Redes Bayesianas",
@@ -36,6 +37,21 @@ if dataset_option == "Cargar Dataset Real (.csv)":
         with open(ruta_datos, "wb") as f:
             f.write(uploaded_file.getbuffer())
         st.sidebar.success(f"Archivo cargado: {uploaded_file.name}")
+
+        # Auto-detectar y convertir si es un dataset externo
+        try:
+            df_test = pd.read_csv(ruta_datos)
+            convertidor = ConvertidorDataset()
+            if not convertidor.ya_es_compatible(df_test):
+                tipo = convertidor.detectar_dataset(df_test)
+                if tipo:
+                    st.sidebar.info(f"🔍 Dataset detectado: **{tipo}**. Se convertirá automáticamente.")
+                    ruta_datos = convertidor.convertir(ruta_datos)
+                    st.sidebar.success(f"✅ Dataset convertido a formato compatible (11 columnas)")
+                else:
+                    st.sidebar.error("❌ Dataset no reconocido. Debe tener 11 columnas o ser un formato soportado (Kaggle Student Performance Factors / UCI Student Performance).")
+        except Exception as e:
+            st.sidebar.error(f"Error al analizar el archivo: {e}")
 
 gzip_level = st.sidebar.slider("Nivel de Compresión Gzip:", min_value=1, max_value=9, value=9)
 

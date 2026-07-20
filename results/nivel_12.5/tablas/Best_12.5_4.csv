@@ -1,2251 +1,823 @@
 X1_sexo,X2_zona,X3_ciclo,X4_ingreso_familiar,X5_trabaja,X6_beca,X7_educ_jefe,X8_tam_familiar,X9_asistencia,X10_cursos_desaprobados,X11_promedio_final
-Masculino,Rural,2,1356.2,No,No,Secundaria,6,79.4,2,13.83
-Masculino,Rural,10,783.92,No,Sí,Primaria,6,87.3,1,13.83
-Femenino,Urbana,1,1999.53,No,No,Superior técnica,3,81.1,2,13.83
-Masculino,Rural,3,1271.53,No,No,Primaria,2,89.5,0,13.83
-Masculino,Rural,1,453.97,Sí,No,Secundaria,6,77.4,1,13.83
-Femenino,Urbana,1,1128.31,No,No,Secundaria,4,90.9,1,13.83
-Masculino,Rural,6,2101.49,No,Sí,Primaria,10,87.1,2,13.83
-Masculino,Urbana,3,2800.08,No,No,Secundaria,4,78.9,1,13.83
-Masculino,Urbana,2,2517.9,No,No,Secundaria,2,80.7,1,13.83
-Femenino,Rural,8,767.56,Sí,No,Secundaria,5,78.8,2,13.83
-Masculino,Urbana,3,5513.14,No,No,Superior técnica,2,85.8,2,13.83
-Femenino,Urbana,3,1346.15,No,No,Secundaria,6,85.3,2,13.83
-Masculino,Urbana,9,1652.97,No,No,Secundaria,6,91.8,2,13.83
-Masculino,Rural,8,766.15,No,No,Secundaria,6,85.7,1,13.83
-Masculino,Urbana,7,1774.21,No,No,Secundaria,3,83.6,0,13.83
-Femenino,Rural,7,725.37,Sí,Sí,Sin educación,4,84.9,0,13.83
-Masculino,Rural,2,2934.29,Sí,No,Superior universitaria,6,79.8,1,13.83
-Femenino,Urbana,3,3703.54,No,No,Superior técnica,3,83.8,2,13.83
-Masculino,Rural,10,1921.27,Sí,Sí,Secundaria,7,86.1,2,13.83
-Masculino,Rural,6,830.6,No,No,Secundaria,5,92.2,1,13.83
-Femenino,Urbana,2,1957.62,No,No,Primaria,3,87.6,0,13.83
-Masculino,Rural,5,638.79,No,No,Secundaria,4,88.2,2,13.82
-Masculino,Rural,3,1805.87,Sí,No,Primaria,4,74.0,0,13.82
-Masculino,Rural,8,506.35,Sí,No,Primaria,6,78.8,0,13.82
-Masculino,Rural,3,784.89,No,Sí,Secundaria,6,80.6,0,13.82
-Femenino,Urbana,4,975.49,No,Sí,Primaria,1,85.6,0,13.82
-Femenino,Rural,8,1050.97,No,Sí,Sin educación,5,90.9,0,13.82
-Masculino,Rural,3,740.39,Sí,No,Primaria,9,74.6,0,13.82
-Femenino,Rural,2,877.2,No,No,Primaria,6,84.8,1,13.82
-Femenino,Urbana,2,1718.79,No,No,Superior técnica,6,91.2,2,13.82
-Femenino,Rural,1,1780.28,No,No,Secundaria,8,92.2,2,13.82
-Masculino,Urbana,3,2124.73,No,No,Superior técnica,2,80.6,0,13.82
-Femenino,Urbana,7,2389.57,No,No,Secundaria,7,87.4,1,13.82
-Masculino,Urbana,2,3720.31,No,No,Secundaria,4,98.5,3,13.82
-Masculino,Urbana,3,2892.77,Sí,No,Superior universitaria,4,80.3,1,13.82
-Masculino,Rural,8,2954.86,No,No,Primaria,8,78.3,0,13.82
-Masculino,Urbana,1,837.64,No,No,Superior universitaria,1,86.7,3,13.82
-Masculino,Urbana,3,1819.06,No,No,Primaria,3,82.0,0,13.82
-Masculino,Urbana,2,3375.95,No,No,Primaria,4,88.0,2,13.82
-Masculino,Urbana,1,1311.21,No,No,Secundaria,3,85.8,1,13.82
-Femenino,Rural,1,1188.89,No,No,Primaria,5,83.3,2,13.82
-Masculino,Urbana,3,2290.12,No,No,Secundaria,2,86.0,1,13.82
-Masculino,Urbana,2,3118.56,Sí,No,Superior universitaria,7,79.5,2,13.82
-Masculino,Urbana,8,1841.85,No,No,Sin educación,5,88.3,1,13.82
-Masculino,Urbana,7,799.29,No,Sí,Primaria,5,95.0,2,13.82
-Femenino,Urbana,6,1618.79,No,No,Primaria,2,96.8,2,13.82
-Femenino,Rural,8,935.67,No,Sí,Primaria,3,83.7,2,13.82
-Masculino,Rural,4,1925.74,No,No,Primaria,6,79.4,0,13.82
-Masculino,Urbana,8,2420.97,Sí,No,Superior técnica,7,79.5,0,13.82
-Masculino,Rural,7,1111.62,Sí,No,Superior universitaria,7,69.8,1,13.82
-Femenino,Rural,4,3611.22,No,No,Secundaria,7,86.8,1,13.82
-Masculino,Rural,7,1891.08,No,No,Secundaria,5,81.0,1,13.82
-Masculino,Rural,1,1972.32,No,No,Secundaria,7,88.5,1,13.82
-Femenino,Rural,7,899.95,No,Sí,Secundaria,7,85.4,1,13.82
-Masculino,Urbana,5,1780.03,No,No,Superior técnica,5,84.7,1,13.82
-Femenino,Urbana,7,1668.69,No,No,Primaria,2,95.0,2,13.82
-Masculino,Rural,5,2267.78,Sí,No,Superior técnica,3,79.2,0,13.82
-Masculino,Urbana,7,1486.17,Sí,No,Primaria,1,76.4,1,13.82
-Femenino,Urbana,1,2922.22,No,No,Superior universitaria,5,86.2,2,13.81
-Masculino,Rural,6,625.58,Sí,Sí,Secundaria,9,82.5,0,13.81
-Masculino,Urbana,2,3101.04,No,No,Superior técnica,2,97.6,1,13.81
-Femenino,Rural,5,922.91,No,No,Secundaria,8,81.1,0,13.81
-Femenino,Urbana,2,5621.85,No,No,Superior técnica,5,89.7,0,13.81
-Masculino,Rural,10,1548.88,No,No,Primaria,5,89.4,1,13.81
-Masculino,Rural,9,482.16,No,No,Primaria,10,94.1,1,13.81
-Femenino,Rural,4,601.33,No,No,Primaria,6,90.0,2,13.81
-Masculino,Rural,3,844.7,No,Sí,Sin educación,5,87.4,0,13.81
-Masculino,Rural,7,1515.14,No,No,Primaria,4,81.7,0,13.81
-Femenino,Rural,1,898.26,No,No,Superior técnica,5,92.8,3,13.81
-Masculino,Urbana,4,2554.91,No,No,Secundaria,5,84.6,1,13.81
-Masculino,Urbana,2,2543.88,No,No,Superior universitaria,2,82.7,1,13.81
-Femenino,Urbana,8,2682.8,No,No,Secundaria,6,84.3,0,13.81
-Femenino,Rural,4,850.29,Sí,No,Primaria,3,85.6,2,13.81
-Masculino,Urbana,2,1283.28,No,No,Superior técnica,8,96.6,2,13.81
-Femenino,Rural,3,557.42,Sí,Sí,Primaria,10,71.7,0,13.81
-Femenino,Urbana,8,1579.6,No,No,Secundaria,6,80.0,2,13.81
-Femenino,Rural,6,1628.12,No,No,Primaria,7,79.7,1,13.81
-Femenino,Rural,3,395.43,No,No,Primaria,5,85.2,1,13.81
-Masculino,Urbana,4,2209.59,No,No,Secundaria,4,85.8,2,13.81
-Femenino,Urbana,2,1626.58,No,Sí,Secundaria,6,87.3,2,13.81
-Femenino,Urbana,5,2295.66,No,No,Secundaria,5,88.2,2,13.81
-Femenino,Rural,5,2327.59,No,No,Secundaria,9,76.4,1,13.81
-Masculino,Urbana,7,2699.29,No,No,Secundaria,2,87.4,2,13.81
-Masculino,Rural,5,2696.64,No,No,Primaria,7,81.9,0,13.81
-Masculino,Urbana,3,3122.77,No,No,Secundaria,5,87.6,1,13.81
-Masculino,Rural,4,614.59,No,No,Sin educación,3,71.5,1,13.81
-Masculino,Rural,5,891.16,No,No,Primaria,5,88.6,0,13.81
-Masculino,Urbana,4,1571.1,No,No,Superior universitaria,5,96.8,2,13.81
-Masculino,Rural,4,1317.45,No,No,Primaria,7,91.7,0,13.81
-Masculino,Rural,5,156.98,Sí,Sí,Primaria,6,78.0,0,13.81
-Femenino,Rural,2,1182.32,Sí,Sí,Primaria,6,88.4,0,13.81
-Femenino,Urbana,2,3813.7,No,No,Secundaria,4,84.7,1,13.81
-Masculino,Rural,5,969.15,Sí,Sí,Sin educación,6,72.3,1,13.81
-Masculino,Urbana,5,2171.02,No,No,Primaria,4,84.0,2,13.81
-Femenino,Urbana,1,755.48,No,Sí,Primaria,10,86.0,4,13.81
-Masculino,Rural,4,1409.15,No,No,Superior técnica,6,87.8,1,13.81
-Masculino,Urbana,7,753.18,No,No,Secundaria,2,78.2,2,13.81
-Masculino,Urbana,3,2868.79,No,No,Superior técnica,8,83.5,1,13.81
-Femenino,Rural,7,1705.74,Sí,No,Sin educación,10,82.1,0,13.81
-Femenino,Rural,4,606.76,Sí,Sí,Superior universitaria,7,64.0,1,13.8
-Femenino,Urbana,6,1406.98,No,No,Primaria,8,81.6,1,13.8
-Masculino,Urbana,2,3366.02,No,No,Primaria,4,93.9,1,13.8
-Masculino,Rural,4,1833.59,No,No,Sin educación,7,90.5,2,13.8
-Femenino,Rural,2,704.41,No,No,Secundaria,9,87.2,2,13.8
-Masculino,Urbana,8,2447.75,No,No,Primaria,2,89.3,0,13.8
-Masculino,Urbana,1,2955.11,Sí,No,Superior universitaria,10,82.0,2,13.8
-Femenino,Urbana,7,3197.41,No,Sí,Sin educación,3,93.1,1,13.8
-Masculino,Rural,7,896.88,No,Sí,Primaria,5,96.2,1,13.8
-Femenino,Rural,5,1197.9,Sí,Sí,Primaria,5,76.5,1,13.8
-Masculino,Rural,1,1007.75,No,Sí,Primaria,6,92.6,2,13.8
-Femenino,Urbana,10,4476.29,Sí,No,Secundaria,4,75.2,1,13.8
-Femenino,Urbana,10,1627.18,No,No,Primaria,5,100.0,2,13.8
-Femenino,Rural,6,1185.92,Sí,No,Superior técnica,6,68.4,1,13.8
-Femenino,Urbana,5,5036.4,No,No,Superior universitaria,4,85.0,2,13.8
-Femenino,Urbana,8,2246.66,Sí,Sí,Primaria,3,71.2,2,13.8
-Masculino,Urbana,1,3640.33,No,No,Secundaria,5,93.0,0,13.8
-Masculino,Urbana,1,2595.61,No,No,Primaria,4,85.3,2,13.8
-Masculino,Urbana,10,1449.79,No,No,Primaria,4,98.0,1,13.8
-Femenino,Rural,8,724.87,Sí,No,Primaria,7,74.1,0,13.8
-Masculino,Rural,4,1184.9,Sí,No,Superior universitaria,4,79.6,2,13.8
-Femenino,Urbana,7,1386.16,No,No,Sin educación,4,82.4,0,13.8
-Femenino,Rural,7,1024.77,No,No,Secundaria,5,80.2,3,13.8
-Masculino,Rural,3,2624.96,No,No,Secundaria,11,87.7,1,13.8
-Masculino,Rural,4,1821.02,No,No,Secundaria,9,90.3,1,13.8
-Masculino,Urbana,1,4438.0,Sí,No,Superior universitaria,7,80.6,1,13.8
-Masculino,Rural,3,783.91,Sí,No,Secundaria,2,78.6,1,13.8
-Masculino,Urbana,4,6967.42,No,No,Primaria,6,81.8,2,13.8
-Femenino,Urbana,5,2165.06,No,No,Secundaria,5,81.4,1,13.8
-Femenino,Urbana,2,805.38,No,No,Secundaria,3,83.2,1,13.8
-Femenino,Rural,7,1166.34,No,No,Secundaria,5,84.0,3,13.8
-Femenino,Rural,10,1413.89,Sí,No,Secundaria,4,81.7,0,13.8
-Masculino,Urbana,7,1493.11,No,No,Secundaria,5,88.9,0,13.8
-Femenino,Rural,9,2718.82,Sí,Sí,Superior universitaria,5,81.5,2,13.8
-Masculino,Rural,2,1650.24,Sí,No,Superior universitaria,13,70.4,0,13.8
-Masculino,Urbana,2,3036.62,No,Sí,Primaria,6,85.1,1,13.8
-Masculino,Rural,8,2833.3,No,No,Secundaria,5,85.9,0,13.8
-Masculino,Urbana,1,1058.33,Sí,No,Secundaria,3,70.4,1,13.8
-Femenino,Rural,1,794.57,Sí,No,Superior técnica,5,88.2,1,13.8
-Masculino,Urbana,1,1380.14,Sí,No,Superior técnica,4,86.1,1,13.8
-Femenino,Urbana,6,1721.75,No,No,Primaria,2,81.0,1,13.8
-Masculino,Urbana,5,1508.31,No,No,Secundaria,2,78.8,0,13.8
-Femenino,Rural,3,1200.63,No,No,Primaria,9,88.4,1,13.8
-Femenino,Rural,5,1735.58,No,Sí,Primaria,6,81.6,1,13.79
-Masculino,Rural,7,547.38,Sí,No,Superior universitaria,9,70.9,1,13.79
-Masculino,Urbana,1,2104.65,No,No,Primaria,3,98.7,1,13.79
-Masculino,Rural,2,1536.34,No,No,Superior universitaria,5,90.8,2,13.79
-Masculino,Rural,2,1213.14,No,No,Secundaria,14,87.6,1,13.79
-Masculino,Rural,3,1567.14,No,Sí,Primaria,2,84.6,2,13.79
-Femenino,Rural,1,1241.55,No,No,Superior universitaria,5,88.0,4,13.79
-Masculino,Urbana,7,1153.73,Sí,No,Superior universitaria,4,79.1,1,13.79
-Femenino,Urbana,6,2680.04,No,No,Sin educación,6,83.3,2,13.79
-Masculino,Urbana,7,2368.46,No,No,Primaria,6,88.1,1,13.79
-Femenino,Urbana,7,895.57,No,No,Primaria,2,86.0,0,13.79
-Femenino,Urbana,6,995.71,No,No,Superior técnica,7,89.2,0,13.79
-Masculino,Urbana,2,1554.31,Sí,No,Superior técnica,4,74.0,2,13.79
-Femenino,Rural,5,2830.65,No,Sí,Secundaria,7,82.9,0,13.79
-Masculino,Rural,2,1618.11,No,No,Superior técnica,2,91.4,2,13.79
-Femenino,Urbana,2,1456.25,No,No,Primaria,4,91.2,0,13.79
-Femenino,Urbana,1,3209.41,No,No,Superior técnica,6,92.2,3,13.79
-Femenino,Urbana,2,1128.54,Sí,Sí,Secundaria,5,77.9,1,13.79
-Femenino,Rural,7,1332.9,No,Sí,Primaria,5,89.6,0,13.79
-Masculino,Rural,3,1043.27,No,No,Secundaria,6,81.3,1,13.79
-Masculino,Rural,8,1121.11,No,No,Primaria,1,88.4,1,13.79
-Femenino,Urbana,5,1976.11,Sí,Sí,Primaria,3,76.7,1,13.79
-Masculino,Urbana,5,3063.13,No,No,Secundaria,3,93.1,1,13.79
-Masculino,Rural,5,872.54,No,Sí,Secundaria,6,83.8,0,13.79
-Masculino,Urbana,10,2740.5,No,No,Superior universitaria,5,81.2,1,13.79
-Masculino,Urbana,3,3123.42,Sí,No,Superior técnica,6,67.0,1,13.79
-Femenino,Rural,7,1036.95,No,No,Secundaria,2,87.8,1,13.79
-Femenino,Rural,1,2909.67,No,No,Superior universitaria,5,85.7,2,13.79
-Femenino,Rural,1,1949.29,Sí,No,Primaria,3,81.1,1,13.79
-Masculino,Urbana,10,4565.11,Sí,No,Superior técnica,7,75.0,1,13.79
-Masculino,Rural,5,694.05,No,Sí,Sin educación,1,86.7,0,13.79
-Femenino,Rural,4,1262.96,No,No,Secundaria,7,79.4,1,13.79
-Femenino,Rural,3,3657.48,No,No,Primaria,7,86.0,1,13.79
-Masculino,Rural,5,3825.28,No,No,Superior técnica,1,91.0,3,13.79
-Femenino,Rural,4,869.14,No,No,Secundaria,7,78.2,2,13.79
-Masculino,Rural,5,693.84,No,No,Superior universitaria,6,74.8,0,13.79
-Masculino,Urbana,9,1332.75,No,No,Superior universitaria,2,87.4,2,13.78
-Masculino,Rural,3,790.2,No,Sí,Primaria,9,90.5,2,13.78
-Masculino,Urbana,1,5480.69,No,No,Superior universitaria,4,92.3,3,13.78
-Masculino,Rural,2,1402.49,No,No,Superior técnica,4,82.6,1,13.78
-Masculino,Rural,7,754.19,Sí,Sí,Primaria,4,76.8,0,13.78
-Femenino,Urbana,10,4053.21,Sí,No,Secundaria,4,69.2,1,13.78
-Femenino,Urbana,1,4734.84,No,No,Secundaria,1,91.7,3,13.78
-Masculino,Urbana,4,1019.61,No,No,Primaria,7,87.0,0,13.78
-Masculino,Rural,1,1168.02,No,No,Superior técnica,5,94.9,1,13.78
-Femenino,Rural,8,1831.87,Sí,No,Secundaria,5,71.8,1,13.78
-Femenino,Urbana,10,3512.52,Sí,No,Superior técnica,5,77.1,1,13.78
-Masculino,Urbana,1,2725.01,No,No,Primaria,5,91.3,3,13.78
-Masculino,Rural,6,2903.28,No,No,Primaria,11,84.9,2,13.78
-Femenino,Rural,6,1218.12,No,No,Superior técnica,4,88.5,2,13.78
-Masculino,Urbana,4,1939.09,No,No,Superior técnica,7,85.3,0,13.78
-Femenino,Urbana,2,1900.63,No,No,Secundaria,5,89.3,2,13.78
-Femenino,Rural,1,707.07,No,Sí,Primaria,3,93.4,3,13.78
-Femenino,Rural,2,578.12,Sí,No,Superior técnica,5,80.5,1,13.78
-Femenino,Rural,4,2009.36,No,No,Sin educación,4,81.4,0,13.78
-Femenino,Urbana,6,1020.19,No,No,Secundaria,1,78.3,1,13.78
-Femenino,Urbana,10,2759.34,No,No,Superior técnica,1,85.1,2,13.78
-Masculino,Rural,5,1974.74,No,Sí,Primaria,6,89.4,2,13.78
-Masculino,Rural,7,1385.06,No,No,Secundaria,4,85.5,2,13.78
-Masculino,Urbana,6,1556.3,Sí,No,Secundaria,3,75.4,1,13.78
-Masculino,Urbana,1,3585.35,No,No,Primaria,4,85.2,1,13.78
-Femenino,Urbana,2,2710.54,No,No,Superior técnica,3,84.6,2,13.78
-Femenino,Urbana,4,2389.94,No,No,Primaria,6,76.6,0,13.78
-Masculino,Rural,1,1363.15,No,No,Secundaria,8,80.6,1,13.78
-Femenino,Urbana,1,2542.21,No,No,Superior universitaria,3,85.9,1,13.78
-Masculino,Rural,7,1341.82,No,No,Secundaria,5,84.0,0,13.78
-Femenino,Urbana,2,2337.26,No,No,Secundaria,6,81.9,1,13.78
-Femenino,Rural,8,581.87,Sí,No,Secundaria,7,75.0,0,13.78
-Femenino,Rural,8,777.81,No,No,Sin educación,2,90.0,0,13.78
-Femenino,Rural,4,1046.07,Sí,No,Secundaria,9,85.0,1,13.78
-Femenino,Urbana,4,2443.72,No,No,Primaria,5,78.0,0,13.78
-Masculino,Rural,7,1235.76,No,No,Primaria,5,92.0,1,13.78
-Femenino,Urbana,3,2176.78,No,No,Secundaria,7,89.2,1,13.78
-Femenino,Rural,1,1503.88,Sí,No,Secundaria,3,78.3,3,13.78
-Masculino,Rural,10,810.77,No,No,Primaria,7,72.5,0,13.78
-Femenino,Rural,6,1160.64,Sí,No,Secundaria,7,63.0,1,13.77
-Femenino,Rural,8,986.3,No,No,Secundaria,4,84.3,0,13.77
-Femenino,Rural,7,558.16,No,No,Primaria,7,86.8,1,13.77
-Masculino,Rural,2,481.13,No,No,Primaria,8,88.4,2,13.77
-Femenino,Rural,8,1045.73,No,No,Secundaria,2,82.2,0,13.77
-Femenino,Rural,8,1130.82,No,Sí,Secundaria,8,83.9,0,13.77
-Femenino,Rural,2,1385.46,No,Sí,Sin educación,6,100.0,2,13.77
-Masculino,Rural,1,723.38,No,No,Primaria,5,79.2,2,13.77
-Femenino,Urbana,2,1142.74,Sí,No,Secundaria,3,80.8,4,13.77
-Masculino,Urbana,4,2192.54,No,No,Superior técnica,3,86.8,1,13.77
-Masculino,Urbana,10,2963.88,No,No,Sin educación,3,87.4,0,13.77
-Masculino,Urbana,9,760.85,Sí,No,Superior técnica,5,71.5,2,13.77
-Masculino,Urbana,2,7613.57,No,No,Superior técnica,4,98.2,2,13.77
-Masculino,Rural,5,1316.59,No,No,Primaria,9,79.1,0,13.77
-Masculino,Rural,4,1141.13,No,No,Secundaria,5,73.3,1,13.77
-Femenino,Urbana,7,1601.81,No,No,Superior universitaria,4,74.8,2,13.77
-Masculino,Urbana,4,3766.08,No,No,Secundaria,6,89.5,2,13.77
-Femenino,Rural,3,903.24,No,No,Sin educación,5,92.5,0,13.77
-Femenino,Urbana,8,3379.55,No,No,Superior técnica,2,78.3,1,13.77
-Masculino,Urbana,2,1996.3,Sí,No,Superior técnica,5,81.2,2,13.77
-Masculino,Rural,4,1136.61,No,No,Primaria,7,87.8,1,13.77
-Femenino,Urbana,5,1661.72,No,No,Sin educación,1,90.4,0,13.77
-Masculino,Urbana,10,1192.58,Sí,No,Primaria,2,79.0,1,13.77
-Masculino,Rural,4,938.56,No,Sí,Secundaria,5,86.5,1,13.77
-Femenino,Urbana,10,2966.73,No,No,Secundaria,1,80.7,1,13.77
-Femenino,Urbana,5,1606.15,No,No,Secundaria,2,90.1,1,13.77
-Masculino,Rural,4,1020.2,No,No,Sin educación,5,78.5,0,13.77
-Masculino,Urbana,1,1634.19,No,No,Secundaria,6,91.8,2,13.77
-Masculino,Rural,3,1400.74,No,No,Primaria,2,83.4,1,13.77
-Femenino,Urbana,6,2142.66,No,No,Superior universitaria,1,81.2,1,13.77
-Femenino,Urbana,3,4216.42,No,No,Secundaria,7,86.6,1,13.77
-Masculino,Rural,6,1998.53,No,No,Superior universitaria,4,82.6,3,13.77
-Masculino,Urbana,6,1977.19,No,No,Primaria,5,77.3,2,13.77
-Masculino,Urbana,6,1220.94,No,No,Secundaria,6,89.9,1,13.77
-Masculino,Urbana,8,1987.72,No,No,Secundaria,4,89.8,1,13.77
-Masculino,Rural,2,751.1,No,No,Sin educación,9,95.5,1,13.77
-Femenino,Rural,3,1522.53,No,No,Primaria,3,83.6,2,13.77
-Femenino,Urbana,6,2821.6,Sí,No,Secundaria,3,83.9,0,13.76
-Masculino,Urbana,6,1994.98,Sí,No,Primaria,3,81.2,0,13.76
-Masculino,Urbana,4,3283.65,Sí,No,Superior técnica,3,86.7,1,13.76
-Masculino,Rural,6,498.87,No,No,Primaria,1,88.5,2,13.76
-Femenino,Rural,5,3968.54,Sí,No,Superior técnica,1,76.7,1,13.76
-Masculino,Rural,6,459.47,No,No,Primaria,8,83.0,0,13.76
-Femenino,Urbana,9,850.88,No,No,Superior universitaria,1,86.7,1,13.76
-Masculino,Urbana,7,6128.41,No,No,Primaria,5,80.5,2,13.76
-Masculino,Rural,1,1939.82,No,No,Primaria,3,87.5,0,13.76
-Masculino,Rural,3,631.22,No,Sí,Sin educación,7,95.6,0,13.76
-Femenino,Urbana,7,4092.8,No,No,Secundaria,4,77.0,3,13.76
-Masculino,Rural,1,622.83,No,Sí,Primaria,6,92.4,2,13.76
-Masculino,Urbana,2,828.99,No,No,Secundaria,3,97.4,2,13.76
-Masculino,Rural,9,599.02,Sí,Sí,Superior técnica,2,68.6,2,13.76
-Femenino,Urbana,5,5193.57,Sí,No,Secundaria,6,75.7,2,13.76
-Masculino,Urbana,3,1927.02,No,No,Superior universitaria,4,96.0,2,13.76
-Femenino,Rural,1,692.35,Sí,Sí,Primaria,6,84.8,2,13.76
-Masculino,Urbana,2,2189.04,No,No,Superior universitaria,1,84.8,2,13.76
-Femenino,Rural,6,2495.44,Sí,No,Superior universitaria,3,78.4,1,13.76
-Masculino,Rural,5,1884.75,No,No,Superior universitaria,8,95.7,2,13.76
-Masculino,Rural,2,1525.63,No,No,Primaria,7,95.8,1,13.76
-Femenino,Rural,7,530.27,No,Sí,Secundaria,6,81.3,0,13.76
-Femenino,Urbana,1,2112.84,Sí,No,Superior técnica,5,72.8,1,13.76
-Masculino,Rural,1,2649.85,No,No,Superior técnica,5,89.2,0,13.76
-Femenino,Rural,8,620.27,No,Sí,Superior técnica,11,84.9,1,13.76
-Femenino,Urbana,3,1714.9,No,No,Secundaria,3,83.7,3,13.76
-Femenino,Rural,8,1088.1,Sí,No,Superior universitaria,6,73.8,0,13.76
-Femenino,Urbana,4,2638.41,No,No,Secundaria,5,87.6,0,13.76
-Masculino,Urbana,4,1880.55,No,No,Secundaria,1,93.8,2,13.76
-Masculino,Rural,1,1371.8,No,No,Secundaria,6,80.3,0,13.76
-Masculino,Urbana,5,2418.94,Sí,No,Superior universitaria,3,72.5,0,13.76
-Femenino,Rural,8,1733.63,No,Sí,Secundaria,5,84.2,1,13.76
-Masculino,Urbana,7,1983.09,Sí,Sí,Sin educación,4,76.5,1,13.76
-Masculino,Rural,5,393.27,No,Sí,Primaria,9,89.8,1,13.76
-Femenino,Urbana,2,4436.59,No,No,Superior técnica,6,84.4,2,13.76
-Masculino,Rural,4,1982.9,Sí,Sí,Primaria,6,70.2,0,13.76
-Masculino,Rural,10,2428.91,No,No,Primaria,4,81.6,1,13.76
-Masculino,Urbana,3,3970.09,No,No,Secundaria,11,83.4,1,13.76
-Femenino,Rural,7,585.39,No,No,Primaria,5,79.1,2,13.76
-Masculino,Urbana,6,2243.81,No,Sí,Primaria,2,78.6,1,13.76
-Femenino,Urbana,3,2971.68,No,No,Secundaria,3,79.9,1,13.76
-Femenino,Rural,1,1295.69,No,Sí,Sin educación,2,86.2,1,13.76
-Femenino,Rural,4,1933.43,No,No,Primaria,8,78.0,1,13.76
-Masculino,Rural,1,1389.04,No,No,Superior técnica,4,76.3,1,13.76
-Femenino,Rural,8,910.01,No,Sí,Secundaria,6,90.7,1,13.76
-Masculino,Urbana,8,4374.92,No,No,Primaria,6,88.1,2,13.76
-Femenino,Urbana,2,2716.42,No,No,Superior universitaria,2,79.3,3,13.76
-Femenino,Urbana,1,2285.31,No,No,Secundaria,5,91.1,4,13.76
-Masculino,Rural,6,1147.46,No,No,Secundaria,5,84.2,1,13.75
-Femenino,Urbana,1,1636.14,No,Sí,Primaria,3,96.6,1,13.75
-Femenino,Rural,8,1224.04,Sí,Sí,Primaria,3,69.2,0,13.75
-Femenino,Rural,6,779.89,No,No,Sin educación,4,88.4,1,13.75
-Masculino,Rural,1,1148.26,No,No,Primaria,8,79.4,1,13.75
-Femenino,Rural,3,845.64,No,Sí,Sin educación,6,78.0,1,13.75
-Femenino,Urbana,7,1281.25,Sí,No,Secundaria,5,70.0,1,13.75
-Masculino,Urbana,3,1733.0,No,No,Secundaria,7,78.3,1,13.75
-Masculino,Rural,5,2108.44,Sí,No,Secundaria,3,75.6,0,13.75
-Masculino,Urbana,4,1639.4,No,No,Secundaria,1,85.3,0,13.75
-Femenino,Rural,9,998.99,No,No,Superior universitaria,5,89.3,2,13.75
-Femenino,Rural,8,641.99,No,No,Secundaria,7,77.5,0,13.75
-Masculino,Urbana,1,2190.84,No,No,Superior universitaria,3,87.4,2,13.75
-Masculino,Rural,5,514.7,Sí,No,Primaria,6,82.5,1,13.75
-Femenino,Rural,3,1145.28,No,Sí,Primaria,5,79.3,0,13.75
-Masculino,Urbana,5,2381.55,No,No,Superior técnica,7,80.1,2,13.75
-Femenino,Urbana,6,2158.18,No,No,Primaria,6,86.7,1,13.75
-Masculino,Urbana,7,4565.12,No,No,Superior universitaria,3,88.4,2,13.75
-Femenino,Urbana,7,1875.23,No,No,Primaria,3,90.3,0,13.75
-Masculino,Urbana,5,2589.54,No,No,Superior técnica,2,89.2,2,13.75
-Femenino,Urbana,1,2851.92,No,No,Primaria,3,94.3,2,13.75
-Femenino,Rural,6,1297.71,No,No,Secundaria,7,85.2,2,13.75
-Femenino,Rural,8,1596.4,No,No,Sin educación,2,89.8,0,13.75
-Femenino,Urbana,7,773.19,No,Sí,Primaria,7,89.6,1,13.75
-Femenino,Urbana,3,1838.3,No,No,Primaria,5,83.1,0,13.75
-Femenino,Rural,8,655.21,Sí,No,Secundaria,4,80.3,1,13.75
-Femenino,Rural,2,1341.23,No,Sí,Primaria,3,92.7,1,13.75
-Masculino,Rural,2,1892.91,No,No,Primaria,7,94.7,1,13.75
-Masculino,Rural,1,727.16,No,Sí,Secundaria,5,88.2,0,13.75
-Masculino,Urbana,2,1491.32,Sí,No,Primaria,5,79.1,2,13.75
-Masculino,Urbana,7,1345.43,No,No,Superior universitaria,1,85.4,3,13.75
-Masculino,Rural,1,735.27,No,No,Primaria,6,77.2,1,13.75
-Masculino,Urbana,4,2425.6,No,No,Secundaria,5,80.2,0,13.75
-Femenino,Urbana,4,2970.75,No,No,Primaria,4,79.3,1,13.75
-Femenino,Urbana,4,2417.38,No,No,Secundaria,7,88.0,0,13.75
-Masculino,Rural,1,2078.25,No,Sí,Primaria,5,92.1,2,13.74
-Masculino,Rural,1,865.6,No,No,Sin educación,7,90.2,1,13.74
-Masculino,Urbana,5,2158.06,No,No,Superior técnica,5,76.8,1,13.74
-Masculino,Rural,6,1195.1,No,No,Superior técnica,7,88.5,1,13.74
-Femenino,Rural,7,415.39,No,No,Secundaria,4,81.3,0,13.74
-Femenino,Urbana,3,2554.61,No,No,Secundaria,4,89.6,2,13.74
-Femenino,Rural,7,786.05,Sí,Sí,Superior técnica,7,75.3,1,13.74
-Masculino,Rural,8,490.41,No,Sí,Secundaria,1,82.7,1,13.74
-Masculino,Urbana,6,1582.15,No,No,Primaria,7,89.3,1,13.74
-Masculino,Urbana,1,1945.39,No,No,Primaria,5,89.2,0,13.74
-Masculino,Rural,8,1639.18,No,No,Superior universitaria,9,81.1,1,13.74
-Femenino,Urbana,9,1624.43,No,No,Secundaria,7,88.6,3,13.74
-Masculino,Rural,10,1459.33,Sí,No,Primaria,7,74.4,0,13.74
-Femenino,Rural,2,765.07,Sí,No,Sin educación,5,78.3,0,13.74
-Femenino,Rural,3,1757.93,Sí,No,Superior universitaria,5,78.5,0,13.74
-Masculino,Urbana,2,1942.53,No,No,Superior universitaria,4,80.8,1,13.74
-Femenino,Rural,7,374.02,No,No,Secundaria,8,70.8,1,13.74
-Femenino,Rural,1,1254.72,No,No,Primaria,6,95.3,3,13.74
-Masculino,Rural,1,959.97,Sí,No,Superior técnica,6,69.9,0,13.74
-Masculino,Urbana,3,1999.1,No,No,Secundaria,5,83.6,1,13.74
-Masculino,Rural,2,1015.44,Sí,No,Secundaria,10,87.0,1,13.74
-Masculino,Urbana,7,2278.29,No,No,Secundaria,3,86.4,1,13.74
-Femenino,Rural,2,1861.46,No,No,Secundaria,10,95.1,1,13.74
-Femenino,Urbana,8,2682.47,No,No,Secundaria,6,84.5,3,13.74
-Masculino,Urbana,7,2122.72,No,No,Primaria,1,88.1,2,13.74
-Femenino,Rural,6,691.66,No,No,Primaria,6,87.1,0,13.74
-Masculino,Urbana,2,3777.42,No,No,Superior técnica,5,87.1,2,13.74
-Femenino,Rural,2,788.21,No,No,Primaria,8,93.4,1,13.74
-Masculino,Rural,1,1671.53,No,No,Primaria,5,84.8,1,13.74
-Masculino,Urbana,4,1342.26,No,No,Sin educación,4,85.3,1,13.74
-Femenino,Rural,3,1426.04,No,No,Primaria,6,82.9,0,13.74
-Masculino,Urbana,7,2282.64,No,No,Secundaria,5,79.0,1,13.74
-Masculino,Urbana,2,1863.7,No,No,Superior técnica,3,89.6,1,13.74
-Masculino,Rural,5,651.09,No,No,Superior técnica,10,90.5,1,13.74
-Femenino,Rural,5,1801.96,No,No,Secundaria,9,87.0,2,13.74
-Femenino,Rural,5,1247.18,No,Sí,Superior universitaria,5,82.3,0,13.73
-Femenino,Rural,5,803.58,No,Sí,Secundaria,3,81.8,2,13.73
-Masculino,Urbana,8,7385.91,No,No,Superior técnica,5,78.8,1,13.73
-Femenino,Rural,5,534.41,No,Sí,Secundaria,3,77.3,2,13.73
-Femenino,Rural,9,668.22,No,No,Superior técnica,9,82.7,1,13.73
-Masculino,Urbana,1,3181.42,Sí,No,Superior técnica,7,86.7,2,13.73
-Femenino,Urbana,4,1358.39,No,No,Sin educación,4,92.1,1,13.73
-Femenino,Urbana,2,1599.03,No,No,Primaria,7,89.9,1,13.73
-Masculino,Rural,3,756.8,No,Sí,Secundaria,3,87.0,1,13.73
-Masculino,Rural,5,1134.2,No,No,Sin educación,4,77.0,0,13.73
-Masculino,Rural,6,542.34,No,No,Superior técnica,11,90.7,2,13.73
-Masculino,Rural,3,814.52,No,No,Sin educación,5,87.1,1,13.73
-Masculino,Rural,6,742.28,No,No,Primaria,10,91.4,1,13.73
-Masculino,Rural,9,1929.8,No,No,Secundaria,8,84.2,1,13.73
-Femenino,Rural,8,3395.81,No,No,Primaria,6,85.6,2,13.73
-Masculino,Rural,4,1034.6,Sí,No,Superior técnica,3,78.0,2,13.73
-Femenino,Urbana,2,1458.28,No,No,Primaria,2,95.9,2,13.73
-Masculino,Urbana,2,1644.74,No,No,Superior universitaria,3,82.9,2,13.73
-Femenino,Urbana,6,4888.53,No,No,Primaria,8,92.2,2,13.73
-Femenino,Urbana,3,2398.15,Sí,No,Secundaria,3,78.1,1,13.73
-Femenino,Urbana,4,1367.24,No,No,Secundaria,9,83.7,0,13.73
-Femenino,Rural,10,624.75,Sí,No,Secundaria,3,77.7,1,13.73
-Femenino,Urbana,6,1004.17,No,No,Primaria,8,86.4,1,13.73
-Femenino,Urbana,6,2323.55,No,No,Secundaria,5,84.1,1,13.73
-Femenino,Urbana,8,1863.5,No,No,Superior técnica,4,92.1,2,13.73
-Masculino,Rural,4,1120.07,No,No,Secundaria,2,83.5,0,13.73
-Femenino,Urbana,9,1568.49,Sí,No,Secundaria,3,81.8,1,13.73
-Masculino,Rural,3,740.83,No,No,Secundaria,8,83.8,0,13.73
-Femenino,Rural,5,337.49,No,No,Primaria,6,82.3,1,13.73
-Masculino,Rural,6,795.42,No,No,Secundaria,4,89.6,1,13.73
-Masculino,Urbana,3,2258.84,Sí,No,Primaria,4,69.2,1,13.73
-Masculino,Rural,10,903.35,No,No,Primaria,10,84.8,0,13.73
-Masculino,Rural,6,2147.61,No,No,Primaria,7,83.4,2,13.73
-Femenino,Rural,4,1616.41,Sí,No,Superior técnica,1,77.2,0,13.73
-Femenino,Rural,9,791.23,No,No,Sin educación,5,88.4,1,13.73
-Masculino,Rural,7,470.95,No,Sí,Primaria,8,87.6,1,13.73
-Femenino,Urbana,9,1384.4,Sí,No,Superior universitaria,6,70.8,1,13.73
-Masculino,Rural,2,455.08,Sí,No,Superior universitaria,9,77.5,1,13.73
-Femenino,Rural,3,882.62,No,Sí,Primaria,5,85.0,2,13.72
-Masculino,Rural,5,1343.49,No,No,Secundaria,5,81.3,1,13.72
-Femenino,Urbana,3,2193.83,Sí,No,Primaria,2,78.3,1,13.72
-Femenino,Rural,1,831.31,No,No,Superior técnica,4,84.9,1,13.72
-Femenino,Rural,4,1341.78,No,No,Secundaria,13,72.3,0,13.72
-Femenino,Rural,3,1082.52,No,No,Secundaria,4,83.3,1,13.72
-Masculino,Rural,2,2676.21,No,No,Superior universitaria,9,86.0,3,13.72
-Masculino,Rural,4,609.25,No,No,Primaria,3,84.4,0,13.72
-Femenino,Rural,8,1145.17,No,Sí,Secundaria,9,91.9,2,13.72
-Masculino,Urbana,4,2019.67,No,No,Secundaria,7,84.4,1,13.72
-Femenino,Urbana,8,1411.13,Sí,No,Secundaria,2,67.1,2,13.72
-Femenino,Urbana,2,1048.86,No,No,Secundaria,3,93.4,1,13.72
-Femenino,Urbana,1,1452.28,No,No,Superior universitaria,2,90.4,2,13.72
-Femenino,Rural,3,1479.33,Sí,No,Primaria,6,79.3,1,13.72
-Masculino,Rural,3,1595.54,Sí,No,Secundaria,4,81.6,1,13.72
-Femenino,Rural,3,993.69,No,Sí,Primaria,2,90.7,1,13.72
-Femenino,Urbana,6,2397.7,No,No,Secundaria,4,86.2,3,13.72
-Masculino,Rural,1,593.06,No,No,Primaria,3,85.2,1,13.72
-Masculino,Rural,4,885.01,No,No,Primaria,6,83.8,0,13.72
-Masculino,Urbana,3,1296.11,No,No,Superior universitaria,5,84.6,1,13.72
-Femenino,Rural,2,1072.62,No,No,Primaria,5,92.0,3,13.72
-Femenino,Urbana,8,2424.28,No,No,Primaria,3,77.9,0,13.72
-Femenino,Rural,3,1156.22,No,Sí,Primaria,5,77.7,1,13.72
-Masculino,Rural,3,1752.16,Sí,No,Secundaria,6,70.5,0,13.72
-Masculino,Rural,5,2411.12,No,Sí,Primaria,9,86.7,1,13.72
-Masculino,Urbana,5,3073.54,No,No,Secundaria,2,86.7,2,13.72
-Masculino,Rural,2,721.91,No,No,Secundaria,4,100.0,1,13.72
-Masculino,Urbana,1,4228.28,No,No,Superior universitaria,4,89.8,2,13.72
-Masculino,Urbana,9,1534.01,Sí,No,Superior universitaria,4,81.8,4,13.72
-Masculino,Rural,2,982.83,No,No,Superior técnica,8,86.1,0,13.72
-Femenino,Rural,2,1001.69,No,Sí,Sin educación,4,87.1,1,13.72
-Masculino,Urbana,3,3048.4,No,No,Secundaria,3,78.2,1,13.72
-Masculino,Urbana,5,802.47,Sí,Sí,Primaria,3,71.7,1,13.72
-Masculino,Rural,1,793.96,No,No,Secundaria,2,92.1,1,13.72
-Femenino,Rural,3,625.71,No,No,Superior técnica,6,76.9,1,13.72
-Masculino,Rural,4,570.23,No,Sí,Primaria,10,92.1,2,13.72
-Masculino,Rural,6,2606.34,No,No,Secundaria,6,89.4,1,13.72
-Femenino,Rural,4,1039.91,No,No,Primaria,8,95.0,1,13.72
-Femenino,Rural,1,1254.28,Sí,No,Superior universitaria,4,91.0,2,13.72
-Femenino,Urbana,2,1767.35,No,No,Superior universitaria,3,77.2,3,13.72
-Masculino,Urbana,10,4237.27,No,No,Primaria,1,93.3,2,13.72
-Femenino,Rural,2,825.73,Sí,Sí,Primaria,6,90.3,1,13.72
-Masculino,Rural,5,719.39,No,No,Secundaria,3,81.3,2,13.72
-Masculino,Urbana,4,1005.52,No,No,Secundaria,4,76.8,0,13.71
-Femenino,Urbana,3,3732.08,Sí,No,Secundaria,7,81.0,1,13.71
-Masculino,Urbana,1,1077.85,No,No,Secundaria,5,83.5,1,13.71
-Masculino,Urbana,4,1749.2,No,No,Primaria,2,88.7,1,13.71
-Femenino,Urbana,3,1050.97,No,No,Secundaria,3,85.5,1,13.71
-Femenino,Rural,6,389.31,No,No,Primaria,3,95.2,1,13.71
-Masculino,Urbana,9,4740.38,No,No,Superior universitaria,4,84.5,1,13.71
-Masculino,Rural,5,459.33,No,No,Primaria,7,77.5,2,13.71
-Femenino,Urbana,5,4588.13,No,No,Superior técnica,6,80.8,2,13.71
-Femenino,Urbana,4,2265.43,No,No,Superior técnica,4,89.8,2,13.71
-Femenino,Rural,3,482.13,No,Sí,Secundaria,5,85.1,0,13.71
-Femenino,Rural,2,1049.95,No,No,Secundaria,7,92.6,2,13.71
-Femenino,Rural,10,1447.31,No,No,Secundaria,6,84.4,0,13.71
-Femenino,Urbana,4,1922.38,Sí,No,Superior universitaria,1,72.0,2,13.71
-Masculino,Rural,8,1076.46,No,No,Primaria,5,77.4,1,13.71
-Masculino,Urbana,7,756.02,Sí,No,Superior universitaria,7,77.1,1,13.71
-Femenino,Rural,8,458.18,No,No,Superior técnica,5,88.7,1,13.71
-Femenino,Rural,3,1893.49,No,No,Superior técnica,6,85.0,2,13.71
-Masculino,Rural,10,773.12,No,Sí,Primaria,6,89.5,1,13.71
-Femenino,Rural,4,502.31,Sí,Sí,Primaria,8,91.9,0,13.71
-Femenino,Rural,8,1192.97,Sí,Sí,Primaria,6,76.9,1,13.71
-Femenino,Rural,6,1194.07,No,No,Secundaria,9,84.6,0,13.71
-Masculino,Rural,2,2095.81,No,No,Superior técnica,5,90.0,2,13.71
-Femenino,Rural,5,793.11,No,No,Secundaria,1,73.2,1,13.71
-Masculino,Rural,6,1075.53,No,No,Primaria,6,86.5,1,13.71
-Masculino,Urbana,4,1443.55,No,No,Secundaria,5,83.2,1,13.71
-Masculino,Urbana,1,1047.67,No,No,Primaria,2,91.1,1,13.71
-Masculino,Urbana,6,2783.72,No,No,Superior universitaria,2,80.8,1,13.71
-Femenino,Rural,4,1000.62,No,Sí,Sin educación,3,90.1,2,13.71
-Femenino,Rural,1,410.4,No,Sí,Primaria,7,100.0,0,13.71
-Femenino,Rural,5,1649.36,No,Sí,Superior técnica,5,83.2,1,13.71
-Femenino,Rural,8,1528.15,Sí,Sí,Superior técnica,6,76.3,1,13.71
-Masculino,Urbana,1,777.19,No,No,Primaria,4,97.7,1,13.71
-Femenino,Rural,8,1467.67,Sí,Sí,Superior técnica,8,73.6,0,13.71
-Masculino,Urbana,9,1043.67,No,No,Secundaria,6,81.3,2,13.71
-Masculino,Urbana,5,1678.11,No,No,Secundaria,6,87.1,0,13.71
-Femenino,Rural,9,775.44,Sí,Sí,Secundaria,9,80.9,2,13.71
-Masculino,Urbana,1,1328.11,No,Sí,Primaria,5,100.0,2,13.71
-Masculino,Urbana,6,716.65,Sí,No,Primaria,8,76.0,2,13.71
-Masculino,Urbana,5,1974.95,Sí,No,Secundaria,5,70.6,1,13.71
-Femenino,Urbana,10,1051.81,Sí,No,Secundaria,6,80.0,1,13.71
-Femenino,Rural,10,577.05,No,No,Primaria,5,82.4,0,13.71
-Femenino,Urbana,1,4175.09,Sí,No,Secundaria,8,86.4,1,13.71
-Femenino,Urbana,3,2438.29,No,No,Sin educación,5,88.2,0,13.71
-Femenino,Rural,6,417.86,Sí,No,Secundaria,7,73.9,0,13.71
-Masculino,Urbana,5,1092.97,Sí,No,Secundaria,3,79.8,1,13.7
-Masculino,Urbana,1,1511.53,No,No,Primaria,4,96.4,0,13.7
-Masculino,Rural,2,1710.84,No,No,Primaria,3,93.6,1,13.7
-Masculino,Urbana,8,7394.24,Sí,No,Superior universitaria,1,75.2,0,13.7
-Masculino,Urbana,1,1737.06,No,No,Superior técnica,4,82.7,0,13.7
-Femenino,Rural,6,782.6,No,No,Primaria,5,80.9,2,13.7
-Masculino,Urbana,3,5318.81,Sí,No,Superior universitaria,1,68.3,2,13.7
-Masculino,Rural,7,1967.15,Sí,No,Secundaria,5,78.7,0,13.7
-Masculino,Urbana,5,3387.22,No,No,Secundaria,4,90.3,2,13.7
-Femenino,Rural,9,972.22,No,No,Superior técnica,6,79.3,2,13.7
-Masculino,Rural,1,2362.64,No,No,Superior técnica,8,86.4,1,13.7
-Masculino,Rural,6,535.22,No,No,Sin educación,11,92.9,1,13.7
-Masculino,Rural,6,830.57,Sí,No,Superior universitaria,6,84.4,2,13.7
-Femenino,Urbana,3,1741.39,Sí,No,Secundaria,6,81.3,1,13.7
-Masculino,Urbana,8,1571.27,No,No,Superior universitaria,5,87.9,2,13.7
-Femenino,Urbana,2,832.03,No,No,Primaria,11,86.8,1,13.7
-Masculino,Urbana,1,1603.97,No,No,Primaria,7,86.8,2,13.7
-Masculino,Urbana,2,1900.73,Sí,Sí,Superior técnica,4,85.2,2,13.7
-Masculino,Rural,1,1638.3,Sí,No,Superior universitaria,7,78.6,3,13.7
-Femenino,Urbana,6,2748.77,No,No,Superior técnica,5,85.2,1,13.7
-Masculino,Rural,9,963.43,Sí,No,Secundaria,5,72.2,1,13.7
-Masculino,Rural,1,791.38,No,Sí,Secundaria,4,96.3,2,13.7
-Masculino,Rural,5,1152.33,Sí,Sí,Secundaria,4,69.6,0,13.7
-Femenino,Urbana,5,1037.32,No,No,Primaria,6,88.7,1,13.7
-Masculino,Rural,4,542.16,Sí,No,Superior universitaria,8,75.3,0,13.7
-Masculino,Urbana,7,4916.78,No,No,Secundaria,7,84.4,2,13.7
-Masculino,Rural,4,1037.84,Sí,Sí,Primaria,7,82.1,2,13.7
-Masculino,Urbana,2,3126.56,No,No,Secundaria,2,83.0,2,13.7
-Masculino,Rural,2,955.76,Sí,No,Superior técnica,5,77.7,2,13.7
-Masculino,Urbana,1,1138.16,No,No,Superior técnica,4,72.5,1,13.7
-Femenino,Urbana,3,2245.51,No,No,Secundaria,6,85.8,1,13.7
-Masculino,Rural,5,989.72,No,Sí,Sin educación,5,94.5,1,13.7
-Femenino,Rural,6,368.26,Sí,Sí,Sin educación,7,75.4,0,13.7
-Masculino,Rural,2,333.39,No,Sí,Primaria,7,99.3,1,13.7
-Femenino,Rural,10,2673.24,Sí,No,Secundaria,7,66.7,2,13.7
-Masculino,Rural,4,871.69,No,Sí,Sin educación,7,89.6,1,13.7
-Masculino,Rural,3,838.45,No,No,Primaria,3,84.4,2,13.7
-Femenino,Urbana,3,713.84,No,No,Primaria,6,88.1,2,13.7
-Femenino,Rural,3,564.68,No,Sí,Secundaria,6,90.9,1,13.7
-Masculino,Rural,5,1199.64,No,Sí,Secundaria,10,92.9,0,13.7
-Femenino,Rural,9,1209.77,No,Sí,Secundaria,6,88.8,1,13.7
-Femenino,Rural,4,1083.19,No,Sí,Primaria,7,93.8,1,13.7
-Masculino,Rural,8,644.3,No,No,Secundaria,5,90.1,3,13.7
-Masculino,Urbana,8,3079.24,Sí,Sí,Primaria,6,89.3,1,13.7
-Masculino,Urbana,4,1550.75,No,No,Superior universitaria,2,91.4,2,13.69
-Masculino,Rural,9,525.37,Sí,Sí,Primaria,5,74.0,1,13.69
-Masculino,Urbana,2,2676.33,No,No,Superior técnica,2,86.0,2,13.69
-Masculino,Urbana,1,3899.85,No,No,Secundaria,1,85.9,1,13.69
-Femenino,Urbana,2,1276.04,No,No,Superior técnica,5,90.7,2,13.69
-Femenino,Urbana,4,2410.7,No,No,Secundaria,2,95.9,0,13.69
-Femenino,Rural,3,796.86,Sí,Sí,Primaria,5,84.8,1,13.69
-Femenino,Rural,6,2499.8,No,No,Secundaria,3,80.5,2,13.69
-Femenino,Rural,2,1085.83,Sí,No,Superior técnica,7,75.1,2,13.69
-Masculino,Rural,2,1115.64,No,No,Primaria,6,85.5,2,13.69
-Femenino,Rural,7,439.29,Sí,No,Superior técnica,8,70.0,1,13.69
-Masculino,Urbana,6,4661.82,Sí,No,Secundaria,3,75.0,1,13.69
-Masculino,Urbana,5,1920.7,No,No,Primaria,3,87.3,0,13.69
-Masculino,Urbana,4,4266.22,No,No,Secundaria,3,79.9,1,13.69
-Femenino,Rural,4,834.34,No,No,Primaria,7,77.6,0,13.69
-Masculino,Urbana,1,1811.36,No,No,Primaria,10,89.1,2,13.69
-Masculino,Urbana,6,1399.02,No,No,Secundaria,6,89.0,1,13.69
-Masculino,Urbana,9,2388.88,Sí,No,Superior universitaria,6,71.5,3,13.69
-Femenino,Rural,4,1991.71,No,No,Primaria,4,84.3,0,13.69
-Femenino,Urbana,6,1373.39,Sí,No,Secundaria,2,79.7,2,13.69
-Femenino,Urbana,1,2536.21,No,No,Secundaria,3,88.6,2,13.69
-Femenino,Rural,3,1087.71,Sí,No,Secundaria,2,87.3,0,13.69
-Femenino,Urbana,1,2187.33,No,Sí,Secundaria,1,89.0,2,13.69
-Femenino,Urbana,3,2612.43,No,No,Superior técnica,5,90.6,1,13.69
-Masculino,Urbana,2,8398.88,No,No,Superior técnica,4,81.1,1,13.69
-Masculino,Rural,10,1094.59,Sí,No,Primaria,4,72.6,1,13.69
-Masculino,Rural,7,3569.24,No,No,Secundaria,7,92.2,1,13.69
-Masculino,Rural,5,392.13,Sí,Sí,Primaria,7,84.2,0,13.69
-Femenino,Rural,6,1338.7,Sí,No,Secundaria,5,80.2,1,13.69
-Masculino,Rural,9,1026.65,No,No,Secundaria,5,90.8,1,13.69
-Masculino,Rural,8,1658.7,Sí,Sí,Secundaria,8,73.6,1,13.69
-Masculino,Urbana,8,775.62,No,No,Primaria,3,85.1,1,13.69
-Masculino,Rural,3,899.56,No,Sí,Primaria,5,93.3,1,13.69
-Masculino,Urbana,3,2483.82,No,No,Primaria,5,89.3,0,13.69
-Femenino,Rural,4,1095.42,No,Sí,Sin educación,6,87.4,2,13.69
-Masculino,Urbana,5,1031.65,No,No,Secundaria,3,87.0,1,13.69
-Masculino,Rural,2,1447.37,No,No,Superior universitaria,9,89.5,2,13.68
-Femenino,Rural,5,1134.55,No,No,Primaria,5,84.4,0,13.68
-Femenino,Rural,2,879.46,No,No,Superior universitaria,8,86.0,3,13.68
-Femenino,Urbana,3,2352.04,No,No,Superior técnica,3,81.8,3,13.68
-Masculino,Rural,2,326.95,No,No,Primaria,7,79.2,0,13.68
-Femenino,Rural,4,822.32,No,No,Secundaria,2,85.8,0,13.68
-Femenino,Rural,4,1215.23,Sí,Sí,Secundaria,2,85.3,1,13.68
-Femenino,Rural,1,794.6,Sí,Sí,Primaria,7,80.4,2,13.68
-Femenino,Urbana,10,1705.86,No,No,Primaria,6,86.0,1,13.68
-Femenino,Urbana,7,2218.79,No,No,Superior técnica,7,88.4,2,13.68
-Femenino,Urbana,2,2908.66,No,Sí,Secundaria,2,92.7,2,13.68
-Femenino,Rural,1,935.15,Sí,Sí,Sin educación,6,83.5,1,13.68
-Masculino,Urbana,2,2067.17,No,No,Superior técnica,8,87.3,3,13.68
-Femenino,Urbana,2,2466.22,No,No,Secundaria,10,97.1,2,13.68
-Femenino,Rural,3,877.65,No,No,Primaria,7,95.8,2,13.68
-Femenino,Rural,5,1599.49,No,No,Secundaria,3,81.9,1,13.68
-Femenino,Rural,1,936.31,Sí,No,Primaria,5,77.4,0,13.68
-Masculino,Rural,1,1304.26,No,No,Primaria,7,92.7,2,13.68
-Masculino,Urbana,1,1826.2,No,No,Primaria,6,92.6,1,13.68
-Femenino,Urbana,1,2651.87,No,No,Secundaria,4,91.3,1,13.68
-Femenino,Urbana,1,2189.91,No,No,Primaria,4,88.7,2,13.68
-Femenino,Urbana,5,1160.32,Sí,Sí,Superior técnica,5,83.5,3,13.68
-Masculino,Urbana,7,1457.16,No,No,Primaria,2,83.0,0,13.68
-Masculino,Urbana,6,1055.58,No,No,Primaria,6,85.7,1,13.68
-Femenino,Rural,1,2143.57,No,No,Secundaria,7,92.9,0,13.68
-Masculino,Rural,6,1066.63,No,No,Primaria,3,85.6,0,13.68
-Femenino,Rural,6,712.64,No,No,Primaria,9,84.4,0,13.68
-Masculino,Rural,3,752.66,Sí,No,Primaria,3,75.4,0,13.68
-Masculino,Rural,7,2599.06,No,No,Primaria,4,69.6,1,13.68
-Masculino,Urbana,5,3040.76,No,No,Superior técnica,6,86.0,2,13.68
-Masculino,Rural,1,457.23,Sí,No,Primaria,7,86.9,0,13.68
-Masculino,Urbana,8,1310.02,No,Sí,Sin educación,3,89.2,2,13.68
-Femenino,Rural,2,1654.56,No,No,Superior universitaria,8,89.1,2,13.68
-Masculino,Rural,1,491.95,No,Sí,Primaria,3,88.9,0,13.68
-Femenino,Urbana,3,1064.89,Sí,No,Superior técnica,5,75.5,1,13.68
-Femenino,Urbana,1,4441.6,No,No,Primaria,7,82.8,3,13.68
-Masculino,Rural,1,2699.76,Sí,No,Superior técnica,8,82.8,2,13.68
-Femenino,Rural,3,1601.11,No,No,Superior técnica,8,85.9,2,13.68
-Masculino,Rural,2,1949.54,No,Sí,Sin educación,6,95.3,0,13.68
-Femenino,Rural,9,1522.34,No,No,Primaria,2,84.5,1,13.68
-Masculino,Rural,3,484.23,No,Sí,Primaria,4,81.9,1,13.68
-Femenino,Rural,5,775.73,No,No,Sin educación,7,93.9,0,13.68
-Masculino,Rural,10,907.63,No,No,Primaria,5,87.2,2,13.68
-Femenino,Urbana,2,2549.82,No,No,Primaria,10,85.1,2,13.67
-Masculino,Rural,10,1795.49,Sí,No,Superior técnica,7,79.9,0,13.67
-Femenino,Urbana,1,3175.6,No,No,Secundaria,5,86.6,3,13.67
-Femenino,Rural,5,1114.87,Sí,No,Primaria,5,80.5,1,13.67
-Masculino,Rural,5,1307.98,No,No,Secundaria,5,85.6,1,13.67
-Femenino,Urbana,1,2039.01,No,No,Superior técnica,3,86.0,2,13.67
-Femenino,Urbana,3,1416.34,No,No,Superior técnica,2,88.8,1,13.67
-Femenino,Rural,5,302.06,No,Sí,Sin educación,6,80.8,0,13.67
-Femenino,Rural,5,1191.13,Sí,Sí,Secundaria,1,74.2,2,13.67
-Masculino,Rural,9,1386.99,Sí,Sí,Secundaria,6,84.1,2,13.67
-Femenino,Rural,7,620.47,Sí,Sí,Secundaria,4,81.4,2,13.67
-Femenino,Rural,4,543.08,No,No,Secundaria,9,86.6,1,13.67
-Femenino,Urbana,6,2864.26,No,No,Primaria,2,87.2,1,13.67
-Masculino,Rural,8,2813.61,No,Sí,Primaria,3,92.6,1,13.67
-Femenino,Urbana,1,1730.54,No,No,Primaria,7,92.5,2,13.67
-Femenino,Urbana,4,1926.85,No,No,Superior técnica,4,84.7,1,13.67
-Masculino,Rural,3,510.34,No,Sí,Primaria,10,85.9,0,13.67
-Masculino,Rural,2,619.19,No,Sí,Secundaria,10,91.8,1,13.67
-Femenino,Rural,7,881.98,No,No,Primaria,3,79.1,1,13.67
-Masculino,Rural,4,2094.83,No,No,Sin educación,7,84.4,1,13.67
-Masculino,Urbana,9,776.47,No,Sí,Primaria,4,93.3,2,13.67
-Masculino,Urbana,10,1888.77,No,No,Secundaria,6,71.6,2,13.67
-Femenino,Rural,5,1303.41,No,Sí,Secundaria,8,85.7,2,13.67
-Masculino,Urbana,1,3035.28,No,No,Superior técnica,5,86.5,2,13.67
-Masculino,Rural,4,1236.25,Sí,Sí,Sin educación,5,81.6,1,13.67
-Femenino,Rural,4,1047.63,Sí,Sí,Secundaria,5,80.3,1,13.67
-Masculino,Rural,6,858.15,No,No,Superior técnica,5,82.1,2,13.67
-Femenino,Rural,1,744.55,No,Sí,Primaria,6,92.5,0,13.67
-Femenino,Rural,10,903.56,Sí,No,Primaria,6,73.9,1,13.67
-Femenino,Urbana,7,1636.18,No,No,Superior universitaria,4,83.6,3,13.67
-Femenino,Urbana,2,3377.55,No,No,Secundaria,2,89.2,1,13.67
-Masculino,Rural,3,916.1,No,No,Primaria,6,78.5,1,13.67
-Femenino,Urbana,6,2377.41,No,No,Superior técnica,3,85.6,2,13.67
-Masculino,Urbana,2,3431.08,No,No,Superior técnica,4,81.6,2,13.67
-Femenino,Urbana,6,1428.43,No,No,Primaria,4,80.2,1,13.67
-Femenino,Rural,2,576.2,Sí,Sí,Primaria,3,85.6,0,13.67
-Femenino,Rural,2,2497.94,No,No,Superior técnica,5,94.0,2,13.67
-Femenino,Rural,5,687.34,No,No,Primaria,4,88.0,1,13.67
-Masculino,Urbana,2,3857.91,No,No,Secundaria,6,90.5,1,13.67
-Masculino,Urbana,3,5695.28,No,No,Secundaria,4,90.3,0,13.67
-Femenino,Urbana,7,4272.24,No,No,Superior técnica,7,72.8,2,13.66
-Femenino,Rural,1,562.37,Sí,Sí,Sin educación,6,84.1,1,13.66
-Masculino,Rural,3,1619.69,Sí,No,Primaria,9,74.4,1,13.66
-Masculino,Urbana,9,2439.57,Sí,No,Secundaria,6,72.3,2,13.66
-Femenino,Rural,8,694.51,Sí,Sí,Secundaria,2,78.3,2,13.66
-Masculino,Rural,3,524.72,No,No,Sin educación,7,85.2,0,13.66
-Masculino,Urbana,8,1447.81,Sí,No,Secundaria,4,72.8,1,13.66
-Masculino,Rural,7,2397.39,Sí,No,Secundaria,5,78.2,2,13.66
-Femenino,Urbana,5,4246.88,No,No,Primaria,6,90.1,1,13.66
-Masculino,Rural,3,888.84,No,No,Primaria,10,78.9,1,13.66
-Masculino,Rural,2,1353.55,No,No,Secundaria,5,89.2,0,13.66
-Femenino,Urbana,10,1352.73,Sí,No,Secundaria,3,74.9,2,13.66
-Masculino,Rural,3,635.32,No,Sí,Sin educación,6,87.5,2,13.66
-Femenino,Rural,3,1133.68,Sí,No,Superior universitaria,3,72.6,3,13.66
-Masculino,Urbana,7,2431.22,No,No,Secundaria,4,88.1,2,13.66
-Masculino,Urbana,5,680.67,No,No,Superior técnica,2,76.4,0,13.66
-Femenino,Rural,7,1319.22,Sí,No,Superior universitaria,8,79.1,1,13.66
-Masculino,Urbana,1,2851.76,Sí,No,Superior universitaria,9,74.0,2,13.66
-Masculino,Urbana,3,1512.17,No,No,Sin educación,5,89.9,0,13.66
-Femenino,Urbana,3,2446.49,No,No,Secundaria,4,94.1,1,13.66
-Femenino,Rural,4,862.54,No,Sí,Primaria,10,87.1,2,13.66
-Masculino,Rural,4,1020.17,No,No,Sin educación,4,91.1,2,13.66
-Masculino,Urbana,3,981.91,No,No,Secundaria,6,86.8,1,13.66
-Masculino,Rural,4,945.24,No,Sí,Primaria,2,87.5,1,13.66
-Femenino,Urbana,2,5412.0,No,No,Secundaria,8,87.5,3,13.66
-Femenino,Urbana,1,2479.08,Sí,No,Superior técnica,7,82.7,1,13.66
-Femenino,Urbana,5,868.28,No,No,Sin educación,9,81.4,1,13.66
-Masculino,Urbana,6,2520.05,Sí,No,Superior técnica,1,83.6,1,13.66
-Femenino,Rural,10,912.48,No,No,Primaria,6,78.6,1,13.66
-Femenino,Rural,4,862.36,No,No,Primaria,7,84.8,1,13.66
-Masculino,Rural,2,2875.48,No,No,Superior universitaria,12,91.9,2,13.66
-Masculino,Urbana,1,5829.56,No,No,Superior técnica,6,87.0,2,13.66
-Masculino,Rural,6,515.96,No,No,Secundaria,9,89.5,1,13.66
-Femenino,Rural,4,1921.53,No,No,Sin educación,5,86.8,2,13.66
-Masculino,Rural,2,598.83,No,Sí,Sin educación,4,83.9,1,13.66
-Masculino,Rural,4,1578.01,No,No,Primaria,5,86.5,2,13.66
-Femenino,Urbana,5,2211.85,No,No,Sin educación,3,83.3,0,13.66
-Femenino,Rural,2,1068.36,Sí,Sí,Primaria,10,81.3,0,13.66
-Masculino,Urbana,3,1075.75,No,No,Secundaria,4,82.5,1,13.66
-Femenino,Rural,5,3406.38,Sí,No,Primaria,5,73.2,1,13.66
-Masculino,Rural,2,647.3,No,No,Secundaria,7,81.4,2,13.66
-Masculino,Rural,7,933.69,No,No,Superior técnica,8,88.1,2,13.66
-Masculino,Urbana,6,2419.97,No,No,Superior universitaria,7,81.3,1,13.66
-Masculino,Rural,1,1048.38,No,No,Secundaria,2,84.4,2,13.66
-Femenino,Urbana,6,5249.39,No,No,Secundaria,4,83.1,3,13.66
-Masculino,Urbana,3,5559.27,Sí,No,Superior universitaria,7,79.5,1,13.66
-Femenino,Urbana,10,1934.43,No,No,Primaria,3,93.4,2,13.66
-Femenino,Urbana,1,1194.22,Sí,No,Superior universitaria,4,81.4,3,13.65
-Masculino,Rural,5,1430.86,No,Sí,Primaria,6,80.7,1,13.65
-Femenino,Rural,3,495.2,Sí,No,Secundaria,9,83.7,2,13.65
-Femenino,Urbana,3,2080.13,No,No,Secundaria,7,86.2,1,13.65
-Femenino,Rural,10,2178.07,No,No,Primaria,7,87.1,2,13.65
-Masculino,Rural,7,811.7,No,No,Secundaria,7,94.1,1,13.65
-Masculino,Rural,1,3551.75,No,No,Primaria,11,84.7,2,13.65
-Femenino,Rural,1,1674.17,No,No,Secundaria,5,88.4,1,13.65
-Masculino,Rural,4,1285.01,No,No,Primaria,4,96.2,2,13.65
-Masculino,Rural,6,980.47,No,Sí,Primaria,6,92.3,1,13.65
-Femenino,Rural,9,1320.19,Sí,No,Superior universitaria,7,75.6,1,13.65
-Femenino,Urbana,9,2654.13,Sí,No,Primaria,7,76.8,1,13.65
-Masculino,Rural,6,2288.57,Sí,No,Secundaria,9,78.7,1,13.65
-Masculino,Urbana,10,1266.03,Sí,No,Secundaria,6,79.4,1,13.65
-Femenino,Urbana,6,2330.93,No,No,Secundaria,6,87.5,2,13.65
-Masculino,Rural,10,1012.13,No,No,Primaria,6,82.5,0,13.65
-Femenino,Urbana,6,5143.77,No,Sí,Primaria,8,91.3,2,13.65
-Femenino,Rural,8,826.97,No,No,Secundaria,4,75.1,1,13.65
-Masculino,Urbana,2,1627.78,No,No,Secundaria,3,80.3,1,13.65
-Masculino,Rural,1,1314.88,Sí,Sí,Superior técnica,1,92.0,2,13.65
-Femenino,Rural,8,1725.47,No,No,Primaria,7,90.1,1,13.65
-Femenino,Rural,5,1049.83,No,No,Primaria,2,88.1,1,13.65
-Masculino,Rural,2,1502.16,No,No,Secundaria,7,93.1,0,13.65
-Masculino,Rural,4,1002.27,No,No,Primaria,13,84.9,0,13.65
-Masculino,Urbana,6,2453.39,No,No,Secundaria,5,83.7,1,13.65
-Masculino,Urbana,4,1865.22,Sí,No,Secundaria,2,84.2,1,13.65
-Masculino,Rural,6,1052.82,No,No,Superior universitaria,2,86.8,2,13.65
-Femenino,Rural,4,2035.14,No,No,Sin educación,4,82.7,3,13.65
-Masculino,Rural,3,755.85,No,Sí,Sin educación,4,82.6,0,13.65
-Femenino,Urbana,3,1731.75,No,No,Secundaria,2,90.6,3,13.65
-Masculino,Urbana,9,2293.0,No,No,Superior técnica,2,81.1,2,13.65
-Masculino,Rural,10,1397.98,No,No,Primaria,6,81.6,2,13.65
-Masculino,Urbana,5,1717.02,No,No,Superior técnica,6,82.7,3,13.64
-Femenino,Rural,1,1552.49,No,No,Primaria,3,84.6,2,13.64
-Femenino,Rural,6,478.24,Sí,Sí,Primaria,7,74.1,0,13.64
-Femenino,Rural,4,1356.1,No,No,Primaria,6,85.9,0,13.64
-Masculino,Rural,2,769.47,Sí,No,Superior universitaria,6,82.7,1,13.64
-Masculino,Urbana,4,1333.35,No,No,Secundaria,1,77.3,1,13.64
-Masculino,Urbana,10,3400.67,No,No,Secundaria,3,79.6,1,13.64
-Femenino,Urbana,5,2540.61,Sí,No,Secundaria,3,81.2,1,13.64
-Femenino,Urbana,2,2383.61,No,No,Superior universitaria,6,86.1,1,13.64
-Femenino,Rural,2,707.74,No,No,Primaria,7,83.8,2,13.64
-Masculino,Urbana,7,2825.54,No,No,Primaria,8,89.2,1,13.64
-Femenino,Rural,8,625.14,No,Sí,Secundaria,6,88.3,2,13.64
-Masculino,Urbana,6,3893.33,No,No,Superior técnica,8,87.2,2,13.64
-Femenino,Urbana,2,2968.99,No,No,Secundaria,6,90.9,2,13.64
-Masculino,Urbana,2,4644.56,No,No,Secundaria,4,92.6,1,13.64
-Femenino,Rural,4,1191.73,Sí,No,Superior universitaria,6,71.5,0,13.64
-Masculino,Urbana,1,5454.59,No,No,Superior técnica,4,87.9,2,13.64
-Masculino,Rural,2,459.81,No,No,Primaria,3,88.7,2,13.64
-Masculino,Rural,1,608.51,Sí,Sí,Secundaria,3,76.7,1,13.64
-Masculino,Rural,5,2076.95,No,Sí,Primaria,6,88.0,1,13.64
-Masculino,Urbana,5,1411.99,No,No,Sin educación,2,81.5,1,13.64
-Masculino,Urbana,7,1390.79,No,No,Primaria,6,83.7,1,13.64
-Masculino,Rural,1,835.36,No,Sí,Secundaria,5,94.8,2,13.64
-Masculino,Urbana,1,2214.36,No,No,Superior universitaria,5,86.0,1,13.64
-Femenino,Urbana,8,2185.39,No,No,Sin educación,2,91.6,0,13.64
-Femenino,Urbana,8,991.07,No,No,Primaria,2,88.0,2,13.64
-Femenino,Urbana,4,1727.76,No,No,Secundaria,1,96.6,2,13.64
-Femenino,Rural,6,676.87,Sí,No,Secundaria,9,78.5,0,13.64
-Femenino,Rural,3,1174.9,No,No,Secundaria,4,83.9,1,13.64
-Femenino,Urbana,2,2426.96,No,No,Secundaria,5,83.2,1,13.64
-Femenino,Urbana,5,1728.68,No,No,Secundaria,4,84.9,2,13.64
-Femenino,Urbana,9,2122.22,No,No,Superior universitaria,5,76.3,2,13.64
-Femenino,Rural,6,889.66,No,Sí,Sin educación,5,83.3,1,13.64
-Masculino,Urbana,4,1508.31,No,No,Secundaria,4,84.5,1,13.63
-Masculino,Rural,5,1789.65,Sí,No,Secundaria,5,74.0,1,13.63
-Masculino,Urbana,5,2954.17,Sí,No,Superior universitaria,3,70.7,1,13.63
-Masculino,Rural,2,904.32,No,Sí,Primaria,10,93.6,3,13.63
-Masculino,Rural,1,751.12,No,No,Sin educación,1,85.8,1,13.63
-Femenino,Urbana,1,2050.07,No,No,Superior técnica,7,90.0,2,13.63
-Femenino,Rural,3,1984.64,No,No,Secundaria,4,90.2,1,13.63
-Masculino,Urbana,3,2854.28,No,No,Superior técnica,6,84.1,2,13.63
-Femenino,Rural,1,422.97,Sí,No,Primaria,4,89.9,1,13.63
-Femenino,Rural,3,1946.86,No,Sí,Sin educación,7,91.7,1,13.63
-Femenino,Urbana,1,1875.9,No,No,Primaria,2,82.2,2,13.63
-Masculino,Urbana,1,921.21,Sí,No,Superior técnica,6,66.4,0,13.63
-Masculino,Rural,4,721.31,No,Sí,Primaria,2,88.0,0,13.63
-Femenino,Rural,4,356.63,No,Sí,Primaria,5,96.2,3,13.63
-Masculino,Urbana,6,1831.84,Sí,No,Superior técnica,5,84.3,2,13.63
-Femenino,Urbana,9,13271.73,No,No,Superior universitaria,2,80.5,2,13.63
-Femenino,Rural,3,999.55,No,No,Primaria,2,84.8,2,13.63
-Femenino,Rural,5,1875.76,No,No,Primaria,6,83.5,2,13.63
-Masculino,Urbana,8,2534.09,No,No,Sin educación,6,84.0,0,13.63
-Femenino,Urbana,4,2199.15,No,No,Primaria,5,84.5,0,13.63
-Femenino,Rural,6,1174.29,No,Sí,Sin educación,7,82.4,1,13.63
-Masculino,Rural,3,754.7,No,No,Sin educación,7,88.3,0,13.63
-Femenino,Rural,8,2359.84,Sí,No,Superior universitaria,4,77.5,2,13.63
-Masculino,Rural,5,401.76,Sí,Sí,Primaria,5,81.8,1,13.63
-Femenino,Rural,2,1247.41,No,Sí,Secundaria,5,90.6,0,13.63
-Femenino,Rural,6,256.49,No,Sí,Superior técnica,8,85.9,0,13.63
-Masculino,Urbana,3,3209.68,No,No,Secundaria,4,82.3,1,13.63
-Masculino,Rural,3,1433.35,No,No,Primaria,4,84.8,1,13.63
-Femenino,Urbana,2,2700.31,No,No,Secundaria,4,86.2,2,13.63
-Masculino,Rural,5,560.38,Sí,No,Secundaria,7,69.8,1,13.63
-Masculino,Urbana,1,1120.24,Sí,No,Superior técnica,4,82.1,1,13.63
-Masculino,Urbana,10,1584.17,Sí,No,Superior técnica,3,74.5,1,13.63
-Masculino,Rural,1,3239.43,No,No,Superior universitaria,5,89.5,3,13.63
-Masculino,Urbana,4,515.35,No,No,Primaria,3,80.3,0,13.63
-Femenino,Rural,5,1630.91,No,No,Secundaria,5,75.1,1,13.63
-Masculino,Urbana,9,889.52,No,Sí,Sin educación,3,80.1,0,13.63
-Masculino,Rural,3,2488.83,No,No,Primaria,4,87.3,0,13.63
-Femenino,Rural,8,630.59,Sí,Sí,Superior técnica,6,75.2,0,13.63
-Masculino,Urbana,3,3037.28,No,Sí,Secundaria,6,77.0,2,13.63
-Masculino,Rural,2,899.89,No,Sí,Secundaria,7,97.1,1,13.63
-Femenino,Rural,2,446.12,No,Sí,Primaria,3,84.3,0,13.63
-Masculino,Urbana,1,2514.13,No,No,Primaria,3,91.3,2,13.63
-Femenino,Urbana,8,2961.0,No,No,Secundaria,4,75.6,0,13.62
-Femenino,Urbana,7,2561.32,No,No,Primaria,8,98.1,2,13.62
-Masculino,Rural,1,498.31,Sí,Sí,Secundaria,5,77.9,2,13.62
-Femenino,Urbana,1,2120.5,Sí,No,Secundaria,4,85.1,1,13.62
-Masculino,Rural,3,1009.04,No,No,Primaria,5,88.3,1,13.62
-Masculino,Rural,1,3574.06,No,No,Superior universitaria,7,77.5,1,13.62
-Masculino,Urbana,6,2030.36,No,No,Secundaria,9,87.6,1,13.62
-Masculino,Urbana,1,3488.9,No,No,Superior universitaria,4,86.8,3,13.62
-Femenino,Rural,2,411.89,No,No,Primaria,13,92.8,1,13.62
-Femenino,Rural,8,1538.36,Sí,Sí,Sin educación,5,79.0,0,13.62
-Femenino,Rural,2,1015.34,No,No,Superior técnica,7,77.7,0,13.62
-Femenino,Rural,4,339.34,No,Sí,Sin educación,5,93.1,0,13.62
-Masculino,Rural,4,1037.4,No,No,Primaria,5,89.6,1,13.62
-Masculino,Rural,4,2162.27,Sí,No,Secundaria,5,78.0,0,13.62
-Femenino,Rural,5,1792.79,No,No,Primaria,4,81.8,0,13.62
-Masculino,Urbana,3,1507.86,No,No,Primaria,5,79.7,0,13.62
-Femenino,Rural,2,839.22,Sí,Sí,Sin educación,4,80.9,2,13.62
-Masculino,Rural,2,1612.65,Sí,No,Primaria,4,73.7,1,13.62
-Femenino,Urbana,2,1630.18,No,No,Primaria,6,93.4,2,13.62
-Masculino,Rural,2,684.33,No,No,Secundaria,3,90.4,1,13.62
-Masculino,Rural,9,5486.45,No,No,Superior técnica,8,85.6,3,13.62
-Femenino,Urbana,6,2029.54,No,No,Primaria,3,80.6,1,13.62
-Femenino,Urbana,7,4845.94,No,No,Primaria,4,83.7,1,13.62
-Masculino,Rural,2,729.5,No,No,Superior técnica,7,85.7,3,13.62
-Femenino,Rural,4,859.15,Sí,Sí,Primaria,2,80.3,0,13.62
-Masculino,Urbana,6,1895.98,No,No,Secundaria,5,89.1,1,13.62
-Femenino,Urbana,3,4185.83,No,No,Secundaria,3,77.8,1,13.62
-Femenino,Urbana,5,1043.18,No,No,Primaria,1,85.1,2,13.62
-Femenino,Rural,4,872.13,Sí,Sí,Primaria,7,71.7,0,13.62
-Masculino,Urbana,3,2595.9,No,No,Secundaria,6,80.0,2,13.62
-Masculino,Rural,6,1274.4,No,No,Primaria,7,83.4,0,13.62
-Masculino,Urbana,4,2029.92,No,No,Superior universitaria,5,90.7,2,13.62
-Masculino,Rural,7,1023.48,Sí,Sí,Secundaria,6,71.7,0,13.62
-Masculino,Urbana,5,965.32,No,No,Sin educación,4,91.9,0,13.62
-Femenino,Rural,4,1395.18,No,Sí,Superior técnica,3,81.7,1,13.62
-Masculino,Rural,2,1135.97,No,No,Sin educación,7,94.5,1,13.62
-Femenino,Rural,7,408.06,No,Sí,Primaria,9,92.7,1,13.62
-Femenino,Rural,6,856.58,Sí,Sí,Secundaria,8,78.3,0,13.62
-Femenino,Rural,5,1144.03,No,No,Secundaria,7,86.9,2,13.62
-Masculino,Urbana,7,2799.34,No,No,Primaria,2,79.3,1,13.62
-Masculino,Rural,6,360.33,No,No,Secundaria,5,87.9,0,13.61
-Femenino,Urbana,1,1945.86,Sí,No,Secundaria,4,75.8,1,13.61
-Femenino,Rural,3,2707.18,No,No,Secundaria,5,82.2,2,13.61
-Masculino,Rural,7,562.01,No,Sí,Primaria,6,83.8,1,13.61
-Femenino,Rural,3,517.39,No,No,Secundaria,3,88.3,2,13.61
-Masculino,Rural,7,405.04,No,No,Primaria,9,83.8,0,13.61
-Masculino,Rural,7,1367.16,No,No,Sin educación,7,95.7,0,13.61
-Masculino,Urbana,1,1962.11,No,No,Superior técnica,7,86.4,2,13.61
-Masculino,Urbana,6,3035.28,Sí,No,Superior técnica,3,77.2,0,13.61
-Femenino,Rural,3,3872.6,No,No,Superior técnica,8,90.6,1,13.61
-Femenino,Rural,3,723.45,No,Sí,Primaria,2,90.9,0,13.61
-Masculino,Rural,8,1918.08,No,No,Secundaria,7,85.9,2,13.61
-Femenino,Rural,10,1779.45,Sí,No,Secundaria,3,79.5,1,13.61
-Masculino,Urbana,6,1419.91,No,No,Secundaria,7,81.3,1,13.61
-Femenino,Rural,2,580.38,No,Sí,Primaria,2,82.2,3,13.61
-Masculino,Urbana,3,886.58,No,No,Secundaria,5,92.2,2,13.61
-Femenino,Urbana,4,1700.72,No,No,Superior técnica,1,69.5,2,13.61
-Masculino,Rural,6,343.41,No,Sí,Sin educación,7,84.5,0,13.61
-Femenino,Rural,4,2813.81,Sí,Sí,Secundaria,9,77.2,2,13.61
-Femenino,Rural,7,1229.9,Sí,No,Secundaria,3,75.7,1,13.61
-Masculino,Urbana,1,2172.21,Sí,Sí,Secundaria,4,80.3,1,13.61
-Masculino,Urbana,9,2050.32,No,No,Secundaria,6,75.6,1,13.61
-Femenino,Rural,6,339.62,Sí,Sí,Primaria,7,76.7,0,13.61
-Femenino,Urbana,2,1978.18,No,No,Primaria,2,84.4,2,13.61
-Femenino,Urbana,3,1402.87,No,No,Primaria,5,86.2,2,13.61
-Masculino,Rural,1,345.51,Sí,Sí,Sin educación,5,87.7,0,13.61
-Femenino,Rural,1,423.61,No,Sí,Superior universitaria,6,81.8,2,13.61
-Masculino,Urbana,5,2171.28,No,No,Superior técnica,5,84.3,2,13.61
-Masculino,Urbana,2,8790.59,No,No,Superior técnica,4,81.6,4,13.61
-Femenino,Rural,5,570.85,No,Sí,Primaria,5,86.1,2,13.61
-Femenino,Urbana,5,1194.54,No,No,Secundaria,3,85.1,3,13.61
-Masculino,Rural,3,3556.14,No,No,Sin educación,5,75.7,1,13.61
-Femenino,Urbana,5,1960.9,Sí,Sí,Primaria,3,77.0,1,13.61
-Masculino,Urbana,5,991.81,Sí,No,Primaria,3,77.6,0,13.61
-Masculino,Rural,4,497.72,Sí,No,Superior universitaria,5,82.5,2,13.61
-Femenino,Rural,9,492.89,Sí,No,Primaria,8,76.2,2,13.61
-Masculino,Rural,5,1559.9,No,No,Superior técnica,6,91.7,2,13.61
-Masculino,Rural,1,601.02,No,Sí,Sin educación,5,93.4,0,13.61
-Femenino,Rural,7,925.28,No,No,Primaria,10,90.6,1,13.61
-Femenino,Rural,2,2377.34,Sí,Sí,Secundaria,2,84.8,0,13.6
-Masculino,Urbana,2,3680.0,Sí,No,Superior técnica,1,81.5,3,13.6
-Masculino,Rural,4,1179.54,No,No,Secundaria,2,88.1,2,13.6
-Femenino,Urbana,4,7467.45,Sí,No,Secundaria,7,68.8,0,13.6
-Masculino,Rural,8,826.02,No,No,Sin educación,1,86.3,0,13.6
-Masculino,Urbana,2,4202.58,No,No,Superior técnica,3,88.7,1,13.6
-Femenino,Urbana,1,5268.17,No,No,Secundaria,8,89.8,4,13.6
-Femenino,Rural,2,1547.85,No,No,Secundaria,6,83.5,1,13.6
-Femenino,Urbana,2,1862.83,No,No,Secundaria,3,100.0,2,13.6
-Femenino,Rural,2,2511.22,No,No,Secundaria,6,97.8,2,13.6
-Femenino,Rural,5,2478.31,No,No,Primaria,3,85.7,1,13.6
-Femenino,Rural,7,1372.87,Sí,Sí,Secundaria,6,75.1,1,13.6
-Masculino,Urbana,6,2400.3,No,No,Superior técnica,6,89.4,1,13.6
-Masculino,Urbana,5,2355.28,No,Sí,Secundaria,7,83.9,1,13.6
-Femenino,Rural,2,556.43,Sí,Sí,Secundaria,5,81.1,1,13.6
-Femenino,Rural,2,503.9,No,Sí,Secundaria,2,84.6,1,13.6
-Masculino,Urbana,8,2098.36,No,No,Sin educación,2,85.8,1,13.6
-Masculino,Rural,2,2300.87,No,No,Secundaria,8,94.4,2,13.6
-Femenino,Rural,4,876.74,No,No,Sin educación,9,96.8,1,13.6
-Masculino,Rural,3,536.33,Sí,Sí,Primaria,3,74.6,1,13.6
-Masculino,Rural,7,1698.58,No,No,Secundaria,5,84.9,1,13.6
-Masculino,Rural,3,832.09,No,No,Primaria,6,82.8,1,13.6
-Masculino,Urbana,4,2445.04,No,No,Primaria,3,90.5,2,13.6
-Femenino,Urbana,5,3840.56,No,No,Primaria,1,85.7,0,13.6
-Femenino,Rural,4,605.41,No,No,Superior técnica,3,80.8,2,13.6
-Femenino,Rural,10,981.3,No,No,Primaria,6,83.8,1,13.6
-Femenino,Rural,2,1397.95,Sí,Sí,Primaria,10,87.0,0,13.6
-Masculino,Rural,6,1238.59,No,No,Secundaria,5,87.2,1,13.6
-Femenino,Urbana,7,2584.68,No,No,Primaria,7,81.9,1,13.6
-Masculino,Urbana,3,4102.55,No,No,Superior universitaria,3,90.8,0,13.6
-Femenino,Urbana,5,4289.71,Sí,No,Secundaria,6,74.9,0,13.6
-Femenino,Rural,6,2322.97,No,No,Secundaria,8,87.4,0,13.6
-Masculino,Urbana,9,1486.03,No,No,Secundaria,4,93.0,2,13.6
-Masculino,Urbana,2,1941.17,Sí,No,Superior universitaria,3,95.4,2,13.6
-Masculino,Urbana,4,1016.0,No,No,Superior técnica,1,85.3,2,13.6
-Femenino,Urbana,2,1020.56,Sí,No,Superior universitaria,4,70.9,2,13.6
-Femenino,Urbana,1,900.07,No,No,Sin educación,5,81.3,1,13.6
-Femenino,Rural,1,1695.99,Sí,Sí,Sin educación,2,77.6,0,13.6
-Femenino,Rural,9,743.27,Sí,No,Primaria,3,76.0,0,13.6
-Femenino,Rural,4,781.35,Sí,Sí,Secundaria,8,66.6,1,13.59
-Masculino,Urbana,1,1645.88,No,No,Superior universitaria,2,95.8,0,13.59
-Femenino,Urbana,4,1252.45,No,No,Primaria,6,77.2,1,13.59
-Masculino,Rural,4,2505.06,No,Sí,Sin educación,7,92.5,2,13.59
-Femenino,Urbana,9,2587.46,No,No,Superior técnica,5,89.0,1,13.59
-Femenino,Rural,4,559.48,No,No,Superior técnica,7,74.0,0,13.59
-Masculino,Rural,4,823.71,Sí,No,Superior universitaria,4,70.9,1,13.59
-Masculino,Rural,2,1251.63,No,No,Primaria,6,85.5,1,13.59
-Masculino,Urbana,8,1079.76,No,No,Primaria,4,82.7,0,13.59
-Femenino,Urbana,8,3523.65,No,No,Secundaria,6,80.1,2,13.59
-Masculino,Rural,1,1445.82,Sí,Sí,Primaria,7,82.8,0,13.59
-Masculino,Urbana,4,1215.93,No,No,Secundaria,7,78.3,1,13.59
-Femenino,Urbana,9,2812.71,No,No,Secundaria,3,84.0,1,13.59
-Femenino,Rural,3,836.17,No,No,Secundaria,4,87.7,1,13.59
-Femenino,Urbana,7,1933.88,Sí,No,Secundaria,3,77.6,2,13.59
-Femenino,Rural,6,961.57,No,No,Secundaria,7,86.4,0,13.59
-Femenino,Rural,6,474.9,Sí,Sí,Secundaria,1,81.7,1,13.59
-Femenino,Urbana,6,2994.66,No,Sí,Secundaria,10,89.4,1,13.59
-Masculino,Urbana,1,1235.62,No,No,Secundaria,9,74.9,2,13.59
-Femenino,Rural,3,625.01,No,No,Primaria,4,88.8,0,13.59
-Femenino,Rural,3,1071.3,No,No,Secundaria,2,84.3,2,13.59
-Femenino,Rural,8,830.81,No,No,Primaria,7,89.4,1,13.59
-Femenino,Rural,6,2646.9,No,No,Primaria,7,81.6,1,13.59
-Masculino,Urbana,5,1402.38,No,No,Secundaria,4,94.0,1,13.59
-Femenino,Urbana,6,1723.81,No,No,Primaria,5,91.0,2,13.59
-Masculino,Urbana,6,940.21,Sí,No,Secundaria,5,80.2,0,13.59
-Femenino,Rural,7,2869.75,Sí,No,Primaria,9,67.7,0,13.59
-Femenino,Rural,10,1708.93,Sí,No,Superior técnica,9,85.7,0,13.59
-Masculino,Rural,5,1475.46,No,No,Secundaria,3,97.0,2,13.59
-Masculino,Rural,9,1303.6,Sí,Sí,Secundaria,2,78.1,1,13.59
-Masculino,Urbana,1,3307.63,No,No,Superior técnica,3,83.5,1,13.59
-Masculino,Rural,3,515.07,No,No,Primaria,4,89.6,0,13.59
-Femenino,Rural,4,776.88,No,Sí,Sin educación,2,83.5,0,13.59
-Femenino,Rural,6,1840.13,No,No,Secundaria,8,78.1,0,13.59
-Femenino,Urbana,2,2014.77,No,No,Secundaria,7,94.3,2,13.59
-Femenino,Urbana,4,1563.3,No,No,Superior universitaria,2,72.0,1,13.59
-Femenino,Rural,1,2418.82,Sí,No,Primaria,9,80.3,1,13.59
-Masculino,Rural,4,1838.34,Sí,Sí,Primaria,4,89.0,1,13.59
-Masculino,Rural,9,436.22,No,No,Primaria,5,84.2,0,13.59
-Masculino,Urbana,1,520.36,No,No,Primaria,2,96.7,1,13.58
-Femenino,Urbana,7,719.37,Sí,No,Superior universitaria,4,71.8,1,13.58
-Masculino,Urbana,2,2710.21,No,No,Superior técnica,5,88.1,4,13.58
-Masculino,Rural,8,717.64,No,No,Primaria,7,77.7,0,13.58
-Masculino,Rural,1,960.37,Sí,Sí,Primaria,8,76.5,0,13.58
-Masculino,Rural,3,732.59,No,No,Primaria,4,83.0,1,13.58
-Masculino,Rural,2,1253.29,Sí,Sí,Sin educación,8,82.7,1,13.58
-Masculino,Rural,8,1508.52,No,No,Primaria,3,75.7,1,13.58
-Femenino,Urbana,1,924.38,No,No,Superior técnica,6,86.2,2,13.58
-Femenino,Rural,6,580.53,No,Sí,Sin educación,6,83.1,0,13.58
-Femenino,Rural,8,959.71,Sí,Sí,Primaria,8,73.2,1,13.58
-Femenino,Rural,2,1033.81,No,No,Superior técnica,5,93.8,4,13.58
-Femenino,Urbana,1,1378.15,No,No,Secundaria,5,80.8,1,13.58
-Masculino,Rural,6,845.76,No,No,Superior técnica,6,81.0,0,13.58
-Femenino,Rural,8,561.99,No,Sí,Sin educación,4,82.6,2,13.58
-Femenino,Rural,3,979.71,No,No,Primaria,7,92.5,1,13.58
-Femenino,Urbana,4,987.23,No,No,Sin educación,7,86.1,0,13.58
-Femenino,Urbana,4,1675.61,Sí,No,Secundaria,6,71.1,1,13.58
-Femenino,Rural,1,1128.96,No,No,Sin educación,7,82.5,0,13.58
-Masculino,Urbana,3,1597.44,No,No,Secundaria,6,96.7,2,13.58
-Masculino,Urbana,2,2627.85,Sí,No,Sin educación,3,89.0,1,13.58
-Masculino,Rural,7,588.25,Sí,No,Superior universitaria,7,74.7,0,13.58
-Masculino,Rural,3,645.47,No,Sí,Primaria,6,87.8,1,13.58
-Femenino,Rural,5,368.59,Sí,No,Superior universitaria,3,71.6,1,13.58
-Femenino,Rural,5,685.16,Sí,Sí,Secundaria,8,74.5,0,13.58
-Femenino,Rural,6,819.62,No,Sí,Primaria,7,87.9,2,13.58
-Femenino,Rural,4,1219.62,No,No,Sin educación,3,78.8,1,13.58
-Femenino,Rural,1,1624.55,No,No,Superior universitaria,7,84.9,0,13.58
-Femenino,Rural,1,315.92,No,No,Secundaria,9,89.7,3,13.58
-Masculino,Urbana,5,3625.64,Sí,No,Superior técnica,6,77.7,1,13.58
-Masculino,Rural,2,554.77,Sí,Sí,Primaria,3,83.8,2,13.58
-Femenino,Rural,9,1105.71,No,No,Primaria,4,82.8,1,13.58
-Masculino,Rural,2,1204.0,Sí,No,Primaria,8,86.0,1,13.58
-Femenino,Rural,5,819.57,No,No,Secundaria,4,89.0,1,13.58
-Femenino,Urbana,5,1921.79,No,No,Superior universitaria,6,88.7,1,13.58
-Masculino,Rural,4,237.49,No,Sí,Primaria,6,93.0,0,13.58
-Femenino,Rural,1,598.01,Sí,Sí,Primaria,4,86.2,2,13.58
-Femenino,Rural,7,678.8,Sí,No,Secundaria,1,77.5,1,13.58
-Masculino,Rural,7,1979.98,No,No,Primaria,3,86.7,1,13.57
-Femenino,Urbana,10,2164.36,No,No,Secundaria,3,88.1,3,13.57
-Masculino,Urbana,1,766.14,No,No,Primaria,3,93.9,2,13.57
-Femenino,Urbana,3,8070.11,No,No,Superior universitaria,6,75.3,1,13.57
-Femenino,Rural,9,1122.9,No,No,Primaria,9,88.8,2,13.57
-Masculino,Rural,6,1690.73,No,No,Secundaria,7,88.0,0,13.57
-Masculino,Urbana,8,970.2,Sí,No,Superior técnica,6,80.9,3,13.57
-Masculino,Urbana,7,2307.73,No,No,Superior universitaria,6,96.3,3,13.57
-Femenino,Rural,2,714.09,No,No,Secundaria,7,94.8,1,13.57
-Femenino,Urbana,1,1881.41,No,No,Secundaria,3,81.2,3,13.57
-Masculino,Urbana,3,3837.91,No,No,Superior técnica,4,81.3,1,13.57
-Femenino,Rural,9,486.45,No,No,Sin educación,5,80.7,0,13.57
-Masculino,Urbana,4,1798.92,No,No,Secundaria,6,87.1,1,13.57
-Femenino,Rural,5,1744.51,Sí,No,Superior universitaria,6,62.9,2,13.57
-Masculino,Urbana,1,1166.27,No,Sí,Secundaria,7,85.4,2,13.57
-Masculino,Rural,6,873.8,Sí,No,Primaria,14,80.6,0,13.57
-Femenino,Urbana,4,3529.09,Sí,No,Secundaria,7,65.1,0,13.57
-Masculino,Rural,1,321.06,Sí,Sí,Sin educación,6,84.4,1,13.57
-Masculino,Urbana,3,1178.52,Sí,No,Secundaria,8,77.7,2,13.57
-Masculino,Urbana,9,2037.25,No,No,Secundaria,3,78.2,1,13.57
-Masculino,Urbana,2,3552.1,Sí,No,Superior universitaria,8,77.6,2,13.57
-Femenino,Rural,1,1047.25,No,No,Primaria,7,80.3,1,13.57
-Masculino,Urbana,3,1321.3,Sí,No,Secundaria,4,69.9,0,13.57
-Femenino,Rural,6,626.22,Sí,No,Superior técnica,8,80.8,1,13.57
-Femenino,Rural,2,1820.81,No,No,Secundaria,5,86.1,1,13.57
-Masculino,Urbana,6,1934.23,No,No,Secundaria,3,70.9,0,13.57
-Femenino,Rural,6,2077.09,Sí,Sí,Primaria,1,82.7,1,13.57
-Masculino,Rural,5,956.44,No,No,Primaria,6,80.1,0,13.57
-Masculino,Urbana,1,1891.13,No,Sí,Primaria,4,88.4,2,13.57
-Masculino,Rural,4,1130.65,No,No,Primaria,4,86.7,2,13.57
-Masculino,Rural,3,2300.1,No,No,Superior técnica,6,82.0,2,13.57
-Masculino,Urbana,3,1188.74,Sí,No,Primaria,5,80.4,0,13.57
-Masculino,Urbana,4,1475.5,No,No,Secundaria,3,86.0,1,13.57
-Masculino,Urbana,2,1261.56,No,No,Secundaria,4,88.7,1,13.57
-Masculino,Urbana,4,1067.37,No,No,Sin educación,2,84.5,1,13.57
-Femenino,Urbana,3,1356.1,Sí,No,Primaria,2,79.0,0,13.57
-Masculino,Rural,1,1784.36,Sí,No,Superior universitaria,9,81.7,4,13.57
-Masculino,Rural,3,605.02,No,No,Primaria,7,86.0,1,13.57
-Femenino,Urbana,3,1492.58,No,No,Primaria,2,90.6,0,13.57
-Masculino,Urbana,1,2176.15,No,No,Superior técnica,6,86.3,0,13.56
-Femenino,Rural,4,1869.95,Sí,No,Superior universitaria,10,79.2,1,13.56
-Femenino,Rural,7,1806.5,No,Sí,Sin educación,9,90.4,1,13.56
-Masculino,Urbana,3,8740.71,No,No,Superior técnica,6,88.4,1,13.56
-Femenino,Urbana,9,927.55,No,No,Primaria,3,81.7,3,13.56
-Femenino,Rural,1,722.21,No,No,Primaria,5,89.3,1,13.56
-Masculino,Urbana,4,7507.76,No,No,Primaria,4,86.2,1,13.56
-Masculino,Rural,8,1472.68,No,No,Superior técnica,4,76.9,2,13.56
-Masculino,Rural,9,2266.27,No,Sí,Primaria,10,84.2,1,13.56
-Masculino,Rural,10,611.53,Sí,No,Secundaria,7,67.7,2,13.56
-Masculino,Urbana,6,4409.36,No,No,Secundaria,3,100.0,1,13.56
-Masculino,Rural,3,509.79,No,Sí,Secundaria,6,90.6,0,13.56
-Masculino,Rural,4,823.07,No,Sí,Secundaria,6,90.7,1,13.56
-Masculino,Rural,4,1621.72,No,No,Primaria,7,83.2,2,13.56
-Masculino,Rural,5,989.59,No,No,Primaria,4,90.5,2,13.56
-Femenino,Rural,10,1425.82,Sí,No,Primaria,6,69.9,2,13.56
-Masculino,Urbana,1,3746.6,No,No,Superior universitaria,3,84.9,1,13.56
-Masculino,Rural,3,1021.92,No,No,Primaria,6,85.0,1,13.56
-Femenino,Rural,2,1536.5,No,No,Superior técnica,3,80.5,1,13.56
-Femenino,Rural,7,482.92,No,Sí,Primaria,7,76.2,0,13.56
-Masculino,Rural,1,2308.0,Sí,No,Superior técnica,7,74.0,0,13.56
-Femenino,Rural,1,1695.32,Sí,Sí,Superior técnica,4,81.4,1,13.56
-Femenino,Rural,5,1206.49,No,No,Primaria,7,79.5,1,13.56
-Masculino,Urbana,3,2675.65,No,No,Superior técnica,6,95.7,2,13.56
-Femenino,Urbana,8,965.23,No,No,Secundaria,13,82.8,1,13.56
-Masculino,Urbana,10,2148.26,No,No,Primaria,9,87.3,1,13.56
-Femenino,Rural,2,1281.14,No,Sí,Superior técnica,3,94.2,5,13.56
-Masculino,Rural,3,1217.75,No,Sí,Secundaria,5,88.0,1,13.56
-Femenino,Rural,4,1125.54,No,No,Secundaria,4,95.8,1,13.56
-Masculino,Urbana,3,2090.67,No,No,Sin educación,4,88.8,0,13.56
-Femenino,Rural,6,1010.99,Sí,No,Primaria,4,79.0,0,13.56
-Femenino,Rural,8,779.85,No,No,Primaria,8,85.0,0,13.56
-Masculino,Urbana,9,1721.23,No,No,Secundaria,2,91.6,1,13.56
-Masculino,Rural,3,744.37,Sí,Sí,Primaria,5,73.1,0,13.56
-Masculino,Urbana,8,2036.37,No,No,Secundaria,2,83.1,2,13.56
-Masculino,Rural,10,1657.76,No,Sí,Primaria,3,79.7,2,13.56
-Masculino,Rural,2,430.08,No,Sí,Sin educación,4,86.1,2,13.56
-Femenino,Urbana,7,2694.03,Sí,No,Superior universitaria,5,71.2,2,13.56
-Femenino,Urbana,2,1262.65,No,No,Superior universitaria,2,79.4,2,13.56
-Femenino,Rural,8,447.16,No,No,Primaria,3,79.5,3,13.56
-Masculino,Rural,1,2148.57,No,No,Secundaria,3,94.3,2,13.56
-Femenino,Rural,2,950.19,Sí,No,Primaria,6,75.9,2,13.56
-Femenino,Rural,6,1027.71,No,No,Primaria,5,87.0,1,13.56
-Masculino,Urbana,1,1784.07,No,No,Superior universitaria,3,83.7,1,13.56
-Femenino,Urbana,8,3917.09,No,No,Superior técnica,3,88.9,0,13.56
-Femenino,Urbana,9,843.09,Sí,No,Superior universitaria,5,70.2,2,13.56
-Masculino,Rural,5,712.53,No,No,Secundaria,5,84.6,0,13.56
-Masculino,Rural,2,1009.11,No,No,Superior técnica,10,90.9,2,13.56
-Masculino,Rural,4,986.23,No,No,Primaria,4,86.1,2,13.56
-Femenino,Urbana,5,880.36,Sí,No,Secundaria,2,79.9,1,13.55
-Femenino,Rural,1,842.07,Sí,No,Superior universitaria,5,76.8,1,13.55
-Masculino,Rural,9,728.12,Sí,No,Secundaria,6,68.4,1,13.55
-Masculino,Rural,1,875.74,Sí,Sí,Superior universitaria,2,76.5,1,13.55
-Masculino,Urbana,3,3963.0,No,No,Primaria,6,92.2,2,13.55
-Femenino,Urbana,1,2286.7,No,No,Secundaria,6,90.8,1,13.55
-Femenino,Rural,3,820.89,Sí,Sí,Primaria,7,77.8,0,13.55
-Femenino,Rural,7,516.82,Sí,Sí,Superior técnica,5,69.8,0,13.55
-Femenino,Rural,1,897.06,No,No,Secundaria,7,81.6,2,13.55
-Femenino,Urbana,6,869.54,No,No,Primaria,6,88.0,3,13.55
-Femenino,Urbana,1,1151.2,No,No,Superior universitaria,3,86.7,1,13.55
-Masculino,Rural,6,1216.3,No,No,Secundaria,2,76.5,1,13.55
-Femenino,Rural,1,1280.25,No,No,Primaria,11,89.5,2,13.55
-Masculino,Rural,9,626.51,No,No,Superior universitaria,6,93.8,2,13.55
-Femenino,Rural,6,935.58,Sí,No,Secundaria,3,75.2,1,13.55
-Masculino,Rural,5,2097.56,No,No,Sin educación,8,87.4,1,13.55
-Masculino,Urbana,1,2313.89,No,No,Superior técnica,1,89.1,2,13.55
-Masculino,Rural,1,722.66,Sí,Sí,Superior universitaria,11,73.5,3,13.55
-Femenino,Rural,2,1367.52,Sí,No,Secundaria,9,78.5,2,13.55
-Masculino,Urbana,4,3243.82,No,No,Primaria,2,89.0,0,13.55
-Femenino,Urbana,2,747.79,Sí,No,Superior universitaria,6,81.2,2,13.55
-Femenino,Urbana,6,816.91,No,No,Sin educación,2,84.5,0,13.55
-Femenino,Urbana,3,2336.55,No,No,Secundaria,3,84.7,1,13.55
-Masculino,Urbana,1,3864.45,No,No,Primaria,4,82.7,1,13.55
-Masculino,Rural,1,2559.57,No,No,Secundaria,7,98.6,1,13.55
-Femenino,Rural,3,1263.62,No,Sí,Secundaria,7,93.9,0,13.55
-Femenino,Rural,4,1567.9,No,Sí,Primaria,7,84.1,1,13.55
-Femenino,Rural,1,2590.07,No,Sí,Primaria,8,90.8,2,13.55
-Masculino,Rural,1,1561.99,No,No,Primaria,8,88.4,1,13.55
-Masculino,Urbana,4,2063.23,Sí,Sí,Primaria,7,79.9,2,13.55
-Femenino,Urbana,1,1401.3,No,No,Secundaria,6,90.1,3,13.55
-Masculino,Rural,4,1037.55,No,Sí,Primaria,8,83.6,0,13.55
-Femenino,Rural,10,1481.26,No,No,Sin educación,9,88.8,2,13.55
-Masculino,Rural,1,1094.27,No,No,Primaria,6,89.8,1,13.55
-Femenino,Urbana,6,4895.16,No,No,Sin educación,4,82.0,1,13.55
-Femenino,Urbana,6,1377.6,No,No,Secundaria,8,84.8,1,13.55
-Femenino,Rural,1,1317.89,No,No,Primaria,6,94.5,2,13.55
-Femenino,Urbana,1,3168.23,No,No,Primaria,1,92.3,1,13.55
-Femenino,Urbana,9,1236.58,No,No,Sin educación,2,79.7,0,13.55
-Masculino,Rural,4,397.18,No,Sí,Primaria,8,93.7,1,13.55
-Masculino,Rural,8,2376.82,No,No,Superior técnica,7,82.5,3,13.55
-Femenino,Rural,4,960.65,No,No,Secundaria,8,79.3,0,13.55
-Femenino,Urbana,3,2556.31,No,No,Primaria,1,79.8,0,13.55
-Masculino,Rural,8,668.19,No,Sí,Primaria,8,92.4,3,13.55
-Masculino,Rural,1,644.5,No,No,Secundaria,2,84.5,2,13.55
-Femenino,Rural,6,604.34,No,No,Superior técnica,4,87.2,0,13.55
-Masculino,Urbana,6,2418.55,No,No,Superior universitaria,2,80.0,0,13.55
-Femenino,Rural,9,999.97,No,No,Secundaria,5,85.3,2,13.55
-Femenino,Rural,6,812.17,Sí,Sí,Superior técnica,6,78.8,1,13.54
-Femenino,Urbana,7,1632.99,Sí,No,Superior técnica,4,69.5,0,13.54
-Femenino,Urbana,3,2027.4,No,No,Primaria,2,78.9,0,13.54
-Masculino,Urbana,3,5825.42,No,No,Secundaria,2,77.8,1,13.54
-Masculino,Rural,5,937.05,No,Sí,Secundaria,5,87.3,2,13.54
-Masculino,Rural,6,1256.3,Sí,No,Superior universitaria,5,67.9,2,13.54
-Femenino,Urbana,1,2182.27,Sí,No,Secundaria,7,83.4,1,13.54
-Masculino,Rural,9,473.4,Sí,No,Secundaria,4,75.3,1,13.54
-Masculino,Rural,3,715.61,No,No,Sin educación,6,88.4,0,13.54
-Masculino,Urbana,7,1395.57,Sí,Sí,Secundaria,3,78.2,1,13.54
-Femenino,Rural,4,307.53,Sí,Sí,Sin educación,6,78.5,2,13.54
-Masculino,Urbana,3,1715.98,No,No,Superior técnica,5,86.3,2,13.54
-Masculino,Urbana,2,1253.05,Sí,No,Superior universitaria,1,75.7,3,13.54
-Masculino,Rural,4,1269.37,No,No,Sin educación,10,91.5,0,13.54
-Femenino,Urbana,2,1186.05,No,No,Superior técnica,2,86.7,3,13.54
-Masculino,Urbana,5,479.25,No,No,Superior técnica,3,90.2,1,13.54
-Masculino,Rural,6,793.19,Sí,No,Primaria,1,74.1,1,13.54
-Femenino,Urbana,1,706.31,Sí,No,Secundaria,6,90.0,2,13.54
-Femenino,Rural,8,594.83,No,No,Primaria,6,83.3,1,13.54
-Femenino,Rural,3,1988.42,No,No,Primaria,8,84.9,0,13.54
-Femenino,Urbana,9,791.72,No,No,Primaria,5,78.2,2,13.54
-Masculino,Rural,7,1141.71,No,No,Primaria,3,87.9,1,13.54
-Masculino,Urbana,3,1058.08,No,No,Secundaria,9,89.4,1,13.54
-Femenino,Rural,9,1249.02,No,No,Secundaria,4,88.6,2,13.54
-Masculino,Rural,7,1049.0,No,No,Primaria,6,78.9,0,13.54
-Femenino,Rural,1,1408.43,No,No,Superior universitaria,3,90.8,2,13.54
-Masculino,Urbana,8,1807.27,No,No,Secundaria,3,94.6,3,13.54
-Masculino,Rural,10,1096.59,No,No,Secundaria,6,81.2,1,13.54
-Masculino,Rural,4,917.15,No,Sí,Sin educación,5,89.8,1,13.54
-Femenino,Rural,3,666.63,No,Sí,Primaria,7,91.3,2,13.54
-Femenino,Rural,2,179.34,No,No,Primaria,6,91.1,1,13.54
-Masculino,Rural,1,2310.85,No,No,Secundaria,8,88.6,1,13.54
-Femenino,Rural,2,2673.6,No,No,Secundaria,5,86.3,0,13.54
-Masculino,Rural,4,1630.78,No,Sí,Primaria,4,83.3,2,13.54
-Masculino,Rural,2,1003.88,Sí,No,Secundaria,2,82.8,0,13.54
-Masculino,Rural,8,3469.17,No,Sí,Primaria,6,89.0,0,13.54
-Femenino,Urbana,8,5024.0,No,No,Secundaria,4,95.3,1,13.54
-Masculino,Rural,3,1223.9,No,No,Primaria,5,72.6,1,13.54
-Femenino,Urbana,7,2673.09,No,No,Primaria,7,87.4,0,13.54
-Masculino,Urbana,5,1493.63,No,No,Secundaria,3,84.3,2,13.54
-Femenino,Rural,5,1340.9,Sí,No,Primaria,5,71.0,2,13.54
-Femenino,Urbana,5,539.46,No,No,Secundaria,9,78.5,2,13.53
-Masculino,Urbana,1,1102.46,No,Sí,Sin educación,5,91.4,2,13.53
-Femenino,Urbana,3,6913.3,Sí,No,Secundaria,3,75.6,2,13.53
-Masculino,Rural,4,2568.67,No,No,Secundaria,5,87.9,1,13.53
-Femenino,Urbana,2,2567.59,No,No,Primaria,1,90.7,0,13.53
-Masculino,Rural,6,1093.81,No,No,Primaria,7,85.2,2,13.53
-Femenino,Rural,9,347.9,Sí,No,Superior universitaria,2,78.0,1,13.53
-Masculino,Rural,9,1480.01,Sí,Sí,Secundaria,5,76.8,2,13.53
-Masculino,Rural,5,2762.65,No,No,Superior técnica,4,76.3,1,13.53
-Masculino,Rural,1,1165.34,Sí,No,Superior universitaria,5,77.1,1,13.53
-Femenino,Rural,6,372.85,Sí,No,Secundaria,7,73.1,1,13.53
-Femenino,Urbana,4,2541.51,No,No,Superior técnica,2,86.9,2,13.53
-Masculino,Urbana,1,4051.54,Sí,No,Superior universitaria,5,78.8,3,13.53
-Masculino,Rural,3,303.7,Sí,Sí,Primaria,4,81.9,0,13.53
-Masculino,Rural,3,1691.05,No,No,Sin educación,4,88.0,2,13.53
-Masculino,Urbana,1,639.75,No,No,Secundaria,6,82.3,1,13.53
-Femenino,Urbana,3,1731.28,No,No,Secundaria,4,75.4,1,13.53
-Masculino,Urbana,3,3534.2,No,No,Superior técnica,5,88.3,2,13.53
-Masculino,Urbana,4,1363.56,No,No,Superior universitaria,7,95.0,3,13.53
-Femenino,Rural,8,833.88,No,No,Primaria,5,92.0,2,13.53
-Masculino,Rural,4,459.77,No,No,Primaria,8,83.4,0,13.53
-Femenino,Urbana,2,2982.54,No,No,Secundaria,6,91.0,3,13.53
-Femenino,Urbana,7,1818.51,Sí,No,Superior universitaria,8,66.8,1,13.53
-Femenino,Rural,10,900.38,Sí,No,Primaria,3,68.0,1,13.53
-Masculino,Rural,4,2463.54,No,No,Primaria,3,88.1,2,13.53
-Masculino,Rural,1,2331.84,No,No,Sin educación,11,91.7,1,13.53
-Femenino,Rural,7,2529.16,Sí,No,Primaria,3,69.2,1,13.53
-Femenino,Urbana,5,1631.41,Sí,No,Secundaria,2,74.9,3,13.53
-Masculino,Rural,6,1324.92,No,No,Primaria,7,82.4,1,13.53
-Masculino,Urbana,5,1281.39,No,No,Secundaria,5,79.4,1,13.53
-Femenino,Urbana,8,4540.94,No,No,Secundaria,4,83.3,0,13.53
-Femenino,Urbana,8,1641.76,Sí,No,Superior universitaria,5,79.0,2,13.53
-Masculino,Rural,9,2337.12,No,No,Superior técnica,7,80.1,1,13.53
-Femenino,Rural,10,1379.35,Sí,No,Secundaria,4,67.6,1,13.53
-Masculino,Urbana,6,1818.42,No,No,Superior universitaria,2,88.9,3,13.53
-Masculino,Rural,3,667.01,No,No,Secundaria,9,80.7,1,13.53
-Femenino,Urbana,2,2142.27,Sí,Sí,Secundaria,1,65.7,0,13.53
-Femenino,Rural,8,3271.86,Sí,No,Superior técnica,2,73.6,2,13.53
-Masculino,Urbana,2,2726.06,No,No,Secundaria,5,87.8,1,13.53
-Masculino,Urbana,7,2443.36,No,No,Secundaria,7,86.2,2,13.53
-Masculino,Rural,9,665.85,Sí,No,Secundaria,6,86.7,2,13.53
-Femenino,Rural,4,749.29,No,No,Secundaria,7,86.8,2,13.53
-Femenino,Rural,7,558.99,Sí,No,Secundaria,5,77.4,1,13.53
-Femenino,Rural,7,381.94,Sí,Sí,Primaria,2,84.6,1,13.53
-Masculino,Rural,8,1081.15,Sí,No,Primaria,5,72.9,1,13.53
-Masculino,Rural,7,1863.53,Sí,Sí,Secundaria,3,76.0,1,13.53
-Masculino,Rural,2,1742.97,No,Sí,Secundaria,2,92.8,1,13.53
-Femenino,Rural,1,1081.45,No,No,Primaria,3,89.3,1,13.53
-Masculino,Rural,1,1455.32,No,No,Secundaria,6,75.1,0,13.53
-Masculino,Rural,9,668.84,Sí,No,Secundaria,3,78.5,0,13.53
-Masculino,Rural,5,786.78,No,No,Primaria,7,82.6,2,13.52
-Femenino,Urbana,8,2081.26,No,No,Secundaria,5,79.2,1,13.52
-Masculino,Rural,5,1338.9,No,Sí,Sin educación,6,83.5,0,13.52
-Masculino,Rural,5,1199.45,No,No,Primaria,6,78.8,1,13.52
-Masculino,Rural,9,584.44,Sí,No,Secundaria,7,72.1,1,13.52
-Masculino,Urbana,2,1982.99,No,No,Superior técnica,9,90.8,1,13.52
-Masculino,Urbana,3,1483.69,Sí,No,Secundaria,4,83.7,1,13.52
-Femenino,Urbana,5,867.94,Sí,No,Superior técnica,5,75.1,3,13.52
-Femenino,Rural,5,1932.68,No,No,Secundaria,8,79.5,0,13.52
-Femenino,Urbana,8,3779.83,No,No,Secundaria,2,79.4,1,13.52
-Masculino,Urbana,3,2633.74,No,No,Superior universitaria,6,85.3,3,13.52
-Femenino,Rural,10,861.02,No,No,Superior técnica,8,77.7,1,13.52
-Femenino,Rural,4,448.86,Sí,Sí,Primaria,5,81.0,1,13.52
-Masculino,Urbana,4,1367.53,Sí,Sí,Primaria,3,83.9,2,13.52
-Femenino,Urbana,2,4260.4,Sí,No,Superior universitaria,2,79.9,2,13.52
-Femenino,Urbana,2,3919.25,No,Sí,Superior técnica,6,98.2,3,13.52
-Masculino,Rural,8,629.11,No,Sí,Primaria,7,89.3,2,13.52
-Femenino,Rural,1,693.17,No,No,Primaria,8,85.1,1,13.52
-Masculino,Rural,4,3979.24,Sí,Sí,Primaria,9,72.0,1,13.52
-Femenino,Rural,4,1607.32,Sí,No,Secundaria,8,78.1,1,13.52
-Masculino,Urbana,3,764.92,No,Sí,Secundaria,5,89.5,1,13.52
-Femenino,Urbana,5,1734.87,No,No,Superior universitaria,5,79.4,2,13.52
-Masculino,Rural,3,654.78,Sí,No,Superior técnica,6,70.5,2,13.52
-Masculino,Rural,4,1884.38,No,No,Sin educación,3,80.5,2,13.52
-Femenino,Urbana,2,1815.45,Sí,No,Superior técnica,5,82.0,2,13.52
-Masculino,Rural,1,1835.88,Sí,No,Superior técnica,1,70.7,2,13.52
-Femenino,Rural,10,414.31,Sí,Sí,Sin educación,6,78.7,2,13.52
-Masculino,Rural,7,1132.56,Sí,No,Superior técnica,9,69.6,1,13.52
-Femenino,Urbana,4,1722.83,No,No,Primaria,3,89.0,0,13.52
-Masculino,Rural,6,1191.24,No,Sí,Primaria,4,90.2,2,13.52
-Masculino,Rural,8,388.14,No,Sí,Sin educación,8,89.5,0,13.52
-Femenino,Rural,8,453.17,Sí,Sí,Primaria,5,85.1,0,13.52
-Masculino,Rural,7,973.4,No,No,Secundaria,13,91.5,1,13.52
-Masculino,Rural,1,1205.96,No,No,Superior técnica,9,89.2,3,13.52
-Femenino,Urbana,4,1611.89,No,No,Primaria,4,95.3,1,13.52
-Masculino,Rural,4,538.89,No,Sí,Sin educación,2,100.0,2,13.52
-Masculino,Rural,10,694.46,No,Sí,Sin educación,3,94.4,0,13.52
-Masculino,Rural,10,647.82,No,Sí,Secundaria,6,97.4,4,13.52
-Masculino,Rural,8,1344.83,No,No,Sin educación,5,82.8,0,13.52
-Masculino,Rural,10,872.48,Sí,Sí,Primaria,5,86.3,0,13.52
-Femenino,Rural,1,353.73,Sí,No,Superior universitaria,3,80.0,2,13.52
-Masculino,Rural,9,1248.81,Sí,Sí,Sin educación,6,70.3,0,13.52
-Femenino,Rural,3,565.18,Sí,No,Superior universitaria,6,69.3,1,13.52
-Masculino,Urbana,3,1149.61,No,No,Primaria,6,88.9,2,13.52
-Masculino,Rural,9,620.74,No,Sí,Sin educación,4,90.7,2,13.52
-Masculino,Rural,2,5039.21,No,No,Secundaria,3,94.5,3,13.52
-Masculino,Urbana,8,2432.67,Sí,No,Secundaria,3,81.6,1,13.52
-Femenino,Rural,7,666.89,No,Sí,Sin educación,9,84.1,0,13.52
-Femenino,Urbana,4,3919.92,No,No,Superior técnica,7,91.1,2,13.51
-Masculino,Rural,2,2164.58,No,No,Secundaria,8,99.2,3,13.51
-Femenino,Rural,7,514.97,No,Sí,Sin educación,8,89.7,2,13.51
-Masculino,Rural,4,1302.02,Sí,Sí,Primaria,8,72.5,1,13.51
-Masculino,Rural,7,293.31,Sí,Sí,Primaria,9,72.3,1,13.51
-Femenino,Urbana,4,2513.38,No,No,Superior universitaria,8,87.1,3,13.51
-Masculino,Urbana,7,5301.34,Sí,No,Superior universitaria,5,67.7,3,13.51
-Femenino,Urbana,7,3940.1,No,No,Superior técnica,7,75.5,0,13.51
-Femenino,Urbana,3,1853.95,No,No,Secundaria,2,83.5,1,13.51
-Masculino,Urbana,8,2490.32,No,No,Secundaria,4,82.2,2,13.51
-Femenino,Rural,3,985.56,No,Sí,Sin educación,8,80.5,1,13.51
-Masculino,Urbana,1,1994.01,No,No,Secundaria,3,84.8,1,13.51
-Masculino,Urbana,9,2786.13,No,No,Superior técnica,8,85.9,1,13.51
-Masculino,Urbana,4,2663.77,No,No,Secundaria,5,91.4,0,13.51
-Femenino,Rural,8,908.72,Sí,Sí,Secundaria,5,81.0,1,13.51
-Masculino,Rural,5,2368.75,No,No,Superior técnica,12,82.2,2,13.51
-Femenino,Urbana,6,3804.99,No,No,Superior universitaria,4,76.1,2,13.51
-Masculino,Rural,6,1206.15,No,No,Superior universitaria,12,81.8,0,13.51
-Masculino,Urbana,1,2418.51,No,No,Secundaria,4,95.8,2,13.51
-Femenino,Rural,5,1204.19,No,Sí,Sin educación,6,77.7,1,13.51
-Femenino,Urbana,6,2450.82,No,No,Primaria,5,87.7,1,13.51
-Masculino,Rural,8,1220.86,Sí,No,Sin educación,6,76.5,0,13.51
-Masculino,Urbana,3,4308.42,Sí,No,Superior universitaria,4,84.8,1,13.51
-Masculino,Rural,7,1448.93,Sí,Sí,Secundaria,4,75.1,0,13.51
-Masculino,Urbana,4,1314.09,No,No,Primaria,6,80.2,1,13.51
-Femenino,Rural,5,1978.3,No,Sí,Secundaria,2,93.3,3,13.51
-Masculino,Urbana,6,2885.4,No,Sí,Primaria,7,90.0,0,13.51
-Femenino,Urbana,2,2007.15,No,No,Superior técnica,9,78.6,2,13.51
-Masculino,Rural,1,1636.62,No,No,Secundaria,3,90.1,0,13.51
-Masculino,Urbana,3,2793.86,No,No,Secundaria,3,92.0,1,13.51
-Masculino,Urbana,3,1461.15,No,No,Superior técnica,5,78.4,3,13.51
-Masculino,Urbana,8,3247.81,No,No,Primaria,1,89.7,2,13.5
-Masculino,Rural,4,476.45,Sí,No,Primaria,3,72.8,1,13.5
-Femenino,Rural,5,2928.33,No,No,Superior técnica,4,94.0,2,13.5
-Femenino,Rural,2,846.75,No,No,Secundaria,10,89.3,3,13.5
-Femenino,Urbana,3,2030.06,No,No,Secundaria,6,84.6,1,13.5
-Femenino,Urbana,3,2517.39,No,No,Superior universitaria,3,73.4,0,13.5
-Femenino,Rural,2,1939.37,No,Sí,Secundaria,5,91.7,1,13.5
-Femenino,Rural,4,654.71,Sí,No,Superior técnica,5,69.6,0,13.5
-Femenino,Urbana,10,1013.55,No,No,Secundaria,6,86.8,2,13.5
-Femenino,Urbana,5,5218.22,Sí,No,Secundaria,6,69.9,2,13.5
-Femenino,Rural,2,641.16,No,No,Superior técnica,2,82.5,1,13.5
-Femenino,Rural,3,781.78,No,No,Sin educación,3,81.8,2,13.5
-Masculino,Rural,6,915.66,Sí,Sí,Sin educación,7,75.5,1,13.5
-Masculino,Rural,1,1081.26,Sí,No,Primaria,4,72.7,1,13.5
-Masculino,Urbana,2,2178.04,No,No,Secundaria,8,87.0,1,13.5
-Femenino,Rural,4,736.99,No,No,Primaria,4,86.2,1,13.5
-Masculino,Urbana,3,2933.73,No,No,Superior universitaria,5,87.5,3,13.5
-Masculino,Rural,2,782.67,No,No,Primaria,6,86.6,1,13.5
-Masculino,Urbana,3,2309.33,Sí,No,Secundaria,4,69.5,1,13.5
-Masculino,Rural,4,684.9,Sí,Sí,Primaria,7,70.9,1,13.5
-Masculino,Rural,3,1109.74,No,No,Secundaria,7,94.3,1,13.5
-Masculino,Urbana,2,4795.46,No,No,Primaria,4,86.5,2,13.5
-Femenino,Urbana,2,1368.68,No,No,Primaria,5,96.7,0,13.5
-Femenino,Rural,10,386.48,Sí,Sí,Secundaria,8,73.2,1,13.5
-Femenino,Urbana,7,2010.87,No,No,Secundaria,3,88.2,2,13.5
-Masculino,Rural,7,1780.99,No,No,Sin educación,9,85.5,2,13.5
-Femenino,Urbana,9,994.63,No,No,Primaria,7,85.5,0,13.5
-Femenino,Rural,3,1830.93,No,No,Primaria,5,79.0,1,13.5
-Masculino,Urbana,8,4060.16,Sí,No,Secundaria,3,70.0,2,13.5
-Femenino,Urbana,3,2554.31,No,No,Secundaria,8,89.0,1,13.5
-Masculino,Rural,7,1070.4,Sí,No,Secundaria,6,73.7,1,13.5
-Femenino,Rural,10,1034.68,No,Sí,Secundaria,5,76.4,1,13.5
-Femenino,Urbana,5,2080.0,No,No,Superior técnica,2,93.6,1,13.5
-Masculino,Urbana,7,3364.0,Sí,No,Superior universitaria,5,73.0,1,13.5
-Masculino,Rural,5,1518.0,No,No,Sin educación,5,93.2,2,13.5
-Femenino,Rural,7,601.75,No,No,Secundaria,5,80.3,2,13.5
-Femenino,Urbana,5,2147.05,Sí,No,Secundaria,4,73.4,0,13.5
-Femenino,Urbana,3,2523.05,No,No,Secundaria,6,90.1,1,13.49
-Femenino,Urbana,1,946.3,No,No,Primaria,3,95.3,1,13.49
-Femenino,Urbana,3,2105.87,No,No,Secundaria,6,82.7,2,13.49
-Masculino,Urbana,6,1179.13,No,No,Superior técnica,2,86.4,2,13.49
-Masculino,Urbana,8,1170.92,Sí,No,Secundaria,7,83.0,1,13.49
-Femenino,Urbana,1,2659.84,Sí,No,Superior universitaria,11,82.8,3,13.49
-Masculino,Rural,2,687.74,No,No,Primaria,5,89.6,0,13.49
-Masculino,Rural,3,811.23,No,No,Primaria,6,86.0,0,13.49
-Masculino,Rural,1,1525.02,No,No,Secundaria,5,85.3,1,13.49
-Masculino,Rural,7,1143.83,No,Sí,Primaria,5,85.2,1,13.49
-Masculino,Rural,8,497.63,Sí,No,Secundaria,7,74.9,0,13.49
-Femenino,Urbana,2,1256.1,No,No,Superior técnica,3,81.6,1,13.49
-Femenino,Rural,4,541.09,No,No,Secundaria,4,93.5,2,13.49
-Femenino,Rural,7,1112.34,Sí,No,Superior técnica,6,90.2,1,13.49
-Masculino,Rural,2,695.15,No,No,Secundaria,8,95.4,2,13.49
-Masculino,Urbana,4,1256.26,No,No,Secundaria,8,76.8,1,13.49
-Femenino,Rural,4,941.61,No,No,Primaria,5,79.7,0,13.49
-Femenino,Rural,5,493.25,No,No,Secundaria,7,89.1,0,13.49
-Femenino,Rural,1,402.36,Sí,Sí,Sin educación,6,78.1,1,13.49
-Masculino,Urbana,2,2155.51,No,No,Secundaria,3,78.9,2,13.49
-Masculino,Rural,1,1089.61,No,No,Primaria,3,81.6,1,13.49
-Femenino,Urbana,1,1985.61,No,No,Secundaria,1,88.1,1,13.49
-Femenino,Rural,2,1016.39,No,No,Secundaria,5,85.4,3,13.49
-Masculino,Urbana,2,5232.89,No,No,Secundaria,7,92.1,3,13.49
-Masculino,Urbana,3,5077.9,No,No,Superior universitaria,2,91.9,2,13.49
-Femenino,Rural,1,5030.29,No,No,Primaria,6,92.4,1,13.49
-Femenino,Urbana,2,2655.24,No,No,Primaria,3,91.1,1,13.49
-Femenino,Urbana,2,1892.71,No,Sí,Secundaria,2,76.2,0,13.49
-Masculino,Urbana,7,4337.45,Sí,No,Secundaria,1,80.7,0,13.49
-Femenino,Rural,3,807.16,Sí,No,Secundaria,3,79.0,1,13.49
-Femenino,Urbana,10,867.27,No,No,Superior universitaria,9,76.6,2,13.49
-Femenino,Rural,2,1903.13,No,No,Secundaria,5,90.8,3,13.49
-Femenino,Urbana,2,1178.05,Sí,Sí,Secundaria,3,86.8,1,13.49
-Femenino,Urbana,10,3477.41,No,No,Primaria,5,84.5,0,13.49
-Masculino,Urbana,4,729.19,No,No,Primaria,2,83.8,0,13.49
-Femenino,Rural,7,948.81,Sí,Sí,Sin educación,3,79.3,0,13.49
-Masculino,Rural,8,1601.8,Sí,No,Superior técnica,4,83.9,2,13.49
-Masculino,Urbana,6,1574.33,No,No,Secundaria,1,84.0,0,13.49
-Masculino,Rural,2,652.71,Sí,Sí,Secundaria,11,80.9,2,13.49
-Femenino,Rural,8,1258.87,No,Sí,Sin educación,7,86.0,1,13.49
-Masculino,Urbana,5,2893.69,No,No,Secundaria,8,77.6,3,13.49
-Femenino,Rural,6,595.89,No,Sí,Sin educación,8,80.3,1,13.49
-Masculino,Urbana,5,5095.76,No,No,Primaria,5,78.9,3,13.49
-Femenino,Rural,3,1647.26,No,No,Superior técnica,3,95.1,2,13.48
-Masculino,Urbana,2,1979.72,No,No,Primaria,5,87.7,2,13.48
-Femenino,Rural,6,869.03,No,Sí,Primaria,4,93.6,0,13.48
-Masculino,Urbana,10,2559.58,No,No,Primaria,1,81.6,0,13.48
-Femenino,Rural,3,414.04,No,Sí,Sin educación,5,80.5,0,13.48
-Femenino,Rural,6,1134.29,No,No,Primaria,4,89.2,2,13.48
-Femenino,Rural,3,764.39,No,No,Superior técnica,4,95.1,2,13.48
-Femenino,Urbana,5,2476.93,No,No,Primaria,2,89.8,0,13.48
-Masculino,Rural,6,887.19,No,No,Secundaria,2,78.5,1,13.48
-Femenino,Rural,10,2517.04,No,No,Primaria,3,93.1,0,13.48
-Masculino,Rural,4,1303.7,Sí,No,Secundaria,5,77.3,2,13.48
-Femenino,Urbana,6,1806.07,No,No,Secundaria,5,82.7,1,13.48
-Masculino,Rural,7,778.22,Sí,No,Primaria,7,75.2,1,13.48
-Femenino,Rural,1,820.8,No,No,Primaria,4,97.3,2,13.48
-Femenino,Urbana,5,3173.27,No,No,Secundaria,6,85.7,3,13.48
-Masculino,Urbana,4,1063.83,No,No,Superior técnica,4,84.9,1,13.48
-Masculino,Rural,1,140.35,No,Sí,Sin educación,3,91.2,1,13.48
-Femenino,Urbana,2,2140.31,Sí,No,Superior universitaria,5,67.4,3,13.48
-Masculino,Rural,6,804.3,No,No,Primaria,8,75.1,1,13.48
-Masculino,Urbana,2,1271.45,No,No,Primaria,8,91.2,3,13.48
-Femenino,Urbana,10,2985.66,No,No,Secundaria,8,85.0,0,13.48
-Masculino,Rural,5,631.63,No,No,Secundaria,4,82.4,0,13.48
-Femenino,Rural,3,710.7,Sí,Sí,Superior universitaria,3,71.6,1,13.48
-Masculino,Rural,1,901.91,No,Sí,Sin educación,3,92.8,2,13.48
-Femenino,Rural,2,1767.4,No,No,Primaria,7,100.0,2,13.48
-Femenino,Urbana,2,1552.87,No,Sí,Sin educación,1,87.4,0,13.48
-Masculino,Rural,8,1171.6,No,No,Secundaria,6,81.4,1,13.48
-Masculino,Urbana,8,11525.41,Sí,No,Superior técnica,5,68.4,1,13.48
-Masculino,Urbana,7,718.29,No,No,Primaria,4,86.8,1,13.48
-Femenino,Rural,4,1777.87,No,No,Secundaria,6,78.5,3,13.48
-Femenino,Rural,7,874.17,Sí,No,Secundaria,5,74.3,1,13.48
-Femenino,Urbana,6,1352.98,No,No,Primaria,2,86.2,1,13.48
-Femenino,Urbana,8,4269.11,No,No,Secundaria,7,73.9,1,13.48
-Femenino,Rural,1,674.71,Sí,Sí,Sin educación,9,84.3,1,13.48
-Femenino,Rural,2,1079.43,Sí,No,Secundaria,4,76.2,1,13.48
-Femenino,Urbana,2,2454.87,No,No,Primaria,3,97.7,1,13.48
-Femenino,Urbana,10,1785.6,Sí,No,Secundaria,3,66.8,1,13.48
-Femenino,Urbana,3,1742.91,No,No,Superior técnica,5,86.0,2,13.48
-Femenino,Rural,10,320.76,Sí,No,Primaria,6,71.2,1,13.48
-Masculino,Rural,1,1843.39,No,No,Superior técnica,7,87.8,3,13.48
-Masculino,Rural,9,597.99,No,No,Primaria,9,82.8,0,13.48
-Femenino,Rural,5,889.4,No,No,Primaria,6,88.0,0,13.48
-Masculino,Rural,4,2470.24,Sí,Sí,Secundaria,2,75.5,1,13.48
-Masculino,Rural,10,649.3,No,Sí,Sin educación,5,90.6,0,13.48
-Femenino,Urbana,4,2710.45,No,No,Superior universitaria,5,82.2,1,13.47
-Masculino,Rural,8,1545.35,No,Sí,Sin educación,5,76.6,1,13.47
-Femenino,Rural,1,1078.25,No,No,Primaria,9,91.4,2,13.47
-Femenino,Rural,4,575.79,No,No,Superior técnica,9,81.2,0,13.47
-Masculino,Rural,1,920.65,No,No,Secundaria,11,92.8,0,13.47
-Femenino,Rural,8,1267.06,Sí,No,Superior técnica,4,84.4,1,13.47
-Femenino,Urbana,7,1642.08,No,No,Primaria,2,86.4,2,13.47
-Femenino,Rural,5,786.87,No,No,Secundaria,7,84.9,0,13.47
-Femenino,Rural,3,796.77,No,Sí,Secundaria,5,96.5,1,13.47
-Masculino,Rural,6,660.53,No,No,Sin educación,7,87.2,0,13.47
-Masculino,Rural,5,1246.58,No,No,Secundaria,7,82.3,1,13.47
-Femenino,Urbana,2,5852.41,No,No,Secundaria,3,87.5,2,13.47
-Femenino,Rural,7,959.09,No,No,Primaria,5,70.6,0,13.47
-Masculino,Urbana,4,2035.78,No,No,Secundaria,2,79.8,1,13.47
-Femenino,Urbana,2,1997.79,No,No,Primaria,3,90.7,1,13.47
-Masculino,Rural,1,518.85,No,Sí,Secundaria,7,92.2,1,13.47
-Femenino,Urbana,1,2660.58,Sí,No,Secundaria,2,70.8,2,13.47
-Masculino,Rural,8,1034.94,No,No,Primaria,3,81.7,2,13.47
-Femenino,Rural,9,1257.15,No,No,Superior técnica,7,81.0,1,13.47
-Masculino,Rural,9,1535.72,No,No,Primaria,6,90.8,2,13.47
-Femenino,Urbana,5,2327.39,No,No,Secundaria,1,94.3,2,13.47
-Femenino,Urbana,5,2007.87,No,No,Sin educación,1,87.5,1,13.47
-Masculino,Urbana,1,3268.21,Sí,No,Superior universitaria,1,68.5,0,13.47
-Masculino,Rural,2,1996.94,No,No,Primaria,7,81.2,2,13.47
-Femenino,Rural,5,1172.6,Sí,Sí,Primaria,9,70.2,1,13.47
-Femenino,Urbana,7,762.46,No,No,Primaria,5,84.9,0,13.47
-Femenino,Rural,1,925.41,No,No,Primaria,8,94.3,1,13.47
-Femenino,Rural,6,1466.5,Sí,Sí,Secundaria,6,82.4,1,13.47
-Femenino,Rural,8,1486.85,No,No,Primaria,4,80.1,1,13.47
-Femenino,Rural,10,1014.2,No,No,Primaria,6,83.7,2,13.47
-Masculino,Rural,4,1141.07,No,No,Secundaria,8,78.8,0,13.47
-Masculino,Rural,1,1677.71,Sí,No,Primaria,7,74.8,1,13.47
-Masculino,Urbana,2,1257.16,No,No,Secundaria,4,85.6,3,13.46
-Femenino,Rural,9,2258.68,Sí,Sí,Secundaria,4,74.9,2,13.46
-Femenino,Urbana,4,3913.0,Sí,No,Superior técnica,3,78.2,1,13.46
-Femenino,Rural,2,300.07,No,Sí,Primaria,7,95.1,1,13.46
-Femenino,Rural,4,1893.08,No,Sí,Primaria,5,87.9,0,13.46
-Femenino,Rural,2,1013.76,No,No,Primaria,6,87.2,2,13.46
-Masculino,Urbana,2,4879.97,Sí,No,Secundaria,4,80.4,0,13.46
-Masculino,Urbana,4,3133.42,No,No,Superior universitaria,6,83.9,4,13.46
-Femenino,Urbana,3,1137.43,Sí,Sí,Superior técnica,4,77.1,0,13.46
-Femenino,Urbana,3,1897.68,No,No,Superior técnica,7,88.5,1,13.46
-Masculino,Urbana,8,1612.29,No,No,Superior universitaria,5,90.6,1,13.46
-Masculino,Urbana,2,2747.46,No,No,Primaria,7,91.1,0,13.46
-Femenino,Rural,3,573.3,No,Sí,Secundaria,1,89.0,1,13.46
-Femenino,Urbana,2,3709.68,No,No,Superior universitaria,4,93.7,3,13.46
-Femenino,Urbana,1,920.67,No,No,Secundaria,2,84.7,2,13.46
-Masculino,Rural,2,841.8,No,No,Secundaria,4,87.6,2,13.46
-Femenino,Urbana,5,574.66,No,No,Primaria,9,86.6,2,13.46
-Masculino,Rural,3,348.02,No,Sí,Sin educación,11,91.9,1,13.46
-Masculino,Urbana,1,3642.3,No,No,Superior técnica,2,92.9,2,13.46
-Masculino,Urbana,3,4764.54,No,No,Superior técnica,4,86.3,1,13.46
-Femenino,Rural,4,2026.41,No,No,Primaria,5,89.3,1,13.46
-Masculino,Rural,5,1117.01,No,Sí,Primaria,5,90.9,4,13.46
-Masculino,Rural,1,1152.13,No,No,Secundaria,10,79.0,2,13.46
-Femenino,Rural,3,590.89,Sí,Sí,Secundaria,5,68.9,0,13.46
-Femenino,Urbana,9,4709.45,No,No,Superior técnica,4,79.6,3,13.46
-Femenino,Rural,9,970.72,Sí,No,Secundaria,8,71.9,0,13.46
-Femenino,Rural,2,1074.0,Sí,No,Secundaria,7,82.2,2,13.46
-Masculino,Urbana,7,1918.29,No,No,Secundaria,1,84.2,1,13.46
-Femenino,Rural,9,619.16,Sí,Sí,Primaria,7,85.7,0,13.46
-Femenino,Rural,8,799.85,No,Sí,Sin educación,5,90.7,1,13.46
-Femenino,Urbana,6,2898.93,Sí,No,Superior técnica,5,76.4,0,13.46
-Masculino,Rural,7,5150.85,No,No,Primaria,4,89.2,2,13.46
-Femenino,Rural,10,1024.31,No,No,Secundaria,2,85.7,1,13.46
-Femenino,Rural,4,2239.13,No,No,Secundaria,6,77.5,1,13.46
-Masculino,Rural,6,2261.77,No,No,Primaria,6,84.2,0,13.46
-Femenino,Rural,1,1866.8,Sí,Sí,Primaria,5,75.2,1,13.46
-Masculino,Rural,1,1352.68,No,No,Primaria,3,97.5,2,13.46
-Masculino,Rural,2,1250.07,No,No,Secundaria,10,78.8,2,13.46
-Masculino,Rural,4,1300.27,Sí,Sí,Sin educación,4,69.0,1,13.46
-Masculino,Urbana,6,2146.52,No,No,Superior universitaria,2,74.8,2,13.46
-Masculino,Rural,2,1462.42,No,No,Secundaria,8,83.8,0,13.46
-Masculino,Rural,4,887.43,No,Sí,Primaria,8,91.5,2,13.46
-Femenino,Rural,3,858.59,No,No,Secundaria,3,95.3,2,13.45
-Masculino,Rural,6,2726.54,No,Sí,Sin educación,6,85.0,1,13.45
-Femenino,Urbana,3,1401.18,No,No,Sin educación,4,86.0,0,13.45
-Masculino,Rural,8,1027.46,Sí,Sí,Sin educación,4,73.3,1,13.45
-Femenino,Rural,2,1262.06,No,No,Primaria,4,95.3,2,13.45
-Femenino,Rural,9,2042.33,No,No,Primaria,7,84.8,1,13.45
-Masculino,Rural,2,565.23,No,Sí,Sin educación,5,92.5,0,13.45
-Masculino,Rural,2,968.83,No,No,Primaria,4,96.0,1,13.45
-Femenino,Urbana,9,2777.79,No,No,Secundaria,2,92.7,2,13.45
-Masculino,Urbana,9,5365.46,Sí,No,Secundaria,3,70.2,0,13.45
-Femenino,Urbana,1,3719.3,No,No,Secundaria,8,73.6,2,13.45
-Femenino,Rural,1,875.92,No,No,Secundaria,8,89.2,2,13.45
-Masculino,Rural,2,1518.3,No,No,Secundaria,3,95.7,3,13.45
-Masculino,Rural,4,1230.69,No,No,Primaria,11,84.4,0,13.45
-Femenino,Rural,10,518.87,No,No,Secundaria,9,78.3,1,13.45
-Femenino,Rural,3,652.79,No,No,Primaria,7,83.0,0,13.45
-Femenino,Urbana,5,4814.67,No,No,Secundaria,4,85.5,2,13.45
-Femenino,Rural,3,2620.78,No,No,Superior técnica,9,88.7,3,13.45
-Femenino,Rural,7,2256.05,No,No,Primaria,5,80.3,0,13.45
-Femenino,Rural,8,767.52,Sí,No,Primaria,10,79.9,1,13.45
-Femenino,Rural,5,661.25,Sí,No,Secundaria,10,72.0,0,13.45
-Femenino,Urbana,5,3357.78,No,No,Sin educación,1,79.5,0,13.45
-Femenino,Rural,9,1142.3,Sí,No,Secundaria,9,76.9,1,13.45
-Femenino,Urbana,2,2041.42,No,No,Primaria,5,93.6,1,13.45
-Femenino,Rural,1,721.64,No,Sí,Primaria,3,84.5,1,13.45
-Masculino,Urbana,1,1076.89,Sí,No,Superior universitaria,3,88.1,3,13.45
-Femenino,Urbana,3,1503.57,No,No,Sin educación,7,90.6,3,13.45
-Femenino,Urbana,5,861.03,No,No,Secundaria,7,77.2,1,13.45
-Femenino,Rural,1,1601.54,No,No,Primaria,6,85.1,0,13.45
-Femenino,Urbana,2,2038.5,No,No,Primaria,2,87.3,1,13.45
-Masculino,Rural,3,1296.48,No,No,Sin educación,10,87.7,0,13.45
-Masculino,Rural,2,452.31,No,No,Primaria,3,93.8,1,13.45
-Masculino,Rural,10,1217.93,Sí,Sí,Secundaria,6,90.0,1,13.45
-Femenino,Rural,1,836.39,Sí,Sí,Secundaria,5,84.7,1,13.45
-Femenino,Rural,2,2301.8,No,No,Superior técnica,6,93.0,2,13.45
-Masculino,Rural,1,2037.28,No,No,Primaria,5,91.5,2,13.45
-Masculino,Urbana,2,2556.69,No,No,Secundaria,7,90.8,3,13.45
-Masculino,Urbana,3,1135.28,No,No,Primaria,6,91.1,1,13.44
-Masculino,Urbana,1,1617.42,No,No,Superior técnica,2,88.0,2,13.44
-Femenino,Urbana,2,3574.54,No,No,Superior técnica,3,85.1,2,13.44
-Femenino,Rural,6,1067.05,No,No,Secundaria,3,76.0,2,13.44
-Femenino,Rural,6,590.33,No,No,Sin educación,9,89.4,2,13.44
-Femenino,Urbana,5,2237.14,No,No,Primaria,5,77.3,1,13.44
-Femenino,Rural,3,992.56,No,No,Sin educación,7,94.6,2,13.44
-Masculino,Rural,1,451.91,Sí,Sí,Primaria,4,77.4,2,13.44
-Femenino,Urbana,8,843.93,Sí,Sí,Secundaria,3,79.9,1,13.44
-Masculino,Urbana,3,2134.13,Sí,No,Secundaria,4,79.2,0,13.44
-Masculino,Urbana,1,2888.22,No,No,Secundaria,7,98.8,1,13.44
-Masculino,Urbana,7,2714.45,No,No,Primaria,8,88.4,3,13.44
-Masculino,Rural,2,1098.89,No,No,Primaria,7,88.3,1,13.44
-Masculino,Rural,1,1860.23,No,No,Primaria,6,83.7,2,13.44
-Femenino,Rural,10,999.84,No,No,Primaria,7,80.3,0,13.44
-Masculino,Urbana,2,3267.86,No,No,Superior técnica,1,86.9,2,13.44
-Femenino,Urbana,6,1261.05,No,No,Primaria,8,97.5,1,13.44
-Femenino,Urbana,4,6378.35,No,No,Primaria,7,83.3,1,13.44
-Masculino,Urbana,4,2645.52,No,No,Superior técnica,1,84.6,3,13.44
-Femenino,Rural,7,1467.51,Sí,Sí,Secundaria,5,72.5,0,13.44
-Femenino,Urbana,8,3933.44,Sí,No,Superior técnica,11,62.6,0,13.44
-Masculino,Rural,1,342.75,No,No,Secundaria,4,86.2,1,13.44
-Masculino,Rural,4,1346.38,No,No,Sin educación,4,76.8,1,13.44
-Masculino,Urbana,5,616.76,No,No,Primaria,6,93.5,1,13.44
-Femenino,Rural,2,3938.87,No,No,Secundaria,6,97.3,1,13.44
-Masculino,Urbana,3,1614.28,No,No,Superior universitaria,7,81.8,2,13.44
-Masculino,Urbana,5,1792.01,No,No,Secundaria,6,72.4,1,13.44
-Femenino,Urbana,8,1565.56,No,No,Secundaria,5,87.4,1,13.44
-Femenino,Rural,3,377.04,No,No,Sin educación,10,85.1,1,13.44
-Femenino,Rural,5,735.35,No,No,Primaria,1,90.2,0,13.44
-Masculino,Rural,6,1490.47,No,No,Primaria,3,82.2,0,13.44
-Masculino,Rural,6,812.54,No,No,Secundaria,3,89.2,2,13.44
-Femenino,Rural,6,2479.32,Sí,No,Superior técnica,4,62.8,2,13.44
-Femenino,Urbana,2,2929.99,No,No,Superior universitaria,5,88.8,4,13.44
-Masculino,Urbana,4,1368.9,No,No,Secundaria,3,82.0,1,13.44
-Femenino,Rural,1,413.35,Sí,Sí,Primaria,12,83.6,0,13.44
-Masculino,Rural,7,1043.7,No,No,Superior técnica,9,85.7,1,13.44
-Masculino,Rural,6,571.75,Sí,Sí,Primaria,3,77.3,3,13.43
-Masculino,Rural,3,981.82,No,No,Primaria,9,85.4,0,13.43
-Masculino,Rural,3,1917.46,Sí,Sí,Primaria,2,75.8,1,13.43
-Masculino,Rural,4,651.26,No,Sí,Primaria,7,84.9,1,13.43
-Femenino,Rural,5,968.82,No,No,Primaria,2,96.9,2,13.43
-Masculino,Rural,3,845.65,No,Sí,Sin educación,3,95.5,2,13.43
-Femenino,Rural,4,336.15,No,No,Superior universitaria,3,84.7,1,13.43
-Masculino,Rural,3,571.25,No,No,Secundaria,9,92.3,1,13.43
-Masculino,Urbana,5,1442.61,No,No,Superior universitaria,5,86.9,2,13.43
-Masculino,Urbana,2,2523.76,No,No,Superior universitaria,7,91.5,2,13.43
-Masculino,Rural,1,1221.16,No,Sí,Primaria,9,94.8,1,13.43
-Masculino,Urbana,4,1819.56,No,No,Secundaria,6,81.1,2,13.43
-Femenino,Urbana,3,1664.6,No,No,Superior técnica,4,88.3,1,13.43
-Masculino,Rural,1,249.62,No,No,Sin educación,5,87.0,1,13.43
-Masculino,Rural,6,908.18,No,No,Primaria,10,78.0,0,13.43
-Femenino,Urbana,1,1564.43,No,No,Sin educación,1,91.2,2,13.43
-Femenino,Rural,6,358.14,Sí,Sí,Primaria,7,90.5,1,13.43
-Masculino,Rural,6,759.43,Sí,Sí,Primaria,2,72.9,1,13.43
-Femenino,Rural,2,1631.46,No,No,Secundaria,8,75.6,1,13.43
-Femenino,Rural,7,2592.05,No,No,Primaria,11,77.1,2,13.43
-Femenino,Rural,5,1028.78,Sí,Sí,Primaria,4,77.1,0,13.43
-Femenino,Urbana,3,2084.38,No,No,Secundaria,6,87.0,1,13.43
-Masculino,Urbana,3,2789.34,No,No,Secundaria,5,79.5,2,13.43
-Masculino,Rural,7,1144.23,No,No,Sin educación,5,84.0,1,13.43
-Masculino,Urbana,1,3493.7,No,Sí,Secundaria,7,91.8,1,13.43
-Masculino,Urbana,8,2147.81,No,No,Secundaria,6,84.7,1,13.43
-Masculino,Urbana,2,1480.13,No,No,Superior universitaria,7,82.1,1,13.43
-Masculino,Rural,10,1433.48,Sí,Sí,Superior técnica,6,76.3,0,13.43
-Masculino,Urbana,8,1524.78,No,No,Secundaria,3,74.8,1,13.43
-Femenino,Rural,9,1552.95,No,No,Primaria,5,84.2,3,13.43
-Masculino,Rural,2,973.63,No,No,Primaria,8,91.1,0,13.43
-Femenino,Rural,3,354.16,No,No,Secundaria,4,90.4,2,13.43
-Femenino,Rural,7,770.01,No,Sí,Sin educación,5,88.0,3,13.43
-Femenino,Urbana,6,1935.74,No,No,Secundaria,3,84.8,3,13.43
-Masculino,Rural,5,2897.27,No,No,Secundaria,6,77.7,2,13.42
-Masculino,Urbana,4,4668.35,No,No,Superior universitaria,6,83.7,1,13.42
-Masculino,Rural,8,2403.46,Sí,No,Superior universitaria,4,78.0,2,13.42
-Masculino,Rural,5,1453.63,No,No,Primaria,9,90.2,2,13.42
-Masculino,Rural,4,405.41,Sí,Sí,Secundaria,5,77.2,1,13.42
-Masculino,Rural,8,740.51,No,No,Secundaria,4,87.9,2,13.42
-Masculino,Urbana,4,2194.26,No,No,Superior técnica,4,81.8,0,13.42
-Masculino,Rural,3,674.1,No,Sí,Primaria,3,94.9,1,13.42
-Femenino,Urbana,7,4055.13,No,No,Primaria,2,78.2,3,13.42
-Femenino,Rural,2,882.65,Sí,Sí,Superior técnica,2,82.4,2,13.42
-Femenino,Rural,4,1037.89,No,No,Secundaria,5,75.3,1,13.42
-Femenino,Urbana,1,2376.31,No,No,Superior técnica,2,87.0,2,13.42
-Masculino,Rural,6,682.22,No,No,Primaria,6,84.8,0,13.42
-Femenino,Urbana,2,1495.2,No,No,Secundaria,4,92.1,2,13.42
-Femenino,Urbana,3,2774.56,No,No,Superior técnica,7,79.2,1,13.42
-Femenino,Urbana,2,3810.08,Sí,No,Secundaria,6,77.6,3,13.42
-Femenino,Urbana,3,1371.65,No,No,Primaria,4,86.4,1,13.42
-Masculino,Rural,1,951.17,No,No,Primaria,4,86.0,1,13.42
-Masculino,Urbana,3,1404.7,No,No,Primaria,2,93.8,1,13.42
-Masculino,Rural,4,367.74,No,Sí,Primaria,8,92.8,1,13.42
-Masculino,Rural,5,447.63,No,No,Primaria,5,79.4,1,13.42
-Masculino,Urbana,9,4442.0,No,Sí,Secundaria,3,83.3,1,13.42
-Masculino,Rural,5,1459.28,No,No,Primaria,6,89.6,2,13.42
-Masculino,Rural,2,1353.28,No,No,Secundaria,5,92.2,0,13.42
-Femenino,Urbana,7,1558.1,No,No,Superior universitaria,5,79.8,1,13.42
-Femenino,Rural,5,1081.0,No,No,Primaria,5,81.2,1,13.42
-Femenino,Urbana,5,1129.23,Sí,No,Primaria,4,79.3,2,13.42
-Femenino,Urbana,1,2919.02,No,No,Sin educación,5,85.6,3,13.42
-Femenino,Rural,6,1603.96,Sí,Sí,Secundaria,9,70.3,1,13.42
-Masculino,Urbana,10,5425.58,No,No,Secundaria,9,83.1,3,13.42
-Femenino,Urbana,7,2801.92,No,No,Primaria,5,80.8,2,13.42
-Femenino,Rural,1,564.77,Sí,No,Secundaria,3,83.0,3,13.42
-Masculino,Rural,5,428.69,No,Sí,Sin educación,4,91.4,0,13.42
-Femenino,Rural,4,524.6,No,No,Sin educación,7,83.2,0,13.42
-Femenino,Rural,2,2055.89,No,No,Secundaria,6,83.2,2,13.42
-Masculino,Urbana,3,1305.76,Sí,No,Primaria,3,72.8,1,13.42
-Femenino,Rural,1,1688.21,Sí,No,Superior técnica,5,82.3,1,13.42
-Masculino,Urbana,5,1201.03,No,No,Secundaria,4,80.0,2,13.42
-Femenino,Rural,1,857.47,No,No,Primaria,5,92.2,1,13.42
-Femenino,Rural,3,2921.65,No,No,Primaria,11,93.2,2,13.42
-Masculino,Urbana,4,2859.1,No,No,Sin educación,5,83.3,2,13.42
-Masculino,Rural,7,733.03,No,No,Primaria,2,81.7,1,13.42
-Masculino,Rural,1,561.64,No,Sí,Sin educación,5,89.1,0,13.42
-Femenino,Rural,1,1029.05,Sí,No,Secundaria,6,82.2,2,13.41
-Masculino,Rural,1,1188.95,No,No,Primaria,9,87.2,2,13.41
-Femenino,Urbana,5,1671.3,Sí,No,Secundaria,1,86.0,0,13.41
-Femenino,Rural,7,1327.76,Sí,Sí,Secundaria,4,79.5,2,13.41
-Femenino,Urbana,8,2558.18,No,No,Primaria,2,87.5,1,13.41
-Femenino,Rural,3,373.26,Sí,Sí,Primaria,10,85.0,0,13.41
-Femenino,Urbana,2,1673.32,Sí,No,Superior universitaria,4,66.6,1,13.41
-Masculino,Rural,3,782.1,Sí,Sí,Secundaria,5,73.4,0,13.41
-Masculino,Rural,7,3669.3,No,Sí,Primaria,6,86.9,2,13.41
-Masculino,Rural,4,1483.41,Sí,Sí,Primaria,6,75.8,0,13.41
-Femenino,Rural,6,2729.3,No,No,Sin educación,6,88.9,2,13.41
-Femenino,Rural,10,522.71,Sí,No,Superior técnica,2,70.3,2,13.41
-Femenino,Rural,4,435.39,Sí,Sí,Primaria,2,85.2,2,13.41
-Masculino,Rural,5,400.94,No,No,Sin educación,4,78.2,2,13.41
-Femenino,Rural,3,1835.64,No,No,Sin educación,8,92.1,3,13.41
-Masculino,Rural,6,596.14,No,No,Sin educación,1,95.1,2,13.41
-Femenino,Rural,6,914.5,Sí,No,Superior universitaria,7,75.7,1,13.41
-Masculino,Rural,6,2129.75,No,No,Secundaria,6,77.9,1,13.41
-Femenino,Rural,2,530.56,No,No,Secundaria,12,88.1,4,13.41
-Masculino,Rural,6,1850.4,No,No,Secundaria,3,77.6,3,13.41
-Femenino,Rural,9,2660.33,Sí,No,Superior universitaria,4,78.7,3,13.41
-Masculino,Urbana,3,1887.84,No,No,Secundaria,5,95.4,0,13.41
-Femenino,Rural,4,580.25,No,No,Superior técnica,7,80.6,2,13.41
-Masculino,Rural,7,791.77,No,No,Secundaria,3,82.6,1,13.41
-Femenino,Rural,1,1318.35,No,No,Primaria,6,94.9,2,13.41
-Femenino,Rural,1,1135.06,Sí,No,Secundaria,11,67.2,2,13.41
-Femenino,Rural,6,1741.38,No,No,Superior universitaria,3,73.2,1,13.41
-Femenino,Rural,1,526.46,No,Sí,Secundaria,5,88.3,2,13.41
-Masculino,Rural,10,954.43,No,No,Sin educación,2,83.4,2,13.41
-Masculino,Rural,2,746.56,No,No,Primaria,1,80.1,0,13.41
-Femenino,Rural,6,743.65,No,Sí,Sin educación,10,80.8,1,13.41
-Femenino,Urbana,1,2249.07,No,No,Primaria,4,90.7,1,13.41
-Masculino,Rural,5,1063.51,No,Sí,Sin educación,6,74.6,0,13.41
-Femenino,Urbana,6,1207.42,No,No,Primaria,3,80.4,1,13.41
-Femenino,Rural,8,466.76,Sí,Sí,Secundaria,4,77.7,0,13.41
-Femenino,Urbana,2,6592.05,No,No,Sin educación,4,90.5,0,13.41
-Femenino,Rural,9,942.09,No,No,Secundaria,7,81.7,0,13.41
-Femenino,Rural,2,1213.18,No,Sí,Secundaria,7,92.3,2,13.41
-Femenino,Rural,3,849.47,No,Sí,Primaria,3,91.2,1,13.41
-Masculino,Rural,10,719.44,No,Sí,Sin educación,7,88.2,2,13.41
-Masculino,Rural,3,1071.81,No,No,Superior técnica,4,87.0,1,13.41
-Masculino,Rural,4,554.37,No,No,Primaria,7,82.6,1,13.41
-Femenino,Rural,3,321.61,Sí,No,Secundaria,8,70.6,1,13.41
-Masculino,Rural,1,502.14,No,Sí,Primaria,4,89.8,0,13.41
-Masculino,Rural,3,1854.95,No,No,Superior técnica,5,84.8,1,13.41
-Masculino,Rural,6,704.9,No,No,Sin educación,8,79.2,1,13.41
-Femenino,Rural,8,772.94,Sí,Sí,Primaria,4,67.4,1,13.41
-Femenino,Rural,5,927.51,No,No,Secundaria,5,83.7,2,13.41
-Masculino,Rural,6,948.56,No,Sí,Primaria,9,82.0,1,13.41
-Masculino,Rural,4,647.24,No,No,Primaria,7,91.4,0,13.41
-Masculino,Rural,1,984.83,No,No,Secundaria,5,92.5,4,13.41
-Masculino,Urbana,9,2796.47,No,No,Superior universitaria,8,96.8,1,13.41
-Masculino,Rural,1,1625.29,Sí,No,Superior universitaria,4,81.8,3,13.41
-Femenino,Urbana,3,5296.44,No,No,Superior técnica,1,87.8,3,13.41
-Masculino,Rural,3,898.25,Sí,Sí,Sin educación,7,79.9,1,13.4
-Femenino,Urbana,8,1655.79,Sí,No,Secundaria,5,76.9,2,13.4
-Femenino,Rural,2,2418.73,No,Sí,Primaria,7,98.2,3,13.4
-Masculino,Urbana,7,561.89,No,No,Primaria,4,90.5,2,13.4
-Masculino,Rural,1,2211.46,No,Sí,Primaria,5,89.3,1,13.4
-Femenino,Urbana,2,1502.18,No,No,Primaria,5,90.8,1,13.4
-Masculino,Rural,6,415.96,Sí,No,Superior universitaria,6,75.7,1,13.4
-Femenino,Urbana,1,1755.6,No,No,Superior técnica,6,85.7,2,13.4
-Femenino,Rural,6,1671.79,No,No,Primaria,5,76.5,1,13.4
-Masculino,Urbana,5,2166.22,Sí,No,Superior técnica,2,83.4,1,13.4
-Femenino,Rural,2,519.12,No,No,Sin educación,2,94.1,2,13.4
-Masculino,Rural,3,1292.22,No,No,Secundaria,3,77.6,0,13.4
-Femenino,Urbana,3,2473.22,No,No,Superior técnica,3,79.7,1,13.4
-Masculino,Rural,3,3150.15,No,No,Secundaria,8,89.4,2,13.4
-Masculino,Rural,2,381.62,Sí,No,Primaria,10,77.5,1,13.4
-Masculino,Urbana,6,2446.91,No,No,Superior técnica,3,82.8,1,13.4
-Masculino,Urbana,3,1853.29,No,No,Secundaria,5,82.4,2,13.4
-Femenino,Rural,6,651.88,Sí,No,Secundaria,3,73.8,1,13.4
-Masculino,Urbana,2,940.76,No,No,Primaria,3,86.0,1,13.4
-Masculino,Urbana,3,3611.65,No,No,Primaria,5,94.9,3,13.4
-Femenino,Rural,1,1549.45,No,No,Primaria,8,86.0,1,13.4
-Masculino,Rural,3,1118.77,No,No,Secundaria,2,78.5,3,13.4
-Masculino,Urbana,2,4101.58,Sí,No,Secundaria,4,79.8,1,13.4
-Femenino,Urbana,6,1783.66,Sí,No,Superior universitaria,4,77.7,1,13.4
-Femenino,Rural,1,393.18,No,No,Primaria,7,95.1,1,13.4
-Masculino,Urbana,8,2787.94,Sí,No,Superior universitaria,8,72.4,2,13.4
-Femenino,Rural,4,656.13,Sí,Sí,Secundaria,4,82.7,0,13.4
-Femenino,Rural,7,482.82,Sí,No,Superior técnica,3,73.3,0,13.4
-Masculino,Urbana,5,1825.64,No,No,Secundaria,6,93.6,0,13.4
-Femenino,Urbana,1,5342.1,No,No,Superior técnica,4,75.4,3,13.4
-Femenino,Rural,4,577.15,Sí,No,Primaria,9,69.9,1,13.4
-Masculino,Rural,2,3361.01,Sí,No,Secundaria,8,75.7,2,13.4
-Masculino,Rural,6,1021.08,No,No,Primaria,6,89.1,1,13.4
-Masculino,Rural,10,1092.81,No,Sí,Sin educación,9,94.8,1,13.4
-Masculino,Urbana,7,2586.77,No,No,Primaria,3,88.8,1,13.4
-Femenino,Rural,4,1124.27,Sí,No,Primaria,2,77.2,1,13.4
-Femenino,Urbana,3,4038.53,No,No,Secundaria,6,96.5,1,13.4
-Masculino,Urbana,6,5005.66,No,No,Secundaria,6,87.3,3,13.4
-Femenino,Rural,1,1134.14,Sí,No,Superior técnica,2,72.6,2,13.4
-Masculino,Urbana,1,2306.61,No,No,Superior técnica,5,92.3,2,13.4
-Femenino,Rural,4,1179.57,Sí,No,Secundaria,6,88.5,1,13.4
-Femenino,Rural,4,849.4,Sí,No,Primaria,13,68.7,1,13.4
-Femenino,Rural,10,1203.97,No,No,Secundaria,6,79.3,1,13.4
-Masculino,Rural,10,1238.07,No,No,Superior técnica,5,86.6,1,13.4
-Femenino,Rural,1,1040.78,No,Sí,Primaria,7,88.3,1,13.4
-Femenino,Rural,10,1115.05,Sí,No,Secundaria,5,75.2,1,13.4
-Masculino,Urbana,3,2998.5,Sí,No,Superior técnica,2,74.2,1,13.39
-Masculino,Urbana,4,966.15,No,No,Secundaria,7,83.7,2,13.39
-Masculino,Rural,3,729.07,Sí,Sí,Primaria,8,86.6,1,13.39
-Femenino,Rural,2,1750.56,No,No,Primaria,8,83.9,0,13.39
-Femenino,Urbana,1,1224.59,No,No,Primaria,3,88.8,1,13.39
-Femenino,Urbana,2,2527.17,Sí,No,Superior universitaria,3,82.0,1,13.39
-Masculino,Rural,1,586.2,No,No,Primaria,7,87.2,2,13.39
-Femenino,Rural,5,773.25,No,No,Superior técnica,4,80.8,2,13.39
-Femenino,Urbana,5,1450.87,No,No,Primaria,4,88.6,2,13.39
-Masculino,Rural,5,1209.08,Sí,No,Primaria,4,79.3,0,13.39
-Femenino,Rural,2,419.52,Sí,Sí,Primaria,10,90.6,1,13.39
-Femenino,Rural,5,475.45,Sí,Sí,Secundaria,4,78.9,1,13.39
-Masculino,Rural,3,1539.4,No,No,Secundaria,8,76.6,0,13.39
-Femenino,Rural,3,1083.47,No,No,Secundaria,5,89.5,0,13.39
-Masculino,Rural,6,2225.44,No,Sí,Secundaria,9,82.6,1,13.39
-Femenino,Urbana,4,3976.84,No,No,Secundaria,5,77.1,3,13.39
-Femenino,Urbana,6,2032.16,Sí,No,Superior técnica,2,73.7,1,13.39
-Masculino,Rural,1,827.31,No,Sí,Primaria,6,89.7,1,13.39
-Masculino,Rural,4,1062.78,No,Sí,Primaria,9,86.1,2,13.39
-Femenino,Rural,9,616.83,Sí,No,Superior técnica,5,79.7,4,13.39
-Femenino,Rural,4,2075.87,No,No,Primaria,6,90.3,3,13.39
-Femenino,Rural,3,541.56,No,Sí,Primaria,2,86.6,1,13.39
-Femenino,Urbana,2,1536.27,Sí,No,Superior técnica,3,80.4,2,13.39
-Masculino,Urbana,5,1018.72,No,No,Superior técnica,6,86.6,1,13.39
-Masculino,Urbana,6,2583.4,No,No,Primaria,9,96.3,2,13.39
-Masculino,Rural,10,1128.65,No,No,Secundaria,11,86.6,0,13.39
-Femenino,Urbana,1,2612.83,No,No,Secundaria,6,87.8,2,13.39
-Masculino,Urbana,2,2270.53,Sí,No,Superior técnica,4,80.4,2,13.39
-Femenino,Rural,5,472.12,No,Sí,Primaria,5,86.4,2,13.39
-Masculino,Urbana,3,684.35,No,No,Secundaria,2,88.4,1,13.39
-Masculino,Urbana,5,2022.12,No,Sí,Primaria,2,84.0,1,13.39
-Masculino,Urbana,2,1078.58,Sí,Sí,Primaria,7,82.9,0,13.39
-Femenino,Rural,10,737.11,Sí,No,Superior técnica,5,70.8,0,13.39
-Femenino,Rural,5,2482.61,Sí,No,Secundaria,7,79.8,2,13.39
-Masculino,Rural,4,948.44,No,No,Secundaria,3,91.6,0,13.39
-Femenino,Urbana,5,1709.73,No,No,Primaria,1,82.0,1,13.39
-Femenino,Rural,8,540.17,No,No,Secundaria,4,83.9,1,13.39
-Femenino,Urbana,9,1439.88,No,No,Primaria,4,79.1,2,13.38
-Femenino,Urbana,1,3734.15,No,No,Primaria,2,84.4,1,13.38
-Masculino,Urbana,6,1311.4,No,Sí,Primaria,3,89.1,1,13.38
-Femenino,Rural,2,626.84,Sí,Sí,Primaria,6,84.7,1,13.38
-Masculino,Urbana,7,6840.75,No,No,Secundaria,9,71.8,1,13.38
-Femenino,Urbana,2,3736.46,Sí,No,Secundaria,3,72.0,2,13.38
-Femenino,Rural,3,440.95,No,No,Primaria,3,91.8,0,13.38
-Femenino,Rural,2,616.15,No,No,Superior técnica,10,90.7,4,13.38
-Masculino,Urbana,3,5454.09,No,No,Superior universitaria,5,81.7,3,13.38
-Masculino,Rural,2,1191.67,No,No,Primaria,8,96.1,2,13.38
-Femenino,Rural,6,319.05,Sí,No,Sin educación,3,79.1,1,13.38
-Femenino,Rural,1,2517.83,No,Sí,Secundaria,6,89.6,1,13.38
-Femenino,Rural,1,1482.81,No,Sí,Sin educación,9,87.2,2,13.38
-Femenino,Rural,7,940.19,No,No,Secundaria,7,84.7,2,13.38
-Masculino,Rural,5,1026.8,No,Sí,Sin educación,7,92.1,0,13.38
-Masculino,Rural,2,1405.29,Sí,Sí,Secundaria,5,84.1,1,13.38
-Masculino,Urbana,7,1385.02,No,No,Primaria,3,90.4,2,13.38
-Femenino,Rural,3,887.21,Sí,Sí,Primaria,7,83.9,1,13.38
-Femenino,Urbana,4,3173.03,Sí,No,Secundaria,4,67.8,2,13.38
-Femenino,Urbana,9,1494.74,Sí,No,Superior universitaria,4,73.6,1,13.38
-Femenino,Rural,8,1001.83,Sí,Sí,Superior técnica,3,80.3,3,13.38
-Femenino,Rural,6,598.47,No,No,Primaria,6,82.2,1,13.38
-Masculino,Urbana,1,3140.84,No,No,Primaria,4,86.8,1,13.38
-Masculino,Rural,7,905.04,Sí,No,Primaria,4,80.7,1,13.38
-Masculino,Urbana,1,1542.28,No,No,Primaria,3,98.3,2,13.38
-Masculino,Urbana,3,2055.91,Sí,No,Secundaria,4,80.6,1,13.38
-Femenino,Rural,1,679.98,No,Sí,Secundaria,8,85.4,1,13.38
-Masculino,Urbana,4,977.96,No,Sí,Primaria,3,90.2,0,13.38
-Femenino,Rural,6,600.44,No,No,Sin educación,10,90.6,1,13.38
-Masculino,Rural,4,815.99,No,No,Sin educación,2,90.0,1,13.38
-Femenino,Urbana,5,2875.5,No,Sí,Secundaria,7,79.5,1,13.38
-Femenino,Rural,5,342.53,No,Sí,Primaria,4,89.9,1,13.38
-Femenino,Rural,1,596.41,Sí,No,Primaria,10,88.7,1,13.38
-Masculino,Urbana,2,3605.98,Sí,No,Superior universitaria,2,76.6,1,13.38
-Femenino,Rural,7,962.53,Sí,Sí,Secundaria,5,82.9,0,13.38
-Femenino,Rural,6,761.18,No,No,Secundaria,6,85.2,2,13.38
-Femenino,Urbana,5,2246.45,No,No,Secundaria,3,70.9,1,13.38
-Femenino,Urbana,7,2528.77,Sí,No,Primaria,1,64.9,3,13.38
-Femenino,Urbana,6,2280.56,No,No,Primaria,5,86.1,1,13.38
-Femenino,Urbana,3,607.0,No,No,Secundaria,4,100.0,1,13.38
-Femenino,Rural,10,1451.26,Sí,No,Secundaria,2,71.6,1,13.38
-Masculino,Urbana,2,5149.77,No,No,Superior técnica,4,93.9,3,13.38
-Femenino,Rural,7,826.22,No,Sí,Primaria,4,90.7,1,13.38
-Femenino,Urbana,8,1043.74,No,Sí,Sin educación,2,78.1,2,13.38
-Femenino,Rural,6,1207.57,Sí,No,Superior técnica,2,68.9,1,13.38
-Femenino,Rural,2,1757.58,No,No,Secundaria,7,83.3,3,13.37
-Masculino,Urbana,3,4719.67,Sí,No,Superior universitaria,7,68.4,0,13.37
-Femenino,Urbana,1,3254.17,No,No,Sin educación,6,87.4,1,13.37
-Masculino,Urbana,2,1157.58,No,No,Primaria,5,94.9,2,13.37
-Masculino,Rural,2,391.24,No,No,Superior técnica,7,76.5,1,13.37
-Masculino,Urbana,2,1335.99,Sí,No,Superior técnica,4,88.2,1,13.37
-Masculino,Rural,5,666.88,No,Sí,Secundaria,7,85.6,1,13.37
-Masculino,Rural,7,952.72,No,No,Secundaria,9,77.4,1,13.37
-Femenino,Rural,2,1752.73,No,Sí,Sin educación,5,95.2,3,13.37
-Femenino,Urbana,8,2051.7,Sí,No,Secundaria,5,68.8,1,13.37
-Femenino,Rural,4,632.75,Sí,Sí,Primaria,6,84.2,0,13.37
-Femenino,Rural,2,899.93,No,No,Sin educación,10,94.5,1,13.37
-Femenino,Rural,5,1537.26,Sí,No,Superior técnica,3,78.4,1,13.37
-Femenino,Urbana,4,1829.56,Sí,No,Superior universitaria,3,67.6,1,13.37
-Masculino,Urbana,2,2075.98,No,Sí,Secundaria,5,81.0,0,13.37
-Masculino,Urbana,4,1668.22,No,No,Secundaria,4,84.3,1,13.37
-Femenino,Rural,9,1674.11,Sí,No,Superior universitaria,6,75.5,0,13.37
-Femenino,Rural,1,1046.98,No,No,Superior universitaria,6,88.7,3,13.37
-Femenino,Urbana,1,2781.12,Sí,No,Superior universitaria,4,84.2,2,13.37
-Femenino,Urbana,5,1301.18,Sí,No,Superior técnica,9,73.4,0,13.37
-Masculino,Rural,5,492.8,No,Sí,Sin educación,2,84.6,1,13.37
-Femenino,Urbana,8,1568.27,No,No,Superior universitaria,6,80.3,2,13.37
-Masculino,Rural,6,428.2,No,No,Primaria,3,78.7,1,13.37
-Masculino,Rural,4,1500.05,Sí,No,Secundaria,8,74.8,0,13.37
-Masculino,Urbana,3,2278.33,Sí,No,Superior técnica,1,82.8,0,13.37
-Masculino,Urbana,3,3572.23,No,No,Superior universitaria,5,80.9,1,13.37
-Masculino,Rural,4,1809.29,Sí,No,Superior técnica,6,84.9,2,13.37
-Masculino,Rural,7,2268.13,Sí,No,Superior técnica,12,78.3,1,13.37
-Masculino,Rural,3,1637.52,Sí,No,Primaria,8,65.6,1,13.37
-Femenino,Rural,2,583.79,No,Sí,Sin educación,2,97.2,1,13.37
-Femenino,Rural,5,759.17,No,Sí,Sin educación,4,84.5,1,13.37
-Masculino,Urbana,6,3041.38,Sí,No,Superior técnica,5,84.2,1,13.37
-Femenino,Urbana,1,1402.67,No,No,Secundaria,4,85.2,3,13.37
-Masculino,Urbana,3,1135.03,No,No,Secundaria,1,92.2,2,13.37
-Masculino,Urbana,5,2451.52,No,No,Superior técnica,11,74.1,1,13.37
-Masculino,Rural,2,521.22,No,No,Primaria,7,84.2,1,13.37
-Femenino,Rural,8,919.27,No,No,Sin educación,12,83.4,0,13.36
-Femenino,Rural,6,720.27,No,No,Primaria,6,82.1,1,13.36
-Masculino,Urbana,8,1058.4,No,No,Secundaria,2,96.2,1,13.36
-Femenino,Rural,2,1307.42,No,No,Primaria,7,87.8,1,13.36
-Femenino,Rural,5,1062.44,No,No,Superior técnica,4,79.1,2,13.36
-Masculino,Urbana,6,2993.86,Sí,Sí,Superior técnica,6,82.7,2,13.36
-Masculino,Urbana,7,2416.03,No,No,Superior técnica,4,74.7,2,13.36
-Masculino,Urbana,5,1732.97,No,No,Secundaria,5,80.6,1,13.36
-Masculino,Urbana,6,1214.91,Sí,No,Superior técnica,1,72.5,1,13.36
-Masculino,Urbana,4,976.02,Sí,No,Secundaria,4,77.7,1,13.36
-Femenino,Rural,1,685.4,Sí,Sí,Secundaria,1,89.9,5,13.36
-Femenino,Rural,4,1447.48,No,No,Primaria,5,82.2,1,13.36
-Masculino,Urbana,4,839.51,Sí,No,Secundaria,2,77.4,1,13.36
-Masculino,Urbana,1,5035.62,Sí,No,Secundaria,8,81.4,3,13.36
-Masculino,Rural,6,706.8,No,Sí,Sin educación,10,82.0,0,13.36
-Femenino,Urbana,1,2324.63,Sí,No,Superior técnica,5,83.4,1,13.36
-Masculino,Rural,5,1475.17,No,No,Primaria,5,92.0,1,13.36
-Femenino,Rural,2,1766.48,Sí,Sí,Sin educación,8,82.1,1,13.36
-Femenino,Urbana,4,2186.56,No,Sí,Primaria,2,88.9,1,13.36
-Femenino,Urbana,2,1314.21,No,No,Superior técnica,3,86.3,3,13.36
-Femenino,Rural,2,606.35,No,No,Primaria,6,88.6,2,13.36
-Masculino,Rural,1,1996.81,No,No,Primaria,6,83.8,1,13.36
-Femenino,Rural,1,1998.94,Sí,Sí,Primaria,5,70.0,3,13.36
-Femenino,Rural,5,302.08,No,No,Sin educación,5,81.9,0,13.36
-Masculino,Urbana,1,1695.99,Sí,No,Secundaria,5,85.9,2,13.36
-Masculino,Urbana,6,1793.38,No,No,Secundaria,3,92.3,2,13.36
-Masculino,Rural,6,1239.98,No,No,Primaria,4,85.0,0,13.36
-Masculino,Urbana,8,2089.07,Sí,No,Secundaria,6,71.7,1,13.36
-Femenino,Urbana,7,1883.62,No,No,Primaria,2,84.0,2,13.36
-Masculino,Urbana,5,680.64,No,No,Primaria,7,91.8,2,13.36
-Femenino,Urbana,3,909.5,No,No,Primaria,4,82.8,1,13.36
-Masculino,Urbana,2,1260.15,No,No,Primaria,4,84.1,1,13.36
-Masculino,Urbana,1,3918.16,No,No,Primaria,3,91.5,1,13.36
-Femenino,Rural,6,1259.84,No,No,Primaria,5,84.3,0,13.36
-Masculino,Urbana,6,4407.85,No,No,Secundaria,8,87.9,3,13.36
-Femenino,Urbana,5,4402.81,Sí,No,Primaria,1,75.9,0,13.36
-Femenino,Urbana,5,744.49,No,Sí,Secundaria,3,99.5,4,13.36
-Femenino,Rural,2,1573.07,No,Sí,Secundaria,2,96.4,4,13.36
-Femenino,Rural,1,1250.63,Sí,Sí,Primaria,6,76.0,1,13.36
-Masculino,Urbana,9,2248.66,Sí,Sí,Secundaria,3,72.5,2,13.36
-Femenino,Rural,5,1464.06,No,No,Sin educación,7,78.5,1,13.36
-Masculino,Rural,3,491.59,No,No,Primaria,6,81.5,0,13.36
-Masculino,Rural,2,814.95,No,No,Secundaria,6,88.5,2,13.36
-Masculino,Rural,1,574.75,No,No,Secundaria,8,83.9,2,13.36
-Masculino,Rural,7,2499.88,Sí,No,Secundaria,8,81.8,1,13.36
-Masculino,Urbana,3,2827.56,No,No,Primaria,2,75.1,2,13.36
-Femenino,Rural,1,1293.27,No,No,Primaria,5,96.6,2,13.36
-Femenino,Urbana,5,5145.24,Sí,Sí,Secundaria,4,75.6,3,13.36
-Femenino,Urbana,6,3304.5,Sí,No,Secundaria,1,63.6,0,13.35
-Femenino,Rural,3,1454.39,No,No,Secundaria,8,89.9,1,13.35
-Masculino,Rural,7,1572.45,No,No,Secundaria,6,85.0,0,13.35
-Masculino,Urbana,2,1145.07,No,No,Primaria,7,91.2,1,13.35
-Femenino,Urbana,10,1840.71,No,No,Sin educación,5,75.5,1,13.35
-Femenino,Rural,3,1471.8,No,No,Secundaria,5,82.4,2,13.35
-Masculino,Urbana,7,4335.22,No,No,Superior técnica,5,82.4,3,13.35
-Masculino,Urbana,3,847.43,No,Sí,Sin educación,7,90.5,1,13.35
-Femenino,Urbana,2,4139.92,No,No,Superior técnica,4,88.8,1,13.35
-Masculino,Urbana,8,2101.68,Sí,Sí,Sin educación,10,80.8,1,13.35
-Masculino,Rural,10,1370.0,No,No,Superior técnica,2,83.4,3,13.35
-Femenino,Rural,6,2860.69,No,No,Superior técnica,5,85.9,0,13.35
-Femenino,Urbana,1,2636.29,No,No,Secundaria,3,93.5,3,13.35
-Masculino,Rural,6,2800.14,No,Sí,Secundaria,7,86.7,1,13.35
-Masculino,Rural,6,1003.72,Sí,No,Primaria,7,73.8,1,13.35
-Femenino,Urbana,2,4065.18,No,No,Superior técnica,4,92.3,3,13.35
-Masculino,Urbana,5,2652.39,Sí,No,Superior técnica,2,71.6,1,13.35
-Masculino,Rural,4,563.95,Sí,Sí,Primaria,10,86.7,3,13.35
-Femenino,Rural,5,305.76,Sí,Sí,Superior universitaria,3,68.3,2,13.35
-Masculino,Rural,10,957.96,Sí,No,Primaria,3,71.4,1,13.35
-Femenino,Urbana,5,1060.18,No,No,Secundaria,6,84.2,2,13.35
-Masculino,Rural,1,978.32,Sí,No,Primaria,9,86.5,1,13.35
-Masculino,Urbana,3,2175.49,No,No,Secundaria,7,85.2,1,13.35
-Femenino,Urbana,4,1322.61,No,Sí,Primaria,7,89.5,2,13.35
-Masculino,Urbana,1,1485.35,No,No,Sin educación,3,91.5,2,13.35
-Masculino,Rural,7,922.2,No,No,Secundaria,5,79.1,2,13.35
-Femenino,Rural,4,690.41,No,No,Secundaria,3,88.1,3,13.35
-Masculino,Rural,3,1773.21,Sí,Sí,Secundaria,5,80.0,0,13.35
-Masculino,Urbana,10,2103.7,Sí,No,Secundaria,3,73.8,3,13.35
-Femenino,Rural,7,1099.14,No,No,Secundaria,5,86.2,2,13.35
-Masculino,Rural,8,960.31,No,Sí,Sin educación,7,85.2,0,13.35
-Masculino,Rural,4,1046.73,No,Sí,Primaria,8,77.8,1,13.35
-Masculino,Urbana,3,4437.78,No,No,Secundaria,6,80.2,1,13.35
-Femenino,Urbana,6,734.66,Sí,No,Superior técnica,3,77.9,1,13.35
-Masculino,Rural,1,946.84,No,No,Secundaria,7,88.1,2,13.35
-Masculino,Rural,6,974.72,No,No,Primaria,5,93.3,1,13.34
-Femenino,Urbana,3,3828.31,No,No,Primaria,2,82.8,1,13.34
-Masculino,Rural,1,1925.57,No,Sí,Primaria,3,83.7,1,13.34
-Masculino,Urbana,7,1684.3,No,No,Secundaria,5,77.2,2,13.34
-Masculino,Rural,5,1189.96,No,No,Primaria,5,88.8,0,13.34
-Femenino,Rural,5,1974.71,No,No,Superior técnica,8,82.6,2,13.34
-Femenino,Rural,4,1136.88,No,No,Sin educación,11,90.5,1,13.34
-Masculino,Rural,6,1526.57,Sí,No,Superior técnica,8,75.6,0,13.34
-Femenino,Rural,4,1154.62,Sí,No,Secundaria,4,76.4,2,13.34
-Femenino,Rural,5,837.3,Sí,Sí,Primaria,5,86.4,2,13.34
-Femenino,Rural,5,492.55,Sí,No,Secundaria,2,78.3,2,13.34
-Masculino,Rural,4,1932.75,No,No,Primaria,4,81.6,1,13.34
-Femenino,Urbana,1,3609.42,No,No,Secundaria,1,99.8,1,13.34
-Femenino,Rural,2,1046.75,Sí,Sí,Secundaria,7,74.8,2,13.34
-Femenino,Rural,4,2266.35,No,No,Secundaria,8,83.3,1,13.34
-Femenino,Urbana,1,4110.4,No,No,Secundaria,6,91.5,3,13.34
-Femenino,Urbana,3,5638.28,Sí,No,Secundaria,6,68.0,1,13.34
-Femenino,Urbana,2,2476.94,No,No,Superior técnica,1,89.6,4,13.34
-Masculino,Rural,2,814.03,Sí,Sí,Sin educación,8,87.5,1,13.34
-Femenino,Rural,6,1464.95,No,No,Primaria,5,85.2,0,13.34
-Masculino,Urbana,2,839.85,No,No,Secundaria,3,80.5,1,13.34
-Femenino,Urbana,8,2071.77,No,No,Primaria,1,82.7,1,13.34
-Femenino,Rural,6,433.85,No,No,Primaria,1,91.2,1,13.34
-Femenino,Rural,1,326.05,No,Sí,Sin educación,4,88.6,1,13.34
-Masculino,Rural,7,378.61,Sí,Sí,Secundaria,4,81.4,3,13.34
-Masculino,Urbana,7,1024.77,No,No,Secundaria,6,85.2,1,13.34
-Masculino,Urbana,1,1280.63,No,No,Superior técnica,1,87.0,1,13.34
-Femenino,Urbana,1,1042.52,Sí,No,Primaria,6,87.5,1,13.34
-Masculino,Urbana,7,3636.68,No,No,Superior técnica,4,82.7,3,13.34
-Femenino,Rural,5,573.12,No,Sí,Sin educación,4,77.1,0,13.34
-Masculino,Urbana,3,734.27,Sí,No,Primaria,4,74.7,0,13.34
-Femenino,Rural,4,780.84,Sí,Sí,Primaria,3,71.0,0,13.34
-Femenino,Rural,3,623.61,Sí,Sí,Sin educación,9,77.3,1,13.34
-Femenino,Rural,1,926.89,No,No,Primaria,8,86.4,1,13.34
-Masculino,Rural,5,1428.06,Sí,Sí,Primaria,5,74.8,1,13.34
-Femenino,Rural,8,627.42,No,Sí,Primaria,5,77.9,0,13.34
-Femenino,Rural,4,841.54,No,No,Primaria,6,93.1,0,13.34
-Masculino,Rural,4,1098.49,No,No,Secundaria,5,87.4,1,13.34
-Masculino,Rural,6,759.02,No,No,Sin educación,4,88.0,1,13.34
-Femenino,Rural,4,1869.4,Sí,No,Secundaria,2,73.4,2,13.34
-Masculino,Urbana,2,1842.92,Sí,No,Secundaria,2,83.1,2,13.34
-Femenino,Urbana,3,3035.41,Sí,No,Secundaria,4,85.1,1,13.34
-Masculino,Urbana,4,1952.2,No,No,Secundaria,10,84.0,2,13.34
-Femenino,Rural,8,467.44,No,No,Secundaria,5,80.9,1,13.34
-Masculino,Rural,10,668.25,No,No,Primaria,7,82.4,2,13.34
-Femenino,Rural,3,1450.54,No,No,Primaria,6,77.0,1,13.34
-Femenino,Rural,7,1498.22,Sí,No,Superior universitaria,5,73.5,1,13.34
-Masculino,Rural,3,489.63,No,No,Secundaria,7,93.7,1,13.33
-Femenino,Urbana,1,3200.11,No,No,Secundaria,9,90.9,4,13.33
-Masculino,Rural,5,2174.86,Sí,Sí,Sin educación,7,80.8,1,13.33
-Femenino,Urbana,1,2423.07,Sí,No,Secundaria,5,77.0,1,13.33
-Masculino,Urbana,9,1630.16,No,No,Secundaria,3,90.3,0,13.33
-Masculino,Urbana,3,2044.58,No,No,Primaria,3,84.1,1,13.33
-Femenino,Rural,2,1064.51,Sí,No,Primaria,6,80.1,3,13.33
-Femenino,Rural,3,575.13,Sí,No,Superior técnica,3,72.2,0,13.33
-Femenino,Rural,5,589.96,Sí,Sí,Primaria,9,80.1,1,13.33
-Masculino,Urbana,6,1763.6,No,No,Superior técnica,4,79.3,1,13.33
-Masculino,Rural,9,1154.06,No,No,Primaria,6,89.9,0,13.33
-Masculino,Rural,1,2144.26,No,No,Secundaria,4,88.2,2,13.33
-Femenino,Rural,5,2071.44,No,No,Primaria,2,83.6,2,13.33
-Masculino,Rural,5,343.75,No,No,Primaria,12,83.6,1,13.33
-Masculino,Rural,5,903.35,Sí,Sí,Superior universitaria,7,83.4,2,13.33
-Masculino,Urbana,1,3435.04,No,No,Secundaria,3,83.9,1,13.33
-Femenino,Rural,6,1078.79,No,Sí,Primaria,5,83.9,1,13.33
-Masculino,Rural,3,2190.52,Sí,No,Superior técnica,4,80.9,1,13.33
-Masculino,Urbana,6,1448.73,No,No,Secundaria,4,84.5,1,13.33
-Femenino,Urbana,4,3090.06,No,No,Superior universitaria,4,85.8,4,13.33
-Masculino,Urbana,4,2997.49,No,No,Secundaria,4,96.0,1,13.33
-Masculino,Rural,1,1333.9,Sí,No,Superior universitaria,7,73.5,2,13.33
-Masculino,Rural,6,738.69,Sí,Sí,Primaria,6,77.5,2,13.33
-Femenino,Rural,5,1546.99,Sí,Sí,Secundaria,7,90.1,2,13.33
-Femenino,Urbana,1,1454.7,No,No,Primaria,4,85.3,0,13.33
-Masculino,Rural,3,1227.54,Sí,Sí,Secundaria,6,80.1,1,13.33
-Masculino,Urbana,6,2355.53,No,No,Secundaria,10,76.7,0,13.33
-Femenino,Rural,8,781.34,No,Sí,Primaria,4,84.1,1,13.33
-Femenino,Urbana,8,4243.49,No,No,Secundaria,5,78.3,1,13.33
-Femenino,Rural,8,1221.41,No,No,Superior técnica,7,80.5,4,13.33
-Masculino,Urbana,9,878.57,No,No,Secundaria,4,82.0,2,13.33
-Femenino,Rural,1,820.06,No,Sí,Primaria,6,92.0,3,13.33
-Masculino,Urbana,5,2492.34,No,No,Superior universitaria,2,80.3,2,13.33
-Femenino,Urbana,5,2786.43,No,No,Primaria,5,82.8,3,13.33
-Masculino,Rural,7,476.64,No,No,Secundaria,10,84.2,1,13.33
-Masculino,Rural,8,1156.4,Sí,No,Secundaria,9,75.6,0,13.33
-Femenino,Urbana,10,3558.08,No,No,Superior técnica,5,85.2,2,13.33
-Femenino,Urbana,6,3167.72,Sí,No,Secundaria,6,67.5,1,13.33
-Masculino,Urbana,2,5194.55,No,No,Superior universitaria,6,84.4,4,13.33
-Masculino,Urbana,5,633.34,No,No,Primaria,4,82.5,1,13.33
-Masculino,Urbana,3,1425.23,No,No,Secundaria,2,85.9,1,13.33
-Femenino,Rural,3,1380.35,Sí,Sí,Secundaria,5,84.1,0,13.33
-Masculino,Urbana,1,1931.76,No,No,Superior técnica,3,92.1,2,13.33
-Masculino,Rural,5,1983.0,No,No,Secundaria,6,72.3,0,13.33
-Masculino,Urbana,1,1147.35,Sí,No,Secundaria,3,76.6,1,13.33
-Femenino,Urbana,4,2349.81,Sí,No,Secundaria,2,73.1,3,13.33
-Femenino,Rural,6,717.94,No,No,Primaria,7,97.1,5,13.33
-Femenino,Urbana,10,2875.5,Sí,No,Superior técnica,6,72.0,2,13.33
-Masculino,Rural,1,579.3,No,Sí,Secundaria,9,88.1,2,13.33
-Femenino,Rural,6,3155.34,Sí,No,Secundaria,5,74.8,0,13.33
-Masculino,Rural,3,1909.4,No,No,Superior técnica,6,77.7,2,13.32
-Femenino,Urbana,6,2940.73,No,Sí,Secundaria,6,86.1,0,13.32
-Femenino,Rural,6,560.58,No,Sí,Primaria,8,86.2,3,13.32
-Masculino,Rural,8,1012.36,No,Sí,Primaria,5,84.9,0,13.32
-Femenino,Urbana,4,3609.23,Sí,No,Superior técnica,10,71.5,0,13.32
-Masculino,Rural,2,1187.27,Sí,Sí,Secundaria,9,76.0,2,13.32
-Femenino,Rural,9,620.52,Sí,Sí,Superior técnica,6,72.9,0,13.32
-Femenino,Urbana,4,3801.67,No,No,Primaria,6,80.9,1,13.32
-Femenino,Urbana,3,1303.83,No,No,Primaria,3,88.1,0,13.32
-Masculino,Rural,2,1502.47,No,No,Sin educación,4,88.1,1,13.32
-Masculino,Rural,7,678.12,Sí,No,Secundaria,8,78.6,1,13.32
-Masculino,Rural,1,877.7,No,Sí,Primaria,5,91.9,2,13.32
-Masculino,Rural,1,966.97,No,No,Secundaria,6,93.4,1,13.32
-Femenino,Urbana,10,3102.03,No,No,Secundaria,5,83.3,2,13.32
-Femenino,Urbana,7,1490.91,Sí,No,Secundaria,5,79.2,1,13.32
-Masculino,Urbana,7,486.7,Sí,No,Primaria,3,74.3,0,13.32
-Femenino,Urbana,9,2015.62,No,No,Secundaria,3,76.1,2,13.32
-Masculino,Rural,5,1341.22,No,No,Superior técnica,9,81.3,1,13.32
-Femenino,Rural,8,817.07,Sí,Sí,Primaria,3,76.7,2,13.32
-Masculino,Urbana,1,1902.94,No,No,Secundaria,2,92.3,5,13.32
-Femenino,Urbana,10,2023.67,Sí,No,Primaria,6,72.5,0,13.32
-Masculino,Urbana,7,4069.1,Sí,No,Primaria,3,70.9,0,13.32
-Masculino,Rural,3,1506.74,No,No,Superior técnica,6,85.6,2,13.32
-Femenino,Rural,5,722.48,No,No,Primaria,3,83.0,1,13.32
-Masculino,Rural,5,1318.85,Sí,No,Primaria,5,72.7,0,13.32
-Masculino,Urbana,1,2421.06,No,No,Secundaria,5,85.8,1,13.32
-Femenino,Urbana,3,1497.94,No,No,Secundaria,2,74.4,2,13.32
-Femenino,Urbana,6,2897.27,Sí,No,Superior universitaria,6,82.0,1,13.32
-Masculino,Urbana,6,3919.25,No,No,Sin educación,8,86.2,0,13.32
-Femenino,Rural,7,1040.3,Sí,No,Superior técnica,10,80.9,0,13.31
-Femenino,Rural,6,716.16,Sí,No,Secundaria,4,78.0,1,13.31
-Masculino,Urbana,3,2410.1,No,No,Secundaria,4,82.4,2,13.31
-Femenino,Rural,4,1630.01,No,No,Primaria,4,84.7,2,13.31
-Masculino,Rural,3,814.23,Sí,No,Secundaria,5,71.1,1,13.31
-Masculino,Urbana,8,1576.69,No,No,Superior técnica,2,81.2,2,13.31
-Masculino,Rural,10,1850.62,No,No,Sin educación,5,82.4,1,13.31
-Masculino,Urbana,3,2932.95,Sí,No,Secundaria,6,85.4,3,13.31
-Femenino,Urbana,9,1015.06,No,No,Secundaria,3,84.9,1,13.31
-Masculino,Rural,6,469.61,No,Sí,Sin educación,8,81.1,0,13.31
-Masculino,Rural,5,1381.26,No,No,Secundaria,4,81.1,3,13.31
-Femenino,Rural,9,904.67,No,No,Primaria,5,94.1,2,13.31
-Masculino,Rural,9,413.04,Sí,Sí,Primaria,6,77.2,1,13.31
-Femenino,Rural,2,682.71,No,Sí,Sin educación,4,86.1,2,13.31
-Femenino,Rural,2,1433.93,No,No,Primaria,8,89.5,1,13.31
-Masculino,Urbana,1,1263.8,No,Sí,Secundaria,2,100.0,1,13.31
-Masculino,Rural,3,746.57,No,No,Superior técnica,10,81.8,1,13.31
-Masculino,Urbana,2,716.72,No,No,Primaria,5,94.3,1,13.31
-Femenino,Urbana,10,818.36,No,No,Secundaria,2,89.5,3,13.31
-Masculino,Urbana,3,2338.94,No,No,Secundaria,9,93.8,1,13.31
-Masculino,Rural,6,1806.09,No,No,Primaria,7,88.5,1,13.31
-Masculino,Rural,1,925.79,No,No,Superior técnica,10,84.2,2,13.31
-Masculino,Rural,8,989.5,Sí,Sí,Primaria,5,77.6,0,13.31
-Femenino,Urbana,6,1562.32,No,No,Superior técnica,2,89.2,1,13.31
-Masculino,Rural,5,3195.27,No,No,Secundaria,7,82.8,0,13.31
-Femenino,Urbana,2,1208.93,Sí,No,Secundaria,3,83.9,1,13.31
-Masculino,Rural,5,3007.71,No,No,Secundaria,7,79.8,0,13.31
-Masculino,Urbana,1,1232.78,No,No,Secundaria,5,91.7,1,13.31
-Masculino,Urbana,1,1957.75,No,No,Secundaria,8,91.5,1,13.31
-Femenino,Rural,1,576.17,No,No,Secundaria,6,82.2,2,13.31
-Femenino,Rural,9,3523.36,Sí,Sí,Primaria,9,71.8,0,13.31
-Masculino,Rural,1,1318.83,Sí,Sí,Primaria,9,79.0,1,13.31
-Femenino,Urbana,6,1327.33,Sí,No,Secundaria,6,72.9,1,13.31
-Femenino,Urbana,2,580.91,No,Sí,Primaria,10,84.7,1,13.31
-Femenino,Rural,5,702.78,No,No,Primaria,3,86.6,1,13.31
-Femenino,Rural,2,350.17,Sí,Sí,Primaria,4,88.7,3,13.31
-Masculino,Urbana,2,1451.26,No,No,Primaria,8,85.9,1,13.31
-Femenino,Rural,6,528.29,Sí,No,Primaria,7,76.3,1,13.31
-Femenino,Rural,3,1100.43,Sí,No,Secundaria,6,69.6,0,13.31
-Femenino,Rural,5,1689.61,Sí,No,Secundaria,4,67.8,1,13.31
-Masculino,Rural,6,1363.64,No,Sí,Secundaria,6,73.8,1,13.31
-Masculino,Rural,3,766.42,Sí,Sí,Primaria,4,74.7,0,13.31
-Masculino,Urbana,1,826.46,No,No,Secundaria,2,88.6,2,13.31
-Masculino,Rural,5,474.23,No,No,Primaria,6,78.7,1,13.31
-Femenino,Rural,2,665.28,No,No,Superior universitaria,6,87.2,2,13.31
-Femenino,Rural,6,1327.54,No,Sí,Primaria,10,90.3,1,13.31
-Femenino,Rural,9,1316.89,No,Sí,Secundaria,10,81.0,4,13.3
-Masculino,Rural,8,1159.78,Sí,Sí,Secundaria,5,87.8,2,13.3
-Masculino,Rural,1,634.55,Sí,Sí,Sin educación,5,89.6,1,13.3
-Femenino,Rural,2,1111.61,No,No,Secundaria,4,83.4,1,13.3
-Femenino,Rural,2,1456.06,Sí,Sí,Primaria,8,81.4,1,13.3
-Femenino,Rural,7,1467.53,Sí,No,Primaria,9,70.8,1,13.3
-Masculino,Rural,10,804.43,Sí,No,Primaria,6,86.8,1,13.3
-Femenino,Rural,4,1161.16,No,No,Sin educación,3,80.9,1,13.3
-Masculino,Urbana,1,1579.64,No,No,Superior universitaria,5,84.6,1,13.3
-Masculino,Urbana,10,2628.82,No,No,Secundaria,5,77.8,2,13.3
-Femenino,Rural,6,846.03,No,No,Primaria,2,82.8,2,13.3
-Masculino,Rural,10,4174.73,Sí,Sí,Superior técnica,5,70.1,2,13.3
-Femenino,Urbana,6,1455.31,Sí,No,Superior técnica,6,68.7,0,13.3
-Femenino,Rural,10,580.22,Sí,Sí,Primaria,6,74.0,1,13.3
-Femenino,Rural,7,2611.85,Sí,No,Superior técnica,3,68.5,2,13.3
-Masculino,Urbana,2,1847.55,No,No,Secundaria,7,82.8,2,13.3
-Femenino,Rural,2,695.74,Sí,Sí,Superior técnica,6,82.8,4,13.3
-Masculino,Urbana,2,917.94,No,No,Secundaria,5,89.9,1,13.3
-Masculino,Urbana,2,2645.6,No,No,Secundaria,1,84.8,2,13.3
-Masculino,Urbana,2,1054.33,No,No,Primaria,7,92.4,2,13.3
-Femenino,Urbana,1,1324.14,No,No,Primaria,3,90.5,2,13.3
-Femenino,Urbana,5,5774.38,No,No,Secundaria,3,78.0,0,13.3
-Masculino,Rural,2,1076.22,Sí,Sí,Superior técnica,9,75.4,3,13.3
-Femenino,Rural,10,1109.37,Sí,No,Primaria,7,72.0,2,13.3
-Masculino,Rural,9,953.76,No,No,Secundaria,6,76.6,1,13.3
-Masculino,Rural,7,1510.25,Sí,No,Secundaria,3,69.8,0,13.3
-Masculino,Rural,1,683.64,Sí,No,Primaria,5,79.5,1,13.3
-Masculino,Urbana,2,3127.23,No,No,Primaria,5,83.3,1,13.3
-Femenino,Urbana,7,1084.44,Sí,No,Secundaria,4,72.7,1,13.3
-Femenino,Rural,6,192.82,Sí,Sí,Primaria,14,75.2,1,13.3
-Femenino,Urbana,1,1357.86,Sí,No,Primaria,10,88.8,0,13.3
-Femenino,Rural,7,1244.87,No,No,Superior técnica,9,79.7,2,13.3
-Masculino,Rural,10,1156.05,Sí,No,Secundaria,4,73.6,1,13.3
-Femenino,Rural,1,451.33,Sí,Sí,Primaria,4,89.2,2,13.3
-Masculino,Urbana,7,2900.24,No,No,Sin educación,1,88.0,2,13.3
-Femenino,Urbana,10,1890.96,No,No,Superior técnica,5,83.2,1,13.3
-Femenino,Rural,6,979.63,No,Sí,Primaria,8,89.3,2,13.3
-Masculino,Rural,3,1623.66,No,No,Primaria,5,78.0,1,13.3
-Masculino,Rural,3,987.77,No,Sí,Primaria,3,95.8,1,13.3
-Femenino,Urbana,6,637.58,No,No,Primaria,2,80.2,2,13.3
-Femenino,Rural,3,635.55,No,Sí,Primaria,5,88.9,1,13.3
-Femenino,Rural,5,479.38,No,No,Secundaria,4,83.1,1,13.3
-Masculino,Urbana,2,1360.89,No,No,Superior técnica,3,95.0,0,13.3
-Masculino,Urbana,7,1210.35,No,No,Superior universitaria,8,78.1,2,13.3
-Masculino,Rural,2,1112.01,No,No,Secundaria,5,93.4,2,13.3
-Masculino,Urbana,4,1736.78,No,No,Primaria,2,89.3,2,13.3
-Masculino,Rural,8,565.6,No,No,Primaria,4,87.9,2,13.3
-Masculino,Urbana,2,1564.85,No,No,Primaria,8,89.0,2,13.3
-Femenino,Urbana,5,3040.57,No,No,Secundaria,4,98.1,2,13.3
-Masculino,Urbana,4,1717.52,No,Sí,Secundaria,5,90.8,3,13.29
-Masculino,Rural,3,1069.55,No,No,Secundaria,5,83.0,2,13.29
-Femenino,Rural,2,2166.55,No,No,Superior universitaria,5,86.3,2,13.29
-Femenino,Urbana,5,733.09,Sí,No,Primaria,12,87.2,2,13.29
-Femenino,Rural,4,1336.97,Sí,Sí,Sin educación,2,73.0,0,13.29
-Femenino,Rural,1,2108.99,No,Sí,Sin educación,4,89.9,1,13.29
-Femenino,Urbana,3,3107.93,Sí,No,Superior técnica,6,82.3,2,13.29
-Masculino,Rural,6,291.57,Sí,Sí,Sin educación,6,75.8,1,13.29
-Femenino,Urbana,4,2722.0,Sí,No,Secundaria,6,70.6,0,13.29
-Femenino,Rural,7,616.98,Sí,Sí,Secundaria,10,73.0,0,13.29
-Masculino,Urbana,4,1666.26,No,No,Sin educación,3,86.9,1,13.29
-Femenino,Rural,6,988.66,Sí,Sí,Secundaria,5,78.3,2,13.29
-Femenino,Rural,1,1230.85,No,No,Secundaria,8,91.4,1,13.29
-Femenino,Urbana,8,4093.22,No,No,Secundaria,2,80.3,2,13.29
-Femenino,Rural,3,1301.41,No,No,Primaria,2,78.4,2,13.29
-Femenino,Rural,7,1887.42,No,No,Secundaria,7,86.8,2,13.29
-Femenino,Rural,1,565.62,No,Sí,Primaria,6,84.7,3,13.29
-Masculino,Urbana,2,1971.19,Sí,No,Superior universitaria,5,81.0,1,13.29
-Femenino,Urbana,2,2496.56,No,No,Secundaria,5,91.7,2,13.29
-Masculino,Rural,3,925.86,No,No,Secundaria,6,87.2,1,13.29
-Femenino,Rural,2,328.17,No,No,Secundaria,1,80.6,1,13.29
-Masculino,Rural,3,1118.66,Sí,No,Primaria,6,75.9,1,13.29
-Masculino,Rural,9,671.92,No,Sí,Primaria,5,86.6,1,13.29
-Femenino,Rural,3,349.99,No,Sí,Primaria,3,88.6,0,13.29
-Femenino,Rural,10,781.74,No,No,Primaria,5,88.9,1,13.29
-Masculino,Rural,5,782.64,No,Sí,Secundaria,11,86.1,1,13.29
-Femenino,Rural,4,635.97,Sí,Sí,Primaria,3,72.4,0,13.29
-Femenino,Urbana,3,4662.61,Sí,No,Superior técnica,4,85.4,4,13.29
-Masculino,Rural,6,523.73,No,No,Sin educación,5,81.6,0,13.29
-Femenino,Rural,3,411.18,Sí,No,Primaria,7,73.7,0,13.29
-Femenino,Rural,7,464.86,Sí,No,Secundaria,7,69.9,0,13.29
-Masculino,Urbana,1,1306.04,No,No,Superior técnica,5,80.7,1,13.29
-Masculino,Rural,3,747.8,No,No,Sin educación,4,91.1,0,13.29
-Masculino,Rural,1,471.36,No,No,Primaria,7,87.7,1,13.28
-Masculino,Urbana,5,1644.38,No,No,Sin educación,5,93.5,1,13.28
-Femenino,Rural,5,1113.37,No,No,Secundaria,4,81.1,2,13.28
-Masculino,Rural,2,466.62,Sí,Sí,Primaria,5,77.7,1,13.28
-Masculino,Rural,10,857.08,No,No,Secundaria,7,85.2,1,13.28
-Masculino,Rural,2,1327.12,No,No,Secundaria,6,90.4,1,13.28
-Femenino,Urbana,5,2622.16,No,No,Sin educación,1,93.8,3,13.28
-Femenino,Rural,6,1205.91,No,Sí,Sin educación,9,82.1,1,13.28
-Femenino,Rural,4,2125.73,Sí,No,Superior universitaria,3,68.6,0,13.28
-Femenino,Urbana,2,1570.64,No,Sí,Primaria,5,79.4,2,13.28
-Femenino,Urbana,3,1919.51,Sí,No,Secundaria,5,75.3,2,13.28
-Masculino,Urbana,1,4489.6,No,No,Superior universitaria,7,80.5,4,13.28
-Femenino,Rural,9,1036.31,Sí,Sí,Primaria,6,79.2,1,13.28
-Masculino,Rural,4,1114.92,No,No,Sin educación,7,80.7,0,13.28
-Femenino,Urbana,4,2040.14,Sí,No,Secundaria,5,68.0,1,13.28
-Masculino,Rural,4,407.15,No,Sí,Sin educación,12,84.4,0,13.28
-Masculino,Urbana,1,1513.87,No,No,Primaria,5,85.7,1,13.28
-Femenino,Rural,7,627.74,No,No,Sin educación,5,91.6,2,13.28
-Masculino,Rural,9,751.7,Sí,Sí,Secundaria,4,72.9,0,13.28
-Femenino,Rural,6,1319.85,No,No,Primaria,9,86.3,1,13.28
-Femenino,Rural,10,420.86,Sí,Sí,Secundaria,10,77.4,0,13.28
-Masculino,Urbana,8,1163.81,No,No,Secundaria,1,81.5,1,13.28
-Masculino,Rural,6,389.22,Sí,Sí,Sin educación,7,71.2,1,13.28
-Masculino,Urbana,5,3935.72,Sí,No,Primaria,6,80.6,2,13.28
-Femenino,Urbana,6,1802.82,No,No,Primaria,2,93.7,2,13.28
-Masculino,Urbana,9,1338.54,No,No,Primaria,6,84.0,2,13.28
-Femenino,Rural,5,991.58,No,No,Secundaria,3,77.2,1,13.28
-Masculino,Urbana,1,1204.64,No,No,Superior técnica,6,89.2,3,13.28
-Masculino,Rural,3,662.34,No,No,Superior técnica,8,85.0,2,13.28
-Femenino,Rural,2,988.42,No,No,Primaria,8,84.5,1,13.28
+Femenino,Urbana,5,2500,Sí,No,Secundaria,3,95,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Secundaria,4,76,0,13.6
+Masculino,Rural,6,2500,Sí,Sí,Secundaria,3,81,2,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior universitaria,3,80,2,13.6
+Masculino,Urbana,6,2500,Sí,Sí,Superior técnica,3,74,1,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior técnica,3,79,0,13.6
+Femenino,Urbana,7,5000,No,No,Secundaria,3,63,0,13.6
+Femenino,Urbana,3,5000,No,Sí,Secundaria,1,91,0,13.6
+Masculino,Urbana,4,800,No,Sí,Superior técnica,1,91,1,13.6
+Femenino,Rural,5,5000,Sí,Sí,Secundaria,3,78,2,13.6
+Femenino,Urbana,6,5000,No,Sí,Superior técnica,1,83,2,13.6
+Masculino,Urbana,5,5000,No,No,Superior técnica,1,85,2,13.6
+Masculino,Urbana,3,800,Sí,Sí,Secundaria,5,92,2,13.6
+Masculino,Urbana,7,800,Sí,Sí,Secundaria,3,75,0,13.6
+Femenino,Rural,6,2500,Sí,Sí,Superior técnica,2,61,0,13.6
+Masculino,Urbana,6,2500,Sí,Sí,Secundaria,2,76,2,13.6
+Masculino,Rural,8,2500,Sí,Sí,Secundaria,3,61,2,13.6
+Femenino,Rural,7,800,No,Sí,Secundaria,3,83,2,13.6
+Masculino,Urbana,6,2500,No,Sí,Secundaria,2,78,0,13.6
+Masculino,Urbana,4,5000,No,Sí,Superior técnica,2,82,0,13.6
+Femenino,Rural,4,800,Sí,Sí,Superior técnica,2,77,1,13.6
+Femenino,Rural,4,5000,Sí,Sí,Secundaria,3,85,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,2,99,2,13.6
+Femenino,Urbana,5,800,No,Sí,Superior técnica,2,98,1,13.6
+Masculino,Urbana,4,5000,No,Sí,Superior técnica,5,78,0,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,4,74,2,13.6
+Masculino,Urbana,7,800,Sí,Sí,Secundaria,1,67,1,13.6
+Femenino,Rural,5,2500,No,Sí,Secundaria,1,90,2,13.6
+Masculino,Rural,7,5000,Sí,Sí,Secundaria,3,64,1,13.6
+Femenino,Rural,4,2500,No,Sí,Superior universitaria,1,83,2,13.6
+Masculino,Urbana,6,800,No,Sí,Superior técnica,1,83,2,13.6
+Masculino,Rural,4,2500,No,Sí,Superior universitaria,2,81,1,13.6
+Femenino,Urbana,6,800,Sí,Sí,Secundaria,3,88,2,13.6
+Femenino,Rural,5,800,Sí,Sí,Superior universitaria,2,94,2,13.6
+Masculino,Urbana,4,5000,No,Sí,Secundaria,2,76,1,13.6
+Femenino,Rural,4,2500,Sí,Sí,Superior técnica,3,82,2,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior técnica,4,85,1,13.6
+Masculino,Urbana,5,2500,No,Sí,Superior técnica,2,73,2,13.6
+Masculino,Urbana,4,2500,No,Sí,Secundaria,2,94,1,13.6
+Femenino,Urbana,5,800,No,Sí,Superior técnica,3,93,2,13.6
+Femenino,Urbana,4,800,No,Sí,Superior universitaria,2,94,0,13.6
+Masculino,Rural,5,5000,Sí,Sí,Secundaria,2,99,2,13.6
+Masculino,Urbana,4,5000,No,Sí,Secundaria,2,84,0,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior universitaria,3,81,1,13.6
+Masculino,Urbana,4,5000,No,Sí,Secundaria,2,84,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,3,84,2,13.6
+Femenino,Urbana,5,5000,No,Sí,Secundaria,4,80,2,13.6
+Femenino,Urbana,4,2500,No,Sí,Superior técnica,2,92,0,13.6
+Masculino,Rural,5,2500,No,Sí,Superior técnica,3,92,2,13.6
+Masculino,Urbana,3,2500,No,No,Secundaria,1,98,0,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,4,74,2,13.6
+Femenino,Rural,6,2500,Sí,Sí,Secundaria,3,74,0,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,2,79,2,13.6
+Masculino,Urbana,5,2500,No,Sí,Secundaria,2,79,0,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,3,68,0,13.6
+Masculino,Urbana,6,5000,Sí,Sí,Secundaria,4,64,1,13.6
+Femenino,Urbana,4,800,Sí,Sí,Superior técnica,4,79,1,13.6
+Femenino,Urbana,7,2500,Sí,Sí,Secundaria,1,86,2,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Secundaria,4,88,1,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Superior universitaria,1,78,0,13.6
+Masculino,Urbana,5,800,Sí,No,Superior técnica,3,79,1,13.6
+Masculino,Urbana,6,800,Sí,Sí,Secundaria,2,85,2,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Superior universitaria,5,93,1,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Secundaria,6,74,2,13.6
+Masculino,Rural,4,2500,Sí,Sí,Superior técnica,1,95,2,13.6
+Femenino,Urbana,6,2500,Sí,Sí,Secundaria,3,82,1,13.6
+Masculino,Urbana,5,800,No,Sí,Secundaria,2,79,1,13.6
+Femenino,Urbana,4,2500,No,Sí,Secundaria,2,82,0,13.6
+Femenino,Rural,5,5000,Sí,Sí,Secundaria,3,80,2,13.6
+Masculino,Urbana,7,800,No,Sí,Secundaria,2,68,0,13.6
+Femenino,Urbana,6,2500,Sí,Sí,Secundaria,2,72,0,13.6
+Masculino,Urbana,4,800,Sí,Sí,Superior universitaria,4,87,2,13.6
+Femenino,Urbana,6,2500,Sí,No,Secundaria,2,69,1,13.6
+Femenino,Urbana,3,5000,Sí,Sí,Secundaria,3,90,2,13.6
+Masculino,Urbana,7,2500,No,Sí,Secundaria,3,75,0,13.6
+Masculino,Urbana,5,5000,No,Sí,Secundaria,2,78,1,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Secundaria,3,88,2,13.6
+Femenino,Rural,5,2500,Sí,No,Superior universitaria,2,92,2,13.6
+Masculino,Rural,3,2500,Sí,Sí,Secundaria,2,94,2,13.6
+Masculino,Urbana,6,5000,Sí,Sí,Secundaria,4,70,1,13.6
+Masculino,Rural,4,2500,Sí,Sí,Secundaria,2,82,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,3,89,0,13.6
+Masculino,Rural,4,800,No,Sí,Secundaria,6,86,2,13.6
+Masculino,Urbana,5,800,No,Sí,Secundaria,4,95,1,13.6
+Masculino,Urbana,4,2500,No,Sí,Superior técnica,2,91,2,13.6
+Masculino,Urbana,5,2500,No,Sí,Secundaria,1,94,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,2,90,1,13.6
+Masculino,Rural,4,5000,Sí,Sí,Secundaria,2,84,1,13.6
+Masculino,Urbana,5,800,Sí,No,Secundaria,2,93,2,13.6
+Masculino,Urbana,6,2500,Sí,Sí,Secundaria,1,77,2,13.6
+Femenino,Rural,4,800,No,Sí,Secundaria,5,94,1,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior universitaria,1,98,2,13.6
+Masculino,Rural,3,800,Sí,Sí,Superior universitaria,2,91,1,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior universitaria,2,81,1,13.6
+Femenino,Rural,4,800,Sí,Sí,Superior técnica,2,96,2,13.6
+Femenino,Urbana,5,800,Sí,No,Secundaria,1,86,1,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior técnica,2,94,2,13.6
+Masculino,Urbana,6,800,No,Sí,Superior técnica,2,85,2,13.6
+Masculino,Urbana,4,800,No,Sí,Secundaria,3,89,1,13.6
+Masculino,Rural,6,800,No,Sí,Secundaria,2,89,1,13.6
+Femenino,Urbana,6,2500,Sí,Sí,Secundaria,1,89,2,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Superior técnica,1,86,2,13.6
+Femenino,Urbana,4,800,Sí,Sí,Superior universitaria,5,72,2,13.6
+Masculino,Urbana,3,800,Sí,Sí,Secundaria,3,81,0,13.6
+Femenino,Rural,5,5000,Sí,Sí,Superior técnica,6,72,2,13.6
+Femenino,Rural,5,5000,No,Sí,Secundaria,2,89,2,13.6
+Femenino,Rural,6,2500,Sí,Sí,Secundaria,2,77,0,13.6
+Masculino,Rural,4,5000,No,Sí,Superior universitaria,2,86,2,13.6
+Femenino,Rural,4,2500,Sí,Sí,Superior técnica,1,92,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,1,86,2,13.6
+Femenino,Urbana,4,2500,No,Sí,Secundaria,2,94,2,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,3,73,1,13.6
+Masculino,Rural,7,2500,No,Sí,Superior universitaria,1,66,2,13.6
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,2,92,0,13.6
+Masculino,Urbana,3,800,Sí,Sí,Secundaria,3,95,1,13.6
+Femenino,Urbana,6,2500,No,Sí,Secundaria,3,66,1,13.6
+Femenino,Rural,6,800,Sí,Sí,Superior técnica,3,64,0,13.6
+Masculino,Urbana,6,2500,No,No,Superior técnica,2,71,0,13.6
+Masculino,Urbana,5,800,No,Sí,Secundaria,5,75,2,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,1,79,1,13.6
+Masculino,Urbana,3,2500,No,Sí,Secundaria,3,96,2,13.6
+Masculino,Rural,4,800,Sí,Sí,Superior técnica,2,71,0,13.6
+Femenino,Rural,5,5000,No,Sí,Secundaria,3,67,1,13.6
+Femenino,Rural,6,800,No,Sí,Secundaria,3,70,0,13.6
+Femenino,Rural,4,800,Sí,Sí,Secundaria,2,85,1,13.6
+Masculino,Rural,3,800,Sí,Sí,Superior universitaria,3,91,2,13.6
+Masculino,Urbana,4,2500,No,Sí,Secundaria,2,74,0,13.6
+Masculino,Rural,2,2500,Sí,Sí,Secundaria,5,97,1,13.6
+Femenino,Rural,5,800,Sí,Sí,Superior técnica,3,79,2,13.6
+Masculino,Urbana,6,800,Sí,Sí,Secundaria,4,77,1,13.6
+Femenino,Rural,4,800,Sí,Sí,Superior técnica,2,87,1,13.6
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,3,81,2,13.6
+Masculino,Urbana,6,800,No,Sí,Secundaria,1,87,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,5,76,0,13.6
+Masculino,Urbana,4,800,Sí,Sí,Superior universitaria,3,89,2,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Secundaria,3,96,1,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Superior universitaria,1,89,2,13.6
+Femenino,Urbana,7,2500,No,Sí,Superior técnica,2,64,2,13.6
+Masculino,Rural,5,2500,No,Sí,Superior universitaria,3,80,2,13.6
+Femenino,Urbana,3,800,No,Sí,Superior técnica,4,86,1,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Superior técnica,2,68,0,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior universitaria,4,77,0,13.6
+Masculino,Urbana,5,800,No,Sí,Superior técnica,5,83,0,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Secundaria,2,89,1,13.6
+Femenino,Urbana,4,800,Sí,Sí,Secundaria,2,95,2,13.6
+Masculino,Rural,5,2500,No,Sí,Secundaria,4,77,1,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Superior técnica,3,77,2,13.6
+Masculino,Urbana,4,5000,No,Sí,Secundaria,5,85,2,13.6
+Masculino,Urbana,3,2500,No,Sí,Secundaria,4,79,0,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,3,88,1,13.6
+Masculino,Rural,4,800,No,Sí,Superior técnica,1,97,1,13.6
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,4,72,1,13.6
+Masculino,Urbana,7,800,No,Sí,Superior técnica,1,72,0,13.6
+Masculino,Rural,3,800,No,Sí,Superior técnica,3,92,1,13.6
+Masculino,Rural,4,800,Sí,Sí,Superior universitaria,2,86,1,13.6
+Masculino,Rural,7,2500,Sí,No,Secundaria,4,74,2,13.6
+Masculino,Rural,5,5000,No,Sí,Secundaria,1,81,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,2,98,2,13.6
+Masculino,Rural,6,5000,No,No,Superior técnica,2,80,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,1,88,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,2,80,0,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,1,83,1,13.6
+Femenino,Urbana,4,5000,Sí,Sí,Secundaria,3,88,2,13.6
+Masculino,Rural,5,5000,No,Sí,Superior técnica,3,74,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Secundaria,3,71,1,13.6
+Femenino,Rural,4,800,No,Sí,Secundaria,3,95,1,13.6
+Femenino,Rural,3,2500,No,Sí,Superior técnica,1,81,1,13.6
+Masculino,Urbana,5,800,No,Sí,Secundaria,2,83,2,13.6
+Masculino,Rural,4,5000,No,Sí,Secundaria,2,72,1,13.6
+Femenino,Urbana,7,2500,Sí,Sí,Superior técnica,3,86,2,13.6
+Masculino,Urbana,6,800,No,Sí,Secundaria,1,86,0,13.6
+Masculino,Urbana,5,800,No,Sí,Superior universitaria,1,89,1,13.6
+Femenino,Urbana,4,5000,Sí,No,Secundaria,2,92,1,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior universitaria,1,92,1,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Superior técnica,4,82,2,13.6
+Masculino,Rural,5,800,Sí,Sí,Secundaria,1,90,2,13.6
+Masculino,Urbana,3,800,Sí,Sí,Secundaria,4,97,1,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Superior técnica,2,79,0,13.6
+Masculino,Rural,5,800,Sí,Sí,Superior universitaria,2,70,1,13.6
+Femenino,Rural,4,2500,Sí,Sí,Superior técnica,2,98,2,13.6
+Masculino,Urbana,6,2500,Sí,No,Superior universitaria,1,76,2,13.6
+Femenino,Rural,5,2500,Sí,Sí,Secundaria,1,79,0,13.6
+Masculino,Rural,5,5000,Sí,Sí,Superior técnica,2,88,2,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,2,79,2,13.6
+Masculino,Rural,4,800,No,Sí,Superior técnica,3,89,2,13.6
+Masculino,Urbana,4,2500,No,Sí,Secundaria,2,85,0,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,3,92,2,13.6
+Masculino,Urbana,4,2500,No,Sí,Superior técnica,2,80,1,13.6
+Masculino,Rural,3,2500,No,Sí,Secundaria,2,98,2,13.6
+Masculino,Rural,6,800,No,Sí,Superior universitaria,1,91,2,13.6
+Femenino,Rural,4,2500,No,Sí,Superior técnica,3,96,2,13.6
+Masculino,Urbana,3,800,Sí,No,Secundaria,5,99,2,13.6
+Femenino,Urbana,3,2500,No,Sí,Secundaria,5,91,1,13.6
+Masculino,Urbana,5,2500,No,Sí,Secundaria,2,84,1,13.6
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,2,92,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Secundaria,5,94,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Secundaria,2,91,1,13.6
+Masculino,Rural,6,800,No,Sí,Secundaria,2,87,2,13.6
+Masculino,Rural,6,5000,Sí,Sí,Secundaria,4,75,2,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Secundaria,2,84,1,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior técnica,1,93,2,13.6
+Masculino,Urbana,7,2500,No,Sí,Secundaria,3,66,1,13.6
+Masculino,Urbana,6,5000,Sí,Sí,Secundaria,2,65,1,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior técnica,2,89,1,13.6
+Femenino,Rural,5,800,Sí,Sí,Secundaria,3,80,1,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Superior técnica,4,82,1,13.6
+Masculino,Rural,4,800,No,Sí,Secundaria,3,91,1,13.6
+Masculino,Urbana,6,800,No,Sí,Secundaria,1,83,1,13.6
+Femenino,Urbana,6,5000,No,Sí,Superior técnica,3,73,0,13.6
+Femenino,Urbana,4,800,Sí,Sí,Superior técnica,3,81,1,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior universitaria,2,76,0,13.6
+Masculino,Rural,6,2500,Sí,Sí,Secundaria,3,87,2,13.6
+Masculino,Urbana,3,5000,Sí,Sí,Superior técnica,2,83,1,13.6
+Masculino,Urbana,4,800,No,Sí,Superior universitaria,3,87,2,13.6
+Masculino,Rural,4,5000,Sí,Sí,Superior universitaria,5,84,2,13.6
+Femenino,Urbana,3,800,No,Sí,Secundaria,4,83,0,13.6
+Masculino,Urbana,6,800,No,Sí,Secundaria,2,89,2,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Superior técnica,3,96,2,13.6
+Masculino,Urbana,4,800,Sí,Sí,Secundaria,2,92,1,13.6
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,2,76,0,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior universitaria,4,81,1,13.6
+Masculino,Rural,3,2500,Sí,Sí,Superior técnica,1,86,2,13.6
+Masculino,Urbana,6,2500,No,Sí,Secundaria,2,64,0,13.6
+Femenino,Urbana,6,800,No,Sí,Secundaria,3,67,0,13.6
+Masculino,Rural,5,5000,Sí,Sí,Superior técnica,5,73,2,13.6
+Masculino,Rural,6,2500,No,Sí,Superior universitaria,4,78,2,13.6
+Femenino,Urbana,6,800,Sí,Sí,Secundaria,2,66,1,13.6
+Masculino,Rural,5,2500,No,Sí,Secundaria,1,76,0,13.6
+Masculino,Urbana,4,2500,No,Sí,Superior técnica,3,84,0,13.6
+Femenino,Urbana,4,2500,No,Sí,Superior técnica,4,79,2,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Superior universitaria,2,78,0,13.6
+Femenino,Rural,7,800,No,Sí,Secundaria,3,73,1,13.6
+Masculino,Rural,4,800,No,Sí,Secundaria,3,94,0,13.6
+Femenino,Rural,5,5000,Sí,Sí,Superior técnica,3,77,1,13.6
+Femenino,Rural,4,800,No,Sí,Superior universitaria,3,82,1,13.6
+Masculino,Urbana,7,2500,Sí,Sí,Superior técnica,5,69,1,13.6
+Masculino,Urbana,3,800,Sí,Sí,Superior técnica,3,91,2,13.6
+Masculino,Rural,4,800,No,Sí,Secundaria,2,97,0,13.6
+Masculino,Urbana,3,800,Sí,Sí,Superior técnica,2,97,2,13.6
+Masculino,Urbana,5,2500,Sí,No,Secundaria,4,91,1,13.6
+Femenino,Rural,6,2500,No,Sí,Secundaria,1,73,0,13.6
+Masculino,Urbana,6,5000,Sí,Sí,Secundaria,1,67,0,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Superior técnica,4,75,1,13.6
+Masculino,Urbana,4,800,No,Sí,Secundaria,1,92,1,13.6
+Masculino,Rural,6,5000,No,Sí,Superior universitaria,1,75,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,2,91,2,13.6
+Masculino,Urbana,6,800,Sí,Sí,Secundaria,3,81,1,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,1,90,1,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Superior universitaria,2,80,2,13.6
+Femenino,Rural,4,2500,Sí,Sí,Superior técnica,2,81,1,13.6
+Femenino,Rural,5,5000,No,No,Superior universitaria,1,90,1,13.6
+Masculino,Rural,4,800,No,Sí,Secundaria,3,90,1,13.6
+Femenino,Rural,4,5000,Sí,Sí,Superior técnica,3,93,1,13.6
+Masculino,Urbana,3,5000,No,Sí,Superior universitaria,2,80,1,13.6
+Femenino,Urbana,2,5000,Sí,Sí,Secundaria,2,79,0,13.6
+Femenino,Urbana,6,2500,Sí,Sí,Secundaria,1,76,1,13.6
+Masculino,Urbana,7,2500,Sí,Sí,Secundaria,2,77,2,13.6
+Masculino,Rural,4,2500,Sí,Sí,Secundaria,6,90,2,13.6
+Masculino,Rural,5,800,Sí,No,Secundaria,1,93,1,13.6
+Femenino,Urbana,7,2500,No,Sí,Superior técnica,4,64,1,13.6
+Femenino,Rural,4,2500,Sí,Sí,Superior universitaria,1,77,0,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior técnica,3,85,2,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior técnica,1,99,1,13.6
+Femenino,Urbana,5,800,Sí,Sí,Superior técnica,2,80,1,13.6
+Masculino,Urbana,6,800,Sí,Sí,Superior técnica,3,66,1,13.6
+Femenino,Urbana,5,2500,No,Sí,Secundaria,2,82,2,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,1,86,0,13.6
+Femenino,Urbana,3,800,Sí,Sí,Secundaria,3,98,2,13.6
+Masculino,Urbana,6,800,No,Sí,Superior técnica,1,81,0,13.6
+Femenino,Urbana,6,2500,No,Sí,Superior técnica,2,81,1,13.6
+Femenino,Urbana,4,800,No,Sí,Secundaria,2,90,0,13.6
+Masculino,Urbana,7,800,No,Sí,Superior técnica,4,68,2,13.6
+Masculino,Urbana,6,800,Sí,Sí,Superior universitaria,2,81,1,13.6
+Masculino,Rural,6,800,Sí,Sí,Superior universitaria,2,70,2,13.6
+Femenino,Rural,5,2500,Sí,Sí,Secundaria,2,84,2,13.6
+Masculino,Rural,8,5000,Sí,Sí,Superior universitaria,2,61,2,13.6
+Masculino,Rural,4,5000,Sí,No,Superior universitaria,1,92,1,13.6
+Femenino,Urbana,2,5000,No,Sí,Superior técnica,2,99,2,13.6
+Femenino,Urbana,7,800,Sí,Sí,Superior técnica,1,61,1,13.6
+Femenino,Urbana,3,800,No,Sí,Superior técnica,3,95,2,13.6
+Masculino,Rural,5,5000,No,Sí,Secundaria,3,74,0,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior universitaria,1,82,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,1,80,0,13.6
+Femenino,Urbana,5,5000,No,Sí,Superior universitaria,1,92,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,1,76,1,13.6
+Masculino,Rural,5,2500,No,Sí,Superior técnica,1,76,1,13.6
+Femenino,Urbana,7,800,No,Sí,Superior técnica,1,75,2,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,4,68,1,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior universitaria,4,85,1,13.6
+Masculino,Urbana,4,5000,No,Sí,Superior universitaria,2,74,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior universitaria,3,80,2,13.6
+Masculino,Rural,5,5000,No,Sí,Secundaria,2,78,0,13.6
+Masculino,Urbana,5,2500,No,Sí,Secundaria,2,92,2,13.6
+Masculino,Rural,3,800,No,Sí,Secundaria,3,96,1,13.6
+Femenino,Rural,6,2500,Sí,Sí,Secundaria,4,73,2,13.6
+Femenino,Urbana,4,800,Sí,Sí,Secundaria,1,99,1,13.6
+Masculino,Rural,6,2500,No,Sí,Secundaria,3,81,2,13.6
+Masculino,Urbana,4,2500,No,Sí,Secundaria,3,87,2,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,1,82,2,13.6
+Femenino,Urbana,3,800,No,Sí,Superior técnica,2,96,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,1,85,2,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,2,71,0,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior universitaria,3,94,2,13.6
+Femenino,Rural,6,5000,No,Sí,Superior universitaria,2,66,2,13.6
+Masculino,Rural,6,800,Sí,Sí,Superior técnica,3,73,0,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior universitaria,1,89,1,13.6
+Femenino,Rural,4,800,No,Sí,Superior universitaria,2,81,0,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Secundaria,3,87,2,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior técnica,3,97,1,13.6
+Masculino,Rural,4,5000,No,Sí,Secundaria,1,99,2,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,4,83,2,13.6
+Masculino,Urbana,5,2500,No,Sí,Superior técnica,1,75,0,13.6
+Masculino,Rural,5,800,No,Sí,Secundaria,2,86,2,13.6
+Masculino,Rural,3,2500,Sí,Sí,Superior universitaria,2,92,1,13.6
+Masculino,Rural,6,800,Sí,Sí,Superior técnica,2,75,0,13.6
+Femenino,Urbana,5,5000,No,Sí,Superior técnica,4,79,2,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,2,94,0,13.6
+Masculino,Urbana,6,800,No,Sí,Secundaria,1,93,2,13.6
+Masculino,Rural,4,5000,Sí,Sí,Secundaria,1,98,0,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior universitaria,3,81,1,13.6
+Femenino,Urbana,6,2500,Sí,Sí,Superior técnica,3,66,0,13.6
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,3,92,2,13.6
+Femenino,Urbana,3,5000,No,Sí,Secundaria,3,95,2,13.6
+Masculino,Urbana,6,2500,Sí,Sí,Superior universitaria,2,72,1,13.6
+Masculino,Rural,5,5000,No,Sí,Superior técnica,3,84,2,13.6
+Masculino,Urbana,6,2500,Sí,Sí,Superior técnica,1,67,0,13.6
+Masculino,Urbana,6,800,No,Sí,Superior universitaria,4,71,0,13.6
+Masculino,Urbana,6,800,No,Sí,Superior universitaria,3,74,2,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,3,76,1,13.6
+Masculino,Urbana,6,800,No,Sí,Secundaria,4,72,1,13.6
+Masculino,Urbana,3,5000,No,Sí,Secundaria,2,94,0,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Superior universitaria,6,79,2,13.6
+Femenino,Rural,2,2500,No,Sí,Superior técnica,2,96,0,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior universitaria,1,87,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,3,72,0,13.6
+Masculino,Urbana,2,800,No,Sí,Secundaria,3,96,2,13.6
+Masculino,Rural,4,2500,Sí,Sí,Superior técnica,2,82,1,13.6
+Masculino,Urbana,4,800,Sí,Sí,Secundaria,3,97,2,13.6
+Femenino,Rural,5,800,Sí,Sí,Secundaria,2,89,2,13.6
+Femenino,Rural,5,800,Sí,Sí,Secundaria,2,97,2,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior técnica,6,65,1,13.6
+Masculino,Urbana,6,5000,Sí,Sí,Superior técnica,3,69,2,13.6
+Femenino,Urbana,4,800,Sí,Sí,Superior universitaria,3,89,2,13.6
+Masculino,Rural,5,800,Sí,Sí,Secundaria,2,89,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,3,76,0,13.6
+Masculino,Urbana,4,2500,No,Sí,Secundaria,1,99,2,13.6
+Masculino,Rural,4,800,Sí,Sí,Secundaria,3,91,2,13.6
+Femenino,Urbana,5,800,Sí,Sí,Superior universitaria,2,86,2,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior técnica,2,66,1,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,4,82,1,13.6
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,3,75,1,13.6
+Femenino,Urbana,4,5000,No,Sí,Superior técnica,3,76,1,13.6
+Masculino,Rural,7,2500,No,Sí,Secundaria,3,61,1,13.6
+Masculino,Rural,4,2500,Sí,No,Superior universitaria,4,96,1,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior universitaria,2,87,1,13.6
+Femenino,Urbana,5,800,Sí,Sí,Superior técnica,1,74,0,13.6
+Femenino,Rural,6,2500,No,Sí,Secundaria,4,73,1,13.6
+Femenino,Urbana,6,5000,No,Sí,Superior universitaria,4,73,2,13.6
+Femenino,Urbana,4,5000,Sí,Sí,Superior técnica,2,79,0,13.6
+Femenino,Rural,4,2500,Sí,Sí,Secundaria,2,93,2,13.6
+Masculino,Urbana,6,800,No,Sí,Secundaria,2,77,0,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,2,93,2,13.6
+Masculino,Urbana,6,5000,Sí,Sí,Secundaria,2,77,1,13.6
+Masculino,Urbana,5,2500,No,Sí,Superior técnica,3,81,2,13.6
+Masculino,Urbana,2,2500,Sí,Sí,Secundaria,5,72,0,13.6
+Masculino,Rural,4,2500,Sí,Sí,Superior universitaria,4,79,1,13.6
+Femenino,Urbana,4,2500,No,Sí,Superior universitaria,3,77,1,13.6
+Femenino,Urbana,5,800,No,Sí,Superior universitaria,3,90,2,13.6
+Femenino,Rural,4,2500,Sí,No,Secundaria,2,85,1,13.6
+Masculino,Rural,5,2500,Sí,Sí,Secundaria,1,93,1,13.6
+Masculino,Rural,4,2500,No,Sí,Superior técnica,3,82,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,3,88,2,13.6
+Femenino,Urbana,6,2500,Sí,Sí,Superior universitaria,2,79,2,13.6
+Femenino,Rural,5,800,No,Sí,Secundaria,1,78,1,13.6
+Femenino,Urbana,7,2500,Sí,Sí,Secundaria,2,77,2,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,5,72,0,13.6
+Femenino,Rural,4,800,No,Sí,Superior universitaria,4,83,2,13.6
+Femenino,Urbana,2,2500,Sí,Sí,Secundaria,2,99,1,13.6
+Masculino,Urbana,3,800,Sí,No,Superior técnica,3,98,1,13.6
+Femenino,Urbana,4,800,No,No,Secundaria,1,90,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,1,91,2,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,5,68,2,13.6
+Femenino,Urbana,6,800,No,No,Superior universitaria,4,82,2,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,1,97,2,13.6
+Masculino,Urbana,4,800,No,Sí,Secundaria,1,100,2,13.6
+Masculino,Rural,4,2500,No,Sí,Superior técnica,3,97,1,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior técnica,1,98,2,13.6
+Masculino,Urbana,2,2500,No,Sí,Superior técnica,4,91,0,13.6
+Femenino,Rural,7,800,No,Sí,Secundaria,2,68,1,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Superior técnica,4,84,0,13.6
+Masculino,Rural,6,800,No,Sí,Secundaria,1,76,0,13.6
+Masculino,Rural,5,800,No,Sí,Secundaria,4,82,0,13.6
+Femenino,Urbana,6,2500,No,Sí,Superior técnica,2,76,2,13.6
+Masculino,Urbana,5,2500,No,Sí,Superior universitaria,3,71,0,13.6
+Femenino,Rural,3,800,No,Sí,Secundaria,1,95,1,13.6
+Masculino,Rural,3,5000,No,Sí,Superior universitaria,2,92,2,13.6
+Femenino,Urbana,3,5000,Sí,No,Superior universitaria,3,86,1,13.6
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,3,79,1,13.6
+Masculino,Urbana,3,2500,No,Sí,Secundaria,2,96,1,13.6
+Masculino,Rural,4,5000,No,Sí,Superior universitaria,2,74,1,13.6
+Femenino,Urbana,4,800,No,Sí,Secundaria,1,95,1,13.6
+Masculino,Urbana,3,800,Sí,Sí,Superior universitaria,2,100,1,13.6
+Femenino,Rural,4,5000,Sí,Sí,Superior universitaria,2,73,0,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,2,81,1,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,3,85,0,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Superior técnica,1,85,2,13.6
+Femenino,Rural,4,5000,Sí,Sí,Superior técnica,4,77,0,13.6
+Femenino,Urbana,5,800,No,Sí,Superior universitaria,3,77,1,13.6
+Masculino,Rural,5,2500,No,Sí,Secundaria,3,83,2,13.6
+Masculino,Urbana,6,800,Sí,Sí,Superior técnica,5,80,1,13.6
+Masculino,Rural,5,2500,Sí,Sí,Superior universitaria,1,78,0,13.6
+Femenino,Urbana,7,5000,No,Sí,Secundaria,2,63,1,13.6
+Masculino,Urbana,4,800,Sí,Sí,Superior universitaria,6,66,0,13.6
+Femenino,Rural,5,800,No,Sí,Secundaria,6,84,1,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,3,95,2,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior técnica,1,73,0,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior universitaria,4,70,1,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Superior universitaria,1,73,2,13.6
+Masculino,Rural,5,2500,Sí,Sí,Superior universitaria,1,70,1,13.6
+Femenino,Urbana,7,2500,Sí,Sí,Superior universitaria,1,69,2,13.6
+Masculino,Rural,4,800,Sí,No,Secundaria,3,98,0,13.6
+Masculino,Rural,5,2500,Sí,Sí,Secundaria,4,71,1,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,4,80,2,13.6
+Masculino,Rural,4,5000,Sí,Sí,Secundaria,2,71,0,13.6
+Masculino,Urbana,5,2500,No,Sí,Secundaria,1,84,2,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior técnica,3,67,1,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior universitaria,2,86,1,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,2,70,0,13.6
+Masculino,Rural,5,800,Sí,Sí,Superior técnica,4,88,2,13.6
+Femenino,Urbana,5,2500,No,Sí,Secundaria,5,76,1,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,2,94,1,13.6
+Masculino,Urbana,4,800,No,Sí,Superior técnica,5,80,2,13.6
+Masculino,Urbana,6,2500,Sí,Sí,Superior técnica,3,75,1,13.6
+Femenino,Urbana,3,800,No,Sí,Superior universitaria,2,83,1,13.6
+Femenino,Rural,4,800,Sí,Sí,Secundaria,2,87,0,13.6
+Femenino,Urbana,2,5000,No,No,Superior universitaria,4,91,0,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,3,84,2,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Superior universitaria,1,68,1,13.6
+Femenino,Urbana,3,800,Sí,Sí,Superior técnica,4,93,2,13.6
+Masculino,Rural,4,800,No,Sí,Secundaria,3,85,2,13.6
+Masculino,Urbana,3,5000,Sí,Sí,Superior universitaria,3,81,1,13.6
+Femenino,Urbana,5,2500,Sí,No,Secundaria,2,93,1,13.6
+Femenino,Urbana,5,800,No,Sí,Superior técnica,4,85,1,13.6
+Femenino,Rural,4,800,No,No,Superior técnica,1,99,0,13.6
+Masculino,Rural,5,800,No,Sí,Secundaria,1,94,1,13.6
+Masculino,Urbana,6,800,No,Sí,Superior técnica,2,73,0,13.6
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,2,82,2,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,1,89,1,13.6
+Femenino,Urbana,4,800,Sí,Sí,Secundaria,4,87,1,13.6
+Masculino,Urbana,4,2500,No,Sí,Secundaria,6,90,1,13.6
+Femenino,Urbana,4,800,Sí,Sí,Superior universitaria,3,80,2,13.6
+Femenino,Rural,5,2500,Sí,Sí,Secundaria,3,76,0,13.6
+Masculino,Rural,6,2500,Sí,Sí,Secundaria,2,76,1,13.6
+Femenino,Urbana,5,2500,Sí,Sí,Superior universitaria,1,87,1,13.6
+Femenino,Urbana,4,800,No,Sí,Secundaria,4,94,1,13.6
+Masculino,Rural,5,5000,No,Sí,Secundaria,2,81,1,13.6
+Masculino,Urbana,5,800,Sí,Sí,Superior universitaria,2,76,1,13.6
+Masculino,Rural,5,5000,No,Sí,Superior técnica,2,85,1,13.6
+Masculino,Urbana,6,2500,Sí,Sí,Secundaria,1,66,0,13.6
+Femenino,Urbana,7,5000,Sí,Sí,Secundaria,1,61,2,13.6
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,4,77,2,13.6
+Femenino,Urbana,5,800,Sí,Sí,Superior técnica,4,82,1,13.6
+Femenino,Urbana,3,5000,Sí,Sí,Secundaria,1,95,0,13.6
+Masculino,Urbana,6,5000,Sí,Sí,Secundaria,2,82,2,13.6
+Femenino,Urbana,5,2500,Sí,No,Superior universitaria,1,94,2,13.6
+Femenino,Rural,3,800,Sí,Sí,Superior universitaria,2,81,0,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Superior técnica,1,67,1,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,3,84,2,13.6
+Masculino,Rural,3,800,Sí,Sí,Superior universitaria,1,89,0,13.6
+Masculino,Urbana,4,5000,Sí,Sí,Superior universitaria,4,91,2,13.6
+Masculino,Urbana,6,800,Sí,Sí,Superior técnica,4,81,2,13.6
+Femenino,Urbana,3,800,Sí,Sí,Secundaria,1,97,1,13.6
+Masculino,Rural,5,800,No,Sí,Secundaria,2,88,1,13.6
+Femenino,Urbana,4,5000,Sí,Sí,Superior técnica,3,79,2,13.6
+Femenino,Urbana,4,2500,Sí,Sí,Superior universitaria,1,84,2,13.6
+Masculino,Urbana,5,5000,No,Sí,Secundaria,4,78,2,13.6
+Femenino,Urbana,7,800,No,Sí,Superior universitaria,3,74,2,13.6
+Femenino,Rural,5,800,Sí,Sí,Secundaria,3,77,0,13.6
+Masculino,Rural,6,800,Sí,Sí,Secundaria,2,64,2,13.6
+Femenino,Urbana,4,5000,Sí,Sí,Superior universitaria,3,67,0,13.6
+Masculino,Rural,5,800,No,Sí,Superior técnica,1,86,2,13.6
+Masculino,Urbana,3,2500,Sí,Sí,Secundaria,2,85,2,13.6
+Femenino,Urbana,3,2500,No,Sí,Superior técnica,2,99,1,13.6
+Femenino,Urbana,4,800,Sí,Sí,Secundaria,3,79,1,13.6
+Masculino,Urbana,6,800,Sí,Sí,Superior técnica,3,92,2,13.6
+Femenino,Urbana,4,5000,Sí,Sí,Secundaria,6,78,1,13.6
+Femenino,Rural,5,800,Sí,Sí,Secundaria,1,93,1,13.6
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,1,97,2,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior universitaria,1,93,2,13.6
+Femenino,Urbana,3,2500,Sí,Sí,Superior técnica,1,100,2,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Secundaria,2,80,2,13.6
+Masculino,Urbana,3,800,Sí,Sí,Superior técnica,3,100,2,13.6
+Femenino,Urbana,3,800,Sí,Sí,Superior universitaria,1,90,1,13.6
+Femenino,Urbana,5,800,Sí,Sí,Superior universitaria,4,90,2,13.6
+Masculino,Urbana,4,2500,No,Sí,Secundaria,2,79,0,13.6
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,3,83,0,13.6
+Femenino,Rural,4,2500,Sí,Sí,Superior técnica,2,78,1,13.6
+Masculino,Urbana,4,800,No,Sí,Superior técnica,4,83,2,13.6
+Masculino,Rural,4,2500,No,No,Superior técnica,5,80,1,13.6
+Femenino,Urbana,6,5000,No,Sí,Secundaria,2,69,1,13.6
+Femenino,Rural,6,800,Sí,Sí,Secundaria,4,76,1,13.6
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,3,82,0,13.6
+Femenino,Urbana,2,2500,Sí,No,Superior universitaria,3,95,0,13.6
+Masculino,Urbana,1,5000,Sí,Sí,Superior técnica,5,84,0,13.6
+Femenino,Rural,4,2500,Sí,No,Secundaria,3,96,0,13.6
+Femenino,Urbana,5,2500,No,Sí,Secundaria,2,92,2,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior universitaria,2,86,1,13.6
+Masculino,Rural,5,2500,Sí,Sí,Superior universitaria,5,77,0,13.6
+Masculino,Urbana,2,800,Sí,Sí,Superior universitaria,5,91,0,13.6
+Masculino,Urbana,4,800,No,Sí,Superior universitaria,2,86,0,13.6
+Femenino,Rural,6,800,Sí,No,Secundaria,4,78,1,13.6
+Masculino,Rural,3,800,Sí,Sí,Superior universitaria,3,88,1,13.6
+Femenino,Urbana,6,2500,No,Sí,Superior técnica,3,65,0,13.6
+Masculino,Rural,2,2500,Sí,Sí,Superior universitaria,2,98,1,13.6
+Femenino,Rural,3,5000,No,Sí,Secundaria,3,93,0,13.6
+Femenino,Urbana,5,2500,No,Sí,Superior técnica,3,90,2,13.6
+Femenino,Rural,4,2500,No,Sí,Secundaria,1,97,1,13.6
+Femenino,Rural,2,800,Sí,Sí,Secundaria,3,86,0,13.6
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,4,83,1,13.6
+Masculino,Rural,6,800,Sí,Sí,Secundaria,1,91,1,13.6
+Femenino,Urbana,3,5000,Sí,Sí,Superior técnica,1,95,2,13.6
+Femenino,Urbana,5,5000,Sí,Sí,Superior técnica,3,76,2,13.6
+Femenino,Urbana,5,5000,No,Sí,Secundaria,4,73,2,13.6
+Masculino,Urbana,3,2500,No,Sí,Secundaria,1,94,1,13.6
+Masculino,Urbana,4,800,No,Sí,Superior técnica,3,91,2,13.6
+Masculino,Urbana,5,800,No,Sí,Secundaria,1,84,1,13.4
+Femenino,Urbana,3,800,Sí,Sí,Superior técnica,4,80,0,13.4
+Femenino,Rural,3,2500,Sí,Sí,Secundaria,3,98,2,13.4
+Masculino,Rural,7,800,Sí,Sí,Secundaria,2,84,2,13.4
+Masculino,Urbana,5,5000,No,Sí,Superior técnica,4,68,2,13.4
+Femenino,Urbana,2,800,No,Sí,Superior universitaria,3,99,2,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,3,69,0,13.4
+Masculino,Urbana,3,800,Sí,Sí,Superior técnica,3,78,0,13.4
+Masculino,Urbana,7,2500,Sí,Sí,Superior técnica,2,70,1,13.4
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,3,72,2,13.4
+Masculino,Urbana,4,800,No,No,Superior técnica,3,93,2,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,1,89,1,13.4
+Masculino,Urbana,3,2500,Sí,Sí,Superior técnica,2,90,2,13.4
+Masculino,Urbana,2,800,No,Sí,Superior técnica,1,96,0,13.4
+Masculino,Rural,5,2500,No,Sí,Secundaria,1,76,1,13.4
+Masculino,Urbana,5,2500,No,Sí,Superior técnica,1,90,2,13.4
+Masculino,Rural,3,800,Sí,Sí,Secundaria,2,100,2,13.4
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,3,86,2,13.4
+Femenino,Urbana,5,5000,No,Sí,Secundaria,1,73,1,13.4
+Femenino,Urbana,4,2500,Sí,Sí,Superior universitaria,5,86,2,13.4
+Masculino,Rural,6,800,No,Sí,Secundaria,2,80,0,13.4
+Masculino,Urbana,3,2500,No,Sí,Superior técnica,3,86,2,13.4
+Masculino,Urbana,4,800,No,Sí,Superior universitaria,2,80,0,13.4
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,2,67,1,13.4
+Femenino,Urbana,5,800,Sí,Sí,Superior universitaria,4,79,2,13.4
+Femenino,Urbana,6,800,Sí,Sí,Secundaria,3,83,1,13.4
+Masculino,Urbana,6,800,No,Sí,Superior universitaria,2,76,0,13.4
+Masculino,Rural,3,800,No,Sí,Superior universitaria,1,78,0,13.4
+Femenino,Urbana,3,5000,No,Sí,Superior universitaria,2,81,1,13.4
+Masculino,Urbana,5,5000,Sí,Sí,Superior universitaria,1,80,1,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,6,75,2,13.4
+Femenino,Urbana,6,800,Sí,Sí,Secundaria,2,67,1,13.4
+Masculino,Urbana,3,800,Sí,No,Superior técnica,2,95,1,13.4
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,2,69,1,13.4
+Masculino,Urbana,3,2500,Sí,Sí,Superior técnica,4,67,1,13.4
+Masculino,Urbana,6,800,Sí,Sí,Secundaria,2,76,2,13.4
+Femenino,Urbana,3,2500,No,Sí,Secundaria,5,97,2,13.4
+Masculino,Urbana,6,2500,Sí,Sí,Superior universitaria,5,71,1,13.4
+Femenino,Urbana,4,2500,No,Sí,Superior técnica,2,84,1,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior universitaria,2,74,1,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,1,93,2,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,2,82,1,13.4
+Masculino,Urbana,2,800,No,Sí,Secundaria,3,87,0,13.4
+Femenino,Rural,5,5000,Sí,Sí,Superior técnica,2,83,2,13.4
+Femenino,Urbana,6,2500,Sí,No,Superior técnica,2,84,2,13.4
+Femenino,Rural,4,2500,Sí,Sí,Superior técnica,1,90,2,13.4
+Femenino,Rural,4,800,No,Sí,Superior técnica,1,81,1,13.4
+Masculino,Urbana,5,2500,No,Sí,Superior técnica,1,66,1,13.4
+Femenino,Rural,5,800,No,Sí,Superior universitaria,7,67,1,13.4
+Masculino,Rural,2,800,No,Sí,Superior técnica,3,91,2,13.4
+Femenino,Rural,5,800,No,Sí,Superior técnica,2,78,2,13.4
+Masculino,Urbana,5,2500,No,Sí,Superior universitaria,2,82,2,13.4
+Masculino,Rural,7,800,No,Sí,Secundaria,2,73,2,13.4
+Femenino,Urbana,4,800,No,Sí,Secundaria,1,97,1,13.4
+Masculino,Urbana,2,800,Sí,Sí,Secundaria,3,99,1,13.4
+Femenino,Rural,7,2500,No,Sí,Secundaria,2,70,1,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Superior universitaria,3,72,1,13.4
+Femenino,Rural,5,2500,Sí,Sí,Superior técnica,1,75,1,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior universitaria,4,72,2,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,1,93,2,13.4
+Femenino,Rural,6,2500,Sí,Sí,Secundaria,5,73,2,13.4
+Femenino,Rural,6,2500,No,No,Secundaria,4,77,2,13.4
+Masculino,Urbana,6,800,No,Sí,Superior universitaria,2,80,2,13.4
+Masculino,Rural,4,800,Sí,Sí,Superior universitaria,3,82,2,13.4
+Masculino,Urbana,5,800,Sí,Sí,Superior universitaria,3,67,2,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,4,79,2,13.4
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,3,79,1,13.4
+Femenino,Rural,4,800,No,Sí,Superior universitaria,2,89,2,13.4
+Masculino,Urbana,4,2500,No,Sí,Secundaria,3,83,1,13.4
+Masculino,Urbana,4,2500,Sí,Sí,Secundaria,2,73,0,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,4,78,1,13.4
+Masculino,Rural,4,800,Sí,Sí,Superior técnica,2,77,0,13.4
+Masculino,Rural,5,2500,Sí,No,Superior universitaria,4,68,2,13.4
+Femenino,Rural,5,2500,Sí,Sí,Secundaria,1,81,2,13.4
+Masculino,Urbana,7,2500,Sí,Sí,Secundaria,3,61,0,13.4
+Masculino,Urbana,5,5000,No,Sí,Secundaria,3,87,2,13.4
+Femenino,Urbana,4,800,Sí,Sí,Superior técnica,4,91,2,13.4
+Masculino,Urbana,3,5000,No,Sí,Secundaria,5,84,2,13.4
+Masculino,Urbana,2,800,Sí,Sí,Secundaria,6,86,1,13.4
+Masculino,Urbana,2,800,Sí,Sí,Superior técnica,3,94,0,13.4
+Femenino,Rural,4,800,No,Sí,Secundaria,3,81,0,13.4
+Masculino,Urbana,5,2500,No,Sí,Secundaria,3,87,1,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Superior universitaria,5,70,1,13.4
+Femenino,Urbana,4,2500,Sí,Sí,Secundaria,2,93,2,13.4
+Masculino,Rural,6,5000,No,Sí,Secundaria,4,68,2,13.4
+Femenino,Urbana,4,2500,Sí,Sí,Superior técnica,4,85,1,13.4
+Masculino,Rural,5,2500,Sí,Sí,Superior técnica,3,65,1,13.4
+Femenino,Rural,6,800,Sí,Sí,Secundaria,2,63,1,13.4
+Femenino,Rural,4,2500,Sí,Sí,Secundaria,4,90,2,13.4
+Femenino,Urbana,5,5000,No,Sí,Secundaria,2,69,1,13.4
+Femenino,Urbana,3,800,Sí,Sí,Superior técnica,2,85,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Superior universitaria,3,87,2,13.4
+Masculino,Rural,4,5000,No,Sí,Secundaria,3,77,0,13.4
+Masculino,Urbana,2,2500,Sí,Sí,Secundaria,1,97,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,2,83,1,13.4
+Femenino,Urbana,2,2500,Sí,No,Superior universitaria,3,81,0,13.4
+Masculino,Urbana,3,2500,No,Sí,Superior técnica,3,89,2,13.4
+Masculino,Rural,4,2500,No,Sí,Superior universitaria,4,79,1,13.4
+Masculino,Rural,4,800,Sí,Sí,Superior técnica,1,96,2,13.4
+Masculino,Urbana,6,5000,Sí,Sí,Superior técnica,2,69,2,13.4
+Masculino,Urbana,5,800,Sí,Sí,Superior universitaria,1,73,0,13.4
+Masculino,Urbana,7,2500,Sí,Sí,Secundaria,1,71,2,13.4
+Femenino,Rural,3,2500,Sí,Sí,Secundaria,2,80,0,13.4
+Masculino,Urbana,4,2500,No,Sí,Superior universitaria,4,81,2,13.4
+Femenino,Rural,4,2500,No,Sí,Superior universitaria,2,76,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,2,68,0,13.4
+Femenino,Urbana,4,800,Sí,Sí,Superior universitaria,4,75,1,13.4
+Masculino,Urbana,3,2500,No,Sí,Secundaria,3,100,1,13.4
+Masculino,Urbana,6,800,Sí,Sí,Superior técnica,2,68,0,13.4
+Masculino,Urbana,3,2500,No,Sí,Secundaria,4,86,2,13.4
+Masculino,Rural,3,2500,Sí,Sí,Superior técnica,1,77,1,13.4
+Masculino,Urbana,4,800,Sí,Sí,Secundaria,2,88,2,13.4
+Femenino,Urbana,6,5000,No,Sí,Secundaria,2,76,2,13.4
+Femenino,Urbana,4,800,Sí,Sí,Superior técnica,2,84,0,13.4
+Masculino,Urbana,3,5000,No,Sí,Superior técnica,1,85,0,13.4
+Masculino,Urbana,5,800,No,Sí,Secundaria,5,82,2,13.4
+Masculino,Rural,4,5000,Sí,Sí,Secundaria,3,73,0,13.4
+Masculino,Rural,4,5000,Sí,Sí,Superior técnica,3,79,2,13.4
+Masculino,Rural,5,2500,No,Sí,Superior técnica,1,92,1,13.4
+Masculino,Urbana,5,800,No,Sí,Superior técnica,2,77,1,13.4
+Masculino,Rural,6,2500,No,Sí,Superior técnica,2,80,2,13.4
+Femenino,Urbana,2,2500,Sí,Sí,Secundaria,4,90,1,13.4
+Masculino,Urbana,4,2500,Sí,Sí,Superior técnica,2,81,1,13.4
+Femenino,Urbana,3,5000,Sí,Sí,Superior técnica,2,98,2,13.4
+Masculino,Urbana,3,2500,Sí,Sí,Secundaria,1,86,2,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,5,83,2,13.4
+Masculino,Urbana,6,2500,No,Sí,Superior universitaria,2,76,2,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior universitaria,1,73,1,13.4
+Femenino,Urbana,3,2500,No,Sí,Secundaria,2,99,1,13.4
+Masculino,Rural,4,2500,No,Sí,Superior técnica,1,84,1,13.4
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,4,74,1,13.4
+Masculino,Rural,4,800,No,Sí,Secundaria,2,90,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,2,79,2,13.4
+Masculino,Urbana,7,2500,Sí,Sí,Secundaria,1,77,2,13.4
+Masculino,Rural,4,800,No,Sí,Superior técnica,2,98,1,13.4
+Masculino,Rural,4,800,No,Sí,Superior técnica,4,81,1,13.4
+Femenino,Rural,4,800,Sí,Sí,Superior técnica,1,84,2,13.4
+Femenino,Rural,5,2500,No,Sí,Superior técnica,1,76,1,13.4
+Femenino,Urbana,3,2500,Sí,Sí,Superior universitaria,2,76,1,13.4
+Masculino,Urbana,4,800,No,Sí,Superior técnica,6,80,1,13.4
+Masculino,Rural,6,5000,Sí,Sí,Secundaria,3,67,0,13.4
+Masculino,Urbana,5,800,No,Sí,Secundaria,1,97,2,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,2,88,2,13.4
+Femenino,Urbana,2,800,No,Sí,Superior técnica,2,86,1,13.4
+Femenino,Urbana,4,800,Sí,Sí,Superior universitaria,3,75,1,13.4
+Femenino,Urbana,4,800,Sí,Sí,Superior universitaria,4,87,2,13.4
+Femenino,Rural,5,2500,No,Sí,Secundaria,3,62,1,13.4
+Masculino,Rural,4,800,No,Sí,Superior técnica,2,79,0,13.4
+Femenino,Rural,3,800,No,Sí,Secundaria,3,93,2,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,3,77,1,13.4
+Masculino,Urbana,3,2500,No,Sí,Superior técnica,3,90,2,13.4
+Masculino,Urbana,3,800,No,Sí,Secundaria,1,95,1,13.4
+Femenino,Urbana,5,800,No,Sí,Secundaria,3,84,0,13.4
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,2,72,1,13.4
+Masculino,Urbana,4,800,Sí,Sí,Secundaria,7,72,1,13.4
+Femenino,Urbana,7,800,Sí,No,Superior técnica,2,76,2,13.4
+Masculino,Rural,6,800,Sí,Sí,Secundaria,3,69,2,13.4
+Masculino,Urbana,5,800,No,Sí,Secundaria,1,83,1,13.4
+Masculino,Rural,5,5000,Sí,Sí,Superior técnica,2,77,0,13.4
+Masculino,Urbana,5,5000,Sí,Sí,Superior técnica,2,83,1,13.4
+Masculino,Rural,5,2500,No,Sí,Secundaria,5,90,2,13.4
+Masculino,Rural,5,2500,Sí,Sí,Secundaria,1,79,1,13.4
+Masculino,Urbana,6,5000,Sí,Sí,Superior técnica,1,69,0,13.4
+Masculino,Urbana,4,2500,No,Sí,Superior técnica,2,87,2,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,3,78,2,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Secundaria,4,93,2,13.4
+Femenino,Rural,3,2500,Sí,Sí,Superior técnica,2,94,2,13.4
+Femenino,Urbana,4,2500,No,Sí,Secundaria,3,94,1,13.4
+Masculino,Urbana,3,2500,No,Sí,Secundaria,1,98,2,13.4
+Femenino,Urbana,5,2500,Sí,Sí,Superior técnica,3,72,2,13.4
+Femenino,Urbana,5,800,No,Sí,Secundaria,1,81,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,2,76,0,13.4
+Femenino,Rural,6,5000,Sí,Sí,Secundaria,2,65,1,13.4
+Masculino,Urbana,4,2500,Sí,Sí,Superior técnica,2,65,0,13.4
+Femenino,Urbana,4,2500,No,Sí,Superior técnica,5,83,1,13.4
+Masculino,Rural,5,800,Sí,Sí,Superior técnica,2,77,2,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,4,68,0,13.4
+Masculino,Rural,5,800,No,Sí,Superior técnica,2,86,1,13.4
+Femenino,Urbana,1,2500,Sí,Sí,Superior universitaria,4,92,0,13.4
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,1,78,0,13.4
+Femenino,Urbana,7,800,No,Sí,Secundaria,1,62,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,2,79,0,13.4
+Femenino,Rural,5,2500,No,No,Superior universitaria,2,88,1,13.4
+Masculino,Rural,3,800,Sí,Sí,Superior técnica,3,83,1,13.4
+Femenino,Urbana,6,2500,No,Sí,Secundaria,3,73,0,13.4
+Femenino,Rural,4,2500,Sí,Sí,Superior universitaria,3,80,2,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,4,78,1,13.4
+Masculino,Urbana,4,2500,No,Sí,Superior universitaria,1,76,1,13.4
+Masculino,Urbana,6,800,No,Sí,Secundaria,3,63,1,13.4
+Femenino,Rural,5,800,Sí,Sí,Secundaria,5,63,0,13.4
+Femenino,Rural,4,2500,Sí,Sí,Secundaria,4,94,2,13.4
+Masculino,Rural,5,2500,Sí,Sí,Secundaria,4,70,2,13.4
+Femenino,Urbana,4,800,Sí,Sí,Secundaria,3,87,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,1,97,2,13.4
+Femenino,Rural,7,5000,No,Sí,Secundaria,2,65,2,13.4
+Masculino,Rural,7,800,Sí,Sí,Secundaria,4,71,2,13.4
+Femenino,Rural,7,2500,No,Sí,Superior técnica,1,62,1,13.4
+Femenino,Urbana,4,800,No,Sí,Superior técnica,4,88,2,13.4
+Masculino,Rural,4,2500,Sí,Sí,Superior universitaria,2,75,1,13.4
+Femenino,Urbana,6,800,Sí,Sí,Superior técnica,1,84,2,13.4
+Masculino,Rural,3,800,Sí,Sí,Superior técnica,1,92,2,13.4
+Masculino,Urbana,5,2500,No,Sí,Secundaria,2,72,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,2,75,2,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,1,67,1,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Superior universitaria,2,73,1,13.4
+Femenino,Urbana,5,800,Sí,Sí,Superior universitaria,1,78,2,13.4
+Masculino,Rural,3,800,Sí,Sí,Superior técnica,3,77,2,13.4
+Masculino,Urbana,5,800,No,Sí,Secundaria,3,76,2,13.4
+Masculino,Urbana,3,2500,Sí,Sí,Secundaria,1,78,1,13.4
+Masculino,Urbana,6,800,Sí,No,Secundaria,3,88,2,13.4
+Masculino,Urbana,5,800,Sí,Sí,Secundaria,3,74,1,13.4
+Masculino,Rural,4,800,No,Sí,Secundaria,3,81,1,13.4
+Masculino,Urbana,4,2500,Sí,Sí,Superior técnica,1,87,1,13.4
+Femenino,Urbana,6,800,Sí,Sí,Secundaria,2,63,0,13.4
+Femenino,Rural,6,2500,No,Sí,Secundaria,1,69,1,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,4,65,0,13.4
+Masculino,Urbana,5,5000,Sí,Sí,Secundaria,3,70,1,13.4
+Masculino,Urbana,4,2500,No,Sí,Secundaria,1,93,1,13.4
+Femenino,Rural,6,5000,Sí,No,Superior técnica,1,61,0,13.4
+Masculino,Urbana,5,2500,No,Sí,Secundaria,2,80,0,13.4
+Femenino,Urbana,7,800,No,Sí,Superior técnica,3,63,0,13.4
+Masculino,Rural,5,2500,Sí,Sí,Superior técnica,1,80,2,13.4
+Femenino,Urbana,6,5000,Sí,Sí,Secundaria,5,62,2,13.4
+Masculino,Rural,4,5000,Sí,Sí,Secundaria,1,91,2,13.4
+Masculino,Rural,2,5000,Sí,Sí,Secundaria,1,86,1,13.4
+Masculino,Rural,4,800,No,No,Secundaria,3,99,2,13.4
+Femenino,Rural,5,2500,No,Sí,Secundaria,4,66,0,13.4
+Femenino,Rural,3,2500,Sí,Sí,Secundaria,3,74,1,13.4
+Masculino,Urbana,4,5000,Sí,Sí,Superior universitaria,2,85,2,13.4
+Masculino,Rural,6,2500,Sí,Sí,Superior universitaria,3,70,1,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Superior técnica,2,80,2,13.4
+Femenino,Urbana,3,800,No,Sí,Secundaria,3,90,2,13.4
+Masculino,Urbana,3,2500,No,Sí,Secundaria,3,85,1,13.4
+Femenino,Urbana,5,5000,Sí,Sí,Secundaria,4,71,0,13.4
+Masculino,Urbana,5,800,No,Sí,Secundaria,2,75,0,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,4,82,1,13.4
+Masculino,Rural,5,800,Sí,Sí,Secundaria,1,74,1,13.4
+Femenino,Urbana,2,2500,No,No,Secundaria,1,96,1,13.4
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,2,89,2,13.4
+Femenino,Urbana,5,2500,No,Sí,Secundaria,4,76,1,13.4
+Femenino,Rural,5,2500,No,Sí,Secundaria,2,79,1,13.4
+Masculino,Urbana,5,5000,Sí,Sí,Superior técnica,2,76,1,13.4
+Masculino,Urbana,4,800,No,Sí,Secundaria,1,86,1,13.4
+Masculino,Urbana,5,2500,No,Sí,Secundaria,3,75,0,13.4
+Masculino,Urbana,2,800,Sí,Sí,Superior técnica,5,89,1,13.4
+Masculino,Urbana,5,5000,No,Sí,Secundaria,2,73,2,13.4
+Masculino,Urbana,5,800,No,Sí,Secundaria,4,81,1,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,4,93,2,13.4
+Femenino,Urbana,3,5000,Sí,Sí,Secundaria,2,88,2,13.4
+Femenino,Rural,4,2500,Sí,Sí,Secundaria,2,96,2,13.4
+Femenino,Urbana,3,2500,No,Sí,Secundaria,2,93,2,13.4
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,2,80,2,13.4
+Masculino,Rural,5,2500,Sí,No,Secundaria,1,72,1,13.4
+Femenino,Rural,4,2500,Sí,Sí,Secundaria,5,87,2,13.4
+Femenino,Urbana,2,2500,Sí,Sí,Superior técnica,5,80,0,13.4
+Femenino,Urbana,6,800,No,Sí,Superior universitaria,2,69,0,13.4
+Femenino,Urbana,4,5000,Sí,Sí,Superior técnica,1,94,2,13.4
+Femenino,Rural,3,2500,No,Sí,Superior universitaria,3,93,1,13.4
+Femenino,Rural,4,800,No,Sí,Secundaria,5,82,2,13.4
+Masculino,Urbana,6,2500,No,Sí,Secundaria,1,69,0,13.4
+Masculino,Urbana,6,2500,No,Sí,Secundaria,1,82,2,13.4
+Masculino,Urbana,4,800,Sí,No,Superior técnica,4,77,1,13.4
+Masculino,Rural,6,5000,No,Sí,Secundaria,3,64,1,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Superior universitaria,3,75,2,13.4
+Masculino,Rural,5,800,Sí,Sí,Superior técnica,3,77,1,13.4
+Masculino,Rural,5,2500,No,Sí,Secundaria,1,84,1,13.4
+Masculino,Urbana,5,800,Sí,Sí,Superior técnica,4,81,2,13.4
+Masculino,Urbana,6,2500,Sí,Sí,Secundaria,1,68,0,13.4
+Masculino,Urbana,6,800,No,Sí,Secundaria,3,72,1,13.4
+Masculino,Urbana,4,5000,No,Sí,Secundaria,1,90,2,13.4
+Masculino,Urbana,2,800,Sí,Sí,Superior universitaria,5,89,2,13.4
+Masculino,Rural,4,5000,Sí,Sí,Secundaria,4,85,1,13.4
+Masculino,Urbana,4,800,Sí,Sí,Superior técnica,5,74,1,13.4
+Masculino,Urbana,4,800,No,Sí,Superior técnica,4,94,1,13.4
+Masculino,Rural,6,800,Sí,Sí,Secundaria,3,65,2,13.4
+Masculino,Urbana,5,2500,Sí,Sí,Secundaria,3,70,1,13.4
+Femenino,Rural,4,800,Sí,Sí,Superior universitaria,1,80,0,13.4
+Masculino,Urbana,5,800,Sí,No,Secundaria,1,83,1,13.4
+Masculino,Urbana,3,2500,No,Sí,Secundaria,3,86,0,13.4
+Masculino,Urbana,3,2500,No,Sí,Superior técnica,3,85,1,13.4
+Masculino,Urbana,4,800,Sí,Sí,Secundaria,4,93,2,13.4
+Femenino,Urbana,5,800,Sí,Sí,Superior técnica,3,89,2,13.4
+Femenino,Rural,4,800,No,Sí,Secundaria,1,93,1,13.4
+Masculino,Urbana,5,2500,No,Sí,Superior universitaria,2,88,1,13.4
+Masculino,Rural,3,800,Sí,Sí,Superior técnica,2,89,2,13.4
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,3,80,2,13.4
+Femenino,Urbana,3,800,Sí,Sí,Superior universitaria,2,80,1,13.4
+Masculino,Urbana,4,800,No,Sí,Secundaria,3,93,1,13.4
+Femenino,Urbana,5,2500,Sí,Sí,Secundaria,1,83,1,13.4
+Femenino,Urbana,3,800,No,Sí,Superior técnica,5,80,0,13.4
+Masculino,Urbana,6,800,Sí,Sí,Superior técnica,2,65,1,13.4
+Masculino,Rural,5,5000,No,Sí,Superior técnica,2,77,2,13.4
+Femenino,Urbana,5,800,Sí,Sí,Secundaria,6,62,1,13.4
+Femenino,Urbana,5,2500,No,Sí,Superior técnica,3,87,2,13.4
+Masculino,Urbana,6,800,Sí,Sí,Secundaria,2,81,2,13.4
+Femenino,Rural,7,800,Sí,Sí,Secundaria,3,67,1,13.4
+Masculino,Urbana,3,800,Sí,Sí,Secundaria,1,98,0,13.4

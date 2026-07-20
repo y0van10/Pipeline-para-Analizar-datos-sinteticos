@@ -11,14 +11,21 @@ from itertools import combinations
 class AnalizadorBayesiano:
     """
     Clase encargada de construir Árboles Bayesianos (MSTs dirigidos) basados en la 
-    probabilidad conjunta de las variables discretizadas con flechas ultraclaras y legibles.
-    También genera gráficos de Radar (Telaraña) comparativos.
+    probabilidad conjunta y la Jerarquía Causal Transitiva (Antecedentes -> Mediadores -> Resultado).
     """
     NOMBRES_COMPLETOS = {
         "X1": "Sexo", "X2": "Zona", "X3": "Ciclo",
         "X4": "Ingreso", "X5": "Trabaja", "X6": "Beca",
         "X7": "Educ.Jefe", "X8": "Tam.Fam", "X9": "Asistencia",
         "X10": "Desaprobados", "X11": "Rendimiento"
+    }
+
+    # Nivel de jerarquía causal de las variables (Causal DAG Ordering)
+    NIVEL_CAUSAL = {
+        "X1": 0, "X2": 0, "X4": 0, "X7": 0, "X8": 0,  # Antecedentes socio-demográficos (Raíces)
+        "X3": 1, "X5": 1, "X6": 1, "X9": 1,          # Comportamientos / Intermediarios
+        "X10": 2,                                     # Factor académico directo
+        "X11": 3                                      # Resultado final (Sink)
     }
 
     def __init__(self, dir_base="results", umbral=0.25):
@@ -112,11 +119,21 @@ class AnalizadorBayesiano:
             p_u = (df_disc[u] == estado_u).sum() / n
             p_v = (df_disc[v] == estado_v).sum() / n
             
-            # Direccionar de menor probabilidad marginal a mayor
-            if p_u <= p_v:
+            lvl_u = self.NIVEL_CAUSAL.get(u, 0)
+            lvl_v = self.NIVEL_CAUSAL.get(v, 0)
+            
+            # Direccionar siguiendo la Jerarquía Causal Transitiva:
+            # Si estan en diferentes niveles causales, orientar del nivel menor al mayor
+            if lvl_u < lvl_v:
                 arbol_bayesiano.add_edge(u, v, weight=max_prob, state=(estado_u, estado_v))
-            else:
+            elif lvl_v < lvl_u:
                 arbol_bayesiano.add_edge(v, u, weight=max_prob, state=(estado_v, estado_u))
+            else:
+                # Si pertenecen al mismo nivel, orientar por probabilidad marginal menor -> mayor
+                if p_u <= p_v:
+                    arbol_bayesiano.add_edge(u, v, weight=max_prob, state=(estado_u, estado_v))
+                else:
+                    arbol_bayesiano.add_edge(v, u, weight=max_prob, state=(estado_v, estado_u))
 
         self.arboles[nombre] = arbol_bayesiano
         self.graficar_arbol(arbol_bayesiano, nombre, nivel)
@@ -133,7 +150,7 @@ class AnalizadorBayesiano:
         for nodo in arbol.nodes():
             grado_in = arbol.in_degree(nodo)
             grado_out = arbol.out_degree(nodo)
-            tamanio = 1400 + (grado_in + grado_out) * 200
+            tamanio = 1400 + (grado_in + grado_out) * 180
             tamaños_nodo.append(tamanio)
 
             if nodo in target:
@@ -143,7 +160,21 @@ class AnalizadorBayesiano:
             else:
                 colores_nodo.append("#1565C0")  # azul intenso = Numérica
 
-        pos = nx.spring_layout(arbol, seed=42, k=2.2)
+        # Layout jerárquico multinivel utilizando la disposición por niveles causales
+        pos = {}
+        # Asignar posiciones Y según nivel causal para que el flujo sea de arriba hacia abajo
+        niveles_nodos = {}
+        for n in arbol.nodes():
+            lvl = self.NIVEL_CAUSAL.get(n, 0)
+            if lvl not in niveles_nodos:
+                niveles_nodos[lvl] = []
+            niveles_nodos[lvl].append(n)
+
+        for lvl, nodos in niveles_nodos.items():
+            y = 3 - lvl * 1.5  # Invertir Y para que Nivel 0 esté arriba y Nivel 3 abajo
+            x_coords = np.linspace(-2.5, 2.5, len(nodos))
+            for i, nodo in enumerate(nodos):
+                pos[nodo] = np.array([x_coords[i], y])
 
         # Dibujar aristas dirigidas con arcos curvos y márgenes limpios
         nx.draw_networkx_edges(
@@ -185,8 +216,8 @@ class AnalizadorBayesiano:
         parche_tar = mpatches.Patch(color="#2E7D32", label="Target: Rendimiento (X11)")
         ax.legend(handles=[parche_cat, parche_num, parche_tar], loc="upper left", fontsize=10)
 
-        ax.set_title(f"Árbol Bayesiano Dirigido (Red Causal Probabilística) - {nombre}\n"
-                     f"Las flechas indican la dirección del condicionamiento | Pesos = P(Xi, Xj)",
+        ax.set_title(f"Árbol Bayesiano Causal Jerárquico - {nombre}\n"
+                     f"Flujo Causal: Antecedentes (Arriba) ➔ Mediadores ➔ Rendimiento (Abajo)",
                      fontsize=13, fontweight="bold")
         ax.axis("off")
 
@@ -200,13 +231,9 @@ class AnalizadorBayesiano:
         path = os.path.join(dir_g, f"arbol_bayesiano_{nombre}.png")
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
-        print(f"      💾 Gráfico Bayesiano con flechas claras guardado: {path}")
+        print(f"      💾 Gráfico Bayesiano Causal Jerárquico guardado: {path}")
 
     def graficar_radar_comparativo(self, df_particiones):
-        """
-        Genera un Gráfico de Telaraña / Radar comparando las medias de los factores
-        entre el grupo de mayor y menor rendimiento.
-        """
         pares = [
             ("50", "Best_50", "Worst_50"),
             ("25", "Best_25_1", "Worst_25_2"),
@@ -257,11 +284,9 @@ class AnalizadorBayesiano:
     def ejecutar_paso(self, df_limpio, particiones):
         self.arboles = {}
 
-        # 1. Árbol completo
         print("\n   🌳 Construyendo Árbol Bayesiano completo...")
         self.construir_arbol_bayesiano(df_limpio, "Completo", nivel="global")
 
-        # 2. Árboles por bloque
         for nombre, info in particiones.items():
             nivel = info["nivel"]
             ruta_csv = info["ruta_csv"]
@@ -269,7 +294,6 @@ class AnalizadorBayesiano:
             print(f"   🌳 Construyendo Árbol Bayesiano para {nombre} desde {os.path.basename(ruta_csv)}...")
             self.construir_arbol_bayesiano(df_part, nombre, nivel=nivel)
 
-        # 3. Graficar Radar Comparativo
         print("\n   🕸️ Generando gráficos de Radar (Telaraña)...")
         self.graficar_radar_comparativo(particiones)
 

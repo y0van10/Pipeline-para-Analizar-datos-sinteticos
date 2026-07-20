@@ -1,8 +1,48 @@
+import os
+import sys
+
+# ─────────────────────────────────────────────────────────────
+# FIX CRÍTICO PYARROW / STREAMLIT LARGEUTF8 (Error 20 JS):
+# Parchear PyArrow para que convierta 'large_string' a 'string' (utf8)
+# evitando que el frontend JavaScript de Streamlit falle con "Unrecognized type: LargeUtf8"
+# ─────────────────────────────────────────────────────────────
+import pyarrow as pa
+import pyarrow.lib as palib
+import streamlit.elements.arrow as st_arrow
+
+_orig_table_from_pandas = pa.Table.from_pandas
+
+def _patched_table_from_pandas(df, *args, **kwargs):
+    t = _orig_table_from_pandas(df, *args, **kwargs)
+    new_fields = []
+    need_cast = False
+    for f in t.schema:
+        if f.type == pa.large_string() or str(f.type) == 'large_string':
+            new_fields.append(f.with_type(pa.string()))
+            need_cast = True
+        elif str(f.type).startswith('dictionary<values=large_string'):
+            new_fields.append(f.with_type(pa.dictionary(f.type.index_type, pa.string(), f.type.ordered)))
+            need_cast = True
+        else:
+            new_fields.append(f)
+    if need_cast:
+        new_schema = pa.schema(new_fields, metadata=t.schema.metadata)
+        return t.cast(new_schema)
+    return t
+
+class _PatchedPyArrowTable:
+    from_pandas = staticmethod(_patched_table_from_pandas)
+    def __getattr__(self, name):
+        return getattr(pa.Table, name)
+
+pa.Table = _PatchedPyArrowTable
+if hasattr(st_arrow, "pa"):
+    st_arrow.pa.Table = _PatchedPyArrowTable
+
+# ─────────────────────────────────────────────────────────────
 import streamlit as st
 import pandas as pd
 import numpy as np
-import os
-import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
@@ -14,19 +54,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
-def sanear_df(df):
-    """
-    Convierte tipos de PyArrow / LargeUtf8 a tipos nativos de Pandas
-    para evitar errores de renderizado JS en Streamlit st.dataframe.
-    """
-    if df is None:
-        return None
-    df_clean = df.copy()
-    for col in df_clean.columns:
-        if df_clean[col].dtype == object or "string" in str(df_clean[col].dtype).lower():
-            df_clean[col] = df_clean[col].astype(str)
-    return df_clean
 
 st.title("🎓 Dashboard de Análisis Académico — NCD/Gzip")
 st.caption("Facultad de Ingeniería de Sistemas · UNA Puno · Ciberseguridad")
@@ -143,10 +170,10 @@ with tab1:
         if col_objetivo:
             st.info(f"🎯 Variable objetivo seleccionada: **{col_objetivo}**")
 
-        st.dataframe(sanear_df(df_cargado.head(15)), use_container_width=True)
+        st.dataframe(df_cargado.head(15), use_container_width=True)
 
         st.subheader("📊 Estadísticas Descriptivas")
-        st.dataframe(sanear_df(df_cargado.describe().reset_index()), use_container_width=True)
+        st.dataframe(df_cargado.describe().reset_index(), use_container_width=True)
     else:
         st.info("Carga un CSV desde la barra lateral para ver los datos aquí.")
 
@@ -225,7 +252,7 @@ with tab4:
             if os.path.exists(ruta_csv_comp):
                 df_c = pd.read_csv(ruta_csv_comp)
                 st.subheader(f"Tabla D — Nivel {pct}%")
-                st.dataframe(sanear_df(df_c), use_container_width=True)
+                st.dataframe(df_c, use_container_width=True)
             else:
                 st.info("Ejecuta el pipeline para ver la comparación.")
         with col2:

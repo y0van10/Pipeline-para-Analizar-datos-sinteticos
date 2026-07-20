@@ -50,7 +50,7 @@ if dataset_option == "Cargar Cualquier Dataset (.csv)":
         convertidor = ConvertidorDataset()
         if not convertidor.ya_es_compatible(df_test):
             necesita_mapeo = True
-            st.sidebar.warning(f"⚠️ Este dataset tiene {df_test.shape[1]} columnas. Se necesitan 11. Configura el mapeo abajo.")
+            st.sidebar.info(f"📋 Dataset cargado con **{df_test.shape[1]} columnas** y **{df_test.shape[0]} registros**. Selecciona qué columnas usar en la pestaña '🔄 Mapeo'.")
         else:
             st.sidebar.success("✅ Dataset compatible (11 columnas detectadas)")
 

@@ -15,6 +15,19 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+def sanear_df(df):
+    """
+    Convierte tipos de PyArrow / LargeUtf8 a tipos nativos de Pandas
+    para evitar errores de renderizado JS en Streamlit st.dataframe.
+    """
+    if df is None:
+        return None
+    df_clean = df.copy()
+    for col in df_clean.columns:
+        if df_clean[col].dtype == object or "string" in str(df_clean[col].dtype).lower():
+            df_clean[col] = df_clean[col].astype(str)
+    return df_clean
+
 st.title("🎓 Dashboard de Análisis Académico — NCD/Gzip")
 st.caption("Facultad de Ingeniería de Sistemas · UNA Puno · Ciberseguridad")
 
@@ -54,7 +67,6 @@ if dataset_option == "Cargar Cualquier CSV":
         # Selección de columna objetivo
         cols_num = df_cargado.select_dtypes(include="number").columns.tolist()
         if cols_num:
-            # Auto-sugerir la columna objetivo por palabras clave
             keywords = ["score", "exam", "grade", "promedio", "final", "gpa",
                         "nota", "rendimiento", "resultado", "average", "mark"]
             sugerida = cols_num[-1]  # default: última numérica
@@ -130,10 +142,11 @@ with tab1:
         st.write(f"**{df_cargado.shape[0]}** registros · **{df_cargado.shape[1]}** columnas")
         if col_objetivo:
             st.info(f"🎯 Variable objetivo seleccionada: **{col_objetivo}**")
-        st.dataframe(df_cargado.head(15), use_container_width=True)
+
+        st.dataframe(sanear_df(df_cargado.head(15)), use_container_width=True)
 
         st.subheader("📊 Estadísticas Descriptivas")
-        st.dataframe(df_cargado.describe(), use_container_width=True)
+        st.dataframe(sanear_df(df_cargado.describe().reset_index()), use_container_width=True)
     else:
         st.info("Carga un CSV desde la barra lateral para ver los datos aquí.")
 
@@ -212,7 +225,7 @@ with tab4:
             if os.path.exists(ruta_csv_comp):
                 df_c = pd.read_csv(ruta_csv_comp)
                 st.subheader(f"Tabla D — Nivel {pct}%")
-                st.dataframe(df_c, use_container_width=True)
+                st.dataframe(sanear_df(df_c), use_container_width=True)
             else:
                 st.info("Ejecuta el pipeline para ver la comparación.")
         with col2:

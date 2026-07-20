@@ -10,57 +10,39 @@ from itertools import combinations
 
 class AnalizadorBayesiano:
     """
-    Clase encargada de construir Árboles Bayesianos (MSTs dirigidos) basados en la
-    probabilidad conjunta y la Jerarquía Causal Transitiva.
-    Funciona con cualquier dataset y cualquier número de columnas.
-    La jerarquía causal se infiere automáticamente a partir de la correlación con
-    la variable objetivo (col_objetivo).
+    Clase encargada de construir:
+    1. Redes Bayesianas Completas (Todos contra Todos dirigidos).
+    2. Árboles Bayesianos MST (Red de Máxima Expansión Mínima).
+    basados en la probabilidad conjunta y la Jerarquía Causal Transitiva.
     """
     def __init__(self, dir_base="results", umbral=0.25, col_objetivo=None):
-        self.dir_base    = os.path.normpath(dir_base)
-        self.umbral      = umbral
+        self.dir_base     = os.path.normpath(dir_base)
+        self.umbral       = umbral
         self.col_objetivo = col_objetivo
-        self.arboles     = {}
+        self.arboles      = {}
 
-    # ──────────────────────────────────────────────
-    # Discretización universal (sin hardcoding)
-    # ──────────────────────────────────────────────
     def discretizar_columna(self, serie):
-        """
-        Convierte una columna a binaria (0/1) de forma automática:
-        - Si numérica: ≥ mediana → 1
-        - Si categórica binaria (2 valores únicos): ordena y asigna 0/1
-        - Si categórica múltiple: los que aparecen más del 50% → 1
-        """
         serie = serie.copy()
-        # Intentar convertir a número
         numerica = pd.to_numeric(serie, errors="coerce")
         if numerica.notna().mean() > 0.7:
             mediana = numerica.median()
             return (numerica >= mediana).astype(int).fillna(0)
 
-        # Categórica
         unicos = serie.dropna().unique()
         if len(unicos) <= 2:
             ordenados = sorted(unicos, key=lambda x: str(x).lower())
             mapeo = {val: i for i, val in enumerate(ordenados)}
             return serie.map(mapeo).fillna(0).astype(int)
 
-        # Múltiples categorías: top moda → 1, resto → 0
         moda = serie.mode()[0] if not serie.mode().empty else unicos[0]
         return (serie == moda).astype(int)
 
     def discretizar_dataframe(self, df, columnas_vars):
-        """
-        Discretiza solo las columnas de análisis (excluye col_objetivo).
-        Retorna DataFrame con columnas originales binarizadas + col_objetivo binarizada.
-        """
         df_disc = pd.DataFrame(index=df.index)
         for col in columnas_vars:
             if col in df.columns:
                 df_disc[col] = self.discretizar_columna(df[col])
 
-        # Incluir objetivo binarizado al final
         if self.col_objetivo and self.col_objetivo in df.columns:
             mediana_obj = pd.to_numeric(df[self.col_objetivo], errors="coerce").median()
             df_disc[self.col_objetivo] = (
@@ -70,13 +52,6 @@ class AnalizadorBayesiano:
         return df_disc
 
     def inferir_nivel_causal(self, df, columnas_vars):
-        """
-        Infiere la jerarquía causal de cada variable basándose en su
-        correlación (punto-biserial o de Pearson) con la variable objetivo.
-        - Nivel 2 (Resultado): col_objetivo
-        - Nivel 1 (Alta corr): |r| > 0.2
-        - Nivel 0 (Baja corr): |r| <= 0.2
-        """
         niveles = {}
         if not self.col_objetivo or self.col_objetivo not in df.columns:
             for col in columnas_vars:
@@ -89,7 +64,6 @@ class AnalizadorBayesiano:
             try:
                 col_num = pd.to_numeric(df[col], errors="coerce")
                 if col_num.notna().mean() < 0.5:
-                    # Categórica: binarizar para correlación
                     col_num = self.discretizar_columna(df[col]).astype(float)
                 else:
                     col_num = col_num.fillna(col_num.median())
@@ -99,33 +73,39 @@ class AnalizadorBayesiano:
                 niveles[col] = 0
 
         if self.col_objetivo:
-            niveles[self.col_objetivo] = 2  # siempre el resultado final
+            niveles[self.col_objetivo] = 2
 
         return niveles
 
-    # ──────────────────────────────────────────────
-    # Construcción del árbol bayesiano
-    # ──────────────────────────────────────────────
-    def construir_arbol_bayesiano(self, df_part, nombre, nivel="global"):
-        # Determinar columnas de análisis (excluir objetivo para el NCD,
-        # pero incluirlo en el árbol bayesiano como nodo resultado)
-        columnas_vars = [c for c in df_part.columns if c != self.col_objetivo]
-        if self.col_objetivo and self.col_objetivo in df_part.columns:
-            columnas_vars_bayes = columnas_vars + [self.col_objetivo]
-        else:
-            columnas_vars_bayes = columnas_vars
+    def _orientar_arista(self, u, v, max_prob, max_state, df_disc, nivel_causal, n):
+        p_u = (df_disc[u] == max_state[0]).sum() / n if u in df_disc else 0.5
+        p_v = (df_disc[v] == max_state[1]).sum() / n if v in df_disc else 0.5
 
+        lvl_u = nivel_causal.get(u, 0)
+        lvl_v = nivel_causal.get(v, 0)
+
+        if lvl_u < lvl_v:
+            return u, v, max_prob, max_state
+        elif lvl_v < lvl_u:
+            return v, u, max_prob, (max_state[1], max_state[0])
+        else:
+            if p_u <= p_v:
+                return u, v, max_prob, max_state
+            else:
+                return v, u, max_prob, (max_state[1], max_state[0])
+
+    def construir_arbol_bayesiano(self, df_part, nombre, nivel="global"):
+        columnas_vars = [c for c in df_part.columns if c != self.col_objetivo]
         df_disc = self.discretizar_dataframe(df_part, columnas_vars)
         variables = list(df_disc.columns)
         n = len(df_disc)
 
         if n < 5 or len(variables) < 2:
-            print(f"      ⚠️  {nombre}: datos insuficientes para árbol bayesiano ({n} filas, {len(variables)} vars)")
+            print(f"      ⚠️  {nombre}: datos insuficientes ({n} filas, {len(variables)} vars)")
             return None
 
         nivel_causal = self.inferir_nivel_causal(df_part, variables)
 
-        # Grafo completo con probabilidades conjuntas
         G_completo = nx.Graph()
         for var in variables:
             G_completo.add_node(var)
@@ -152,61 +132,56 @@ class AnalizadorBayesiano:
             G_completo.add_edge(var_i, var_j, weight=dist)
             datos_aristas[(var_i, var_j)] = (max_prob, max_state)
 
-        mst_no_dirigido = nx.minimum_spanning_tree(G_completo, weight="weight")
+        # ─────────────────────────────────────────────
+        # 1. RED COMPLETA (Todos contra Todos)
+        # ─────────────────────────────────────────────
+        red_completa = nx.DiGraph()
+        for v in variables:
+            red_completa.add_node(v)
 
-        arbol = nx.DiGraph()
-        for var in variables:
-            arbol.add_node(var)
+        for (u, v), (max_prob, max_state) in datos_aristas.items():
+            origen, destino, prob, st = self._orientar_arista(u, v, max_prob, max_state, df_disc, nivel_causal, n)
+            red_completa.add_edge(origen, destino, weight=prob, state=st)
+
+        # ─────────────────────────────────────────────
+        # 2. ÁRBOLES BAYESIANOS (MST)
+        # ─────────────────────────────────────────────
+        mst_no_dirigido = nx.minimum_spanning_tree(G_completo, weight="weight")
+        arbol_mst = nx.DiGraph()
+        for v in variables:
+            arbol_mst.add_node(v)
 
         for u, v in mst_no_dirigido.edges():
             llave = (u, v) if (u, v) in datos_aristas else (v, u)
             max_prob, max_state = datos_aristas[llave]
+            origen, destino, prob, st = self._orientar_arista(llave[0], llave[1], max_prob, max_state, df_disc, nivel_causal, n)
+            arbol_mst.add_edge(origen, destino, weight=prob, state=st)
 
-            if llave == (u, v):
-                estado_u, estado_v = max_state
-            else:
-                estado_v, estado_u = max_state
+        self.arboles[f"MST_{nombre}"] = arbol_mst
+        self.arboles[f"Completa_{nombre}"] = red_completa
 
-            p_u = (df_disc[u] == estado_u).sum() / n if u in df_disc else 0.5
-            p_v = (df_disc[v] == estado_v).sum() / n if v in df_disc else 0.5
+        # Graficar ambos
+        self.graficar_red(arbol_mst, nombre, nivel, nivel_causal, es_completa=False)
+        self.graficar_red(red_completa, nombre, nivel, nivel_causal, es_completa=True)
 
-            lvl_u = nivel_causal.get(u, 0)
-            lvl_v = nivel_causal.get(v, 0)
+        return arbol_mst
 
-            if lvl_u < lvl_v:
-                arbol.add_edge(u, v, weight=max_prob, state=(estado_u, estado_v))
-            elif lvl_v < lvl_u:
-                arbol.add_edge(v, u, weight=max_prob, state=(estado_v, estado_u))
-            else:
-                if p_u <= p_v:
-                    arbol.add_edge(u, v, weight=max_prob, state=(estado_u, estado_v))
-                else:
-                    arbol.add_edge(v, u, weight=max_prob, state=(estado_v, estado_u))
-
-        self.arboles[nombre] = arbol
-        self.graficar_arbol(arbol, nombre, nivel, nivel_causal)
-        return arbol
-
-    # ──────────────────────────────────────────────
-    # Visualización del árbol
-    # ──────────────────────────────────────────────
-    def graficar_arbol(self, arbol, nombre, nivel, nivel_causal):
-        n_nodos = len(arbol.nodes())
+    def graficar_red(self, red, nombre, nivel, nivel_causal, es_completa=False):
+        n_nodos = len(red.nodes())
         fig_h   = max(11, n_nodos * 0.9)
         fig_w   = max(13, n_nodos * 1.1)
         fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 
-        # ─ Colores por nivel causal ─
         COLOR_RAIZ     = "#E65100"  # naranja: antecedentes (nivel 0)
         COLOR_INTERM   = "#1565C0"  # azul: intermediarios (nivel 1)
         COLOR_OBJETIVO = "#2E7D32"  # verde: resultado (nivel 2)
 
         colores_nodo  = []
         tamaños_nodo  = []
-        for nodo in arbol.nodes():
+        for nodo in red.nodes():
             lvl = nivel_causal.get(nodo, 0)
-            grado_total = arbol.in_degree(nodo) + arbol.out_degree(nodo)
-            tamaños_nodo.append(1400 + grado_total * 180)
+            grado_total = red.in_degree(nodo) + red.out_degree(nodo)
+            tamaños_nodo.append(1400 + grado_total * (100 if es_completa else 180))
 
             if lvl == 2:
                 colores_nodo.append(COLOR_OBJETIVO)
@@ -215,74 +190,91 @@ class AnalizadorBayesiano:
             else:
                 colores_nodo.append(COLOR_RAIZ)
 
-        # ─ Layout por niveles causales ─
+        # Layout por niveles causales
         pos = {}
         grupos_nivel = {}
-        for nodo in arbol.nodes():
+        for nodo in red.nodes():
             lvl = nivel_causal.get(nodo, 0)
             grupos_nivel.setdefault(lvl, []).append(nodo)
 
         max_lvl = max(grupos_nivel.keys()) if grupos_nivel else 0
         for lvl, nodos in grupos_nivel.items():
-            y = max_lvl - lvl  # nivel 0 arriba, nivel 2 abajo
+            y = max_lvl - lvl
             x_coords = np.linspace(-3.0, 3.0, len(nodos))
             for i, nodo in enumerate(sorted(nodos)):
                 pos[nodo] = np.array([x_coords[i], y * 1.8])
 
-        # ─ Dibujar aristas con flechas ─
-        nx.draw_networkx_edges(
-            arbol, pos, ax=ax,
-            arrows=True, arrowstyle="-|>", arrowsize=28,
-            edge_color="#C62828", width=2.8, alpha=0.85,
-            connectionstyle="arc3,rad=0.12",
-            min_target_margin=32, min_source_margin=32,
-        )
+        # Dibujar aristas
+        pesos = [data["weight"] for _, _, data in red.edges(data=True)]
+        p_min = min(pesos) if pesos else 0
+        p_max = max(pesos) if pesos else 1
 
-        # ─ Dibujar nodos ─
+        if es_completa:
+            # En la red completa, variar alpha y ancho por probabilidad para no atoturar
+            anchos = [0.8 + 2.5 * ((w - p_min) / (p_max - p_min + 1e-6)) for w in pesos]
+            alphas = [0.25 + 0.60 * ((w - p_min) / (p_max - p_min + 1e-6)) for w in pesos]
+
+            for (u, v, data), w_val, a_val in zip(red.edges(data=True), anchos, alphas):
+                nx.draw_networkx_edges(
+                    red, pos, edgelist=[(u, v)], ax=ax,
+                    arrows=True, arrowstyle="-|>", arrowsize=18,
+                    edge_color="#C62828", width=w_val, alpha=a_val,
+                    connectionstyle="arc3,rad=0.15",
+                    min_target_margin=25, min_source_margin=25
+                )
+        else:
+            # MST
+            nx.draw_networkx_edges(
+                red, pos, ax=ax,
+                arrows=True, arrowstyle="-|>", arrowsize=28,
+                edge_color="#C62828", width=2.8, alpha=0.85,
+                connectionstyle="arc3,rad=0.12",
+                min_target_margin=32, min_source_margin=32,
+            )
+
+        # Dibujar nodos
         nx.draw_networkx_nodes(
-            arbol, pos, ax=ax, node_size=tamaños_nodo,
+            red, pos, ax=ax, node_size=tamaños_nodo,
             node_color=colores_nodo, edgecolors="white", linewidths=2.5,
         )
 
-        # ─ Etiquetas de nodos (nombre real, recortado) ─
-        etiquetas = {n: (n[:15] + "…" if len(n) > 15 else n) for n in arbol.nodes()}
-        nx.draw_networkx_labels(arbol, pos, labels=etiquetas, ax=ax,
+        etiquetas = {n: (n[:15] + "…" if len(n) > 15 else n) for n in red.nodes()}
+        nx.draw_networkx_labels(red, pos, labels=etiquetas, ax=ax,
                                 font_size=8, font_weight="bold", font_color="white")
 
-        # ─ Etiquetas de aristas ─
+        # Dibujar etiquetas en aristas (solo top en completa si son muchas)
         etiquetas_aristas = {}
-        for u, v, data in arbol.edges(data=True):
-            etiquetas_aristas[(u, v)] = f"P={data['weight']:.2f}"
-        nx.draw_networkx_edge_labels(arbol, pos, edge_labels=etiquetas_aristas,
-                                     ax=ax, font_size=7, font_color="#D32F2F",
-                                     font_weight="bold")
+        umbral_label = np.percentile(pesos, 50) if es_completa and len(pesos) > 20 else 0.0
+        for u, v, data in red.edges(data=True):
+            if not es_completa or data["weight"] >= umbral_label:
+                etiquetas_aristas[(u, v)] = f"P={data['weight']:.2f}"
 
-        # ─ Leyenda ─
+        if etiquetas_aristas:
+            nx.draw_networkx_edge_labels(red, pos, edge_labels=etiquetas_aristas,
+                                         ax=ax, font_size=6 if es_completa else 7,
+                                         font_color="#D32F2F", font_weight="bold")
+
         parche_raiz = mpatches.Patch(color=COLOR_RAIZ,     label="Antecedentes (baja corr. con objetivo)")
         parche_int  = mpatches.Patch(color=COLOR_INTERM,   label="Intermediarios (alta corr. con objetivo)")
         parche_tar  = mpatches.Patch(color=COLOR_OBJETIVO, label=f"Objetivo: {self.col_objetivo or 'resultado'}")
         ax.legend(handles=[parche_raiz, parche_int, parche_tar], loc="upper left", fontsize=9)
 
-        ax.set_title(f"Árbol Bayesiano Causal Jerárquico — {nombre}\n"
+        tipo_str = "Red Bayesiana Completa (Todos contra Todos)" if es_completa else "Árbol Bayesiano (MST)"
+        ax.set_title(f"{tipo_str} — {nombre}\n"
                      f"Flujo: Antecedentes ➔ Intermediarios ➔ {self.col_objetivo or 'Resultado'}",
                      fontsize=13, fontweight="bold")
         ax.axis("off")
         plt.tight_layout()
 
-        if nivel == "global":
-            dir_g = os.path.join(self.dir_base, "global")
-        else:
-            dir_g = os.path.join(self.dir_base, f"nivel_{nivel}", "graficos")
-
+        dir_g = os.path.join(self.dir_base, "global") if nivel == "global" else os.path.join(self.dir_base, f"nivel_{nivel}", "graficos")
         os.makedirs(dir_g, exist_ok=True)
-        path = os.path.join(dir_g, f"arbol_bayesiano_{nombre}.png")
+
+        nombre_archivo = f"red_bayesiana_completa_{nombre}.png" if es_completa else f"arbol_bayesiano_{nombre}.png"
+        path = os.path.join(dir_g, nombre_archivo)
         plt.savefig(path, dpi=150, bbox_inches="tight")
         plt.close()
-        print(f"      💾 Árbol Bayesiano guardado: {path}")
+        print(f"      💾 {tipo_str} guardado: {path}")
 
-    # ──────────────────────────────────────────────
-    # Gráfico de Radar comparativo
-    # ──────────────────────────────────────────────
     def graficar_radar_comparativo(self, df_particiones):
         pares = [
             ("50",  "Best_50",     "Worst_50"),
@@ -297,7 +289,6 @@ class AnalizadorBayesiano:
             df_b = df_particiones[n_best]["df"]  if isinstance(df_particiones[n_best], dict) else df_particiones[n_best]
             df_w = df_particiones[n_worst]["df"] if isinstance(df_particiones[n_worst], dict) else df_particiones[n_worst]
 
-            # Usar las columnas de análisis (sin objetivo)
             vars_radar = [c for c in df_b.columns if c != self.col_objetivo]
             if len(vars_radar) < 3:
                 continue
@@ -338,20 +329,17 @@ class AnalizadorBayesiano:
             plt.close()
             print(f"      💾 Radar guardado: {path}")
 
-    # ──────────────────────────────────────────────
-    # Ejecución completa
-    # ──────────────────────────────────────────────
     def ejecutar_paso(self, df_limpio, particiones):
         self.arboles = {}
 
-        print("\n   🌳 Construyendo Árbol Bayesiano completo (dataset limpio)...")
+        print("\n   🌳 Construyendo Red Completa y Árbol MST (dataset completo)...")
         self.construir_arbol_bayesiano(df_limpio, "Completo", nivel="global")
 
         for nombre, info in particiones.items():
             nivel    = info["nivel"]
             ruta_csv = info["ruta_csv"]
             df_part  = pd.read_csv(ruta_csv)
-            print(f"   🌳 Árbol Bayesiano para {nombre}...")
+            print(f"   🌳 Red Completa y Árbol MST para {nombre}...")
             self.construir_arbol_bayesiano(df_part, nombre, nivel=nivel)
 
         print("\n   🕸️ Generando gráficos de Radar...")

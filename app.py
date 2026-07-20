@@ -216,23 +216,51 @@ with tab2:
 
 # ── TAB 3: BAYESIANOS ──
 with tab3:
-    st.header("🌳 Árboles Bayesianos Causales Jerárquicos")
-    st.markdown("Redes dirigidas donde las **flechas** representan el flujo causal de probabilidad conjunta.")
+    st.header("🌳 Redes y Árboles Bayesianos Causales Jerárquicos")
+    st.markdown("Redes dirigidas donde las **flechas** representan la causalidad y probabilidad conjunta.")
     dir_graf = (os.path.join("results", nivel_sel, "graficos")
                 if nivel_sel != "global"
                 else os.path.join("results", "global"))
 
     if os.path.exists(dir_graf):
-        bayes_files = sorted([f for f in os.listdir(dir_graf) if f.startswith("arbol_bayesiano_")])
+        mst_bayes   = sorted([f for f in os.listdir(dir_graf) if f.startswith("arbol_bayesiano_")])
+        comp_bayes  = sorted([f for f in os.listdir(dir_graf) if f.startswith("red_bayesiana_completa_")])
         radar_files = sorted([f for f in os.listdir(dir_graf) if f.startswith("radar_")])
 
-        if bayes_files:
-            b_sel = st.selectbox("Seleccionar Árbol Bayesiano:", bayes_files)
-            st.image(os.path.join(dir_graf, b_sel), caption=b_sel, use_column_width=True)
-        else:
-            st.info("Ejecuta el pipeline para visualizar los árboles bayesianos.")
+        if mst_bayes or comp_bayes:
+            tipo_vista = st.radio(
+                "Tipo de Grafo Bayesiano:",
+                ["🕸️ Red Completa (Todos contra Todos)", "🌳 Árbol Mínimo (MST)", "⚖️ Comparar Ambos Lado a Lado"],
+                horizontal=True
+            )
+
+            bloques_bayes = sorted(list(set(
+                [f.replace("arbol_bayesiano_", "").replace("red_bayesiana_completa_", "").replace(".png", "")
+                 for f in (mst_bayes + comp_bayes)]
+            )))
+
+            b_sel = st.selectbox("Seleccionar Bloque:", bloques_bayes)
+
+            path_comp = os.path.join(dir_graf, f"red_bayesiana_completa_{b_sel}.png")
+            path_mst  = os.path.join(dir_graf, f"arbol_bayesiano_{b_sel}.png")
+
+            if tipo_vista == "🕸️ Red Completa (Todos contra Todos)":
+                if os.path.exists(path_comp):
+                    st.image(path_comp, caption=f"Red Bayesiana Completa — {b_sel}", use_column_width=True)
+            elif tipo_vista == "🌳 Árbol Mínimo (MST)":
+                if os.path.exists(path_mst):
+                    st.image(path_mst, caption=f"Árbol Bayesiano MST — {b_sel}", use_column_width=True)
+            else:
+                col_c1, col_c2 = st.columns(2)
+                with col_c1:
+                    if os.path.exists(path_comp):
+                        st.image(path_comp, caption=f"Red Completa — {b_sel}", use_column_width=True)
+                with col_c2:
+                    if os.path.exists(path_mst):
+                        st.image(path_mst, caption=f"Árbol MST — {b_sel}", use_column_width=True)
 
         if radar_files:
+            st.markdown("---")
             st.subheader("🕸️ Gráficos de Radar (Telaraña)")
             for rf in radar_files:
                 st.image(os.path.join(dir_graf, rf), caption=rf, use_column_width=True)

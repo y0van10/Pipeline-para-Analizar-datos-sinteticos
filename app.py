@@ -179,38 +179,68 @@ with tab1:
 
 # ── TAB 2: TOPOLOGÍAS ──
 with tab2:
-    st.header("🗺️ Topologías de Red (MST), Heatmaps y Dendrogramas")
+    st.header("🗺️ Topologías de Red NCD: Grafo Completo, MST, Heatmap y Dendrogramas")
     dir_graf = (os.path.join("results", nivel_sel, "graficos")
                 if nivel_sel != "global"
                 else os.path.join("results", "global"))
 
     if os.path.exists(dir_graf):
         archivos_png = sorted([f for f in os.listdir(dir_graf) if f.endswith(".png")])
+        comp_files = [f for f in archivos_png if f.startswith("grafo_completo_")]
         mst_files  = [f for f in archivos_png if f.startswith("mst_")]
         hm_files   = [f for f in archivos_png if f.startswith("heatmap_")]
 
         bloques = sorted(list(set(
-            f.replace("mst_", "").replace("heatmap_", "").replace("dendrograma_", "").replace(".png", "")
-            for f in (mst_files + hm_files)
+            f.replace("grafo_completo_", "").replace("mst_", "").replace("heatmap_", "").replace("dendrograma_", "").replace(".png", "")
+            for f in (comp_files + mst_files + hm_files)
         )))
 
         if bloques:
-            block_sel = st.selectbox("Seleccionar Bloque:", bloques)
-            col_a, col_b = st.columns(2)
+            block_sel = st.selectbox("Seleccionar Bloque:", bloques, key="topologia_bloque")
+
+            path_comp = os.path.join(dir_graf, f"grafo_completo_{block_sel}.png")
             path_mst  = os.path.join(dir_graf, f"mst_{block_sel}.png")
             path_hm   = os.path.join(dir_graf, f"heatmap_{block_sel}.png")
             path_dend = os.path.join(dir_graf, f"dendrograma_{block_sel}.png")
 
-            with col_a:
-                if os.path.exists(path_mst):
-                    st.image(path_mst, caption=f"MST — {block_sel}", use_column_width=True)
-                if os.path.exists(path_dend):
-                    st.image(path_dend, caption=f"Dendrograma — {block_sel}", use_column_width=True)
-            with col_b:
-                if os.path.exists(path_hm):
-                    st.image(path_hm, caption=f"Heatmap NCD — {block_sel}", use_column_width=True)
+            tipo_topologia = st.radio(
+                "Tipo de Vista NCD:",
+                ["🌐 Grafo Completo vs MST", "🔥 Heatmap & Dendrograma", "👁️ Ver Todo"],
+                horizontal=True
+            )
+
+            if tipo_topologia == "🌐 Grafo Completo vs MST":
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    if os.path.exists(path_comp):
+                        st.image(path_comp, caption=f"Grafo NCD Completo (Todos vs Todos) — {block_sel}", use_column_width=True)
+                with col_b:
+                    if os.path.exists(path_mst):
+                        st.image(path_mst, caption=f"Árbol de Expansión Mínima (MST) — {block_sel}", use_column_width=True)
+
+            elif tipo_topologia == "🔥 Heatmap & Dendrograma":
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    if os.path.exists(path_hm):
+                        st.image(path_hm, caption=f"Heatmap NCD — {block_sel}", use_column_width=True)
+                with col_b:
+                    if os.path.exists(path_dend):
+                        st.image(path_dend, caption=f"Dendrograma — {block_sel}", use_column_width=True)
+
+            else:  # Ver Todo
+                col1, col2 = st.columns(2)
+                with col1:
+                    if os.path.exists(path_comp):
+                        st.image(path_comp, caption=f"Grafo NCD Completo — {block_sel}", use_column_width=True)
+                    if os.path.exists(path_hm):
+                        st.image(path_hm, caption=f"Heatmap NCD — {block_sel}", use_column_width=True)
+                with col2:
+                    if os.path.exists(path_mst):
+                        st.image(path_mst, caption=f"MST — {block_sel}", use_column_width=True)
+                    if os.path.exists(path_dend):
+                        st.image(path_dend, caption=f"Dendrograma — {block_sel}", use_column_width=True)
         else:
-            st.info("Ejecuta el pipeline para generar los gráficos.")
+            st.info("Ejecuta el pipeline para generar las topologías.")
     else:
         st.info("Ejecuta el pipeline primero.")
 

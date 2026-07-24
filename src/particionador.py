@@ -25,8 +25,8 @@ class ParticionadorEstudiantes:
             print(f"   ⚠️  col_objetivo no especificada. Usando: '{self.col_objetivo}'")
 
         self.particiones = {}
-        df_ordenado = df.sort_values(self.col_objetivo, ascending=False).reset_index(drop=True)
-        n = len(df_ordenado)
+        df_ordenado = df.sort_values(self.col_objetivo, ascending=False).reset_index(drop=True) # ordena el DataFrame por la columna objetivo en orden descendente
+        n = len(df_ordenado) # es importante recalcular n después de ordenar, ya que podría haber filas duplicadas o NaN que se eliminan al ordenar
         print(f"   📊 Ordenando {n} registros por '{self.col_objetivo}' (mayor → menor)...")
 
         # ─────────────────────────────────────────────
@@ -34,11 +34,10 @@ class ParticionadorEstudiantes:
         # ─────────────────────────────────────────────
         dir_50 = os.path.join(self.dir_base, "nivel_50", "tablas")
         os.makedirs(dir_50, exist_ok=True)
-        k50 = int(n * 0.50)
+        k50 = int(n * 0.50) # partición en 50% (mitad superior e inferior)
 
-        best_50  = df_ordenado.iloc[0:k50].copy()
-        worst_50 = df_ordenado.iloc[k50:n].copy()
-
+        best_50  = df_ordenado.iloc[0:k50].copy() # ordenado de mayor a menor
+        worst_50 = df_ordenado.iloc[k50:n].copy() # .copy()hace una copia independiente para evitar SettingWithCopyWarning
         b_50_path = os.path.join(dir_50, "Best_50.csv")
         w_50_path = os.path.join(dir_50, "Worst_50.csv")
         best_50.to_csv(b_50_path, index=False)
@@ -56,7 +55,7 @@ class ParticionadorEstudiantes:
         # ─────────────────────────────────────────────
         dir_25 = os.path.join(self.dir_base, "nivel_25", "tablas")
         os.makedirs(dir_25, exist_ok=True)
-        k25 = int(n * 0.25)
+        k25 = int(n * 0.25) # ordenar por bloques de 25% cada uno
 
         bloques_25 = [
             ("Best_25_1",  df_ordenado.iloc[0:k25].copy(),        "0% - 25%"),
@@ -77,7 +76,7 @@ class ParticionadorEstudiantes:
         # ─────────────────────────────────────────────
         dir_125 = os.path.join(self.dir_base, "nivel_12.5", "tablas")
         os.makedirs(dir_125, exist_ok=True)
-        k125 = int(n * 0.125)
+        k125 = int(n * 0.125) # ordenar por bloques de 12.5% cada uno
 
         bloques_125 = [
             ("Best_12.5_1",  df_ordenado.iloc[0:k125].copy(),          "0% - 12.5%"),

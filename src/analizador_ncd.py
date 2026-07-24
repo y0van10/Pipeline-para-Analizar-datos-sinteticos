@@ -23,12 +23,12 @@ class AnalizadorNCD:
         datos = texto.encode("utf-8")
         return len(gzip.compress(datos, compresslevel=self.nivel_gzip))
 
-    def calcular_ncd(self, txt_x, txt_y):
-        cx  = self._comprimir_y_medir(txt_x)
-        cy  = self._comprimir_y_medir(txt_y)
-        cxy = self._comprimir_y_medir(txt_x + "\n" + txt_y)
-        ncd = (cxy - min(cx, cy)) / max(cx, cy)
-        return float(np.clip(ncd, 0.0, 1.0))
+    def calcular_ncd(self, txt_x, txt_y): # calcula la distancia NCD entre dos columnas representadas como texto
+        cx  = self._comprimir_y_medir(txt_x) # ejemplo de uso: ncd = calcular_ncd(columna1, columna2)
+        cy  = self._comprimir_y_medir(txt_y) 
+        cxy = self._comprimir_y_medir(txt_x + "\n" + txt_y)  # Tamaño comprimido de ambas columnas concatenadas.
+        ncd = (cxy - min(cx, cy)) / max(cx, cy)# Fórmula de la distancia de compresión normalizada.
+        return float(np.clip(ncd, 0.0, 1.0)) # Limita el resultado al rango entre 0 y 1.
 
     def obtener_columnas_analisis(self, df):
         """
@@ -40,11 +40,16 @@ class AnalizadorNCD:
     def procesar_particiones(self, particiones):
         self.matrices = {}
 
-        for nombre, info in particiones.items():
+        for nombre, info in particiones.items():    # Recorre cada partición: Best_50, Worst_50, Best_25_1, etc.
+            # Recupera el nivel y la ruta del archivo CSV.
             nivel     = info["nivel"]
             ruta_csv  = info["ruta_csv"]
 
+            # Lee directamente el archivo generado por el particionador.
             df = pd.read_csv(ruta_csv)
+
+            # Selecciona todas las variables excepto la columna objetivo,
+            # porque la columna objetivo solo se usó para ordenar y dividir.
             variables = self.obtener_columnas_analisis(df)
             n_vars = len(variables)
 

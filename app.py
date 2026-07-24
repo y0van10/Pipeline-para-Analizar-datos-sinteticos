@@ -50,18 +50,17 @@ from src.pipeline_academico import PipelineAcademico
 
 st.set_page_config(
     page_title="Pipeline NCD/Gzip — Análisis Académico",
-    page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-st.title("🎓 Dashboard de Análisis Académico — NCD/Gzip")
+st.title("Dashboard de Análisis Académico — NCD/Gzip")
 st.caption("Facultad de Ingeniería de Sistemas · UNA Puno · Ciberseguridad")
 
 # ──────────────────────────────────────────────────
 # SIDEBAR
 # ──────────────────────────────────────────────────
-st.sidebar.header("⚙️ Configuración del Pipeline")
+st.sidebar.header("Configuración del Pipeline")
 
 dataset_option = st.sidebar.radio(
     "Origen de Datos:",
@@ -87,8 +86,8 @@ if dataset_option == "Cargar Cualquier CSV":
             df_cargado = pd.read_csv(ruta_datos, encoding="latin-1")
 
         st.sidebar.info(
-            f"📋 **{uploaded_file.name}** cargado\n\n"
-            f"🔢 {df_cargado.shape[0]} filas · {df_cargado.shape[1]} columnas"
+            f"**{uploaded_file.name}** cargado\n\n"
+            f"{df_cargado.shape[0]} filas · {df_cargado.shape[1]} columnas"
         )
 
         # Selección de columna objetivo
@@ -104,26 +103,26 @@ if dataset_option == "Cargar Cualquier CSV":
                         break
 
             col_objetivo = st.sidebar.selectbox(
-                "🎯 Columna objetivo (la que se analizará como resultado):",
+                "Columna objetivo (la que se analizará como resultado):",
                 cols_num,
                 index=cols_num.index(sugerida),
                 help="El pipeline usará esta columna para ordenar y particionar los registros (mejor→peor)."
             )
         else:
-            st.sidebar.warning("⚠️ No se detectaron columnas numéricas en el CSV.")
+            st.sidebar.warning("No se detectaron columnas numéricas en el CSV.")
 
 # ── Dataset predeterminado ──
 else:
     try:
         df_cargado = pd.read_csv(ruta_datos)
         col_objetivo = "X11_promedio_final"
-        st.sidebar.info(f"📋 **estudiantes.csv** cargado\n\n🔢 {df_cargado.shape[0]} filas · {df_cargado.shape[1]} columnas")
+        st.sidebar.info(f"**estudiantes.csv** cargado\n\n{df_cargado.shape[0]} filas · {df_cargado.shape[1]} columnas")
     except Exception:
         st.sidebar.warning("Dataset predeterminado no encontrado.")
 
 gzip_level = st.sidebar.slider("Nivel de Compresión Gzip:", min_value=1, max_value=9, value=9)
 
-ejecutar = st.sidebar.button("🚀 Ejecutar Pipeline Completo (7 Pasos)", type="primary")
+ejecutar = st.sidebar.button("Ejecutar Pipeline Completo (7 Pasos)", type="primary")
 
 # ── Ejecución del pipeline ──
 if ejecutar:
@@ -136,16 +135,16 @@ if ejecutar:
                     col_objetivo=col_objetivo
                 )
                 pipeline.ejecutar()
-                st.sidebar.success("✅ ¡Pipeline ejecutado exitosamente!")
+                st.sidebar.success("Pipeline ejecutado exitosamente!")
                 st.balloons()
             except Exception as e:
-                st.sidebar.error(f"❌ Error: {e}")
+                st.sidebar.error(f"Error: {e}")
                 st.exception(e)
     else:
         st.sidebar.warning("Primero carga un CSV y selecciona la columna objetivo.")
 
 st.sidebar.markdown("---")
-st.sidebar.header("📁 Explorador de Resultados")
+st.sidebar.header("Explorador de Resultados")
 nivel_sel = st.sidebar.selectbox(
     "Seleccionar Nivel de Análisis:",
     ["nivel_50", "nivel_25", "nivel_12.5", "global"]
@@ -155,31 +154,31 @@ nivel_sel = st.sidebar.selectbox(
 # TABS
 # ──────────────────────────────────────────────────
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📊 Datos & Limpieza",
-    "🗺️ Topologías MST & Heatmaps",
-    "🌳 Árboles Bayesianos",
-    "📈 Comparación Best vs Worst",
-    "📄 Reporte"
+    "Datos & Limpieza",
+    "Topologías MST & Heatmaps",
+    "Árboles Bayesianos",
+    "Comparación Best vs Worst",
+    "Reporte"
 ])
 
 # ── TAB 1: DATOS ──
 with tab1:
-    st.header("📊 Dataset Cargado")
+    st.header("Dataset Cargado")
     if df_cargado is not None:
         st.write(f"**{df_cargado.shape[0]}** registros · **{df_cargado.shape[1]}** columnas")
         if col_objetivo:
-            st.info(f"🎯 Variable objetivo seleccionada: **{col_objetivo}**")
+            st.info(f"Variable objetivo seleccionada: **{col_objetivo}**")
 
         st.dataframe(df_cargado.head(15), use_container_width=True)
 
-        st.subheader("📊 Estadísticas Descriptivas")
+        st.subheader("Estadísticas Descriptivas")
         st.dataframe(df_cargado.describe().reset_index(), use_container_width=True)
     else:
         st.info("Carga un CSV desde la barra lateral para ver los datos aquí.")
 
 # ── TAB 2: TOPOLOGÍAS ──
 with tab2:
-    st.header("🗺️ Topologías de Red NCD: Grafo Completo, MST, Heatmap y Dendrogramas")
+    st.header("Topologías de Red NCD: Grafo Completo, MST, Heatmap y Dendrogramas")
     dir_graf = (os.path.join("results", nivel_sel, "graficos")
                 if nivel_sel != "global"
                 else os.path.join("results", "global"))
@@ -205,11 +204,11 @@ with tab2:
 
             tipo_topologia = st.radio(
                 "Tipo de Vista NCD:",
-                ["🌐 Grafo Completo vs MST", "🔥 Heatmap & Dendrograma", "👁️ Ver Todo"],
+                ["Grafo Completo vs MST", "Heatmap & Dendrograma", "Ver Todo"],
                 horizontal=True
             )
 
-            if tipo_topologia == "🌐 Grafo Completo vs MST":
+            if tipo_topologia == "Grafo Completo vs MST":
                 col_a, col_b = st.columns(2)
                 with col_a:
                     if os.path.exists(path_comp):
@@ -218,7 +217,7 @@ with tab2:
                     if os.path.exists(path_mst):
                         st.image(path_mst, caption=f"Árbol de Expansión Mínima (MST) — {block_sel}", use_column_width=True)
 
-            elif tipo_topologia == "🔥 Heatmap & Dendrograma":
+            elif tipo_topologia == "Heatmap & Dendrograma":
                 col_a, col_b = st.columns(2)
                 with col_a:
                     if os.path.exists(path_hm):
@@ -246,8 +245,8 @@ with tab2:
 
 # ── TAB 3: BAYESIANOS ──
 with tab3:
-    st.header("🌳 Redes y Árboles Bayesianos Causales Jerárquicos")
-    st.markdown("Redes dirigidas donde las **flechas** representan la causalidad y probabilidad conjunta.")
+    st.header("Redes y Árboles Bayesianos Causales Jerárquicos")
+    st.markdown("Redes dirigidas donde las flechas representan la causalidad y probabilidad conjunta.")
     dir_graf = (os.path.join("results", nivel_sel, "graficos")
                 if nivel_sel != "global"
                 else os.path.join("results", "global"))
@@ -260,7 +259,7 @@ with tab3:
         if mst_bayes or comp_bayes:
             tipo_vista = st.radio(
                 "Tipo de Grafo Bayesiano:",
-                ["🕸️ Red Completa (Todos contra Todos)", "🌳 Árbol Mínimo (MST)", "⚖️ Comparar Ambos Lado a Lado"],
+                ["Red Completa (Todos contra Todos)", "Árbol Mínimo (MST)", "Comparar Ambos Lado a Lado"],
                 horizontal=True
             )
 
@@ -274,10 +273,10 @@ with tab3:
             path_comp = os.path.join(dir_graf, f"red_bayesiana_completa_{b_sel}.png")
             path_mst  = os.path.join(dir_graf, f"arbol_bayesiano_{b_sel}.png")
 
-            if tipo_vista == "🕸️ Red Completa (Todos contra Todos)":
+            if tipo_vista == "Red Completa (Todos contra Todos)":
                 if os.path.exists(path_comp):
                     st.image(path_comp, caption=f"Red Bayesiana Completa — {b_sel}", use_column_width=True)
-            elif tipo_vista == "🌳 Árbol Mínimo (MST)":
+            elif tipo_vista == "Árbol Mínimo (MST)":
                 if os.path.exists(path_mst):
                     st.image(path_mst, caption=f"Árbol Bayesiano MST — {b_sel}", use_column_width=True)
             else:
@@ -291,7 +290,7 @@ with tab3:
 
         if radar_files:
             st.markdown("---")
-            st.subheader("🕸️ Gráficos de Radar (Telaraña)")
+            st.subheader("Gráficos de Radar (Telaraña)")
             for rf in radar_files:
                 st.image(os.path.join(dir_graf, rf), caption=rf, use_column_width=True)
     else:
@@ -299,7 +298,7 @@ with tab3:
 
 # ── TAB 4: COMPARACIÓN ──
 with tab4:
-    st.header("📈 Comparación Estructural Best vs Worst")
+    st.header("Comparación Estructural Best vs Worst")
     if nivel_sel in ["nivel_50", "nivel_25", "nivel_12.5"]:
         pct = nivel_sel.replace("nivel_", "")
         ruta_csv_comp = os.path.join("results", nivel_sel, "tablas", f"comparacion_{pct}.csv")
@@ -325,14 +324,14 @@ with tab4:
 
 # ── TAB 5: REPORTE ──
 with tab5:
-    st.header("📄 Informe Técnico Final")
+    st.header("Informe Técnico Final")
     ruta_md = "informe/informe_ncd_gzip.md"
     if os.path.exists(ruta_md):
         with open(ruta_md, "r", encoding="utf-8") as f:
             contenido_md = f.read()
         st.markdown(contenido_md)
         st.download_button(
-            "📥 Descargar Informe (.md)",
+            "Descargar Informe (.md)",
             data=contenido_md,
             file_name="informe_ncd_gzip.md",
             mime="text/markdown"

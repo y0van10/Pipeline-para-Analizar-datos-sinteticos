@@ -30,10 +30,12 @@ class GestorTopologias:
             return True
         return False
 
-    def construir_grafo_completo(self, df_matriz):
-        G = nx.Graph()
-        etiquetas = list(df_matriz.index)
-        for i, var_i in enumerate(etiquetas):
+
+    #grafo completo construccion
+    def construir_grafo_completo(self, df_matriz): # construye un grafo completo a partir de la matriz NCD
+        G = nx.Graph() # inicializa un grafo vacío no dirigido
+        etiquetas = list(df_matriz.index) # obtiene las etiquetas de las filas (y columnas) de la matriz NCD
+        for i, var_i in enumerate(etiquetas): # itera sobre cada variable para agregar nodos y aristas
             G.add_node(var_i)
             for j, var_j in enumerate(etiquetas):
                 if i < j:

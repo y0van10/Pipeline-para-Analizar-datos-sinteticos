@@ -15,11 +15,11 @@ class ComparadorTopologias:
         self.dir_base = os.path.normpath(dir_base)
         self.comparaciones = {}
 
-    def comparar_grados(self, grados_best, grados_worst):
+    def comparar_grados(self, grados_best, grados_worst): 
         """Compara el grado ponderado de cada variable entre Best y Worst."""
         # Unión de todas las variables presentes en ambos bloques
-        todas_vars = sorted(set(grados_best.keys()) | set(grados_worst.keys()))
-        filas = []
+        todas_vars = sorted(set(grados_best.keys()) | set(grados_worst.keys())) #
+        filas = [] # Lista de diccionarios para construir el DataFrame final
         for var in todas_vars:
             g_b = grados_best.get(var, 0.0)
             g_w = grados_worst.get(var, 0.0)

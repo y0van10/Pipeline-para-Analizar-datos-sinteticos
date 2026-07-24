@@ -45,6 +45,16 @@ class PipelineAcademico:
         return resultado
 
     def ejecutar(self):
+        """
+        Ejecuta de manera secuencial los 7 pasos del pipeline académico:
+        1. Limpieza de datos (remoción de duplicados, imputación y validación del objetivo).
+        2. Particionamiento jerárquico contiguo (Best/Worst para 50%, 25% y 12.5%).
+        3. Cálculo de NCD (Normalized Compression Distance) usando Gzip sobre todas las variables.
+        4. Construcción de topologías complejas y MST utilizando NetworkX.
+        5. Comparación estructural de grados de centralidad (Best vs Worst por variable).
+        6. Inferencia probabilística causal y graficado de Redes y Árboles Bayesianos.
+        7. Consolidación de resultados y generación automática del Reporte Técnico en Markdown.
+        """
         print("\n" + "=" * 60)
         print("   🎓 PIPELINE POO NCD/Gzip - ANÁLISIS ACADÉMICO")
         print("   Particionamiento Jerárquico (50%, 25%, 12.5%)")
@@ -52,36 +62,36 @@ class PipelineAcademico:
 
         inicio_total = time.time()
 
-        # ── Paso 1: Limpieza (detecta col_objetivo si no fue indicada) ──
+        # ── Paso 1: Limpieza (Carga el dataset y autodetecta/valida la columna objetivo si no fue indicada) ──
         df, reporte_limpieza = self._paso(1, "LIMPIEZA DE DATOS", self.limpiador.ejecutar)
 
-        # Propagar col_objetivo detectado a los demás módulos
+        # Propagar el col_objetivo detectado dinámicamente a todos los demás módulos de análisis
         col_obj = self.limpiador.col_objetivo
         self.particionador.col_objetivo = col_obj
         self.analizador.col_objetivo    = col_obj
         self.bayesiano.col_objetivo     = col_obj
         print(f"   🎯 Variable objetivo: '{col_obj}'")
 
-        # ── Paso 2: Particiones ──
+        # ── Paso 2: Partición jerárquica contigua (Best y Worst en base a la columna objetivo) ──
         particiones = self._paso(2, "PARTICIONAMIENTO POR BLOQUES",
                                  self.particionador.ejecutar, df)
 
-        # ── Paso 3: NCD/Gzip ──
+        # ── Paso 3: Análisis de Teoría de la Información (NCD/Gzip para medir disimilitud algorítmica) ──
         matrices = self._paso(3, "CÁLCULO NCD/GZIP ENTRE VARIABLES",
                               self.analizador.ejecutar, particiones)
 
-        # ── Paso 4: Topologías (MST, heatmap, dendrograma) ──
+        # ── Paso 4: Análisis de Redes Complejas (Grafo Completo, Árbol MST, Heatmap y Dendrogramas) ──
         topologias = self._paso(4, "CONSTRUCCIÓN DE TOPOLOGÍAS (MST)",
                                 self.topologia.ejecutar, matrices)
 
         print("\n   🌳 Generando dendrogramas comparativos por nivel...")
         self.topologia.graficar_dendrograma_comparativo(matrices)
 
-        # ── Paso 5: Comparación Best vs Worst ──
+        # ── Paso 5: Comparación de Centralidad Estructural (Diferencia de grado ponderado D = Worst - Best) ──
         comparaciones = self._paso(5, "COMPARACIÓN BEST vs WORST",
                                    self.comparador.ejecutar, topologias)
 
-        # ── Paso 6: Árboles Bayesianos ──
+        # ── Paso 6: Redes Bayesianas y Árboles de Probabilidad Conjunta Causal Jerárquica ──
         arboles = self._paso(6, "ÁRBOLES BAYESIANOS (PROB. CONJUNTA)",
                              self.bayesiano.ejecutar_paso, df, particiones)
 

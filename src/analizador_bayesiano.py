@@ -52,6 +52,15 @@ class AnalizadorBayesiano:
         return df_disc
 
     def inferir_nivel_causal(self, df, columnas_vars):
+        """
+        Determina la Jerarquía Causal Transitiva de las variables basándose en
+        su nivel de correlación lineal/punto-biserial con la variable objetivo:
+          - Nivel 2: La variable objetivo (col_objetivo), que es el resultado final.
+          - Nivel 1: Variables intermediarias con alta correlación (|r| > 0.2) con el objetivo.
+          - Nivel 0: Variables antecedentes con baja correlación (|r| <= 0.2) con el objetivo.
+        Esta jerarquía previene ciclos bidireccionales en el grafo y orienta las flechas
+        desde los niveles más bajos hacia los más altos (Causalidad de abajo hacia arriba).
+        """
         niveles = {}
         if not self.col_objetivo or self.col_objetivo not in df.columns:
             for col in columnas_vars:
@@ -78,6 +87,13 @@ class AnalizadorBayesiano:
         return niveles
 
     def _orientar_arista(self, u, v, max_prob, max_state, df_disc, nivel_causal, n):
+        """
+        Orienta de manera dirigida la arista entre los nodos u y v siguiendo dos criterios:
+        1. Jerarquía Causal: El nodo en un nivel inferior (antecedente) siempre apunta
+           al nodo en el nivel superior (ejemplo: Nivel 0 -> Nivel 1 -> Nivel 2).
+        2. Criterio de Entropía Local: Si están en el mismo nivel causal, la flecha se orienta
+           desde el estado menos probable (mayor especificidad/sorpresa) hacia el más probable.
+        """
         p_u = (df_disc[u] == max_state[0]).sum() / n if u in df_disc else 0.5
         p_v = (df_disc[v] == max_state[1]).sum() / n if v in df_disc else 0.5
 
@@ -95,6 +111,11 @@ class AnalizadorBayesiano:
                 return v, u, max_prob, (max_state[1], max_state[0])
 
     def construir_arbol_bayesiano(self, df_part, nombre, nivel="global"):
+        """
+        Construye tanto la Red Bayesiana Completa como el Árbol Bayesiano (MST).
+        Calcula la distribución de probabilidad conjunta para cada par de variables
+        y extrae el estado conjunto de mayor probabilidad para medir su similitud.
+        """
         columnas_vars = [c for c in df_part.columns if c != self.col_objetivo]
         df_disc = self.discretizar_dataframe(df_part, columnas_vars)
         variables = list(df_disc.columns)
@@ -114,13 +135,16 @@ class AnalizadorBayesiano:
         for var_i, var_j in combinations(variables, 2):
             if var_i not in df_disc.columns or var_j not in df_disc.columns:
                 continue
+            
+            # Tabla de contingencia cruzada para contar frecuencias conjuntas de X_i y X_j
             counts = df_disc.groupby([var_i, var_j]).size().unstack(fill_value=0)
             for val in [0, 1]:
                 if val not in counts.index:   counts.loc[val] = 0
                 if val not in counts.columns: counts[val] = 0
             counts = counts.loc[[0, 1], [0, 1]]
-            probs  = counts / n
+            probs  = counts / n # Distribución de probabilidad conjunta P(X_i, X_j)
 
+            # Buscamos el estado conjunto con la mayor probabilidad (Moda de la probabilidad conjunta)
             max_prob, max_state = -1.0, None
             for a in [0, 1]:
                 for b in [0, 1]:
@@ -128,6 +152,7 @@ class AnalizadorBayesiano:
                     if p > max_prob:
                         max_prob, max_state = p, (a, b)
 
+            # Usamos la disimilitud probabilística (1 - P_max) como el peso/distancia
             dist = 1.0 - max_prob
             G_completo.add_edge(var_i, var_j, weight=dist)
             datos_aristas[(var_i, var_j)] = (max_prob, max_state)

@@ -17,18 +17,36 @@ class AnalizadorNCD:
         self.matrices = {}
 
     def _columna_a_texto(self, serie):
+        # Convierte una columna de Pandas a un string plano uniendo sus filas con saltos de línea
+        # Esto prepara la variable para que sea tratada como un archivo de texto por el compresor gzip.
         return "\n".join(serie.astype(str).values)
 
     def _comprimir_y_medir(self, texto):
+        # Codifica el texto en formato binario UTF-8
         datos = texto.encode("utf-8")
+        # Retorna el tamaño en bytes de los datos comprimidos con Gzip en el nivel especificado.
+        # Sirve como una aproximación de la Complejidad de Kolmogorov K(X).
         return len(gzip.compress(datos, compresslevel=self.nivel_gzip))
 
-    def calcular_ncd(self, txt_x, txt_y): # calcula la distancia NCD entre dos columnas representadas como texto
-        cx  = self._comprimir_y_medir(txt_x) # ejemplo de uso: ncd = calcular_ncd(columna1, columna2)
-        cy  = self._comprimir_y_medir(txt_y) 
-        cxy = self._comprimir_y_medir(txt_x + "\n" + txt_y)  # Tamaño comprimido de ambas columnas concatenadas.
-        ncd = (cxy - min(cx, cy)) / max(cx, cy)# Fórmula de la distancia de compresión normalizada.
-        return float(np.clip(ncd, 0.0, 1.0)) # Limita el resultado al rango entre 0 y 1.
+    def calcular_ncd(self, txt_x, txt_y):
+        """
+        Calcula la Distancia de Compresión Normalizada (NCD):
+        NCD(X, Y) = ( K(X, Y) - min(K(X), K(Y)) ) / max(K(X), K(Y))
+        Donde:
+          - K(X) y K(Y) son los tamaños comprimidos individuales.
+          - K(X, Y) es el tamaño comprimido de la concatenación de X e Y (información conjunta).
+        NCD tiende a 0 si las variables comparten muchos patrones idénticos,
+        y tiende a 1 si son estadísticamente independientes.
+        """
+        cx  = self._comprimir_y_medir(txt_x) # K(X)
+        cy  = self._comprimir_y_medir(txt_y) # K(Y)
+        cxy = self._comprimir_y_medir(txt_x + "\n" + txt_y) # K(X, Y)
+        
+        # Aplicamos la ecuación clásica de la métrica NCD
+        ncd = (cxy - min(cx, cy)) / max(cx, cy)
+        
+        # Limitamos el rango de salida matemáticamente a [0, 1] por estabilidad numérica
+        return float(np.clip(ncd, 0.0, 1.0))
 
     def obtener_columnas_analisis(self, df):
         """
@@ -38,35 +56,38 @@ class AnalizadorNCD:
         return cols
 
     def procesar_particiones(self, particiones):
+        """
+        Itera sobre todas las particiones del dataset (niveles 50%, 25%, 12.5% y global),
+        calcula la matriz de distancias NCD de todas las variables contra todas (todos contra todos)
+        y las guarda como archivos CSV de resultados.
+        """
         self.matrices = {}
 
-        for nombre, info in particiones.items():    # Recorre cada partición: Best_50, Worst_50, Best_25_1, etc.
-            # Recupera el nivel y la ruta del archivo CSV.
+        for nombre, info in particiones.items():
             nivel     = info["nivel"]
             ruta_csv  = info["ruta_csv"]
 
-            # Lee directamente el archivo generado por el particionador.
             df = pd.read_csv(ruta_csv)
-
-            # Selecciona todas las variables excepto la columna objetivo,
-            # porque la columna objetivo solo se usó para ordenar y dividir.
             variables = self.obtener_columnas_analisis(df)
             n_vars = len(variables)
 
             print(f"   📊 NCD desde {os.path.basename(ruta_csv)} ({len(df)} filas, {n_vars} variables)...")
 
+            # Convertimos cada columna entera del dataset a su equivalente en texto plano
             textos = {col: self._columna_a_texto(df[col]) for col in variables}
 
+            # Inicializamos la matriz de distancias con ceros en la diagonal
             matriz = np.zeros((n_vars, n_vars))
             np.fill_diagonal(matriz, 0.0)
 
+            # Calculamos las combinaciones simétricas (evita calcular dos veces NCD(A,B) y NCD(B,A))
             for i, j in combinations(range(n_vars), 2):
                 dist = self.calcular_ncd(textos[variables[i]], textos[variables[j]])
                 matriz[i, j] = dist
                 matriz[j, i] = dist
 
-            # Etiquetas cortas para la matriz (nombre real de columna)
-            etiquetas = variables  # usamos el nombre real, no "X1", "X2"...
+            # Convertimos la matriz numpy a un DataFrame de Pandas estructurado con los nombres reales de las variables
+            etiquetas = variables  
             df_matriz = pd.DataFrame(np.round(matriz, 6), index=etiquetas, columns=etiquetas)
 
             dir_tablas = os.path.join(self.dir_base, f"nivel_{nivel}", "tablas")

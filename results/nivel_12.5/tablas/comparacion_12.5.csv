@@ -1,8 +1,10 @@
 Variable,Nombre,Grado_Best,Grado_Worst,Diferencia_D,Abs_Diferencia
-gender,gender,4.020779,1.6375,-2.383279,2.383279
-test preparation course,test preparation cou…,0.715909,2.252083,1.536174,1.536174
-reading score,reading score,0.704545,1.699931,0.995386,0.9953860000000001
-writing score,writing score,1.630681,0.762431,-0.86825,0.8682500000000001
-lunch,lunch,0.730769,1.526157,0.795388,0.795388
-parental level of education,parental level of ed…,0.849515,0.833333,-0.016182,0.01618200000000003
-race/ethnicity,race/ethnicity,0.79845,0.807407,0.008957,0.008956999999999993
+genero_victima,genero_victima,0.779661,1.604923,0.825262,0.825262
+doble_factor,doble_factor,1.28708,2.105681,0.818601,0.8186010000000001
+rango_edad_victima,rango_edad_victima,1.598189,0.793548,-0.804641,0.804641
+region,region,1.630717,0.827451,-0.803266,0.8032659999999999
+antivirus_activo,antivirus_activo,1.193942,0.546392,-0.64755,0.6475500000000001
+denuncia_formal,denuncia_formal,1.433603,1.866256,0.432653,0.43265299999999995
+tipo_delito,tipo_delito,1.499173,1.665651,0.166478,0.1664779999999999
+hora_incidente,hora_incidente,1.569966,1.621102,0.051136,0.05113600000000007
+medio_utilizado,medio_utilizado,0.851711,0.846442,-0.005269,0.005268999999999968

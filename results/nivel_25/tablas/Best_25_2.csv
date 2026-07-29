@@ -1,251 +1,376 @@
-gender,race/ethnicity,parental level of education,lunch,test preparation course,math score,reading score,writing score
-female,group C,bachelor's degree,standard,none,77,88,87
-male,group C,associate's degree,free/reduced,none,77,67,64
-female,group E,some high school,standard,none,77,79,80
-female,group E,some college,standard,none,76,78,80
-male,group C,associate's degree,standard,none,76,70,68
-male,group D,some high school,standard,completed,76,70,69
-male,group D,some college,standard,none,76,64,66
-female,group D,associate's degree,standard,none,76,74,73
-female,group B,associate's degree,free/reduced,completed,76,94,87
-male,group E,bachelor's degree,standard,completed,76,62,66
-male,group E,some college,standard,none,76,71,72
-female,group C,some college,free/reduced,none,76,83,88
-male,group E,some college,standard,none,76,67,67
-female,group C,some high school,standard,completed,76,87,85
-male,group E,associate's degree,standard,none,76,71,67
-male,group D,some college,standard,none,76,71,73
-female,group D,some high school,standard,none,76,72,71
-male,group B,high school,standard,completed,76,62,60
-male,group C,some high school,standard,completed,76,80,73
-female,group B,high school,free/reduced,completed,76,85,82
-male,group C,some college,standard,none,76,78,75
-male,group D,high school,standard,none,76,73,68
-male,group D,some college,standard,completed,76,83,79
-female,group C,high school,standard,none,76,76,74
-female,group D,associate's degree,free/reduced,completed,75,90,88
-male,group A,some college,free/reduced,none,75,81,74
-female,group B,bachelor's degree,free/reduced,none,75,85,82
-female,group B,bachelor's degree,standard,none,75,84,80
-female,group D,some college,standard,completed,75,77,83
-female,group A,high school,standard,completed,75,82,79
-male,group D,high school,free/reduced,none,75,74,66
-male,group C,high school,standard,completed,75,69,68
-female,group C,associate's degree,standard,completed,75,82,90
-female,group E,some college,free/reduced,completed,75,88,85
-female,group E,high school,standard,none,75,86,79
-female,group C,high school,standard,none,75,88,85
-male,group C,some high school,standard,none,75,72,62
-male,group D,associate's degree,free/reduced,none,75,66,73
-male,group C,high school,standard,none,75,81,71
-male,group D,associate's degree,standard,none,75,68,64
-male,group B,some college,free/reduced,none,75,68,65
-male,group D,some high school,standard,none,75,74,69
-male,group A,bachelor's degree,standard,completed,75,58,62
-male,group D,bachelor's degree,standard,none,75,73,74
-female,group C,some college,standard,completed,75,81,84
-male,group D,high school,free/reduced,none,74,70,69
-female,group D,associate's degree,standard,none,74,81,83
-male,group E,some high school,standard,completed,74,64,60
-female,group D,master's degree,standard,none,74,79,82
-male,group D,bachelor's degree,free/reduced,completed,74,79,75
-female,group C,some high school,standard,none,74,75,82
-female,group C,bachelor's degree,free/reduced,completed,74,86,89
-female,group E,some high school,free/reduced,none,74,74,72
-female,group B,high school,standard,none,74,72,72
-female,group E,high school,standard,none,74,81,71
-female,group B,some high school,free/reduced,completed,74,90,88
-female,group C,associate's degree,standard,completed,74,75,83
-male,group C,some college,free/reduced,none,74,77,73
-female,group E,high school,standard,none,74,76,73
-male,group D,some high school,standard,completed,74,71,78
-female,group B,some college,free/reduced,none,74,81,76
-male,group D,bachelor's degree,free/reduced,completed,74,71,80
-male,group B,some high school,standard,none,74,63,57
-male,group C,associate's degree,standard,none,74,73,67
-male,group D,some high school,standard,none,74,74,72
-female,group E,high school,standard,completed,74,79,80
-female,group D,associate's degree,free/reduced,completed,74,88,90
-male,group B,some college,free/reduced,completed,74,77,76
-female,group D,some college,standard,none,74,89,84
-female,group D,some college,standard,completed,74,75,79
-male,group B,high school,standard,completed,73,71,68
-female,group B,associate's degree,standard,none,73,76,80
-male,group C,some high school,standard,none,73,66,66
-male,group E,some high school,free/reduced,completed,73,67,59
-male,group D,high school,free/reduced,completed,73,68,66
-male,group A,master's degree,free/reduced,none,73,74,72
-male,group D,master's degree,standard,none,73,70,75
-male,group B,bachelor's degree,free/reduced,none,73,56,57
-male,group C,associate's degree,standard,completed,73,78,72
-female,group B,some high school,standard,none,73,79,79
-female,group C,master's degree,standard,none,73,78,74
-male,group C,some college,standard,none,73,74,61
-female,group E,some college,standard,completed,73,78,76
-male,group C,some high school,standard,none,73,66,63
-female,group D,associate's degree,standard,completed,73,75,80
-male,group D,some high school,standard,none,73,66,62
-male,group B,high school,standard,completed,73,69,68
-female,group E,associate's degree,free/reduced,none,73,76,78
-male,group C,associate's degree,free/reduced,none,73,68,66
-female,group C,some college,standard,none,73,76,78
-female,group D,some high school,standard,none,73,84,85
-male,group E,high school,standard,none,73,64,57
-female,group B,associate's degree,standard,none,73,83,76
-female,group D,high school,free/reduced,none,73,92,84
-female,group D,bachelor's degree,free/reduced,none,73,79,84
-female,group D,some high school,standard,none,73,86,82
-female,group C,some college,standard,none,73,80,82
-female,group E,some high school,free/reduced,none,72,79,77
-male,group B,some high school,standard,none,72,68,67
-male,group B,high school,standard,completed,72,65,68
-female,group B,some high school,free/reduced,none,72,81,79
-male,group E,associate's degree,standard,none,72,64,63
-male,group E,associate's degree,standard,none,72,57,62
-male,group D,some college,standard,none,72,57,58
-female,group B,bachelor's degree,standard,none,72,72,74
-male,group C,master's degree,free/reduced,completed,72,66,72
-female,group A,some college,standard,completed,72,79,82
-female,group C,some college,standard,none,72,72,71
-male,group D,associate's degree,standard,none,72,79,74
-male,group C,high school,standard,completed,72,67,64
-male,group A,high school,standard,completed,72,73,74
-male,group A,high school,free/reduced,completed,72,67,65
-male,group D,high school,standard,none,72,66,66
-female,group C,high school,standard,none,72,80,83
-female,group C,high school,standard,none,72,80,75
-female,group A,some high school,standard,none,71,83,77
-male,group C,bachelor's degree,standard,completed,71,74,68
-female,group D,some college,free/reduced,none,71,83,83
-male,group A,high school,standard,none,71,74,64
-female,group C,some college,standard,completed,71,71,80
-female,group E,bachelor's degree,standard,completed,71,70,70
-female,group E,some college,free/reduced,none,71,76,70
-male,group A,some high school,standard,none,71,62,50
-male,group B,some college,standard,completed,71,75,70
-female,group C,some high school,free/reduced,completed,71,84,87
-female,group C,some college,standard,none,71,81,80
-male,group C,master's degree,standard,none,71,67,67
-male,group E,associate's degree,standard,completed,71,74,68
-male,group D,some college,standard,none,71,49,52
-female,group D,associate's degree,standard,none,71,71,74
-male,group C,high school,standard,none,71,79,71
-female,group C,associate's degree,standard,completed,71,77,77
-male,group C,high school,standard,none,71,66,65
-male,group D,some high school,standard,completed,71,69,68
-male,group D,some college,standard,completed,71,61,69
-male,group C,high school,standard,none,71,60,61
-female,group D,bachelor's degree,standard,completed,71,76,83
-female,group E,some college,standard,none,71,70,76
-female,group B,high school,free/reduced,none,71,87,82
-male,group D,associate's degree,standard,none,71,66,60
-female,group B,associate's degree,standard,none,71,83,78
-male,group E,bachelor's degree,standard,completed,70,64,70
-female,group C,some college,standard,completed,70,72,76
-male,group C,bachelor's degree,free/reduced,completed,70,75,74
-male,group D,some college,free/reduced,none,70,63,58
-male,group E,bachelor's degree,free/reduced,completed,70,68,72
-female,group C,some college,standard,completed,70,89,88
-female,group C,some high school,standard,completed,70,82,76
-male,group E,high school,standard,none,70,55,56
-female,group D,master's degree,standard,completed,70,71,74
-female,group E,associate's degree,free/reduced,none,70,84,81
-male,group D,high school,standard,none,70,70,70
-female,group B,some high school,standard,none,70,64,72
-male,group C,high school,standard,none,70,56,51
-male,group B,high school,standard,none,70,65,60
-male,group C,high school,standard,none,70,70,65
-female,group B,some college,standard,none,70,75,78
-female,group D,some college,free/reduced,completed,70,78,78
-male,group C,high school,standard,none,70,74,71
-male,group D,high school,free/reduced,none,69,70,67
-female,group C,associate's degree,standard,none,69,80,71
-female,group B,high school,standard,completed,69,76,74
-female,group C,some high school,standard,none,69,73,73
-female,group D,some college,free/reduced,none,69,65,74
-female,group A,some college,standard,none,69,84,82
-female,group C,some high school,standard,none,69,75,78
-female,group C,some college,standard,completed,69,90,88
-female,group C,master's degree,standard,completed,69,84,85
-male,group D,some college,free/reduced,none,69,66,60
-female,group D,high school,standard,completed,69,77,78
-female,group C,some college,standard,none,69,78,76
-male,group C,associate's degree,standard,none,69,77,69
-male,group B,some college,standard,completed,69,77,77
-male,group C,some high school,free/reduced,none,69,71,65
-male,group C,bachelor's degree,standard,none,69,63,61
-female,group D,some college,standard,none,69,77,77
-male,group A,some college,standard,none,69,67,69
-male,group D,some high school,standard,none,69,66,61
-male,group B,associate's degree,free/reduced,completed,69,70,63
-female,group D,some college,standard,completed,69,79,81
-male,group D,some college,free/reduced,completed,69,60,63
-male,group C,some college,standard,none,69,64,68
-male,group D,high school,standard,none,69,75,71
-male,group E,some college,standard,none,69,60,54
-female,group D,some high school,free/reduced,completed,69,86,81
-male,group D,bachelor's degree,standard,none,69,58,57
-female,group D,high school,standard,none,69,72,77
-female,group D,some college,standard,none,69,74,74
-male,group B,some college,standard,none,69,54,55
-female,group D,high school,standard,none,69,77,73
-male,group C,high school,standard,completed,69,58,53
-female,group D,some college,standard,completed,68,78,77
-female,group E,some college,standard,none,68,70,66
-male,group C,associate's degree,free/reduced,none,68,65,61
-male,group D,bachelor's degree,standard,completed,68,74,74
-male,group B,some high school,standard,none,68,54,53
-male,group E,some high school,standard,completed,68,51,57
-female,group D,bachelor's degree,standard,completed,68,75,81
-male,group D,some college,standard,none,68,59,62
-female,group D,some high school,standard,none,68,71,75
-male,group E,some college,standard,none,68,72,65
-male,group C,some high school,free/reduced,none,68,63,54
-female,group B,associate's degree,free/reduced,completed,68,77,80
-female,group B,high school,standard,completed,68,83,78
-male,group D,bachelor's degree,free/reduced,none,68,68,67
-female,group A,high school,standard,completed,68,80,76
-male,group E,bachelor's degree,standard,none,68,68,64
-male,group A,some high school,free/reduced,none,68,72,64
-male,group C,high school,standard,none,68,60,53
-male,group D,high school,standard,completed,68,64,66
-female,group C,associate's degree,free/reduced,completed,68,67,69
-male,group A,high school,standard,none,68,70,66
-female,group C,associate's degree,standard,completed,68,67,73
-male,group E,some college,standard,none,68,60,59
-female,group E,associate's degree,standard,none,68,76,67
-female,group C,associate's degree,standard,completed,68,86,84
-male,group C,some college,free/reduced,none,68,68,61
-female,group C,bachelor's degree,standard,none,67,69,75
-male,group A,associate's degree,standard,none,67,57,53
-male,group D,associate's degree,standard,completed,67,54,63
-female,group D,some college,free/reduced,completed,67,86,83
-male,group D,some college,standard,none,67,64,70
-female,group B,high school,free/reduced,completed,67,80,81
-female,group B,some high school,standard,none,67,89,82
-female,group C,bachelor's degree,free/reduced,none,67,75,72
-female,group D,some high school,free/reduced,none,67,84,84
-male,group C,some college,free/reduced,completed,67,74,70
-male,group D,associate's degree,standard,completed,67,72,67
-male,group D,bachelor's degree,standard,completed,67,61,68
-male,group B,associate's degree,free/reduced,none,67,62,60
-male,group C,master's degree,standard,none,67,57,59
-female,group C,some college,free/reduced,completed,67,75,70
-female,group E,some college,standard,none,67,76,75
-male,group C,some high school,standard,completed,67,73,68
-female,group C,some high school,standard,completed,67,74,77
-female,group C,high school,free/reduced,completed,67,79,84
-female,group C,associate's degree,standard,completed,67,84,81
-female,group D,high school,standard,none,67,72,74
-female,group C,some college,standard,completed,67,81,79
-female,group B,bachelor's degree,standard,none,67,86,83
-female,group C,associate's degree,standard,completed,67,84,86
-female,group B,high school,free/reduced,completed,67,78,79
-male,group B,some high school,standard,none,67,64,61
-female,group C,high school,free/reduced,none,66,76,68
-female,group E,associate's degree,standard,none,66,65,69
-female,group C,bachelor's degree,free/reduced,completed,66,83,83
-male,group D,high school,free/reduced,none,66,74,69
-male,group E,associate's degree,standard,completed,66,63,64
-male,group B,bachelor's degree,standard,none,66,60,57
-male,group B,some college,standard,none,66,65,60
+tipo_delito,medio_utilizado,rango_edad_victima,genero_victima,region,hora_incidente,antivirus_activo,doble_factor,denuncia_formal,monto_afectado
+Fraude Informatico,Llamada Telefonica,30-49,Femenino,Puno,Manana,No,Si,No,6077.52
+Acceso Ilicito,WhatsApp o SMS,65 o mas,Femenino,Lima,Manana,Si,Si,Si,6076.84
+Acceso Ilicito,Correo Electronico,30-49,Femenino,Piura,Manana,No,No,Si,6065.53
+Fraude Informatico,Correo Electronico,18-29,Femenino,Lima,Noche,No,Si,No,6052.31
+Fraude Informatico,Correo Electronico,18-29,Masculino,Lima,Madrugada,No,Si,No,6048.43
+Sextorsion,WhatsApp o SMS,30-49,Femenino,Tacna,Madrugada,No,No,Si,6043.64
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Arequipa,Manana,Si,No,No,6041.46
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,Si,No,6024.95
+Fraude Informatico,Correo Electronico,18-29,Masculino,La Libertad,Tarde,No,No,Si,6024.12
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Manana,No,No,No,6009.45
+Sextorsion,Redes Sociales,18-29,Masculino,Lima,Noche,No,No,No,6008.0
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Tarde,No,Si,No,5980.19
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,Si,No,5968.86
+Fraude Informatico,Llamada Telefonica,30-49,Femenino,La Libertad,Tarde,Si,No,Si,5954.53
+Fraude Informatico,Correo Electronico,65 o mas,Masculino,Lima,Manana,No,No,No,5953.09
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,Si,No,No,5947.62
+Fraude Informatico,Correo Electronico,18-29,Femenino,Lambayeque,Manana,No,No,No,5944.33
+Fraude Informatico,Correo Electronico,50-64,Masculino,Lima,Tarde,No,No,No,5932.07
+Acceso Ilicito,Pagina Web Falsa,50-64,Femenino,Lima,Tarde,No,No,No,5925.84
+Fraude Informatico,Pagina Web Falsa,50-64,Femenino,Lima,Madrugada,No,No,Si,5896.77
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,Si,Si,5883.64
+Fraude Informatico,Redes Sociales,30-49,Masculino,Arequipa,Noche,Si,Si,No,5866.8
+Sextorsion,WhatsApp o SMS,18-29,Masculino,Tacna,Tarde,No,No,No,5861.55
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Manana,No,No,Si,5861.25
+Fraude Informatico,Correo Electronico,30-49,Femenino,Arequipa,Tarde,No,Si,No,5846.4
+Fraude Informatico,Correo Electronico,30-49,Masculino,Lima,Tarde,No,Si,Si,5845.6
+Fraude Informatico,Pagina Web Falsa,65 o mas,Femenino,Lima,Manana,No,No,No,5844.63
+Sextorsion,Pagina Web Falsa,30-49,Femenino,Lima,Tarde,No,No,Si,5840.05
+Fraude Informatico,Correo Electronico,50-64,Femenino,Lima,Noche,No,Si,No,5835.38
+Fraude Informatico,Redes Sociales,30-49,Femenino,Callao,Manana,No,Si,No,5816.11
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Arequipa,Madrugada,No,No,No,5811.51
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Noche,No,No,No,5811.36
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,No,No,5800.8
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Tarde,No,No,No,5789.85
+Fraude Informatico,Correo Electronico,30-49,Femenino,La Libertad,Noche,No,No,Si,5789.7
+Sextorsion,Correo Electronico,18-29,Femenino,Puno,Noche,No,No,No,5782.95
+Fraude Informatico,Correo Electronico,65 o mas,Femenino,Callao,Manana,No,Si,No,5777.17
+Fraude Informatico,Correo Electronico,18-29,Masculino,Lima,Manana,No,No,Si,5777.11
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Madrugada,No,No,No,5752.63
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Cusco,Noche,Si,No,No,5750.39
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Tarde,No,Si,No,5747.81
+Fraude Informatico,Correo Electronico,30-49,Masculino,Lima,Madrugada,No,Si,No,5742.35
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,Si,No,No,5741.44
+Fraude Informatico,WhatsApp o SMS,65 o mas,Femenino,Arequipa,Madrugada,No,Si,No,5723.74
+Fraude Informatico,Redes Sociales,18-29,Femenino,Lambayeque,Noche,No,No,No,5715.89
+Fraude Informatico,Correo Electronico,30-49,Masculino,Cusco,Tarde,Si,No,Si,5674.6
+Fraude Informatico,Llamada Telefonica,18-29,Masculino,Lima,Tarde,No,No,No,5669.32
+Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Noche,No,Si,No,5649.37
+Fraude Informatico,Llamada Telefonica,30-49,Masculino,Lima,Madrugada,No,Si,Si,5637.92
+Fraude Informatico,Correo Electronico,30-49,Masculino,La Libertad,Noche,No,Si,No,5630.32
+Fraude Informatico,Redes Sociales,30-49,Femenino,Callao,Manana,No,No,No,5629.28
+Fraude Informatico,Correo Electronico,50-64,Femenino,Lima,Tarde,No,No,Si,5622.27
+Fraude Informatico,WhatsApp o SMS,30-49,Femenino,Lima,Manana,No,Si,No,5621.16
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,No,Si,No,5619.07
+Fraude Informatico,Correo Electronico,50-64,Masculino,Arequipa,Manana,No,Si,No,5608.58
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,Si,No,Si,5597.57
+Sextorsion,Pagina Web Falsa,30-49,Masculino,Lima,Manana,No,No,No,5586.24
+Acceso Ilicito,WhatsApp o SMS,50-64,Masculino,Junin,Manana,No,No,No,5584.0
+Sextorsion,Llamada Telefonica,30-49,Masculino,Lima,Manana,No,No,No,5583.62
+Fraude Informatico,Redes Sociales,18-29,Masculino,Cusco,Manana,Si,No,Si,5581.71
+Sextorsion,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,Si,No,Si,5578.93
+Fraude Informatico,Redes Sociales,30-49,Femenino,Arequipa,Noche,Si,No,Si,5566.89
+Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Noche,No,No,Si,5565.72
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Noche,No,No,Si,5563.72
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Cusco,Manana,No,No,Si,5563.34
+Fraude Informatico,Llamada Telefonica,18-29,Masculino,Tacna,Manana,Si,No,No,5557.55
+Sextorsion,Redes Sociales,18-29,Masculino,Lambayeque,Manana,No,No,No,5552.71
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Tacna,Noche,Si,No,Si,5524.28
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,Si,Si,Si,5522.33
+Sextorsion,WhatsApp o SMS,50-64,Femenino,La Libertad,Tarde,No,No,No,5518.09
+Sextorsion,Pagina Web Falsa,18-29,Masculino,Callao,Manana,No,No,Si,5505.19
+Sextorsion,Pagina Web Falsa,30-49,Masculino,Callao,Madrugada,No,No,No,5497.42
+Fraude Informatico,Redes Sociales,65 o mas,Femenino,Lima,Tarde,No,Si,No,5492.75
+Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Manana,No,No,No,5486.68
+Fraude Informatico,Llamada Telefonica,50-64,Masculino,Lima,Manana,Si,Si,Si,5469.07
+Fraude Informatico,Redes Sociales,50-64,Femenino,Piura,Madrugada,No,No,No,5467.2
+Fraude Informatico,Correo Electronico,50-64,Masculino,Lima,Madrugada,No,Si,Si,5465.34
+Fraude Informatico,Pagina Web Falsa,18-29,Femenino,La Libertad,Noche,Si,No,No,5450.38
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,Si,5445.17
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Madrugada,Si,Si,No,5425.58
+Fraude Informatico,WhatsApp o SMS,65 o mas,Femenino,Puno,Madrugada,Si,Si,Si,5413.66
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Junin,Manana,No,No,Si,5411.85
+Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Manana,No,No,No,5407.6
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lambayeque,Noche,No,No,Si,5401.86
+Fraude Informatico,Llamada Telefonica,18-29,Masculino,Lima,Madrugada,No,No,No,5395.84
+Acceso Ilicito,Pagina Web Falsa,30-49,Femenino,Junin,Madrugada,Si,No,Si,5375.63
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,Si,5357.94
+Fraude Informatico,Redes Sociales,30-49,Femenino,Arequipa,Manana,No,Si,Si,5355.3
+Acceso Ilicito,WhatsApp o SMS,50-64,Masculino,Lima,Manana,Si,Si,No,5349.46
+Fraude Informatico,Redes Sociales,30-49,Masculino,Lima,Tarde,No,No,Si,5345.63
+Fraude Informatico,Llamada Telefonica,18-29,Masculino,Lima,Manana,Si,No,No,5341.8
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Callao,Manana,No,Si,Si,5330.85
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Lima,Tarde,Si,No,No,5329.84
+Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,No,5326.46
+Fraude Informatico,WhatsApp o SMS,65 o mas,Femenino,Lima,Madrugada,No,No,No,5323.17
+Acceso Ilicito,Redes Sociales,50-64,Masculino,Arequipa,Noche,Si,No,No,5321.17
+Fraude Informatico,WhatsApp o SMS,30-49,Femenino,Lima,Manana,No,No,No,5306.11
+Acceso Ilicito,WhatsApp o SMS,65 o mas,Femenino,Lima,Madrugada,No,No,Si,5305.15
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lambayeque,Madrugada,No,Si,No,5269.08
+Fraude Informatico,Redes Sociales,50-64,Masculino,Cusco,Noche,No,No,No,5264.1
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Manana,Si,No,Si,5258.13
+Acceso Ilicito,Pagina Web Falsa,50-64,Femenino,Lima,Manana,No,No,No,5255.9
+Fraude Informatico,Correo Electronico,30-49,Femenino,Piura,Noche,No,Si,No,5255.81
+Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Tarde,Si,No,No,5252.14
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Piura,Noche,No,No,Si,5248.35
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Cusco,Tarde,No,Si,No,5246.63
+Acceso Ilicito,Pagina Web Falsa,18-29,Femenino,Lima,Tarde,No,No,Si,5239.86
+Sextorsion,WhatsApp o SMS,50-64,Masculino,Lima,Tarde,Si,Si,Si,5236.74
+Fraude Informatico,Correo Electronico,18-29,Masculino,Lima,Madrugada,No,No,No,5236.59
+Fraude Informatico,Llamada Telefonica,30-49,Masculino,Tacna,Tarde,Si,Si,Si,5235.23
+Fraude Informatico,Correo Electronico,65 o mas,Masculino,Lima,Manana,No,No,Si,5228.61
+Acceso Ilicito,WhatsApp o SMS,50-64,Masculino,Lima,Noche,Si,Si,No,5227.41
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Piura,Tarde,No,Si,No,5222.03
+Acceso Ilicito,Pagina Web Falsa,50-64,Masculino,Callao,Noche,Si,No,No,5207.76
+Acceso Ilicito,Redes Sociales,65 o mas,Masculino,Lima,Tarde,No,No,Si,5202.36
+Fraude Informatico,Redes Sociales,30-49,Masculino,Lima,Noche,No,No,No,5190.04
+Sextorsion,WhatsApp o SMS,30-49,Femenino,Cusco,Tarde,No,Si,No,5185.08
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Arequipa,Manana,Si,Si,Si,5184.39
+Fraude Informatico,Llamada Telefonica,50-64,Femenino,Callao,Manana,Si,Si,No,5183.88
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Tarde,No,Si,Si,5166.94
+Fraude Informatico,Redes Sociales,30-49,Masculino,Lima,Manana,Si,No,Si,5166.85
+Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Tarde,No,Si,Si,5160.23
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Tarde,No,No,No,5159.38
+Fraude Informatico,Correo Electronico,30-49,Masculino,Lambayeque,Noche,Si,No,Si,5153.62
+Fraude Informatico,WhatsApp o SMS,30-49,Femenino,Arequipa,Manana,Si,No,No,5153.45
+Fraude Informatico,Redes Sociales,50-64,Femenino,Puno,Manana,Si,No,No,5141.0
+Sextorsion,WhatsApp o SMS,30-49,Femenino,Lima,Tarde,No,No,Si,5140.33
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Lima,Tarde,No,No,No,5137.61
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Piura,Noche,No,No,No,5124.39
+Fraude Informatico,Correo Electronico,18-29,Femenino,Lima,Madrugada,Si,No,No,5123.89
+Acceso Ilicito,Pagina Web Falsa,18-29,Femenino,Lima,Madrugada,No,No,Si,5117.54
+Fraude Informatico,WhatsApp o SMS,30-49,Femenino,La Libertad,Madrugada,Si,No,No,5078.16
+Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lima,Manana,No,Si,Si,5072.17
+Fraude Informatico,Redes Sociales,30-49,Femenino,Junin,Tarde,No,No,Si,5069.21
+Acceso Ilicito,Redes Sociales,50-64,Femenino,Arequipa,Madrugada,Si,No,No,5067.33
+Acceso Ilicito,WhatsApp o SMS,65 o mas,Femenino,Lima,Tarde,Si,No,No,5064.26
+Sextorsion,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,Si,5063.68
+Fraude Informatico,Redes Sociales,18-29,Femenino,Arequipa,Manana,Si,No,Si,5041.49
+Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,5039.57
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,La Libertad,Manana,Si,No,No,5033.84
+Fraude Informatico,Redes Sociales,30-49,Masculino,Cusco,Tarde,Si,No,No,5028.62
+Sextorsion,Pagina Web Falsa,50-64,Femenino,Puno,Manana,No,Si,Si,5027.96
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,Si,Si,5027.95
+Acceso Ilicito,Correo Electronico,30-49,Masculino,Callao,Tarde,No,No,No,5020.38
+Acceso Ilicito,Redes Sociales,65 o mas,Masculino,Cusco,Manana,Si,No,Si,5018.01
+Sextorsion,WhatsApp o SMS,30-49,Femenino,Lima,Tarde,No,Si,Si,5009.59
+Sextorsion,WhatsApp o SMS,50-64,Masculino,Lima,Manana,No,No,No,4996.24
+Acceso Ilicito,Pagina Web Falsa,18-29,Masculino,Lima,Manana,No,No,Si,4991.77
+Fraude Informatico,Correo Electronico,18-29,Femenino,Callao,Tarde,No,Si,Si,4984.83
+Acceso Ilicito,Pagina Web Falsa,30-49,Femenino,Lima,Tarde,No,No,Si,4979.73
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Manana,No,Si,No,4977.92
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Arequipa,Manana,Si,No,Si,4972.26
+Fraude Informatico,Llamada Telefonica,18-29,Masculino,Junin,Noche,No,Si,Si,4968.0
+Acceso Ilicito,Llamada Telefonica,30-49,Masculino,Arequipa,Manana,No,No,No,4967.92
+Fraude Informatico,Correo Electronico,30-49,Masculino,Lima,Manana,No,Si,No,4961.44
+Fraude Informatico,Redes Sociales,65 o mas,Femenino,Lima,Tarde,No,No,No,4960.33
+Acceso Ilicito,Correo Electronico,30-49,Masculino,Lima,Madrugada,Si,No,No,4954.85
+Fraude Informatico,Redes Sociales,30-49,Femenino,Junin,Madrugada,No,Si,No,4946.7
+Fraude Informatico,Correo Electronico,18-29,Masculino,Arequipa,Noche,No,No,No,4941.69
+Fraude Informatico,Redes Sociales,18-29,Femenino,La Libertad,Noche,No,Si,Si,4933.34
+Fraude Informatico,Correo Electronico,18-29,Femenino,Arequipa,Madrugada,No,No,No,4928.04
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Lima,Noche,No,No,No,4927.35
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Manana,Si,No,No,4919.45
+Fraude Informatico,Correo Electronico,50-64,Femenino,Cusco,Manana,No,Si,Si,4915.22
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,No,4899.04
+Fraude Informatico,Redes Sociales,18-29,Masculino,Arequipa,Manana,No,Si,No,4895.43
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Cusco,Manana,Si,No,No,4861.75
+Acceso Ilicito,WhatsApp o SMS,30-49,Femenino,Lima,Manana,No,No,No,4860.62
+Acceso Ilicito,Llamada Telefonica,50-64,Femenino,Lima,Noche,Si,No,Si,4857.33
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,Si,4855.64
+Fraude Informatico,Llamada Telefonica,30-49,Masculino,Puno,Tarde,No,No,No,4849.2
+Estafa por Internet,Correo Electronico,30-49,Masculino,Lima,Manana,No,No,No,4848.79
+Acceso Ilicito,WhatsApp o SMS,30-49,Femenino,Arequipa,Tarde,No,Si,No,4848.5
+Fraude Informatico,Correo Electronico,18-29,Femenino,Arequipa,Manana,No,No,Si,4845.07
+Fraude Informatico,WhatsApp o SMS,30-49,Femenino,La Libertad,Madrugada,No,No,Si,4835.24
+Fraude Informatico,Redes Sociales,30-49,Femenino,La Libertad,Tarde,No,No,No,4835.02
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Noche,No,No,No,4833.65
+Estafa por Internet,WhatsApp o SMS,50-64,Femenino,Lima,Tarde,No,No,No,4827.82
+Sextorsion,WhatsApp o SMS,50-64,Femenino,Lima,Noche,No,Si,Si,4824.62
+Fraude Informatico,Pagina Web Falsa,18-29,Femenino,Lima,Noche,No,Si,Si,4818.05
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Manana,No,No,No,4811.55
+Fraude Informatico,Correo Electronico,50-64,Femenino,Piura,Tarde,No,No,No,4809.4
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Madrugada,No,No,No,4805.65
+Acceso Ilicito,WhatsApp o SMS,50-64,Femenino,Lima,Tarde,Si,Si,No,4793.53
+Fraude Informatico,WhatsApp o SMS,50-64,Masculino,Lima,Madrugada,No,No,No,4789.26
+Fraude Informatico,Redes Sociales,18-29,Masculino,La Libertad,Madrugada,No,No,No,4786.5
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Manana,No,No,Si,4774.95
+Fraude Informatico,Correo Electronico,30-49,Femenino,Arequipa,Tarde,No,No,Si,4765.39
+Sextorsion,Llamada Telefonica,18-29,Masculino,Cusco,Madrugada,No,No,Si,4753.14
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,No,4733.39
+Fraude Informatico,WhatsApp o SMS,30-49,Femenino,Lambayeque,Manana,No,No,Si,4728.18
+Fraude Informatico,Pagina Web Falsa,18-29,Femenino,Lima,Tarde,No,No,Si,4683.45
+Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Madrugada,No,No,No,4678.19
+Acceso Ilicito,Redes Sociales,50-64,Femenino,Lima,Tarde,Si,No,Si,4677.45
+Fraude Informatico,Redes Sociales,50-64,Masculino,Lima,Tarde,No,No,Si,4674.63
+Acceso Ilicito,Redes Sociales,30-49,Masculino,Lima,Madrugada,Si,Si,No,4673.41
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Tarde,Si,No,Si,4659.79
+Acceso Ilicito,Redes Sociales,50-64,Femenino,Lima,Noche,No,No,No,4658.66
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Manana,No,Si,No,4653.1
+Acceso Ilicito,WhatsApp o SMS,65 o mas,Femenino,Piura,Manana,No,Si,No,4650.52
+Fraude Informatico,Llamada Telefonica,30-49,Masculino,Callao,Tarde,Si,No,No,4646.06
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lambayeque,Tarde,Si,No,No,4645.06
+Estafa por Internet,WhatsApp o SMS,65 o mas,Femenino,Lambayeque,Tarde,No,No,Si,4643.49
+Fraude Informatico,WhatsApp o SMS,65 o mas,Femenino,Lima,Noche,No,No,No,4637.21
+Fraude Informatico,Pagina Web Falsa,30-49,Masculino,Lima,Manana,No,No,Si,4629.46
+Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Tarde,Si,Si,No,4620.93
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,No,No,4616.88
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,Si,Si,No,4616.67
+Acceso Ilicito,WhatsApp o SMS,30-49,Femenino,La Libertad,Tarde,Si,No,No,4614.6
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Madrugada,Si,No,No,4612.22
+Acceso Ilicito,WhatsApp o SMS,50-64,Femenino,Lima,Manana,Si,Si,Si,4610.58
+Acceso Ilicito,Redes Sociales,50-64,Masculino,Lima,Manana,No,No,No,4600.25
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lambayeque,Manana,No,No,No,4599.54
+Sextorsion,Pagina Web Falsa,50-64,Masculino,Puno,Tarde,No,Si,Si,4599.04
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,No,No,4590.9
+Fraude Informatico,Correo Electronico,18-29,Femenino,Arequipa,Tarde,Si,No,No,4590.19
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Callao,Manana,Si,No,No,4589.29
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Manana,No,No,Si,4585.67
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,No,4569.7
+Fraude Informatico,Redes Sociales,50-64,Masculino,Lima,Noche,No,No,No,4554.43
+Fraude Informatico,Correo Electronico,65 o mas,Femenino,Lima,Noche,Si,Si,Si,4552.42
+Fraude Informatico,Redes Sociales,30-49,Masculino,La Libertad,Tarde,Si,No,Si,4537.42
+Estafa por Internet,Llamada Telefonica,65 o mas,Femenino,Lima,Manana,No,No,Si,4528.04
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,No,No,No,4510.4
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,No,No,4507.41
+Fraude Informatico,Redes Sociales,50-64,Masculino,Arequipa,Manana,No,No,Si,4484.87
+Acceso Ilicito,Correo Electronico,50-64,Femenino,Lima,Manana,No,No,Si,4482.33
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Tarde,No,No,Si,4478.41
+Fraude Informatico,Pagina Web Falsa,18-29,Masculino,La Libertad,Madrugada,No,Si,Si,4471.75
+Acceso Ilicito,Redes Sociales,50-64,Masculino,Lima,Madrugada,No,Si,No,4466.52
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Callao,Madrugada,Si,No,No,4466.51
+Sextorsion,Pagina Web Falsa,18-29,Femenino,Junin,Manana,No,No,No,4453.97
+Estafa por Internet,Pagina Web Falsa,65 o mas,Femenino,Lima,Manana,Si,No,No,4451.56
+Sextorsion,Redes Sociales,18-29,Femenino,Lima,Manana,Si,No,Si,4450.64
+Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Manana,Si,No,Si,4450.58
+Acceso Ilicito,Redes Sociales,18-29,Femenino,La Libertad,Madrugada,No,No,Si,4444.83
+Fraude Informatico,WhatsApp o SMS,30-49,Femenino,Lima,Tarde,No,No,Si,4439.77
+Acceso Ilicito,Redes Sociales,30-49,Femenino,Piura,Manana,No,Si,No,4427.53
+Estafa por Internet,Correo Electronico,65 o mas,Femenino,Lima,Noche,No,No,No,4427.19
+Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Manana,No,No,Si,4426.14
+Acceso Ilicito,Llamada Telefonica,65 o mas,Femenino,Cusco,Noche,No,No,No,4425.63
+Fraude Informatico,Redes Sociales,18-29,Femenino,Cusco,Noche,Si,No,Si,4425.19
+Estafa por Internet,Correo Electronico,50-64,Femenino,Lima,Noche,No,No,Si,4407.28
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Madrugada,No,No,No,4401.65
+Acceso Ilicito,Pagina Web Falsa,30-49,Femenino,La Libertad,Manana,No,No,No,4387.2
+Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Madrugada,Si,No,Si,4386.65
+Fraude Informatico,Redes Sociales,30-49,Femenino,Junin,Manana,Si,Si,No,4384.32
+Estafa por Internet,WhatsApp o SMS,65 o mas,Masculino,Junin,Manana,No,No,No,4379.09
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Cusco,Madrugada,No,No,Si,4362.79
+Acceso Ilicito,Redes Sociales,30-49,Femenino,Junin,Manana,No,No,No,4360.66
+Fraude Informatico,Pagina Web Falsa,50-64,Masculino,Piura,Noche,No,Si,Si,4356.97
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,Si,No,Si,4344.65
+Fraude Informatico,Redes Sociales,18-29,Masculino,Piura,Noche,No,Si,No,4341.07
+Fraude Informatico,Pagina Web Falsa,30-49,Femenino,Lima,Noche,No,No,No,4308.57
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,No,No,4301.46
+Estafa por Internet,Llamada Telefonica,30-49,Masculino,Lima,Manana,No,No,Si,4299.87
+Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Madrugada,Si,No,No,4292.13
+Fraude Informatico,Correo Electronico,30-49,Femenino,Lima,Manana,Si,No,Si,4292.04
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,No,4291.87
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,Si,4291.77
+Fraude Informatico,Redes Sociales,30-49,Masculino,La Libertad,Manana,No,Si,Si,4289.93
+Estafa por Internet,WhatsApp o SMS,50-64,Masculino,Lima,Manana,No,No,No,4285.73
+Acceso Ilicito,Redes Sociales,30-49,Masculino,Tacna,Manana,No,Si,Si,4283.17
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Piura,Madrugada,No,Si,No,4282.46
+Sextorsion,Pagina Web Falsa,18-29,Masculino,Cusco,Tarde,Si,No,Si,4274.37
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Junin,Madrugada,No,No,No,4270.15
+Acceso Ilicito,Redes Sociales,50-64,Masculino,Piura,Tarde,No,No,No,4267.41
+Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Tarde,No,No,Si,4264.87
+Fraude Informatico,Correo Electronico,30-49,Masculino,Arequipa,Noche,No,No,No,4250.65
+Fraude Informatico,Redes Sociales,65 o mas,Masculino,La Libertad,Tarde,No,Si,No,4248.6
+Acceso Ilicito,Correo Electronico,18-29,Masculino,Lima,Noche,Si,No,Si,4247.29
+Fraude Informatico,Redes Sociales,18-29,Femenino,Arequipa,Manana,No,No,No,4243.49
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Noche,Si,No,Si,4243.03
+Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,4241.5
+Fraude Informatico,Redes Sociales,18-29,Masculino,Puno,Manana,No,No,Si,4229.86
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Manana,Si,No,No,4224.89
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lambayeque,Tarde,No,No,No,4217.22
+Sextorsion,Llamada Telefonica,18-29,Masculino,Lima,Manana,Si,No,Si,4214.84
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,La Libertad,Madrugada,Si,No,No,4209.53
+Acceso Ilicito,WhatsApp o SMS,30-49,Masculino,Lima,Madrugada,No,Si,No,4203.24
+Fraude Informatico,Redes Sociales,30-49,Masculino,Lima,Manana,No,Si,Si,4198.86
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Tarde,No,Si,No,4191.86
+Estafa por Internet,Pagina Web Falsa,30-49,Femenino,Lima,Manana,No,No,Si,4185.22
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Cusco,Tarde,No,No,No,4183.66
+Fraude Informatico,Redes Sociales,30-49,Femenino,Piura,Tarde,No,No,No,4164.52
+Fraude Informatico,Redes Sociales,18-29,Femenino,La Libertad,Tarde,No,No,Si,4161.14
+Fraude Informatico,Correo Electronico,30-49,Femenino,Puno,Noche,No,No,No,4150.02
+Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Noche,No,Si,No,4145.27
+Estafa por Internet,WhatsApp o SMS,30-49,Femenino,Lima,Noche,No,No,Si,4144.38
+Fraude Informatico,Correo Electronico,18-29,Masculino,Lima,Madrugada,No,No,No,4142.79
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,Si,Si,No,4133.31
+Estafa por Internet,Redes Sociales,30-49,Femenino,Arequipa,Tarde,No,No,No,4132.5
+Acceso Ilicito,Correo Electronico,18-29,Masculino,Lima,Tarde,No,No,Si,4118.23
+Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lima,Noche,No,Si,Si,4102.98
+Acceso Ilicito,Correo Electronico,18-29,Masculino,Lima,Noche,No,No,Si,4097.47
+Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,4083.9
+Sextorsion,WhatsApp o SMS,18-29,Femenino,Cusco,Noche,No,No,Si,4081.64
+Fraude Informatico,Redes Sociales,30-49,Femenino,Piura,Noche,Si,Si,Si,4075.91
+Estafa por Internet,Pagina Web Falsa,30-49,Femenino,Lima,Noche,No,No,No,4071.75
+Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Manana,No,No,No,4070.68
+Sextorsion,WhatsApp o SMS,30-49,Femenino,Lima,Tarde,No,Si,No,4069.17
+Sextorsion,Redes Sociales,30-49,Femenino,Cusco,Tarde,No,No,No,4068.7
+Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Manana,Si,No,No,4067.62
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,No,Si,4067.08
+Fraude Informatico,Redes Sociales,50-64,Masculino,Cusco,Noche,Si,Si,No,4061.88
+Fraude Informatico,Redes Sociales,30-49,Femenino,Arequipa,Tarde,No,No,No,4058.34
+Sextorsion,WhatsApp o SMS,18-29,Femenino,Lima,Manana,Si,Si,Si,4046.08
+Sextorsion,WhatsApp o SMS,30-49,Masculino,Lima,Noche,Si,Si,Si,4042.06
+Acceso Ilicito,WhatsApp o SMS,30-49,Femenino,Lima,Noche,No,Si,No,4038.84
+Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Noche,No,Si,Si,4035.58
+Acceso Ilicito,Pagina Web Falsa,30-49,Masculino,Lima,Manana,Si,No,No,4028.17
+Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lambayeque,Tarde,Si,No,Si,4017.5
+Fraude Informatico,Correo Electronico,18-29,Femenino,Cusco,Madrugada,No,No,No,4017.39
+Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Callao,Noche,No,No,No,4014.45
+Acceso Ilicito,Redes Sociales,18-29,Femenino,Puno,Manana,No,No,No,4008.34
+Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Tarde,No,No,Si,4005.78
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,3982.61
+Sextorsion,Redes Sociales,50-64,Femenino,Cusco,Manana,No,No,Si,3968.54
+Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Tarde,Si,No,Si,3967.09
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Arequipa,Noche,Si,No,No,3964.36
+Fraude Informatico,Llamada Telefonica,30-49,Femenino,Piura,Manana,No,Si,Si,3955.51
+Sextorsion,WhatsApp o SMS,18-29,Masculino,Lima,Noche,Si,No,Si,3954.88
+Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,Si,No,3953.23
+Fraude Informatico,WhatsApp o SMS,65 o mas,Masculino,Lima,Tarde,Si,Si,Si,3950.62
+Fraude Informatico,Redes Sociales,18-29,Femenino,Junin,Madrugada,No,Si,Si,3943.99
+Acceso Ilicito,Correo Electronico,18-29,Femenino,Lambayeque,Tarde,No,No,No,3942.63
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,Si,Si,Si,3938.97
+Fraude Informatico,Pagina Web Falsa,18-29,Femenino,Puno,Tarde,No,No,Si,3932.74
+Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lambayeque,Tarde,No,No,No,3928.66
+Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Tarde,Si,Si,No,3927.63
+Fraude Informatico,Llamada Telefonica,18-29,Masculino,Tacna,Tarde,No,No,Si,3924.54
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Cusco,Tarde,Si,Si,No,3923.46
+Sextorsion,Redes Sociales,30-49,Femenino,Lima,Madrugada,No,No,Si,3911.0
+Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Manana,No,No,No,3909.04
+Estafa por Internet,Redes Sociales,30-49,Masculino,Junin,Noche,No,No,No,3907.87
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,No,Si,3900.61
+Estafa por Internet,Redes Sociales,30-49,Masculino,Puno,Tarde,No,No,No,3894.94
+Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,No,No,3894.28
+Fraude Informatico,Llamada Telefonica,18-29,Femenino,La Libertad,Madrugada,Si,No,No,3891.13
+Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Manana,Si,No,No,3880.11
+Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,Si,No,3879.88
+Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Piura,Tarde,Si,No,No,3877.39
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Puno,Noche,Si,No,Si,3875.57
+Acceso Ilicito,Redes Sociales,50-64,Femenino,Callao,Madrugada,No,No,Si,3873.88
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,Si,Si,3872.14
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Callao,Noche,Si,No,Si,3863.28
+Suplantacion de Identidad,WhatsApp o SMS,65 o mas,Masculino,Lima,Manana,No,No,No,3854.74
+Estafa por Internet,Correo Electronico,50-64,Masculino,Lima,Madrugada,Si,No,Si,3851.74
+Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lima,Manana,Si,No,No,3851.46
+Acceso Ilicito,Pagina Web Falsa,18-29,Masculino,Lima,Tarde,No,No,Si,3850.31
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Callao,Tarde,Si,Si,No,3845.27
+Sextorsion,Redes Sociales,18-29,Masculino,La Libertad,Noche,No,No,Si,3842.65
+Fraude Informatico,Redes Sociales,50-64,Masculino,Lambayeque,Tarde,No,No,Si,3841.89
+Fraude Informatico,Redes Sociales,30-49,Femenino,La Libertad,Manana,Si,No,Si,3839.52
+Estafa por Internet,Correo Electronico,30-49,Femenino,Lima,Tarde,No,No,Si,3817.51
+Estafa por Internet,Redes Sociales,30-49,Masculino,Cusco,Madrugada,No,No,Si,3813.12
+Suplantacion de Identidad,WhatsApp o SMS,65 o mas,Femenino,Lima,Madrugada,No,No,No,3812.35
+Fraude Informatico,Llamada Telefonica,18-29,Masculino,Lima,Manana,Si,No,Si,3810.15
+Fraude Informatico,Redes Sociales,50-64,Masculino,Lima,Tarde,No,Si,No,3800.76
+Estafa por Internet,Pagina Web Falsa,50-64,Masculino,Arequipa,Noche,No,No,No,3795.76
+Fraude Informatico,Redes Sociales,30-49,Femenino,La Libertad,Noche,No,No,No,3780.82
+Fraude Informatico,Redes Sociales,18-29,Femenino,La Libertad,Tarde,No,No,Si,3774.41
+Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Manana,Si,No,No,3761.15
+Fraude Informatico,Pagina Web Falsa,30-49,Masculino,La Libertad,Noche,No,Si,Si,3759.6
+Acceso Ilicito,WhatsApp o SMS,30-49,Masculino,Lima,Madrugada,No,Si,Si,3756.1
+Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,Si,No,3754.45
+Estafa por Internet,WhatsApp o SMS,30-49,Femenino,Lima,Noche,No,Si,No,3750.69
+Acceso Ilicito,Llamada Telefonica,18-29,Femenino,Tacna,Madrugada,No,No,Si,3742.72
+Estafa por Internet,WhatsApp o SMS,30-49,Masculino,Lambayeque,Madrugada,No,No,No,3734.1
+Estafa por Internet,Llamada Telefonica,30-49,Femenino,Arequipa,Manana,Si,No,Si,3733.4
+Acceso Ilicito,Redes Sociales,50-64,Masculino,Lima,Manana,Si,No,No,3727.39
+Sextorsion,Llamada Telefonica,18-29,Masculino,Lima,Noche,Si,No,No,3726.92
+Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Callao,Madrugada,No,No,Si,3717.27
+Fraude Informatico,Redes Sociales,18-29,Femenino,Junin,Manana,No,No,Si,3716.76
+Acceso Ilicito,Llamada Telefonica,65 o mas,Femenino,La Libertad,Tarde,No,Si,Si,3714.88

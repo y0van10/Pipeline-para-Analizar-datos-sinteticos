@@ -16,6 +16,12 @@ import sys
 import os
 import subprocess
 
+# Reconfigurar salida estándar para soportar UTF-8 en consolas Windows (evita UnicodeEncodeError)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 # Asegurar que el directorio del script sea el directorio de trabajo
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -28,10 +34,10 @@ def ejecutar_cli():
     ruta_datos = sys.argv[2] if len(sys.argv) > 2 else "data/estudiantes.csv"
     col_objetivo = sys.argv[3] if len(sys.argv) > 3 else None
 
-    print(f"🚀 Ejecutando Pipeline en modo Consola...")
-    print(f"📂 Dataset: {ruta_datos}")
+    print("Ejecutando Pipeline en modo Consola...")
+    print(f"Dataset: {ruta_datos}")
     if col_objetivo:
-        print(f"🎯 Columna Objetivo: {col_objetivo}")
+        print(f"Columna Objetivo: {col_objetivo}")
 
     pipeline = PipelineAcademico(
         ruta_datos=ruta_datos,
@@ -41,7 +47,7 @@ def ejecutar_cli():
     pipeline.ejecutar()
 
 def lanzar_streamlit():
-    print("🌐 Iniciando Dashboard Interactivo en Streamlit (app.py)...")
+    print("Iniciando Dashboard Interactivo en Streamlit (app.py)...")
     cmd = [sys.executable, "-m", "streamlit", "run", "app.py"]
     subprocess.run(cmd)
 

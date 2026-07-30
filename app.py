@@ -243,10 +243,13 @@ with tab2:
     else:
         st.info("Ejecuta el pipeline primero.")
 
+
+
 # ── TAB 3: BAYESIANOS ──
 with tab3:
     st.header("Redes y Árboles Bayesianos Causales Jerárquicos")
     st.markdown("Redes dirigidas donde las flechas representan la causalidad y probabilidad conjunta.")
+    
     dir_graf = (os.path.join("results", nivel_sel, "graficos")
                 if nivel_sel != "global"
                 else os.path.join("results", "global"))
@@ -254,7 +257,6 @@ with tab3:
     if os.path.exists(dir_graf):
         mst_bayes   = sorted([f for f in os.listdir(dir_graf) if f.startswith("arbol_bayesiano_")])
         comp_bayes  = sorted([f for f in os.listdir(dir_graf) if f.startswith("red_bayesiana_completa_")])
-        radar_files = sorted([f for f in os.listdir(dir_graf) if f.startswith("radar_")])
 
         if mst_bayes or comp_bayes:
             tipo_vista = st.radio(
@@ -287,12 +289,6 @@ with tab3:
                 with col_c2:
                     if os.path.exists(path_mst):
                         st.image(path_mst, caption=f"Árbol MST — {b_sel}", use_column_width=True)
-
-        if radar_files:
-            st.markdown("---")
-            st.subheader("Gráficos de Radar (Telaraña)")
-            for rf in radar_files:
-                st.image(os.path.join(dir_graf, rf), caption=rf, use_column_width=True)
     else:
         st.info("Ejecuta el pipeline primero.")
 

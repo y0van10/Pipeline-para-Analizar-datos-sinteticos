@@ -290,19 +290,13 @@ children.push(h2("4.1 Redes Bayesianas Dirigidas"));
 addImageIfExists("results/global/arbol_bayesiano_Completo.png", "Árbol Bayesiano Dirigido - Dataset Completo");
 addImageIfExists("results/nivel_50/graficos/arbol_bayesiano_Best_50.png", "Árbol Bayesiano - Best 50%");
 addImageIfExists("results/nivel_50/graficos/arbol_bayesiano_Worst_50.png", "Árbol Bayesiano - Worst 50%");
-
-children.push(h2("4.2 Gráficos de Radar (Telaraña) Comparativos"));
-addImageIfExists("results/nivel_50/graficos/radar_comparativo_50.png", "Perfil Radar - Nivel 50%");
-addImageIfExists("results/nivel_25/graficos/radar_comparativo_25.png", "Perfil Radar - Nivel 25%");
-addImageIfExists("results/nivel_12.5/graficos/radar_comparativo_12.5.png", "Perfil Radar - Nivel 12.5%");
-
-children.push(h2("4.3 Comparaciones Topológicas"));
+children.push(h2("4.2 Comparaciones Topológicas"));
 addImageIfExists("results/global/resumen_comparacion_global.png", "Resumen Global de Diferencias Topológicas");
 
 children.push(h1("5. Conclusiones"));
 children.push(numbered("El pipeline en POO ejecuta los 7 pasos procesando archivos CSV independientes por cada nivel."));
-children.push(numbered("Los Árboles Bayesianos dirigen adecuadamente las aristas utilizando probabilidades condicionales, resaltando el rendimiento (X11) como nodo central."));
-children.push(numbered("Los gráficos de Radar confirman visualmente las desviaciones socioeconómicas y académicas entre estudiantes de alto y bajo rendimiento."));
+children.push(numbered("Los Árboles Bayesianos dirigen adecuadamente las aristas utilizando probabilidades condicionales, modelando las dependencias de forma robusta."));
+children.push(numbered("La topología de red basada en NCD identifica diferencias significativas en las relaciones entre variables de grupos de rendimiento extremo."));
 
 const doc = new Document({
   numbering: {

@@ -87,29 +87,29 @@ class GestorTopologias:
         umbral_sim = np.percentile(similitud, 60) if len(similitud) > 25 else 0.0
         edge_labels = {(u, v): f"{G[u][v]['weight']:.2f}" for u, v in G.edges() if (1.0 - G[u][v]['weight']) >= umbral_sim}
         if edge_labels:
-            nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, ax=ax, font_size=6, font_color="#D32F2F")
+            nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, ax=ax, font_size=7, font_color="#D32F2F")
 
-        nx.draw_networkx_nodes(G, pos, ax=ax, node_size=1300,
+        nx.draw_networkx_nodes(G, pos, ax=ax, node_size=2000,
                                node_color=colores_nodo, edgecolors="white", linewidths=2.5)
 
-        labels = {n: n[:16] + "…" if len(n) > 16 else n for n in G.nodes()}
-        nx.draw_networkx_labels(G, pos, labels=labels, ax=ax, font_size=7, font_weight="bold", font_color="white")
+        labels = {n: (n[:30] + "…" if len(n) > 30 else n) for n in G.nodes()}
+        nx.draw_networkx_labels(G, pos, labels=labels, ax=ax, font_size=8, font_weight="bold", font_color="white")
 
         parche_cat = mpatches.Patch(color="#FF7043", label="Variable Categórica")
         parche_num = mpatches.Patch(color="#42A5F5", label="Variable Numérica")
-        ax.legend(handles=[parche_cat, parche_num], loc="upper left", fontsize=9)
+        ax.legend(handles=[parche_cat, parche_num], loc="upper left", fontsize=10)
 
         n_vars = len(list(G.nodes()))
         n_edges = len(list(G.edges()))
         ax.set_title(f"Grafo NCD Completo (Todos contra Todos) — {nombre}\n"
                      f"Partición Nivel {nivel}% | {n_vars} variables ({n_edges} conexiones NCD)",
-                     fontsize=13, fontweight="bold")
+                     fontsize=14, fontweight="bold")
         ax.axis("off")
 
         plt.tight_layout()
         dir_g = self._obtener_dir_graficos(nivel)
         path = os.path.join(dir_g, f"grafo_completo_{nombre}.png")
-        plt.savefig(path, dpi=150, bbox_inches="tight")
+        plt.savefig(path, dpi=300, bbox_inches="tight")
         plt.close()
         return path
 
@@ -121,32 +121,32 @@ class GestorTopologias:
 
         pesos = [mst[u][v]["weight"] for u, v in mst.edges()]
         peso_max = max(pesos) if pesos else 1
-        anchos = [3.0 * (1 - w / peso_max) + 0.5 for w in pesos]
+        anchos = [3.5 * (1 - w / peso_max) + 0.5 for w in pesos]
 
         nx.draw_networkx_edges(mst, pos, ax=ax, width=anchos, alpha=0.6, edge_color="#78909C")
         edge_labels = {(u, v): f"{mst[u][v]['weight']:.3f}" for u, v in mst.edges()}
-        nx.draw_networkx_edge_labels(mst, pos, edge_labels=edge_labels, ax=ax, font_size=7, font_color="#546E7A")
+        nx.draw_networkx_edge_labels(mst, pos, edge_labels=edge_labels, ax=ax, font_size=8, font_color="#546E7A")
 
-        nx.draw_networkx_nodes(mst, pos, ax=ax, node_size=1400,
+        nx.draw_networkx_nodes(mst, pos, ax=ax, node_size=2200,
                                node_color=colores_nodo, edgecolors="white", linewidths=2.5)
 
-        labels = {n: n[:18] + "…" if len(n) > 18 else n for n in mst.nodes()}
-        nx.draw_networkx_labels(mst, pos, labels=labels, ax=ax, font_size=7, font_weight="bold", font_color="white")
+        labels = {n: (n[:30] + "…" if len(n) > 30 else n) for n in mst.nodes()}
+        nx.draw_networkx_labels(mst, pos, labels=labels, ax=ax, font_size=9, font_weight="bold", font_color="white")
 
         parche_cat = mpatches.Patch(color="#FF7043", label="Variable Categórica")
         parche_num = mpatches.Patch(color="#42A5F5", label="Variable Numérica")
-        ax.legend(handles=[parche_cat, parche_num], loc="upper left", fontsize=9)
+        ax.legend(handles=[parche_cat, parche_num], loc="upper left", fontsize=10)
 
         n_vars = len(list(mst.nodes()))
         ax.set_title(f"Árbol de Expansión Mínima (MST) — {nombre}\n"
                      f"Partición Nivel {nivel}% | {n_vars} variables",
-                     fontsize=13, fontweight="bold")
+                     fontsize=14, fontweight="bold")
         ax.axis("off")
 
         plt.tight_layout()
         dir_g = self._obtener_dir_graficos(nivel)
         path = os.path.join(dir_g, f"mst_{nombre}.png")
-        plt.savefig(path, dpi=150, bbox_inches="tight")
+        plt.savefig(path, dpi=300, bbox_inches="tight")
         plt.close()
         return path
 

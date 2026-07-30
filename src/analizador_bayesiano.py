@@ -192,21 +192,27 @@ class AnalizadorBayesiano:
         return arbol_mst
 
     def graficar_red(self, red, nombre, nivel, nivel_causal, es_completa=False):
+        """
+        Grafica la red bayesiana causal con alta resolución (300 DPI) para permitir
+        un zoom nítido (con lupa), letras más grandes, nodos más amplios y sin recortar
+        los nombres de variables largas.
+        """
         n_nodos = len(red.nodes())
-        fig_h   = max(11, n_nodos * 0.9)
-        fig_w   = max(13, n_nodos * 1.1)
+        fig_h   = max(12, n_nodos * 1.0)
+        fig_w   = max(14, n_nodos * 1.2)
         fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 
-        COLOR_RAIZ     = "#E65100"  # naranja: antecedentes (nivel 0)
-        COLOR_INTERM   = "#1565C0"  # azul: intermediarios (nivel 1)
-        COLOR_OBJETIVO = "#2E7D32"  # verde: resultado (nivel 2)
+        COLOR_RAIZ     = "#E65100"  # naranja oscuro: antecedentes
+        COLOR_INTERM   = "#1565C0"  # azul: intermediarios
+        COLOR_OBJETIVO = "#2E7D32"  # verde oscuro: resultado objetivo
 
         colores_nodo  = []
         tamaños_nodo  = []
         for nodo in red.nodes():
             lvl = nivel_causal.get(nodo, 0)
             grado_total = red.in_degree(nodo) + red.out_degree(nodo)
-            tamaños_nodo.append(1400 + grado_total * (100 if es_completa else 180))
+            # Aumentamos el tamaño base de los nodos para alojar textos legibles
+            tamaños_nodo.append(2600 + grado_total * (120 if es_completa else 200))
 
             if lvl == 2:
                 colores_nodo.append(COLOR_OBJETIVO)
@@ -215,7 +221,7 @@ class AnalizadorBayesiano:
             else:
                 colores_nodo.append(COLOR_RAIZ)
 
-        # Layout por niveles causales
+        # Disposición (layout) jerárquico por nivel causal
         pos = {}
         grupos_nivel = {}
         for nodo in red.nodes():
@@ -225,49 +231,49 @@ class AnalizadorBayesiano:
         max_lvl = max(grupos_nivel.keys()) if grupos_nivel else 0
         for lvl, nodos in grupos_nivel.items():
             y = max_lvl - lvl
-            x_coords = np.linspace(-3.0, 3.0, len(nodos))
+            x_coords = np.linspace(-3.5, 3.5, len(nodos))
             for i, nodo in enumerate(sorted(nodos)):
-                pos[nodo] = np.array([x_coords[i], y * 1.8])
+                pos[nodo] = np.array([x_coords[i], y * 2.0])
 
-        # Dibujar aristas
+        # Dibujar aristas con opacidad y grosores adecuados
         pesos = [data["weight"] for _, _, data in red.edges(data=True)]
         p_min = min(pesos) if pesos else 0
         p_max = max(pesos) if pesos else 1
 
         if es_completa:
-            # En la red completa, variar alpha y ancho por probabilidad para no atoturar
-            anchos = [0.8 + 2.5 * ((w - p_min) / (p_max - p_min + 1e-6)) for w in pesos]
-            alphas = [0.25 + 0.60 * ((w - p_min) / (p_max - p_min + 1e-6)) for w in pesos]
+            anchos = [1.0 + 3.0 * ((w - p_min) / (p_max - p_min + 1e-6)) for w in pesos]
+            alphas = [0.30 + 0.60 * ((w - p_min) / (p_max - p_min + 1e-6)) for w in pesos]
 
             for (u, v, data), w_val, a_val in zip(red.edges(data=True), anchos, alphas):
                 nx.draw_networkx_edges(
                     red, pos, edgelist=[(u, v)], ax=ax,
-                    arrows=True, arrowstyle="-|>", arrowsize=18,
+                    arrows=True, arrowstyle="-|>", arrowsize=20,
                     edge_color="#C62828", width=w_val, alpha=a_val,
                     connectionstyle="arc3,rad=0.15",
-                    min_target_margin=25, min_source_margin=25
+                    min_target_margin=30, min_source_margin=30
                 )
         else:
             # MST
             nx.draw_networkx_edges(
                 red, pos, ax=ax,
-                arrows=True, arrowstyle="-|>", arrowsize=28,
-                edge_color="#C62828", width=2.8, alpha=0.85,
+                arrows=True, arrowstyle="-|>", arrowsize=32,
+                edge_color="#C62828", width=3.5, alpha=0.85,
                 connectionstyle="arc3,rad=0.12",
-                min_target_margin=32, min_source_margin=32,
+                min_target_margin=38, min_source_margin=38,
             )
 
-        # Dibujar nodos
+        # Dibujar nodos en pantalla
         nx.draw_networkx_nodes(
             red, pos, ax=ax, node_size=tamaños_nodo,
             node_color=colores_nodo, edgecolors="white", linewidths=2.5,
         )
 
-        etiquetas = {n: (n[:15] + "…" if len(n) > 15 else n) for n in red.nodes()}
+        # Mostrar etiquetas de nodos sin truncar tanto (hasta 30 caracteres para legibilidad total)
+        etiquetas = {n: (n[:30] + "…" if len(n) > 30 else n) for n in red.nodes()}
         nx.draw_networkx_labels(red, pos, labels=etiquetas, ax=ax,
-                                font_size=8, font_weight="bold", font_color="white")
+                                font_size=9, font_weight="bold", font_color="white")
 
-        # Dibujar etiquetas en aristas (solo top en completa si son muchas)
+        # Mostrar probabilidades en las aristas
         etiquetas_aristas = {}
         umbral_label = np.percentile(pesos, 50) if es_completa and len(pesos) > 20 else 0.0
         for u, v, data in red.edges(data=True):
@@ -276,18 +282,18 @@ class AnalizadorBayesiano:
 
         if etiquetas_aristas:
             nx.draw_networkx_edge_labels(red, pos, edge_labels=etiquetas_aristas,
-                                         ax=ax, font_size=6 if es_completa else 7,
+                                         ax=ax, font_size=8,
                                          font_color="#D32F2F", font_weight="bold")
 
         parche_raiz = mpatches.Patch(color=COLOR_RAIZ,     label="Antecedentes (baja corr. con objetivo)")
         parche_int  = mpatches.Patch(color=COLOR_INTERM,   label="Intermediarios (alta corr. con objetivo)")
         parche_tar  = mpatches.Patch(color=COLOR_OBJETIVO, label=f"Objetivo: {self.col_objetivo or 'resultado'}")
-        ax.legend(handles=[parche_raiz, parche_int, parche_tar], loc="upper left", fontsize=9)
+        ax.legend(handles=[parche_raiz, parche_int, parche_tar], loc="upper left", fontsize=10)
 
         tipo_str = "Red Bayesiana Completa (Todos contra Todos)" if es_completa else "Árbol Bayesiano (MST)"
         ax.set_title(f"{tipo_str} — {nombre}\n"
-                     f"Flujo: Antecedentes ➔ Intermediarios ➔ {self.col_objetivo or 'Resultado'}",
-                     fontsize=13, fontweight="bold")
+                     f"Flujo Causal: Antecedentes ➔ Intermediarios ➔ {self.col_objetivo or 'Resultado'}",
+                     fontsize=14, fontweight="bold")
         ax.axis("off")
         plt.tight_layout()
 
@@ -296,63 +302,11 @@ class AnalizadorBayesiano:
 
         nombre_archivo = f"red_bayesiana_completa_{nombre}.png" if es_completa else f"arbol_bayesiano_{nombre}.png"
         path = os.path.join(dir_g, nombre_archivo)
-        plt.savefig(path, dpi=150, bbox_inches="tight")
+        
+        # Guardamos a 300 DPI para resolución nítida en pantallas y PDFs
+        plt.savefig(path, dpi=300, bbox_inches="tight")
         plt.close()
-        print(f"      💾 {tipo_str} guardado: {path}")
-
-    def graficar_radar_comparativo(self, df_particiones):
-        pares = [
-            ("50",  "Best_50",     "Worst_50"),
-            ("25",  "Best_25_1",   "Worst_25_2"),
-            ("12.5","Best_12.5_1", "Worst_12.5_4"),
-        ]
-
-        for nivel, n_best, n_worst in pares:
-            if n_best not in df_particiones or n_worst not in df_particiones:
-                continue
-
-            df_b = df_particiones[n_best]["df"]  if isinstance(df_particiones[n_best], dict) else df_particiones[n_best]
-            df_w = df_particiones[n_worst]["df"] if isinstance(df_particiones[n_worst], dict) else df_particiones[n_worst]
-
-            vars_radar = [c for c in df_b.columns if c != self.col_objetivo]
-            if len(vars_radar) < 3:
-                continue
-
-            disc_b = self.discretizar_dataframe(df_b, vars_radar)
-            disc_w = self.discretizar_dataframe(df_w, vars_radar)
-            vars_disponibles = [v for v in vars_radar if v in disc_b.columns and v in disc_w.columns]
-
-            if len(vars_disponibles) < 3:
-                continue
-
-            means_b = [disc_b[v].mean() for v in vars_disponibles]
-            means_w = [disc_w[v].mean() for v in vars_disponibles]
-
-            angles  = np.linspace(0, 2 * np.pi, len(vars_disponibles), endpoint=False).tolist()
-            means_b = means_b + means_b[:1]
-            means_w = means_w + means_w[:1]
-            angles  = angles  + angles[:1]
-
-            fig, ax = plt.subplots(figsize=(9, 9), subplot_kw=dict(polar=True))
-            ax.plot(angles, means_b, color="#1E88E5", linewidth=2.5, label=f"BEST ({n_best})")
-            ax.fill(angles, means_b, color="#1E88E5", alpha=0.25)
-            ax.plot(angles, means_w, color="#E53935", linewidth=2.5, label=f"WORST ({n_worst})")
-            ax.fill(angles, means_w, color="#E53935", alpha=0.25)
-
-            labels_full = [v[:12] + "…" if len(v) > 12 else v for v in vars_disponibles]
-            ax.set_xticks(angles[:-1])
-            ax.set_xticklabels(labels_full, fontsize=8, fontweight="bold")
-            ax.set_ylim(0, 1.0)
-            ax.set_title(f"Radar — Nivel {nivel}%\nPerfiles: Best vs Worst",
-                         fontsize=12, fontweight="bold", pad=20)
-            ax.legend(loc="upper right", bbox_to_anchor=(1.15, 1.1), fontsize=9)
-
-            dir_g = os.path.join(self.dir_base, f"nivel_{nivel}", "graficos")
-            os.makedirs(dir_g, exist_ok=True)
-            path  = os.path.join(dir_g, f"radar_comparativo_{nivel}.png")
-            plt.savefig(path, dpi=150, bbox_inches="tight")
-            plt.close()
-            print(f"      💾 Radar guardado: {path}")
+        print(f"      💾 {tipo_str} guardado a 300 DPI: {path}")
 
     def ejecutar_paso(self, df_limpio, particiones):
         self.arboles = {}
@@ -367,7 +321,7 @@ class AnalizadorBayesiano:
             print(f"   🌳 Red Completa y Árbol MST para {nombre}...")
             self.construir_arbol_bayesiano(df_part, nombre, nivel=nivel)
 
-        print("\n   🕸️ Generando gráficos de Radar...")
-        self.graficar_radar_comparativo(particiones)
-
+        # Nota: Los gráficos de radar (telaraña) han sido eliminados por requerimiento de diseño.
         return self.arboles
+
+

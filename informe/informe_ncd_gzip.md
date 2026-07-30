@@ -2,7 +2,7 @@
 
 Este informe de investigación académica consolida los resultados del experimento automatizado llevado a cabo sobre el modelo de factores socioacadémicos utilizando la distancia de compresión normalizada (NCD), **particionamiento jerárquico por bloques de rendimiento (50%, 25%, 12.5%)** y **Árboles Bayesianos Probabilísticos (MST Dirigidos de Probabilidad Conjunta)**.
 
-**Fecha de ejecución:** 30/07/2026 11:39  
+**Fecha de ejecución:** 30/07/2026 11:54  
 **Total de estudiantes analizados:** 364
 
 ---

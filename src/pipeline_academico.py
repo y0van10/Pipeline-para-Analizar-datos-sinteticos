@@ -35,13 +35,12 @@ class PipelineAcademico:
         print("\n" + "█" * 60)
         print(f"  {titulo}")
         print("█" * 60)
-
     def _paso(self, numero, titulo, metodo, *args):
         self._separador(f"PASO {numero}/7: {titulo}")
         inicio = time.time()
         resultado = metodo(*args)
         fin = time.time()
-        print(f"\n   ⏱️  Tiempo del paso {numero}: {fin - inicio:.2f}s")
+        print(f"\n   Tiempo del paso {numero}: {fin - inicio:.2f}s")
         return resultado
 
     def ejecutar(self):
@@ -56,7 +55,7 @@ class PipelineAcademico:
         7. Consolidación de resultados y generación automática del Reporte Técnico en Markdown.
         """
         print("\n" + "=" * 60)
-        print("   🎓 PIPELINE POO NCD/Gzip - ANÁLISIS ACADÉMICO")
+        print("   PIPELINE POO NCD/Gzip - ANALISIS ACADEMICO")
         print("   Particionamiento Jerárquico (50%, 25%, 12.5%)")
         print("=" * 60)
 
@@ -70,7 +69,7 @@ class PipelineAcademico:
         self.particionador.col_objetivo = col_obj
         self.analizador.col_objetivo    = col_obj
         self.bayesiano.col_objetivo     = col_obj
-        print(f"   🎯 Variable objetivo: '{col_obj}'")
+        print(f"   Variable objetivo: '{col_obj}'")
 
         # ── Paso 2: Partición jerárquica contigua (Best y Worst en base a la columna objetivo) ──
         particiones = self._paso(2, "PARTICIONAMIENTO POR BLOQUES",
@@ -84,7 +83,7 @@ class PipelineAcademico:
         topologias = self._paso(4, "CONSTRUCCIÓN DE TOPOLOGÍAS (MST)",
                                 self.topologia.ejecutar, matrices)
 
-        print("\n   🌳 Generando dendrogramas comparativos por nivel...")
+        print("\n   Generando dendrogramas comparativos por nivel...")
         self.topologia.graficar_dendrograma_comparativo(matrices)
 
         # ── Paso 5: Comparación de Centralidad Estructural (Diferencia de grado ponderado D = Worst - Best) ──
@@ -103,7 +102,7 @@ class PipelineAcademico:
 
         fin_total = time.time()
         print("\n" + "=" * 60)
-        print(f"   ✅ PIPELINE COMPLETADO en {fin_total - inicio_total:.2f}s")
-        print(f"   🎯 Variable objetivo usada: '{col_obj}'")
+        print(f"   PIPELINE COMPLETADO en {fin_total - inicio_total:.2f}s")
+        print(f"   Variable objetivo usada: '{col_obj}'")
         print("=" * 60)
         print(f"   Informe final: {ruta_informe}\n")

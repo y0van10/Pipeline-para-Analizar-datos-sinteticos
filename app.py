@@ -1,6 +1,12 @@
 import os
 import sys
 
+# Reconfigurar la codificación de la consola para evitar UnicodeEncodeError en Windows
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 # ─────────────────────────────────────────────────────────────
 # FIX CRÍTICO PYARROW / STREAMLIT LARGEUTF8 (Error 20 JS):
 # Parchear PyArrow para que convierta 'large_string' a 'string' (utf8)

@@ -1,188 +1,46 @@
-tipo_delito,medio_utilizado,rango_edad_victima,genero_victima,region,hora_incidente,antivirus_activo,doble_factor,denuncia_formal,monto_afectado
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Arequipa,Tarde,No,No,No,2884.55
-Acceso Ilicito,Redes Sociales,50-64,Masculino,Lima,Tarde,No,No,No,2880.75
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Junin,Noche,No,Si,Si,2877.1
-Fraude Informatico,Correo Electronico,18-29,Femenino,Lima,Tarde,Si,No,No,2871.73
-Suplantacion de Identidad,Llamada Telefonica,50-64,Femenino,Lima,Manana,No,Si,Si,2866.77
-Fraude Informatico,Correo Electronico,18-29,Masculino,Lima,Manana,No,Si,No,2857.39
-Suplantacion de Identidad,Redes Sociales,50-64,Femenino,Lima,Madrugada,No,No,No,2854.74
-Suplantacion de Identidad,Pagina Web Falsa,30-49,Masculino,Lima,Tarde,No,No,No,2848.44
-Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,Si,2846.62
-Suplantacion de Identidad,Pagina Web Falsa,30-49,Femenino,Lima,Manana,Si,No,Si,2844.9
-Estafa por Internet,Redes Sociales,65 o mas,Masculino,Cusco,Tarde,No,No,Si,2842.77
-Acceso Ilicito,Pagina Web Falsa,18-29,Femenino,Lima,Tarde,Si,Si,No,2840.95
-Estafa por Internet,Pagina Web Falsa,18-29,Masculino,Lima,Madrugada,No,No,No,2840.87
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Tacna,Tarde,No,No,No,2840.27
-Suplantacion de Identidad,Correo Electronico,50-64,Femenino,Lima,Manana,No,Si,No,2839.5
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,No,No,No,2825.65
-Suplantacion de Identidad,Correo Electronico,30-49,Femenino,Lima,Tarde,No,No,No,2818.34
-Sextorsion,Llamada Telefonica,30-49,Masculino,Lima,Madrugada,No,Si,No,2813.84
-Fraude Informatico,Redes Sociales,18-29,Femenino,Puno,Tarde,Si,No,Si,2809.95
-Sextorsion,Correo Electronico,18-29,Masculino,Lima,Noche,No,No,No,2809.86
-Estafa por Internet,WhatsApp o SMS,50-64,Femenino,Callao,Tarde,No,No,No,2801.95
-Sextorsion,Redes Sociales,18-29,Femenino,Puno,Tarde,Si,Si,No,2792.31
-Suplantacion de Identidad,Redes Sociales,18-29,Femenino,Lima,Manana,No,No,Si,2782.21
-Sextorsion,Correo Electronico,18-29,Femenino,Lima,Noche,Si,No,Si,2779.79
-Suplantacion de Identidad,Redes Sociales,65 o mas,Femenino,Lima,Tarde,Si,No,No,2779.74
-Estafa por Internet,Correo Electronico,18-29,Femenino,Lambayeque,Noche,No,No,Si,2778.43
-Suplantacion de Identidad,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,No,No,Si,2777.89
-Suplantacion de Identidad,Redes Sociales,30-49,Femenino,La Libertad,Manana,No,No,No,2770.19
-Suplantacion de Identidad,Redes Sociales,50-64,Femenino,Lima,Manana,No,No,No,2766.7
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Masculino,Lambayeque,Tarde,No,No,Si,2765.67
-Suplantacion de Identidad,Correo Electronico,18-29,Femenino,Lima,Tarde,No,No,Si,2760.49
-Suplantacion de Identidad,Redes Sociales,30-49,Masculino,Lima,Madrugada,No,No,Si,2759.4
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Arequipa,Manana,No,No,No,2756.98
-Acceso Ilicito,Redes Sociales,30-49,Masculino,Lima,Manana,No,Si,Si,2753.39
-Acceso Ilicito,Llamada Telefonica,18-29,Femenino,Cusco,Tarde,Si,No,Si,2736.72
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Femenino,Puno,Tarde,No,No,Si,2736.15
-Suplantacion de Identidad,Correo Electronico,30-49,Femenino,Lima,Manana,No,No,Si,2729.02
-Acceso Ilicito,Correo Electronico,18-29,Femenino,Lima,Madrugada,No,Si,Si,2727.15
-Estafa por Internet,Pagina Web Falsa,65 o mas,Masculino,Cusco,Tarde,No,No,No,2726.1
-Acceso Ilicito,Correo Electronico,18-29,Masculino,Piura,Tarde,No,No,Si,2718.04
-Fraude Informatico,Pagina Web Falsa,18-29,Femenino,Cusco,Tarde,No,No,No,2712.35
-Acceso Ilicito,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,No,No,2711.66
-Suplantacion de Identidad,Llamada Telefonica,30-49,Femenino,Piura,Noche,Si,No,No,2711.25
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Puno,Noche,No,Si,Si,2710.39
-Suplantacion de Identidad,Redes Sociales,30-49,Femenino,Lambayeque,Madrugada,No,No,Si,2709.23
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Lima,Manana,No,No,No,2705.82
-Suplantacion de Identidad,Correo Electronico,30-49,Masculino,Arequipa,Tarde,No,No,No,2699.82
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Femenino,Lima,Tarde,Si,Si,No,2691.99
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,No,2687.84
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Piura,Tarde,No,No,No,2682.4
-Acceso Ilicito,Redes Sociales,18-29,Masculino,Junin,Manana,No,Si,Si,2667.06
-Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Manana,No,No,No,2665.08
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,Si,No,2650.58
-Suplantacion de Identidad,Redes Sociales,18-29,Femenino,Lima,Noche,No,No,Si,2646.13
-Suplantacion de Identidad,Redes Sociales,30-49,Femenino,Lima,Noche,No,No,Si,2645.2
-Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Tarde,No,No,No,2644.1
-Estafa por Internet,Llamada Telefonica,65 o mas,Masculino,Arequipa,Tarde,Si,No,No,2642.84
-Sextorsion,Pagina Web Falsa,18-29,Masculino,Lima,Noche,No,No,No,2629.91
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Tacna,Tarde,Si,Si,Si,2629.66
-Estafa por Internet,WhatsApp o SMS,18-29,Femenino,Callao,Manana,No,No,No,2627.26
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Femenino,Lima,Manana,No,No,No,2626.66
-Suplantacion de Identidad,Redes Sociales,30-49,Masculino,Lima,Noche,No,No,Si,2623.41
-Acceso Ilicito,Correo Electronico,30-49,Masculino,Callao,Noche,No,No,No,2616.08
-Suplantacion de Identidad,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,2612.26
-Sextorsion,Correo Electronico,18-29,Masculino,Puno,Tarde,No,Si,No,2608.62
-Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Tarde,Si,No,No,2607.99
-Suplantacion de Identidad,Correo Electronico,65 o mas,Femenino,Lima,Manana,No,Si,No,2600.74
-Suplantacion de Identidad,Redes Sociales,18-29,Femenino,Lima,Tarde,No,No,No,2596.51
-Suplantacion de Identidad,Pagina Web Falsa,30-49,Femenino,Lambayeque,Noche,Si,No,No,2591.65
-Estafa por Internet,Redes Sociales,30-49,Femenino,Tacna,Noche,No,No,No,2590.99
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,La Libertad,Manana,No,No,No,2588.21
-Suplantacion de Identidad,Correo Electronico,50-64,Femenino,Arequipa,Manana,Si,No,No,2586.23
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Femenino,Arequipa,Noche,Si,No,Si,2585.97
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,Si,Si,2581.57
-Suplantacion de Identidad,Redes Sociales,18-29,Masculino,Lima,Manana,No,No,Si,2579.79
-Estafa por Internet,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,Si,Si,2576.65
-Suplantacion de Identidad,Redes Sociales,30-49,Masculino,Lima,Manana,Si,No,Si,2576.47
-Acceso Ilicito,Redes Sociales,30-49,Masculino,Tacna,Madrugada,Si,No,Si,2570.9
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,Si,No,2569.19
-Fraude Informatico,Llamada Telefonica,18-29,Femenino,Lambayeque,Noche,No,No,No,2568.02
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Femenino,Lima,Manana,No,No,No,2563.94
-Sextorsion,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,Si,No,2562.76
-Estafa por Internet,Correo Electronico,30-49,Femenino,Arequipa,Tarde,No,No,Si,2561.13
-Acceso Ilicito,Pagina Web Falsa,50-64,Femenino,Lima,Madrugada,Si,No,No,2558.7
-Estafa por Internet,Redes Sociales,18-29,Femenino,La Libertad,Tarde,No,No,No,2558.67
-Estafa por Internet,Llamada Telefonica,18-29,Femenino,Lima,Tarde,Si,No,No,2555.17
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Cusco,Manana,No,No,No,2555.1
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Femenino,Lima,Tarde,No,Si,No,2551.92
-Fraude Informatico,Correo Electronico,18-29,Masculino,Junin,Tarde,No,No,No,2547.93
-Suplantacion de Identidad,WhatsApp o SMS,18-29,Femenino,Lima,Noche,No,No,No,2547.47
-Fraude Informatico,Correo Electronico,18-29,Masculino,Tacna,Tarde,Si,Si,Si,2542.88
-Fraude Informatico,Correo Electronico,18-29,Femenino,Lima,Tarde,No,Si,Si,2540.03
-Acceso Ilicito,Correo Electronico,50-64,Masculino,Tacna,Tarde,Si,No,Si,2524.22
-Suplantacion de Identidad,Llamada Telefonica,30-49,Femenino,La Libertad,Tarde,No,No,Si,2518.41
-Suplantacion de Identidad,Llamada Telefonica,65 o mas,Masculino,Lima,Tarde,No,No,Si,2512.0
-Acceso Ilicito,Pagina Web Falsa,18-29,Masculino,Lima,Noche,No,No,No,2510.7
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Junin,Tarde,No,No,No,2508.62
-Fraude Informatico,Pagina Web Falsa,18-29,Masculino,La Libertad,Madrugada,Si,No,Si,2500.18
-Suplantacion de Identidad,WhatsApp o SMS,18-29,Femenino,Lima,Noche,No,No,No,2495.78
-Acceso Ilicito,WhatsApp o SMS,50-64,Femenino,La Libertad,Madrugada,No,No,Si,2495.73
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,Si,No,2490.49
-Estafa por Internet,Pagina Web Falsa,30-49,Masculino,Arequipa,Tarde,Si,No,No,2490.07
-Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Tarde,No,Si,Si,2484.26
-Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Madrugada,No,Si,Si,2482.76
-Suplantacion de Identidad,Correo Electronico,30-49,Femenino,Lima,Manana,No,No,Si,2481.27
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,Si,No,No,2480.81
-Acceso Ilicito,Pagina Web Falsa,18-29,Femenino,La Libertad,Tarde,Si,No,No,2478.8
-Estafa por Internet,Redes Sociales,50-64,Femenino,Lima,Manana,No,No,Si,2478.67
-Suplantacion de Identidad,Redes Sociales,30-49,Masculino,Piura,Madrugada,No,No,No,2474.93
-Suplantacion de Identidad,Llamada Telefonica,18-29,Masculino,Lima,Tarde,No,No,No,2473.95
-Estafa por Internet,WhatsApp o SMS,30-49,Masculino,Lima,Madrugada,No,No,Si,2471.36
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Femenino,Lima,Manana,No,Si,No,2469.02
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Masculino,Lima,Tarde,No,Si,No,2468.87
-Suplantacion de Identidad,Pagina Web Falsa,18-29,Femenino,Lima,Manana,No,No,No,2468.25
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Manana,Si,No,Si,2465.68
-Estafa por Internet,WhatsApp o SMS,50-64,Femenino,Callao,Noche,No,No,No,2455.58
-Estafa por Internet,WhatsApp o SMS,50-64,Masculino,Puno,Tarde,Si,Si,Si,2452.13
-Sextorsion,Pagina Web Falsa,18-29,Masculino,Lima,Tarde,Si,Si,Si,2450.17
-Suplantacion de Identidad,Pagina Web Falsa,18-29,Femenino,Lima,Madrugada,Si,No,No,2446.04
-Fraude Informatico,Redes Sociales,18-29,Masculino,Tacna,Tarde,Si,No,No,2445.21
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Masculino,Arequipa,Manana,Si,No,Si,2444.54
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Noche,Si,Si,Si,2443.64
-Estafa por Internet,Correo Electronico,18-29,Femenino,Junin,Manana,No,No,Si,2442.95
-Acceso Ilicito,Pagina Web Falsa,18-29,Masculino,Lambayeque,Madrugada,Si,No,No,2439.1
-Estafa por Internet,WhatsApp o SMS,65 o mas,Masculino,Lima,Manana,Si,No,Si,2438.33
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Femenino,Callao,Tarde,No,No,Si,2434.93
-Acceso Ilicito,Redes Sociales,30-49,Masculino,Lima,Madrugada,Si,No,No,2432.25
-Acceso Ilicito,Pagina Web Falsa,18-29,Femenino,Lima,Madrugada,No,No,No,2431.27
-Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Madrugada,Si,No,No,2423.83
-Suplantacion de Identidad,Correo Electronico,18-29,Femenino,Lima,Tarde,No,No,Si,2420.15
-Acceso Ilicito,Redes Sociales,30-49,Femenino,Junin,Manana,Si,No,No,2419.62
-Suplantacion de Identidad,WhatsApp o SMS,50-64,Femenino,Piura,Tarde,Si,No,Si,2418.21
-Suplantacion de Identidad,Redes Sociales,18-29,Masculino,Lima,Noche,No,No,No,2417.01
-Estafa por Internet,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,No,Si,No,2409.89
-Suplantacion de Identidad,Redes Sociales,30-49,Femenino,Lima,Noche,Si,Si,Si,2404.45
-Suplantacion de Identidad,Redes Sociales,50-64,Masculino,Lima,Noche,No,No,No,2404.14
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Femenino,Lima,Tarde,No,No,No,2396.6
-Estafa por Internet,Pagina Web Falsa,50-64,Masculino,Lambayeque,Tarde,Si,Si,Si,2395.53
-Suplantacion de Identidad,Pagina Web Falsa,30-49,Femenino,Lima,Tarde,No,No,No,2391.32
-Acceso Ilicito,Redes Sociales,30-49,Masculino,Piura,Manana,Si,No,Si,2388.3
-Suplantacion de Identidad,Pagina Web Falsa,18-29,Femenino,Lima,Noche,No,No,No,2387.66
-Suplantacion de Identidad,Redes Sociales,50-64,Femenino,Lima,Madrugada,No,No,No,2386.82
-Suplantacion de Identidad,Llamada Telefonica,30-49,Femenino,Lima,Manana,No,No,Si,2384.79
-Estafa por Internet,WhatsApp o SMS,65 o mas,Masculino,Arequipa,Tarde,No,No,No,2384.74
-Suplantacion de Identidad,Correo Electronico,65 o mas,Masculino,Lima,Tarde,Si,No,Si,2381.0
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,No,Si,2375.84
-Suplantacion de Identidad,Redes Sociales,50-64,Masculino,Lima,Noche,Si,No,No,2375.33
-Suplantacion de Identidad,Pagina Web Falsa,50-64,Masculino,Lima,Manana,No,No,Si,2373.32
-Acceso Ilicito,Redes Sociales,18-29,Femenino,Junin,Manana,No,Si,Si,2370.61
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,La Libertad,Manana,No,No,Si,2366.49
-Suplantacion de Identidad,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,No,No,2364.06
-Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Manana,No,No,Si,2359.26
-Estafa por Internet,Llamada Telefonica,18-29,Masculino,Puno,Noche,Si,No,No,2357.79
-Sextorsion,Redes Sociales,18-29,Masculino,Lima,Tarde,No,Si,No,2353.34
-Estafa por Internet,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,No,Si,2352.63
-Suplantacion de Identidad,Pagina Web Falsa,18-29,Femenino,Lima,Madrugada,Si,No,No,2343.88
-Suplantacion de Identidad,Redes Sociales,30-49,Femenino,Lima,Tarde,No,No,No,2343.14
-Estafa por Internet,WhatsApp o SMS,65 o mas,Femenino,Callao,Noche,Si,No,Si,2342.47
-Acceso Ilicito,WhatsApp o SMS,30-49,Femenino,Lima,Madrugada,Si,No,Si,2336.85
-Suplantacion de Identidad,WhatsApp o SMS,18-29,Masculino,Lima,Madrugada,No,No,No,2336.75
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Femenino,Lima,Manana,Si,No,No,2336.26
-Estafa por Internet,Redes Sociales,50-64,Masculino,La Libertad,Noche,Si,No,No,2331.76
-Suplantacion de Identidad,WhatsApp o SMS,30-49,Masculino,Lima,Noche,Si,No,No,2325.61
-Fraude Informatico,Correo Electronico,18-29,Masculino,La Libertad,Noche,Si,Si,Si,2323.89
-Acceso Ilicito,Correo Electronico,30-49,Masculino,Lambayeque,Tarde,No,Si,No,2322.04
-Estafa por Internet,Llamada Telefonica,30-49,Femenino,Arequipa,Manana,No,No,No,2318.69
-Suplantacion de Identidad,Redes Sociales,18-29,Femenino,Lima,Manana,No,No,Si,2317.6
-Suplantacion de Identidad,Pagina Web Falsa,30-49,Femenino,Lima,Manana,No,Si,No,2314.18
-Acceso Ilicito,Redes Sociales,50-64,Femenino,Lima,Tarde,No,Si,Si,2313.27
-Estafa por Internet,Redes Sociales,30-49,Femenino,Lambayeque,Noche,No,No,No,2313.0
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Callao,Tarde,No,Si,No,2310.45
-Acceso Ilicito,WhatsApp o SMS,50-64,Femenino,La Libertad,Noche,Si,No,Si,2302.36
-Estafa por Internet,Redes Sociales,50-64,Masculino,Arequipa,Manana,No,Si,Si,2301.81
-Estafa por Internet,WhatsApp o SMS,30-49,Masculino,Lambayeque,Manana,Si,No,No,2291.58
-Acceso Ilicito,Redes Sociales,50-64,Femenino,Lima,Tarde,Si,No,Si,2288.5
-Suplantacion de Identidad,Redes Sociales,30-49,Masculino,Lima,Madrugada,No,Si,No,2287.37
-Estafa por Internet,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,No,2287.08
-Suplantacion de Identidad,Llamada Telefonica,30-49,Masculino,Lima,Tarde,Si,No,No,2286.28
-Suplantacion de Identidad,Llamada Telefonica,18-29,Masculino,Lima,Manana,Si,No,Si,2276.28
-Sextorsion,WhatsApp o SMS,18-29,Femenino,Lima,Manana,Si,No,Si,2274.33
-Suplantacion de Identidad,Redes Sociales,30-49,Masculino,Lambayeque,Madrugada,No,Si,No,2271.11
-Acceso Ilicito,Redes Sociales,50-64,Femenino,La Libertad,Noche,Si,Si,No,2271.03
-Estafa por Internet,Pagina Web Falsa,18-29,Femenino,Piura,Manana,No,No,No,2264.8
-Suplantacion de Identidad,Redes Sociales,18-29,Femenino,Lima,Madrugada,Si,No,No,2264.66
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,Si,No,2256.23
-Suplantacion de Identidad,Correo Electronico,50-64,Masculino,Lima,Madrugada,No,No,No,2251.0
-Suplantacion de Identidad,Correo Electronico,30-49,Femenino,Junin,Madrugada,No,Si,No,2247.33
+having_IP_Address,URL_Length,Prefix_Suffix,having_Sub_Domain,SSLfinal_State,Domain_registeration_length,web_traffic,Google_Index,Result
+0,1,0,-1,1,-1,1,1,0
+0,-1,1,1,1,-1,0,0,0
+1,1,1,0,1,-1,0,0,0
+0,-1,-1,1,1,1,1,0,0
+1,-1,0,0,1,-1,1,0,0
+1,-1,0,0,1,1,1,0,0
+0,-1,1,-1,1,0,1,1,0
+0,-1,0,0,-1,1,1,0,0
+0,-1,-1,0,1,1,1,0,0
+0,1,1,0,1,-1,1,0,0
+0,-1,0,0,-1,-1,1,0,0
+0,-1,-1,1,1,0,1,1,0
+0,-1,0,1,1,1,0,0,0
+0,-1,-1,1,1,1,0,0,0
+1,1,1,1,1,0,1,0,0
+0,-1,-1,-1,1,-1,1,1,0
+1,1,1,0,-1,0,1,1,0
+0,-1,1,-1,1,1,0,0,0
+0,-1,0,-1,1,-1,1,1,0
+0,1,0,-1,1,-1,1,0,0
+0,-1,-1,-1,1,1,0,0,0
+0,-1,-1,1,1,-1,-1,0,0
+0,-1,-1,1,-1,1,1,0,0
+0,-1,1,1,1,1,1,0,0
+0,1,-1,-1,1,1,0,0,0
+0,1,-1,1,1,-1,1,0,0
+1,1,0,-1,1,-1,1,0,0
+0,-1,-1,-1,1,0,1,1,0
+0,-1,-1,-1,1,0,0,1,0
+0,1,1,1,1,-1,0,1,0
+0,-1,1,-1,1,1,1,0,0
+0,-1,0,0,1,-1,1,0,0
+0,1,0,0,1,0,1,0,0
+0,-1,-1,0,-1,1,1,0,0
+0,-1,1,0,1,-1,1,0,0
+1,1,1,0,1,-1,1,0,0
+1,1,1,1,1,-1,1,0,0
+0,-1,-1,0,1,1,1,1,0
+0,-1,0,-1,-1,0,1,0,0
+0,-1,0,1,1,-1,0,0,0
+0,1,0,1,1,0,1,0,0
+0,-1,-1,0,-1,-1,1,0,0
+0,-1,-1,1,-1,-1,0,0,0
+1,-1,0,1,1,1,1,0,0
+0,-1,0,-1,1,0,1,1,0

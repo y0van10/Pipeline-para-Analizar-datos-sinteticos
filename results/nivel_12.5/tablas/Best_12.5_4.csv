@@ -1,188 +1,46 @@
-tipo_delito,medio_utilizado,rango_edad_victima,genero_victima,region,hora_incidente,antivirus_activo,doble_factor,denuncia_formal,monto_afectado
-Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Manana,No,No,Si,4774.95
-Fraude Informatico,Correo Electronico,30-49,Femenino,Arequipa,Tarde,No,No,Si,4765.39
-Sextorsion,Llamada Telefonica,18-29,Masculino,Cusco,Madrugada,No,No,Si,4753.14
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,No,4733.39
-Fraude Informatico,WhatsApp o SMS,30-49,Femenino,Lambayeque,Manana,No,No,Si,4728.18
-Fraude Informatico,Pagina Web Falsa,18-29,Femenino,Lima,Tarde,No,No,Si,4683.45
-Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Madrugada,No,No,No,4678.19
-Acceso Ilicito,Redes Sociales,50-64,Femenino,Lima,Tarde,Si,No,Si,4677.45
-Fraude Informatico,Redes Sociales,50-64,Masculino,Lima,Tarde,No,No,Si,4674.63
-Acceso Ilicito,Redes Sociales,30-49,Masculino,Lima,Madrugada,Si,Si,No,4673.41
-Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Tarde,Si,No,Si,4659.79
-Acceso Ilicito,Redes Sociales,50-64,Femenino,Lima,Noche,No,No,No,4658.66
-Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Manana,No,Si,No,4653.1
-Acceso Ilicito,WhatsApp o SMS,65 o mas,Femenino,Piura,Manana,No,Si,No,4650.52
-Fraude Informatico,Llamada Telefonica,30-49,Masculino,Callao,Tarde,Si,No,No,4646.06
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lambayeque,Tarde,Si,No,No,4645.06
-Estafa por Internet,WhatsApp o SMS,65 o mas,Femenino,Lambayeque,Tarde,No,No,Si,4643.49
-Fraude Informatico,WhatsApp o SMS,65 o mas,Femenino,Lima,Noche,No,No,No,4637.21
-Fraude Informatico,Pagina Web Falsa,30-49,Masculino,Lima,Manana,No,No,Si,4629.46
-Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Tarde,Si,Si,No,4620.93
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,No,No,4616.88
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,Si,Si,No,4616.67
-Acceso Ilicito,WhatsApp o SMS,30-49,Femenino,La Libertad,Tarde,Si,No,No,4614.6
-Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Madrugada,Si,No,No,4612.22
-Acceso Ilicito,WhatsApp o SMS,50-64,Femenino,Lima,Manana,Si,Si,Si,4610.58
-Acceso Ilicito,Redes Sociales,50-64,Masculino,Lima,Manana,No,No,No,4600.25
-Fraude Informatico,Redes Sociales,18-29,Masculino,Lambayeque,Manana,No,No,No,4599.54
-Sextorsion,Pagina Web Falsa,50-64,Masculino,Puno,Tarde,No,Si,Si,4599.04
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,No,No,4590.9
-Fraude Informatico,Correo Electronico,18-29,Femenino,Arequipa,Tarde,Si,No,No,4590.19
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Callao,Manana,Si,No,No,4589.29
-Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Manana,No,No,Si,4585.67
-Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,No,4569.7
-Fraude Informatico,Redes Sociales,50-64,Masculino,Lima,Noche,No,No,No,4554.43
-Fraude Informatico,Correo Electronico,65 o mas,Femenino,Lima,Noche,Si,Si,Si,4552.42
-Fraude Informatico,Redes Sociales,30-49,Masculino,La Libertad,Tarde,Si,No,Si,4537.42
-Estafa por Internet,Llamada Telefonica,65 o mas,Femenino,Lima,Manana,No,No,Si,4528.04
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,No,No,No,4510.4
-Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,No,No,4507.41
-Fraude Informatico,Redes Sociales,50-64,Masculino,Arequipa,Manana,No,No,Si,4484.87
-Acceso Ilicito,Correo Electronico,50-64,Femenino,Lima,Manana,No,No,Si,4482.33
-Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Tarde,No,No,Si,4478.41
-Fraude Informatico,Pagina Web Falsa,18-29,Masculino,La Libertad,Madrugada,No,Si,Si,4471.75
-Acceso Ilicito,Redes Sociales,50-64,Masculino,Lima,Madrugada,No,Si,No,4466.52
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Callao,Madrugada,Si,No,No,4466.51
-Sextorsion,Pagina Web Falsa,18-29,Femenino,Junin,Manana,No,No,No,4453.97
-Estafa por Internet,Pagina Web Falsa,65 o mas,Femenino,Lima,Manana,Si,No,No,4451.56
-Sextorsion,Redes Sociales,18-29,Femenino,Lima,Manana,Si,No,Si,4450.64
-Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Manana,Si,No,Si,4450.58
-Acceso Ilicito,Redes Sociales,18-29,Femenino,La Libertad,Madrugada,No,No,Si,4444.83
-Fraude Informatico,WhatsApp o SMS,30-49,Femenino,Lima,Tarde,No,No,Si,4439.77
-Acceso Ilicito,Redes Sociales,30-49,Femenino,Piura,Manana,No,Si,No,4427.53
-Estafa por Internet,Correo Electronico,65 o mas,Femenino,Lima,Noche,No,No,No,4427.19
-Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Manana,No,No,Si,4426.14
-Acceso Ilicito,Llamada Telefonica,65 o mas,Femenino,Cusco,Noche,No,No,No,4425.63
-Fraude Informatico,Redes Sociales,18-29,Femenino,Cusco,Noche,Si,No,Si,4425.19
-Estafa por Internet,Correo Electronico,50-64,Femenino,Lima,Noche,No,No,Si,4407.28
-Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Madrugada,No,No,No,4401.65
-Acceso Ilicito,Pagina Web Falsa,30-49,Femenino,La Libertad,Manana,No,No,No,4387.2
-Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Madrugada,Si,No,Si,4386.65
-Fraude Informatico,Redes Sociales,30-49,Femenino,Junin,Manana,Si,Si,No,4384.32
-Estafa por Internet,WhatsApp o SMS,65 o mas,Masculino,Junin,Manana,No,No,No,4379.09
-Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Cusco,Madrugada,No,No,Si,4362.79
-Acceso Ilicito,Redes Sociales,30-49,Femenino,Junin,Manana,No,No,No,4360.66
-Fraude Informatico,Pagina Web Falsa,50-64,Masculino,Piura,Noche,No,Si,Si,4356.97
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Madrugada,Si,No,Si,4344.65
-Fraude Informatico,Redes Sociales,18-29,Masculino,Piura,Noche,No,Si,No,4341.07
-Fraude Informatico,Pagina Web Falsa,30-49,Femenino,Lima,Noche,No,No,No,4308.57
-Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,No,No,4301.46
-Estafa por Internet,Llamada Telefonica,30-49,Masculino,Lima,Manana,No,No,Si,4299.87
-Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Madrugada,Si,No,No,4292.13
-Fraude Informatico,Correo Electronico,30-49,Femenino,Lima,Manana,Si,No,Si,4292.04
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,No,No,4291.87
-Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Tarde,No,No,Si,4291.77
-Fraude Informatico,Redes Sociales,30-49,Masculino,La Libertad,Manana,No,Si,Si,4289.93
-Estafa por Internet,WhatsApp o SMS,50-64,Masculino,Lima,Manana,No,No,No,4285.73
-Acceso Ilicito,Redes Sociales,30-49,Masculino,Tacna,Manana,No,Si,Si,4283.17
-Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Piura,Madrugada,No,Si,No,4282.46
-Sextorsion,Pagina Web Falsa,18-29,Masculino,Cusco,Tarde,Si,No,Si,4274.37
-Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Junin,Madrugada,No,No,No,4270.15
-Acceso Ilicito,Redes Sociales,50-64,Masculino,Piura,Tarde,No,No,No,4267.41
-Acceso Ilicito,Redes Sociales,30-49,Femenino,Lima,Tarde,No,No,Si,4264.87
-Fraude Informatico,Correo Electronico,30-49,Masculino,Arequipa,Noche,No,No,No,4250.65
-Fraude Informatico,Redes Sociales,65 o mas,Masculino,La Libertad,Tarde,No,Si,No,4248.6
-Acceso Ilicito,Correo Electronico,18-29,Masculino,Lima,Noche,Si,No,Si,4247.29
-Fraude Informatico,Redes Sociales,18-29,Femenino,Arequipa,Manana,No,No,No,4243.49
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Noche,Si,No,Si,4243.03
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,4241.5
-Fraude Informatico,Redes Sociales,18-29,Masculino,Puno,Manana,No,No,Si,4229.86
-Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Manana,Si,No,No,4224.89
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lambayeque,Tarde,No,No,No,4217.22
-Sextorsion,Llamada Telefonica,18-29,Masculino,Lima,Manana,Si,No,Si,4214.84
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,La Libertad,Madrugada,Si,No,No,4209.53
-Acceso Ilicito,WhatsApp o SMS,30-49,Masculino,Lima,Madrugada,No,Si,No,4203.24
-Fraude Informatico,Redes Sociales,30-49,Masculino,Lima,Manana,No,Si,Si,4198.86
-Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Tarde,No,Si,No,4191.86
-Estafa por Internet,Pagina Web Falsa,30-49,Femenino,Lima,Manana,No,No,Si,4185.22
-Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Cusco,Tarde,No,No,No,4183.66
-Fraude Informatico,Redes Sociales,30-49,Femenino,Piura,Tarde,No,No,No,4164.52
-Fraude Informatico,Redes Sociales,18-29,Femenino,La Libertad,Tarde,No,No,Si,4161.14
-Fraude Informatico,Correo Electronico,30-49,Femenino,Puno,Noche,No,No,No,4150.02
-Fraude Informatico,Redes Sociales,50-64,Femenino,Lima,Noche,No,Si,No,4145.27
-Estafa por Internet,WhatsApp o SMS,30-49,Femenino,Lima,Noche,No,No,Si,4144.38
-Fraude Informatico,Correo Electronico,18-29,Masculino,Lima,Madrugada,No,No,No,4142.79
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,Si,Si,No,4133.31
-Estafa por Internet,Redes Sociales,30-49,Femenino,Arequipa,Tarde,No,No,No,4132.5
-Acceso Ilicito,Correo Electronico,18-29,Masculino,Lima,Tarde,No,No,Si,4118.23
-Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lima,Noche,No,Si,Si,4102.98
-Acceso Ilicito,Correo Electronico,18-29,Masculino,Lima,Noche,No,No,Si,4097.47
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,4083.9
-Sextorsion,WhatsApp o SMS,18-29,Femenino,Cusco,Noche,No,No,Si,4081.64
-Fraude Informatico,Redes Sociales,30-49,Femenino,Piura,Noche,Si,Si,Si,4075.91
-Estafa por Internet,Pagina Web Falsa,30-49,Femenino,Lima,Noche,No,No,No,4071.75
-Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Manana,No,No,No,4070.68
-Sextorsion,WhatsApp o SMS,30-49,Femenino,Lima,Tarde,No,Si,No,4069.17
-Sextorsion,Redes Sociales,30-49,Femenino,Cusco,Tarde,No,No,No,4068.7
-Fraude Informatico,Redes Sociales,30-49,Femenino,Lima,Manana,Si,No,No,4067.62
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Manana,No,No,Si,4067.08
-Fraude Informatico,Redes Sociales,50-64,Masculino,Cusco,Noche,Si,Si,No,4061.88
-Fraude Informatico,Redes Sociales,30-49,Femenino,Arequipa,Tarde,No,No,No,4058.34
-Sextorsion,WhatsApp o SMS,18-29,Femenino,Lima,Manana,Si,Si,Si,4046.08
-Sextorsion,WhatsApp o SMS,30-49,Masculino,Lima,Noche,Si,Si,Si,4042.06
-Acceso Ilicito,WhatsApp o SMS,30-49,Femenino,Lima,Noche,No,Si,No,4038.84
-Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Noche,No,Si,Si,4035.58
-Acceso Ilicito,Pagina Web Falsa,30-49,Masculino,Lima,Manana,Si,No,No,4028.17
-Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lambayeque,Tarde,Si,No,Si,4017.5
-Fraude Informatico,Correo Electronico,18-29,Femenino,Cusco,Madrugada,No,No,No,4017.39
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Callao,Noche,No,No,No,4014.45
-Acceso Ilicito,Redes Sociales,18-29,Femenino,Puno,Manana,No,No,No,4008.34
-Acceso Ilicito,Redes Sociales,18-29,Femenino,Lima,Tarde,No,No,Si,4005.78
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,No,Si,3982.61
-Sextorsion,Redes Sociales,50-64,Femenino,Cusco,Manana,No,No,Si,3968.54
-Estafa por Internet,Redes Sociales,30-49,Masculino,Lima,Tarde,Si,No,Si,3967.09
-Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Arequipa,Noche,Si,No,No,3964.36
-Fraude Informatico,Llamada Telefonica,30-49,Femenino,Piura,Manana,No,Si,Si,3955.51
-Sextorsion,WhatsApp o SMS,18-29,Masculino,Lima,Noche,Si,No,Si,3954.88
-Fraude Informatico,WhatsApp o SMS,30-49,Masculino,Lima,Tarde,No,Si,No,3953.23
-Fraude Informatico,WhatsApp o SMS,65 o mas,Masculino,Lima,Tarde,Si,Si,Si,3950.62
-Fraude Informatico,Redes Sociales,18-29,Femenino,Junin,Madrugada,No,Si,Si,3943.99
-Acceso Ilicito,Correo Electronico,18-29,Femenino,Lambayeque,Tarde,No,No,No,3942.63
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,Si,Si,Si,3938.97
-Fraude Informatico,Pagina Web Falsa,18-29,Femenino,Puno,Tarde,No,No,Si,3932.74
-Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lambayeque,Tarde,No,No,No,3928.66
-Fraude Informatico,Redes Sociales,18-29,Femenino,Lima,Tarde,Si,Si,No,3927.63
-Fraude Informatico,Llamada Telefonica,18-29,Masculino,Tacna,Tarde,No,No,Si,3924.54
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Cusco,Tarde,Si,Si,No,3923.46
-Sextorsion,Redes Sociales,30-49,Femenino,Lima,Madrugada,No,No,Si,3911.0
-Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Manana,No,No,No,3909.04
-Estafa por Internet,Redes Sociales,30-49,Masculino,Junin,Noche,No,No,No,3907.87
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,No,Si,3900.61
-Estafa por Internet,Redes Sociales,30-49,Masculino,Puno,Tarde,No,No,No,3894.94
-Acceso Ilicito,WhatsApp o SMS,18-29,Masculino,Lima,Tarde,No,No,No,3894.28
-Fraude Informatico,Llamada Telefonica,18-29,Femenino,La Libertad,Madrugada,Si,No,No,3891.13
-Acceso Ilicito,Redes Sociales,18-29,Masculino,Lima,Manana,Si,No,No,3880.11
-Acceso Ilicito,WhatsApp o SMS,18-29,Femenino,Lima,Tarde,No,Si,No,3879.88
-Fraude Informatico,WhatsApp o SMS,50-64,Femenino,Piura,Tarde,Si,No,No,3877.39
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Puno,Noche,Si,No,Si,3875.57
-Acceso Ilicito,Redes Sociales,50-64,Femenino,Callao,Madrugada,No,No,Si,3873.88
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,Si,Si,3872.14
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Callao,Noche,Si,No,Si,3863.28
-Suplantacion de Identidad,WhatsApp o SMS,65 o mas,Masculino,Lima,Manana,No,No,No,3854.74
-Estafa por Internet,Correo Electronico,50-64,Masculino,Lima,Madrugada,Si,No,Si,3851.74
-Fraude Informatico,Pagina Web Falsa,18-29,Masculino,Lima,Manana,Si,No,No,3851.46
-Acceso Ilicito,Pagina Web Falsa,18-29,Masculino,Lima,Tarde,No,No,Si,3850.31
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Callao,Tarde,Si,Si,No,3845.27
-Sextorsion,Redes Sociales,18-29,Masculino,La Libertad,Noche,No,No,Si,3842.65
-Fraude Informatico,Redes Sociales,50-64,Masculino,Lambayeque,Tarde,No,No,Si,3841.89
-Fraude Informatico,Redes Sociales,30-49,Femenino,La Libertad,Manana,Si,No,Si,3839.52
-Estafa por Internet,Correo Electronico,30-49,Femenino,Lima,Tarde,No,No,Si,3817.51
-Estafa por Internet,Redes Sociales,30-49,Masculino,Cusco,Madrugada,No,No,Si,3813.12
-Suplantacion de Identidad,WhatsApp o SMS,65 o mas,Femenino,Lima,Madrugada,No,No,No,3812.35
-Fraude Informatico,Llamada Telefonica,18-29,Masculino,Lima,Manana,Si,No,Si,3810.15
-Fraude Informatico,Redes Sociales,50-64,Masculino,Lima,Tarde,No,Si,No,3800.76
-Estafa por Internet,Pagina Web Falsa,50-64,Masculino,Arequipa,Noche,No,No,No,3795.76
-Fraude Informatico,Redes Sociales,30-49,Femenino,La Libertad,Noche,No,No,No,3780.82
-Fraude Informatico,Redes Sociales,18-29,Femenino,La Libertad,Tarde,No,No,Si,3774.41
-Fraude Informatico,Redes Sociales,18-29,Masculino,Lima,Manana,Si,No,No,3761.15
-Fraude Informatico,Pagina Web Falsa,30-49,Masculino,La Libertad,Noche,No,Si,Si,3759.6
-Acceso Ilicito,WhatsApp o SMS,30-49,Masculino,Lima,Madrugada,No,Si,Si,3756.1
-Fraude Informatico,WhatsApp o SMS,18-29,Masculino,Lima,Manana,No,Si,No,3754.45
-Estafa por Internet,WhatsApp o SMS,30-49,Femenino,Lima,Noche,No,Si,No,3750.69
-Acceso Ilicito,Llamada Telefonica,18-29,Femenino,Tacna,Madrugada,No,No,Si,3742.72
-Estafa por Internet,WhatsApp o SMS,30-49,Masculino,Lambayeque,Madrugada,No,No,No,3734.1
-Estafa por Internet,Llamada Telefonica,30-49,Femenino,Arequipa,Manana,Si,No,Si,3733.4
-Acceso Ilicito,Redes Sociales,50-64,Masculino,Lima,Manana,Si,No,No,3727.39
-Sextorsion,Llamada Telefonica,18-29,Masculino,Lima,Noche,Si,No,No,3726.92
-Fraude Informatico,WhatsApp o SMS,18-29,Femenino,Callao,Madrugada,No,No,Si,3717.27
+having_IP_Address,URL_Length,Prefix_Suffix,having_Sub_Domain,SSLfinal_State,Domain_registeration_length,web_traffic,Google_Index,Result
+0,-1,-1,0,-1,-1,-1,0,1
+0,-1,0,0,0,1,-1,0,1
+0,-1,0,0,-1,-1,-1,0,1
+0,-1,0,0,-1,0,0,0,1
+0,1,-1,0,0,-1,0,0,1
+0,1,-1,0,-1,-1,-1,0,1
+0,-1,-1,-1,-1,1,0,0,1
+0,-1,-1,0,1,0,0,0,1
+0,1,0,0,-1,-1,-1,0,1
+0,-1,0,0,0,1,0,0,1
+1,1,-1,1,1,-1,0,0,1
+1,-1,-1,-1,-1,1,0,0,1
+0,1,0,-1,-1,0,0,0,1
+1,1,0,-1,-1,-1,1,0,1
+0,1,-1,0,-1,0,0,0,1
+0,-1,0,0,-1,0,-1,0,1
+0,-1,-1,-1,0,0,1,0,1
+0,1,-1,-1,-1,0,-1,0,1
+0,-1,0,-1,1,0,0,0,1
+1,1,0,0,-1,-1,-1,0,1
+0,1,0,0,0,1,-1,0,1
+0,-1,-1,0,1,1,1,0,1
+0,-1,0,1,-1,0,-1,0,1
+0,-1,0,-1,-1,1,0,0,1
+0,-1,-1,0,0,-1,0,0,1
+0,1,-1,0,0,-1,1,0,1
+0,-1,-1,1,1,1,0,0,1
+1,1,-1,-1,-1,-1,1,0,1
+0,-1,0,0,0,0,1,0,1
+0,1,0,-1,-1,0,-1,0,1
+0,-1,-1,-1,0,0,0,0,1
+0,-1,-1,-1,-1,1,0,1,1
+0,-1,-1,0,0,-1,1,0,1
+1,1,-1,0,0,-1,1,0,1
+0,-1,0,0,-1,0,1,0,1
+1,-1,-1,0,0,1,-1,0,1
+1,-1,-1,-1,1,0,0,0,1
+0,-1,0,0,0,1,-1,1,1
+0,-1,0,1,-1,1,-1,1,1
+0,1,-1,1,-1,0,-1,1,1
+0,1,-1,-1,1,0,0,1,1
+0,0,-1,-1,-1,1,0,1,1
+0,0,0,-1,-1,1,-1,0,1
+0,0,-1,-1,-1,1,1,1,1
+1,1,0,-1,-1,1,-1,0,1
